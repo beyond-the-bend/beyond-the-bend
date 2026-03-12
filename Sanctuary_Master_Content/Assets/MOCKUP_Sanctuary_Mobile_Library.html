@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOCKUP: The Sanctuary Mobile Vision</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --sage: #A8B5A2;
+            --deep-sage: #6B8063;
+            --warm-sand: #E6D5C7;
+            --text: #3F4A3C;
+            --bg: #FDFCFB;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 40px 30px;
+            text-align: center;
+            border-bottom: 1px solid var(--warm-sand);
+            background: white;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* Mood Selection Scroll */
+        .mood-scroll {
+            display: flex;
+            overflow-x: auto;
+            gap: 12px;
+            padding: 20px 30px;
+            scrollbar-width: none;
+        }
+
+        .mood-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .mood-chip {
+            white-space: nowrap;
+            background: white;
+            border: 1px solid var(--warm-sand);
+            padding: 8px 24px;
+            border-radius: 40px;
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+
+        .mood-chip.active {
+            background: var(--sage);
+            color: white;
+            border-color: var(--sage);
+        }
+
+        .search-area {
+            padding: 0 30px;
+        }
+
+        .search-box {
+            width: 100%;
+            background: white;
+            border: 1px solid var(--warm-sand);
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 16px;
+            color: #888;
+            box-sizing: border-box;
+        }
+
+        /* Library List */
+        .content-list {
+            padding: 40px 30px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .video-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .video-thumb {
+            width: 100px;
+            height: 100px;
+            background: var(--warm-sand);
+            border-radius: 12px;
+            flex-shrink: 0;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .video-info h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            margin: 0 0 5px 0;
+        }
+
+        .video-info span {
+            font-size: 12px;
+            color: var(--sage);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Bottom Tab Bar */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: white;
+            border-top: 1px solid var(--warm-sand);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding-bottom: 20px;
+            /* Safe area */
+        }
+
+        .tab-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--sage);
+        }
+
+        .tab-item.active {
+            color: var(--text);
+        }
+
+        .tab-icon {
+            width: 24px;
+            height: 24px;
+            margin-bottom: 5px;
+            border-radius: 50%;
+            border: 1px solid currentColor;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <span class="logo">The Sanctuary</span>
+        <div class="search-area">
+            <div class="search-box">How do you feel right now?</div>
+        </div>
+    </header>
+
+    <div class="mood-scroll">
+        <div class="mood-chip active">All Practices</div>
+        <div class="mood-chip">Tender</div>
+        <div class="mood-chip">Overwhelmed</div>
+        <div class="mood-chip">Grounded</div>
+        <div class="mood-chip">Transition</div>
+    </div>
+
+    <div class="content-list">
+        <h2 class="section-title">Newest for You</h2>
+
+        <div class="video-item">
+            <div class="video-thumb"
+                style="background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=200');">
+            </div>
+            <div class="video-info">
+                <span>Movement • 60m</span>
+                <h4>Somatic Vinyasa</h4>
+            </div>
+        </div>
+
+        <div class="video-item">
+            <div class="video-thumb"
+                style="background-image: url('https://images.unsplash.com/photo-1518191766624-94676643666b?auto=format&fit=crop&q=80&w=200');">
+            </div>
+            <div class="video-info">
+                <span>Audio • 15m</span>
+                <h4>Linen Reflections</h4>
+            </div>
+        </div>
+
+        <div class="video-item">
+            <div class="video-thumb"
+                style="background-image: url('https://images.unsplash.com/photo-1499728603263-13726abce5fd?auto=format&fit=crop&q=80&w=200');">
+            </div>
+            <div class="video-info">
+                <span>Expert • 30m</span>
+                <h4>Dr. Arlene: Peri-Health</h4>
+            </div>
+        </div>
+
+        <div class="video-item">
+            <div class="video-thumb" style="background-color: var(--warm-sand);"></div>
+            <div class="video-info">
+                <span>Reflection • PDF</span>
+                <h4>Journal: The Heart's River</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <div class="tab-item active">
+            <div class="tab-icon"></div>
+            Library
+        </div>
+        <div class="tab-item">
+            <div class="tab-icon"></div>
+            Pathways
+        </div>
+        <div class="tab-item">
+            <div class="tab-icon"></div>
+            Dailies
+        </div>
+        <div class="tab-item">
+            <div class="tab-icon"></div>
+            Me
+        </div>
+    </div>
+
+</body>
+
+</html>

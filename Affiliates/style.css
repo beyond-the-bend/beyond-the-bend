@@ -1,0 +1,250 @@
+/* 
+   Beyond the Bend (BTB) Style System 
+   Colors:
+   Sage Green: #A8B5A2
+   Soft Blush Pink: #E8C4C4
+   Warm Sand: #E6D5C7
+   Dark Olive (Text): #3F4A3C
+*/
+
+:root {
+    --sage: #A8B5A2;
+    --blush: #E8C4C4;
+    --sand: #E6D5C7;
+    --dark-olive: #3F4A3C;
+    --white: #F7F4EF;
+    /* Off-white for softer feel */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--white);
+    color: var(--dark-olive);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header */
+header {
+    background-color: var(--sand);
+    padding: 4rem 0;
+    text-align: center;
+    border-bottom: 2px solid var(--sage);
+}
+
+.hero-image-placeholder {
+    height: 300px;
+    background-color: #f1ede8;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--sage);
+    font-size: 1.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;
+}
+
+header .tagline {
+    font-size: 1.2rem;
+    font-style: italic;
+    opacity: 0.9;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Intro */
+.intro {
+    padding: 4rem 0 2rem;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.intro h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--sage);
+}
+
+.intro p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* Grid & Cards */
+.affiliates-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin: 4rem 0;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 0;
+    /* Square edges for magazine look */
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+    transition: transform 0.4s ease;
+    border: none;
+    margin-bottom: 4rem;
+}
+
+.card:nth-child(even) {
+    flex-direction: column-reverse;
+}
+
+@media (min-width: 768px) {
+    .card {
+        flex-direction: row;
+        align-items: center;
+        min-height: 450px;
+    }
+
+    .card:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .card-image-placeholder {
+        flex: 1;
+        height: 100%;
+        min-height: 450px;
+    }
+
+    .card-content {
+        flex: 1;
+        padding: 4rem;
+    }
+}
+
+.card-image-placeholder {
+    background-color: #f1ede8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--sage);
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 1.8rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.card-content {
+    padding: 2rem;
+}
+
+.card-content h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--dark-olive);
+}
+
+.card-content p {
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--sage);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #8fa189;
+}
+
+/* Pending/Status Styles */
+.card.pending {
+    opacity: 0.7;
+    background-color: #fafafa;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    background-color: var(--blush);
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    padding: 4rem 0;
+    text-align: center;
+    background-color: var(--sand);
+    margin-top: 4rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+footer .disclaimer {
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    opacity: 0.7;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lauras-insight {
+    background-color: #Fdf8f2;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    border: none;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.02);
+}
+
+.lauras-insight p {
+    font-style: italic;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--dark-olive);
+    line-height: 1.7;
+}
+
+.signature {
+    display: block;
+    text-align: right;
+    font-family: 'Mr De Haviland', cursive;
+    font-size: 3.5rem;
+    color: var(--dark-olive);
+    margin-top: -1rem;
+    opacity: 0.8;
+}

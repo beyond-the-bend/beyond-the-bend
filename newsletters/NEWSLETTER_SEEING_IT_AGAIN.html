@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter | Seeing It Again</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+        body,
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            background-color: #f7f7f5;
+            color: #4a4a4a;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+
+        /* Header / Masthead */
+        .header {
+            background-color: #faf0f0;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 4px solid #556b2f;
+        }
+
+        .header img {
+            max-width: 140px;
+            height: auto;
+            margin-bottom: 25px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .masthead-title {
+            color: #556b2f;
+            font-family: 'Playfair Display', Georgia, serif;
+            line-height: 1.2;
+        }
+
+        .masthead-top {
+            display: block;
+            font-size: 28px;
+            font-style: italic;
+            font-weight: 400;
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+
+        .masthead-main {
+            display: block;
+            font-size: 32px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-top: 2px solid #556b2f;
+            border-bottom: 2px solid #556b2f;
+            padding: 15px 0;
+            margin-top: 10px;
+        }
+
+        .content-block {
+            padding: 40px 30px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #556b2f;
+            font-size: 26px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #78866b;
+            font-size: 22px;
+            margin-bottom: 10px;
+            margin-top: 20px;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .highlight-section {
+            background-color: #fcfbf9;
+            padding: 40px 30px;
+            border-left: 4px solid #556b2f;
+        }
+
+        .studio-section {
+            background-color: #f4f7f2;
+            padding: 40px 30px;
+            border-top: 1px solid #d8e4d0;
+        }
+
+        .practice-section {
+            background-color: #eef2eb;
+            padding: 30px 20px;
+            margin-top: 0;
+        }
+
+        .img-responsive {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin: 20px 0;
+            display: block;
+        }
+
+        /* Class schedule table */
+        .class-row td {
+            padding: 12px 15px;
+            font-size: 15px;
+            line-height: 1.6;
+            border-bottom: 1px solid #d8e4d0;
+        }
+
+        .class-day {
+            color: #556b2f;
+            font-weight: 700;
+        }
+
+        .new-badge {
+            background-color: #556b2f;
+            color: white;
+            font-size: 11px;
+            padding: 2px 7px;
+            border-radius: 10px;
+            letter-spacing: 1px;
+            vertical-align: middle;
+            margin-left: 6px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 15px;
+            letter-spacing: 1px;
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+        }
+
+        .btn-sage {
+            background-color: #A8B5A2;
+            color: white;
+        }
+
+        .btn-forest {
+            background-color: #3F4A3C;
+            color: #F7F4EF;
+        }
+
+        .embodied-card {
+            background-color: #F0F4EE;
+            border-left: 3px solid #A8B5A2;
+            padding: 20px 25px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .footer {
+            background-color: #3F4A3C;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #F7F4EF;
+            letter-spacing: 1px;
+        }
+
+        .footer a {
+            color: #A8B5A2;
+            text-decoration: none;
+        }
+
+        strong {
+            color: #556b2f;
+            font-weight: 600;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                width: 100% !important;
+            }
+
+            .header {
+                padding: 30px 15px;
+            }
+
+            .content-block,
+            .highlight-section,
+            .studio-section {
+                padding: 25px 15px;
+            }
+
+            .masthead-main {
+                font-size: 24px;
+                letter-spacing: 1px;
+            }
+
+            .masthead-top {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- ═══ MASTHEAD BANNER ═══ -->
+        <div class="header">
+            <img src="https://storage.googleapis.com/msgsndr/t19sOv208p64ldeUjJug/media/697996aad119a57c1575bb7d.png"
+                alt="Beyond the Bend Logo">
+            <div class="masthead-title">
+                <span class="masthead-top">Reflections from</span>
+                <span class="masthead-main">Beyond the Bend</span>
+            </div>
+        </div>
+
+        <!-- ═══ PERSONAL INTRO ═══ -->
+        <div class="content-block">
+            <p>Hi {{contact.first_name}},</p>
+            <p>I want to tell you something that feels almost strange to admit, because it's new for me and I'm still a
+                little surprised by it.</p>
+            <p>For the first time in a long time, maybe the first time ever, I'm not waiting for my life to begin. I'm
+                actually in it. Seeing it. Feeling it. And the difference is something I want to try to put into words,
+                because I think you might know exactly what I mean.</p>
+            <p>With warmth and gratitude,<br>Laura 🩷</p>
+        </div>
+
+        <!-- ═══ WELLNESS WISDOM ═══ -->
+        <div class="highlight-section">
+            <h2>This Week's Wellness Wisdom</h2>
+
+            <!-- IMAGE — upload to GHL and replace this src URL -->
+            <img src="https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/69ad161c36702f225665e662.png"
+                alt="A quiet morning — mug of tea by a winter window" class="img-responsive">
+
+            <h3>Seeing It Again</h3>
+            <p><em>By Laura Harvey | Beyond the Bend Yoga</em></p>
+
+            <p>I spent a lot of years not seeing my life.</p>
+            <p>Not because it wasn't beautiful. It was. But my attention had a habit of drifting toward what was
+                missing, what still needed fixing, what was coming next. And when your attention lives there, the life
+                that's actually in front of you slowly fades into the background.</p>
+            <p>The cup you drink from every morning. The body that carries you through your day. The people who have
+                been beside you for years. They don't disappear. They just stop registering. They become part of the
+                wallpaper of your days, present but unfelt.</p>
+            <p>I know this place. I've lived there for long stretches of my life. And I say that without any judgment,
+                toward myself or toward you, because it's just what happens. When we're tired, when we're overwhelmed,
+                when we've been moving so fast for so long that slowing down starts to feel dangerous.</p>
+            <p>What I've noticed lately, and I say <em>noticed</em> because it genuinely surprised me, is that
+                something has shifted. I'm not sure exactly when it happened. But I find myself pausing in the middle of
+                ordinary moments and just... receiving them. A cup of tea that's exactly the right temperature. The
+                particular quality of winter light through my window in the morning. The feeling of my feet on the floor
+                before the day begins.</p>
+            <p>None of it is extraordinary. That's almost the point.</p>
+            <p>Because I think that's where most of life actually lives. Not in the peak moments, not in the arrivals,
+                not in the things we've been working toward. But in the quiet, unremarkable texture of an ordinary
+                Tuesday that we almost let slip by without really feeling it.</p>
+            <p>This is what I think yoga and meditation are really asking us to practice. Not flexibility. Not stillness
+                for its own sake. But <em>contact</em>. Real, unhurried contact with whatever is actually here.</p>
+            <p>Because when we finally let what's in front of us land, something shifts. Not dramatically. But the day
+                feels different. Fuller somehow. Like we've been eating without tasting and someone finally reminded us
+                to slow down and actually eat.</p>
+            <p>I'm not saying I've mastered this. I'm saying I'm in a season where it's coming more naturally, and I'm
+                aware enough to know that won't always be the case. So I'm paying attention while I can. I'm letting
+                things land. I'm looking at my life like it's something I get to have, rather than something I'm always
+                trying to improve.</p>
+            <p>And it turns out, when I do that, it's more than enough.</p>
+            <p><em>It always was.</em></p>
+        </div>
+
+        <!-- ═══ FROM THE STUDIO ═══ -->
+        <div class="studio-section">
+            <h2>From the Studio</h2>
+            <p>Spring has a way of arriving before we are quite ready for it. One day we are deep in the quiet of winter
+                and the next the light is different and something in us stirs.</p>
+            <p>If that stirring is telling you it is time to come back to your mat, I would love to have you join us.
+                The Beyond the Bend Yoga spring session begins the week of April 6th and runs through to late June.
+                Whether you have been with us before or you have been quietly curious and waiting for the right moment,
+                this is your invitation.</p>
+
+            <!-- Class Schedule -->
+            <table width="100%" cellpadding="0" cellspacing="0"
+                style="margin: 20px 0; border-collapse: collapse; border-radius: 6px; overflow: hidden; border: 1px solid #d8e4d0;">
+                <tr class="class-row">
+                    <td
+                        style="padding: 12px 15px; border-bottom: 1px solid #d8e4d0; font-size: 15px; line-height: 1.6;">
+                        <span class="class-day">Monday evenings</span><br>
+                        Somatic Vinyasa &middot; 6:00 to 7:15 PM &middot; April 6 to June 22
+                    </td>
+                </tr>
+                <tr class="class-row">
+                    <td
+                        style="padding: 12px 15px; border-bottom: 1px solid #d8e4d0; font-size: 15px; line-height: 1.6;">
+                        <span class="class-day">Tuesday mornings</span><br>
+                        Rise and Restore &middot; 10:00 to 11:15 AM &middot; April 7 to June 23
+                    </td>
+                </tr>
+                <tr class="class-row">
+                    <td
+                        style="padding: 12px 15px; border-bottom: 1px solid #d8e4d0; font-size: 15px; line-height: 1.6;">
+                        <span class="class-day">Tuesday evenings</span><br>
+                        Restore and Reclaim &middot; 6:00 to 7:15 PM &middot; April 7 to June 23
+                    </td>
+                </tr>
+                <tr class="class-row">
+                    <td
+                        style="padding: 12px 15px; border-bottom: 1px solid #d8e4d0; font-size: 15px; line-height: 1.6;">
+                        <span class="class-day">Wednesday mornings</span><br>
+                        Somatic Hatha &middot; 10:00 to 11:15 AM &middot; April 8 to June 24
+                    </td>
+                </tr>
+                <tr class="class-row">
+                    <td style="padding: 12px 15px; font-size: 15px; line-height: 1.6; background-color: #F0F4EE;">
+                        <span class="class-day">Wednesday evenings</span>
+                        <span class="new-badge">NEW</span><br>
+                        Embodied Flow &middot; 5:30 to 6:30 PM &middot; April 8 to June 24
+                    </td>
+                </tr>
+            </table>
+
+            <p style="font-size: 15px;">All sessions are 11 weeks at $187 + GST. Drop-in is available at $20 per class
+                if space allows.</p>
+
+            <p style="text-align: center; margin: 30px 0;">
+                <a href="https://beyondthebendyoga.ca/classes" class="btn btn-sage">View All Classes &amp; Register</a>
+            </p>
+
+            <!-- Embodied Flow spotlight -->
+            <div class="embodied-card">
+                <h3 style="margin-top: 0; color: #3F4A3C;">Something new this spring.</h3>
+                <p style="font-size: 15px;">This spring I am introducing Embodied Flow, a Wednesday evening class that
+                    is unlike anything I have offered before. It is somatic organic movement, which means we move from
+                    the inside out. No sequences to memorize. No poses to perfect. No pressure to look a certain way.
+                    Just 60 minutes of intentional movement that follows what the body is actually asking for.</p>
+                <p style="font-size: 15px;"><em>I made this class because I needed it too.</em> Spots are limited to 12
+                    and a few are already spoken for.</p>
+                <p style="text-align: center; margin: 20px 0 5px 0;">
+                    <a href="https://beyondthebendyoga.ca/embodied-flow" class="btn btn-forest">Learn More &amp; Save
+                        Your Spot</a>
+                </p>
+            </div>
+
+            <p style="font-size: 15px; margin-top: 20px;">If you have any questions or want to talk through which class
+                might be the right fit for you, just reply to this email. I am always happy to help you find your way
+                in.</p>
+        </div>
+
+        <!-- ═══ PRACTICE OF THE WEEK ═══ -->
+        <div class="content-block">
+            <div class="practice-section" style="border-radius: 4px; padding: 30px;">
+                <h2>Practice of the Week</h2>
+                <h3 style="margin-top: 8px;">Letting It Land</h3>
+                <p>At some point today, choose one completely ordinary moment and decide to actually be in it.</p>
+                <p>Not analyzing it. Not improving it. Not thinking about what comes next.</p>
+                <p>Just let it be what it is and let yourself be someone who is genuinely here for it.</p>
+                <p>Notice what that feels like in your body. Notice if something softens.</p>
+                <p><em>That softening is the practice working.</em></p>
+            </div>
+        </div>
+
+        <!-- ═══ CLOSING THOUGHT ═══ -->
+        <div class="content-block">
+            <h2>A Closing Thought</h2>
+            <p>The life you've been waiting to feel fully present in is the one you are already living.</p>
+            <p>It has been here the whole time.</p>
+            <br>
+            <p>With warmth and gratitude,<br>Laura 🩷</p>
+        </div>
+
+        <!-- ═══ FOOTER ═══ -->
+        <div class="footer">
+            BEYOND THE BEND YOGA<br>
+            Rising Moon Studio &middot; Sherwood Park, AB<br><br>
+            <a href="{{unsubscribe_link}}">Unsubscribe</a>
+        </div>
+
+    </div>
+</body>
+
+</html>

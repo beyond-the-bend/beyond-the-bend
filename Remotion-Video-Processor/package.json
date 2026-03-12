@@ -1,0 +1,23 @@
+{
+  "name": "btb-remotion-processor",
+  "version": "1.0.0",
+  "description": "Automated video processing for Beyond the Bend Yoga",
+  "main": "index.js",
+  "scripts": {
+    "start": "remotion preview src/index.ts",
+    "render": "remotion render src/index.ts Main btb_processed_video.mp4",
+    "build": "remotion build src/index.ts Main btb_processed_video.mp4"
+  },
+  "dependencies": {
+    "remotion": "^4.0.0",
+    "@remotion/cli": "^4.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "lucide-react": "^0.300.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "typescript": "^5.0.0"
+  }
+}

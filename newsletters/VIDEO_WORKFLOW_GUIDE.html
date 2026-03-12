@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Workflow Guide | Beyond the Bend Yoga</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --sage: #A8B5A2;
+            --warm-sand: #E6D5C7;
+            --text: #3F4A3C;
+            --background: #F7F4EF;
+        }
+
+        body {
+            background-color: white;
+            /* Clean white background */
+            color: var(--text);
+            font-family: 'Lato', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 80px 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        header {
+            margin-bottom: 60px;
+            border-bottom: 1px solid var(--warm-sand);
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 400;
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--sage);
+            margin-top: 10px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: var(--sage);
+            margin-bottom: 25px;
+            font-weight: 400;
+        }
+
+        .step {
+            margin-bottom: 30px;
+            padding-left: 20px;
+            border-left: 2px solid var(--warm-sand);
+        }
+
+        .step-title {
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        p,
+        li {
+            font-size: 16px;
+            font-weight: 300;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li::before {
+            content: "•";
+            color: var(--sage);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        code {
+            background: var(--background);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 14px;
+        }
+
+        footer {
+            margin-top: 100px;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 18px;
+            text-align: center;
+            opacity: 0.8;
+        }
+
+        .button-instruction {
+            display: inline-block;
+            background-color: var(--background);
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Video Workflow Guide</h1>
+            <div class="subtitle">Beyond the Bend Yoga</div>
+        </header>
+
+        <section>
+            <h2>I. The Canva Designs</h2>
+            <p>Use the YouTube Template (1920 x 1080) in Canva. This ensures your videos match perfectly for the fastest
+                processing.</p>
+
+            <div class="step">
+                <span class="step-title">1. Create 4 Intros</span>
+                <p>Build one intro design for each class style: <i>Restorative, Gentle Hatha, Somatic Hatha, and Somatic
+                        Vinyasa.</i> Use Playfair Display for titles and Lato for instructions.</p>
+            </div>
+
+            <div class="step">
+                <span class="step-title">2. Use the Three-Scene Structure</span>
+                <ul>
+                    <li><strong>Scene 1:</strong> The Sanctuary | [Class Name]</li>
+                    <li><strong>Scene 2:</strong> Instructions on gathering props (blankets, blocks, pillows).</li>
+                    <li><strong>Scene 3:</strong> Settle into a lying position. We will begin in a moment.</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <span class="step-title">3. Export & Save</span>
+                <p>Save these as MP4 files in the folder: <br><code>C:\BTB\Video-Processor\assets_intro</code></p>
+            </div>
+        </section>
+
+        <section>
+            <h2>II. The Descript Editing</h2>
+            <p>This is where you refine the class recording before adding the branding.</p>
+
+            <div class="step">
+                <span class="step-title">1. The "Surgical" Edit</span>
+                <p>Use the "Remove Filler Words" tool to take out the "ums." Trim your 75-minute recording down to a
+                    beautiful, clean 60 minutes.</p>
+            </div>
+
+            <div class="step">
+                <span class="step-title">2. Export the Class</span>
+                <p>Export the clean class as a single MP4. Place it in the folder:
+                    <br><code>C:\BTB\Video-Processor\raw_footage</code></p>
+            </div>
+        </section>
+
+        <section>
+            <h2>III. The Magic Stitch</h2>
+            <p>This phase adds your branding to your class instantly, without any long render times.</p>
+
+            <div class="step">
+                <span class="step-title">1. Start the Tool</span>
+                <p>Open <code>C:\BTB\Video-Processor</code>. Right-click the file <strong>Process-Videos.ps1</strong>
+                    and choose "Run with PowerShell."</p>
+            </div>
+
+            <div class="step">
+                <span class="step-title">2. Choose Your Intro</span>
+                <p>The screen will list the intros you made in Canva. Type the number for the class you are processing
+                    (1, 2, 3, or 4) and press Enter.</p>
+            </div>
+
+            <div class="step">
+                <span class="step-title">3. Completion</span>
+                <p>Wait about 60 seconds. Your branded video will appear in the folder:
+                    <br><code>C:\BTB\Video-Processor\finished_videos</code></p>
+            </div>
+        </section>
+
+        <footer>
+            With warmth and gratitude,<br>
+            Laura ❤️
+        </footer>
+    </div>
+</body>
+
+</html>

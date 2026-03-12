@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Briefing: Beyond the Bend | Project Sanctuary</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            padding: 40px;
+            background: #f9f9f9;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1 {
+            color: #3F4A3C;
+            border-bottom: 2px solid #A8B5A2;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #6B8063;
+            margin-top: 30px;
+        }
+
+        code {
+            background: #eee;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #A8B5A2;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            margin-right: 5px;
+        }
+
+        .files-list {
+            background: #f0f4f0;
+            padding: 15px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1>Technical Briefing: Project Sanctuary</h1>
+        <p><strong>To:</strong> Laura's Son</p>
+        <p>This briefing outlines the current technical direction for <strong>Beyond the Bend Yoga</strong> as we move
+            toward a more custom, modular, and unhurried digital ecosystem.</p>
+
+        <h2>1. The Goal: GHL Decoupling</h2>
+        <p>The long-term objective is to migrate away from GoHighLevel (GHL) into a custom-built stack that Laura owns
+            and I (her AI partner) manage. We are prioritizing speed, clean typography, and "Sanctuary" values
+            (nervous-system-first design).</p>
+
+        <h2>2. Work Completed So Far</h2>
+        <p>We have successfully "abstracted" the video processing layer away from SaaS tools like Descript/Canva for the
+            final stitch:</p>
+        <ul>
+            <li><strong>FFmpeg CLI:</strong> Installed <code>gyan.ffmpeg</code> (v8.0.1) locally.</li>
+            <li><strong>PowerShell Automation:</strong> Built a custom script (<code>Process-Videos.ps1</code>) that
+                utilizes the <code>concat</code> demuxer to stitch Intros, Outros, and Edited Footage in seconds without
+                re-rendering.</li>
+            <li><strong>Asset Management:</strong> Organized a local directory structure
+                (<code>C:\BTB\Video-Processor</code>) for scalable asset selection.</li>
+        </ul>
+
+        <h2>3. Proposed Tech Stack (Phase 2)</h2>
+        <p>In our next phase, we are looking at building a "Headless" or lightweight modular setup:</p>
+        <ul>
+            <li><span class="tag">Frontend</span> Next.js or a clean HTML/CSS/JS architecture (Vercel-hosted).</li>
+            <li><span class="tag">CMS</span> Modular integration with Substack (for Blog) and a custom Metadata layer
+                for the Video Library.</li>
+            <li><span class="tag">Payments</span> Direct Stripe Integration (Serverless) to eliminate GHL checkout
+                clunkiness.</li>
+            <li><span class="tag">Auth</span> Tiered access for "The Sanctuary" members using a specialized Auth
+                provider.</li>
+        </ul>
+
+        <h2>4. Documentation Hand-off</h2>
+        <p>The following design and logic documents currently exist in <code>C:\BTB</code>:</p>
+        <div class="files-list">
+            • <code>VIDEO_WORKFLOW_GUIDE.html</code> - End-to-end ops manual.<br>
+            • <code>CANVA_DESIGN_CHECKLIST.html</code> - Asset branding requirements.<br>
+            • <code>THE_SANCTUARY_VISUAL_VISION.html</code> - UI/UX North Star.<br>
+            • <code>Video-Processor\Process-Videos.ps1</code> - Current production code.
+        </div>
+
+        <p><em>"Build for a Sanctuary, not a Funnel."</em></p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOCKUP: The Sanctuary Hub | Desktop Vision</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --sage: #A8B5A2;
+            --deep-sage: #6B8063;
+            --warm-sand: #E6D5C7;
+            --soft-blush: #E8C4C4;
+            --text: #3F4A3C;
+            --bg: #F7F4EF;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Navigation */
+        nav {
+            width: 280px;
+            background-color: white;
+            border-right: 1px solid var(--warm-sand);
+            padding: 60px 40px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-area {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin-bottom: 60px;
+            border-bottom: 1px solid var(--warm-sand);
+            padding-bottom: 20px;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 13px;
+            cursor: pointer;
+            color: var(--sage);
+            transition: color 0.3s;
+        }
+
+        .nav-links li:hover {
+            color: var(--deep-sage);
+        }
+
+        .nav-links li.active {
+            color: var(--text);
+            font-weight: 700;
+        }
+
+        /* Main Content area */
+        main {
+            flex: 1;
+            padding: 80px 60px;
+            max-width: 1200px;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        .mood-bar {
+            margin: 40px 0;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .mood-label {
+            font-style: italic;
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+        }
+
+        .mood-btn {
+            background: white;
+            border: 1px solid var(--warm-sand);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .mood-btn:hover {
+            background: var(--sage);
+            color: white;
+            border-color: var(--sage);
+        }
+
+        /* Grid of Content */
+        .library-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-img {
+            height: 200px;
+            background: var(--warm-sand);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: rgba(63, 74, 60, 0.4);
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-tag {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--sage);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            margin: 0 0 10px 0;
+        }
+
+        .card-meta {
+            font-size: 13px;
+            color: #888;
+        }
+
+        /* Float button for AI help */
+        .ai-assist {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            background: var(--deep-sage);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 20px rgba(107, 128, 99, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo-area">Beyond the Bend</div>
+        <ul class="nav-links">
+            <li class="active">The Library</li>
+            <li>Pathways & Courses</li>
+            <li>The Meditation Room</li>
+            <li>Expert Echoes</li>
+            <li>My Reflections</li>
+        </ul>
+    </nav>
+
+    <main>
+        <header>
+            <div
+                style="color: var(--sage); font-size: 14px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px;">
+                Welcome Back, Laura</div>
+            <h1>The Sanctuary</h1>
+            <p style="color: #888; font-style: italic; font-family: 'Playfair Display', serif;">Wide margins and
+                graceful silence.</p>
+        </header>
+
+        <section class="mood-bar">
+            <span class="mood-label">How do you feel in your body right now?</span>
+            <button class="mood-btn">Overwhelmed</button>
+            <button class="mood-btn">Grounded</button>
+            <button class="mood-btn">Tender</button>
+            <button class="mood-btn">Restless</button>
+        </section>
+
+        <div class="library-grid">
+            <!-- Video Card -->
+            <div class="card">
+                <div class="card-img"
+                    style="background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=600'); background-size: cover;">
+                </div>
+                <div class="card-content">
+                    <span class="card-tag">Movement • 60 mins</span>
+                    <h3 class="card-title">Somatic Vinyasa: Rooting to Rise</h3>
+                    <p class="card-meta">A steady practice to reclaim your rhythm.</p>
+                </div>
+            </div>
+
+            <!-- Meditation Card -->
+            <div class="card">
+                <div class="card-img" style="background-color: #f0f4f0; display: flex; flex-direction: column;">
+                    <div style="width: 100px; height: 2px; background: var(--sage); margin-bottom: 10px;"></div>
+                    <div style="width: 60px; height: 2px; background: var(--sage);"></div>
+                </div>
+                <div class="card-content">
+                    <span class="card-tag">Meditation • 12 mins</span>
+                    <h3 class="card-title">Breath as a River</h3>
+                    <p class="card-meta">Quiet audio for a restless heart.</p>
+                </div>
+            </div>
+
+            <!-- Expert Card -->
+            <div class="card">
+                <div class="card-img"
+                    style="background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600'); background-size: cover;">
+                </div>
+                <div class="card-content">
+                    <span class="card-tag">Expert Echo • 45 mins</span>
+                    <h3 class="card-title">The Hormonal Shift</h3>
+                    <p class="card-meta">A conversation with Dr. Arlene Smith.</p>
+                </div>
+            </div>
+
+            <!-- Course Card -->
+            <div class="card">
+                <div class="card-img"
+                    style="background-color: var(--soft-blush); color: var(--text); font-size: 14px; padding: 40px; text-align: center;">
+                    "Listening is less about becoming someone new, and more about remembering who we've always been."
+                </div>
+                <div class="card-content">
+                    <span class="card-tag">Pathway • 8 Weeks</span>
+                    <h3 class="card-title">The Wise Wild Woman</h3>
+                    <p class="card-meta">A journey through transitions.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="ai-assist">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L14.85 9.15L22 12L14.85 14.85L12 22L9.15 14.85L2 12L9.15 9.15L12 2Z" fill="white" />
+        </svg>
+    </div>
+
+</body>
+
+</html>

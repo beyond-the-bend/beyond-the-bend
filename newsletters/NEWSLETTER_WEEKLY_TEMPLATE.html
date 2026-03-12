@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Template | Beyond the Bend Yoga</title>
+    <style>
+        /* Import Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+        /* Base Reset */
+        body,
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            background-color: #f7f7f5;
+            color: #4a4a4a;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Container */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+
+        /* Header / Masthead */
+        .header {
+            background-color: #faf0f0;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 4px solid #556b2f;
+        }
+
+        .header img {
+            max-width: 140px;
+            height: auto;
+            margin-bottom: 25px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .masthead-title {
+            color: #556b2f;
+            font-family: 'Playfair Display', Georgia, serif;
+            line-height: 1.2;
+        }
+
+        .masthead-top {
+            display: block;
+            font-size: 28px;
+            font-style: italic;
+            font-weight: 400;
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+
+        .masthead-main {
+            display: block;
+            font-size: 32px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-top: 2px solid #556b2f;
+            border-bottom: 2px solid #556b2f;
+            padding: 15px 0;
+            margin-top: 10px;
+        }
+
+        /* Content Sections */
+        .content-block {
+            padding: 40px 30px;
+        }
+
+        /* Typography */
+        h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #556b2f;
+            font-size: 26px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #78866b;
+            font-size: 22px;
+            margin-bottom: 10px;
+            margin-top: 25px;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        h4 {
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            color: #556b2f;
+            font-size: 14px;
+            font-weight: 700;
+            margin-top: 20px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        /* Highlighted Sections */
+        .highlight-section {
+            background-color: #fcfbf9;
+            padding: 30px 20px;
+            border-left: 4px solid #556b2f;
+        }
+
+        .practice-section {
+            background-color: #eef2eb;
+            padding: 30px 20px;
+            margin-top: 30px;
+            border-radius: 2px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        li:before {
+            content: "•";
+            color: #acc18a;
+            font-weight: bold;
+            font-size: 20px;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+
+        strong {
+            color: #556b2f;
+            font-weight: 600;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        .footer {
+            background-color: #f1f1ef;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #888888;
+        }
+
+        .footer a {
+            color: #888888;
+            text-decoration: underline;
+        }
+
+        .spacer {
+            height: 20px;
+        }
+
+        .img-responsive {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            .header {
+                padding: 30px 15px;
+            }
+
+            .content-block {
+                padding: 25px 15px;
+            }
+
+            .masthead-main {
+                font-size: 24px;
+                letter-spacing: 1px;
+            }
+
+            .masthead-top {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <img src="https://storage.googleapis.com/msgsndr/t19sOv208p64ldeUjJug/media/697996aad119a57c1575bb7d.png"
+                alt="Beyond the Bend Logo">
+            <div class="masthead-title">
+                <span class="masthead-top">Reflections from</span>
+                <span class="masthead-main">Beyond the Bend</span>
+            </div>
+        </div>
+
+        <!-- Intro Personal Note -->
+        <div class="content-block">
+            <p>Hello {{contact.first_name}},</p>
+            <p>[[INTRO_PERSONAL_NOTE_GOES_HERE]]</p>
+            <div class="spacer"></div>
+            <p>With warmth and gratitude,<br>
+                Laura ❤️</p>
+        </div>
+
+        <!-- Wellness Wisdom Section -->
+        <div class="highlight-section">
+            <h2>This Week's Wellness Wisdom</h2>
+            <h3>[[WISDOM_SUBTITLE]]</h3>
+            <p><em>By Laura Harvey | Beyond the Bend Yoga</em></p>
+
+            <p>[[WISDOM_BODY_PARAGRAPH_1]]</p>
+
+            <!-- IMAGE SECTION -->
+            <img src="[[IMAGE_URL_GOES_HERE]]" alt="Weekly Highlight Image" class="img-responsive">
+
+            <p>[[WISDOM_BODY_PARAGRAPH_2]]</p>
+
+            <p>[[WISDOM_BODY_PARAGRAPH_3]]</p>
+        </div>
+
+        <!-- Offerings Section -->
+        <div class="content-block">
+            <h2>Offering: [[OFFERING_TITLE]]</h2>
+            <p>[[OFFERING_BODY]]</p>
+        </div>
+
+        <!-- Weekly Practice Section -->
+        <div class="content-block">
+            <div class="practice-section">
+                <h2>OUR WEEKLY PRACTICE:</h2>
+                <h3>[[PRACTICE_TITLE]]</h3>
+                <p>[[PRACTICE_INTRO]]</p>
+                <ul>
+                    <li><strong>[[STEP_1_NAME]]:</strong> [[STEP_1_DESC]]</li>
+                    <li><strong>[[STEP_2_NAME]]:</strong> [[STEP_2_DESC]]</li>
+                    <li><strong>[[STEP_3_NAME]]:</strong> [[STEP_3_DESC]]</li>
+                    <li><strong>[[STEP_4_NAME]]:</strong> [[STEP_4_DESC]]</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Closing Section -->
+        <div class="content-block">
+            <h2>A Closing Thought</h2>
+            <p>[[CLOSING_THOUGHT_BODY]]</p>
+            <div class="spacer"></div>
+            <p>With warmth and gratitude,<br>
+                Laura ❤️</p>
+            <p><strong>Beyond the Bend Yoga</strong></p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Reflections from Beyond the Bend | Sherwood Park, AB</p>
+            <p><a href="{{unsubscribe_link}}">Unsubscribe</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

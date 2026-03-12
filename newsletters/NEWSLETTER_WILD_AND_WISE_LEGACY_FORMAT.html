@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflections from Beyond the Bend | The Wild and The Wise</title>
+    <style>
+        /* Import Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+        /* Base Reset */
+        body,
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            /* Primary Body Font */
+            background-color: #f7f7f5;
+            /* Soft oat/light grey background */
+            color: #4a4a4a;
+            /* Dark grey text, softer than black */
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Container */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            overflow: hidden;
+            /* Keeps neat corners */
+        }
+
+        /* Header / Masthead */
+        .header {
+            background-color: #faf0f0;
+            /* Faint Dusty Rose Background */
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 4px solid #556b2f;
+            /* Sage anchor line at bottom of header */
+        }
+
+        .header img {
+            max-width: 140px;
+            /* Logo styling */
+            height: auto;
+            margin-bottom: 25px;
+            display: block;
+            /* Ensures centered */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* New Styled Masthead Title */
+        .masthead-title {
+            color: #556b2f;
+            /* Sage Green Text */
+            font-family: 'Playfair Display', Georgia, serif;
+            line-height: 1.2;
+        }
+
+        .masthead-top {
+            display: block;
+            font-size: 28px;
+            font-style: italic;
+            font-weight: 400;
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+
+        .masthead-main {
+            display: block;
+            font-size: 32px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-top: 2px solid #556b2f;
+            border-bottom: 2px solid #556b2f;
+            padding: 15px 0;
+            margin-top: 10px;
+        }
+
+        /* Content Sections */
+        .content-block {
+            padding: 40px 30px;
+        }
+
+        /* Typography */
+        h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #556b2f;
+            font-size: 26px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #78866b;
+            font-size: 22px;
+            margin-bottom: 10px;
+            margin-top: 25px;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        h4 {
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            color: #556b2f;
+            font-size: 14px;
+            font-weight: 700;
+            margin-top: 20px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        /* Highlighted Sections (Wisdom & Practice) */
+        .highlight-section {
+            background-color: #fcfbf9;
+            padding: 30px 20px;
+            border-left: 4px solid #556b2f;
+        }
+
+        .practice-section {
+            background-color: #eef2eb;
+            padding: 30px 20px;
+            margin-top: 30px;
+            border-radius: 2px;
+        }
+
+        /* List Styling */
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        li:before {
+            content: "•";
+            color: #acc18a;
+            font-weight: bold;
+            font-size: 20px;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+
+        strong {
+            color: #556b2f;
+            font-weight: 600;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #f1f1ef;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #888888;
+        }
+
+        .footer a {
+            color: #888888;
+            text-decoration: underline;
+        }
+
+        /* Button */
+        .button {
+            display: inline-block;
+            background-color: #556b2f;
+            color: #ffffff;
+            padding: 14px 28px;
+            text-decoration: none;
+            border-radius: 2px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        /* Spacer */
+        .spacer {
+            height: 20px;
+        }
+
+        /* Image Styling */
+        .img-responsive {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        /* Mobile Responsiveness */
+        @media only screen and (max-width: 600px) {
+            .container {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            .header {
+                padding: 30px 15px;
+            }
+
+            .content-block {
+                padding: 25px 15px;
+            }
+
+            .masthead-main {
+                font-size: 24px;
+                letter-spacing: 1px;
+            }
+
+            .masthead-top {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <!-- LOGO: User Provided Hosted Link -->
+            <img src="https://storage.googleapis.com/msgsndr/t19sOv208p64ldeUjJug/media/697996aad119a57c1575bb7d.png"
+                alt="Beyond the Bend Logo">
+
+            <div class="masthead-title">
+                <span class="masthead-top">Reflections from</span>
+                <span class="masthead-main">Beyond the Bend</span>
+            </div>
+        </div>
+
+        <!-- Intro Personal Note -->
+        <div class="content-block">
+            <p>Hello {{contact.first_name}},</p>
+            <p>I have been doing some reading lately about the energy that arrives with the turn of the lunar year, the
+                Year of the Wood Horse. I'll be honest: I came to it a little sideways, the way I come to most things
+                that end up meaning something. A passing mention. A quiet pull. And then suddenly, there it was, a
+                symbol that felt less like astrology and more like a mirror.</p>
+            <p>There is a certain quiet strength in the Horse that I have been carrying with me through my own
+                transitions this week. I hope these reflections resonate with where you are in your own.</p>
+            <div class="spacer"></div>
+            <p>With warmth and gratitude,<br>
+                Laura 🩷</p>
+        </div>
+
+        <!-- Wellness Wisdom Section -->
+        <div class="highlight-section">
+            <h2>This Week's Wellness Wisdom</h2>
+            <h3>The Wild and The Wise</h3>
+            <p><em>By Laura Harvey | Beyond the Bend Yoga</em></p>
+
+            <p>In simple terms, the energy of the Horse is about movement, vitality, and a certain kind of unapologetic
+                aliveness. Not the frantic, breathless doing we are so often called into, the kind that leaves us
+                depleted and wondering what we were even running toward. This is something different. It is a natural,
+                rhythmic power. A dignity in motion.</p>
+
+            <p>We often think of wildness as something belonging only to youth. We associate it with being reckless, or
+                unformed, or impractical. Something to be eventually tamed.</p>
+
+            <!-- NEW IMAGE: Placeholder Link for User -->
+            <!-- REPLACE THE LINK BELOW WITH YOUR NEW IMAGE URL -->
+            <img src="https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/699a248455d8bc260401f97f.png"
+                alt="The Wild and The Wise spirit" class="img-responsive">
+
+            <p>But there is a different kind of wildness that arrives later in life. It doesn't announce itself loudly.
+                It arrives more like a quiet recognition, a slow clearing of the throat. It is the wildness of a woman
+                who has stopped asking for permission to be herself.</p>
+
+            <p>I think of it as the <strong>wise wild</strong>.</p>
+
+            <p>It is what happens when the years of caretaking, of shape-shifting to fit other people's needs, of making
+                ourselves smaller so others could feel larger, when all of that begins to loosen its grip. Not with
+                bitterness. Not with resentment. But with a kind of gentle, almost amused clarity.</p>
+
+            <p><em>Oh. So this is what was here all along.</em></p>
+
+            <p>For so many of us in midlife, there comes a moment, or a slow season of moments, when we realize that our
+                energy is finally becoming our own again. We are no longer the horse pulling the carriage for everyone
+                else, keeping the pace set by someone else's schedule, someone else's needs, someone else's vision of
+                who we should be.</p>
+
+            <p>We are the horse discovering the open field.</p>
+
+            <p>And that field is not about doing more. It is not a new to-do list disguised as freedom. It is something
+                quieter and more fundamental: the reclaiming of your own rhythm. The permission to move at the pace that
+                is actually yours. To feel strong and unhurried at the same time.</p>
+
+            <p>That, I think, is what this season is inviting.</p>
+        </div>
+
+        <!-- Offerings Section -->
+        <div class="content-block">
+            <h2>Offering: Come Practice With Us</h2>
+            <p>There are six classes remaining in our current session, and if you have been thinking about joining us,
+                this is a lovely time to step in. I am happy to prorate the fee so you can come for the remaining
+                classes without paying for a full session.</p>
+            <p>Just <strong>hit reply</strong>. We will sort it out together from there.</p>
+            <p>And if you are someone who loves the idea of being part of the community but worries about signing up
+                because life has a way of getting in the way, know that if you miss a class for any reason — whether it
+                is weather, illness, travel, or just one of those weeks — you always have the option to make it up
+                online. You can join a live stream class from wherever you are, so missing a session does not mean
+                losing it.</p>
+        </div>
+
+        <!-- Weekly Practice Section -->
+        <div class="content-block">
+            <div class="practice-section">
+                <h2>OUR WEEKLY PRACTICE:</h2>
+                <h3>Rooting to Rise</h3>
+                <p>You don't need a mat for this. You don't need a quiet room or the perfect moment. You just need a
+                    minute, and wherever you already are.</p>
+
+                <ul>
+                    <li><strong>Connect with the Ground:</strong> Take a moment to sit or stand tall, feeling the soles
+                        of your feet connecting with whatever is beneath you (floor, earth, carpet, wood). It doesn't
+                        matter. It is still ground.</li>
+
+                    <li><strong>Anchor Your Weight:</strong> Notice where you feel the most weight in your body. Let
+                        that weight be what it is — not a problem to fix, but an anchor. A point of contact with
+                        something solid.</li>
+
+                    <li><strong>Rise with Inhale:</strong> On your next inhale, imagine a steady, horse-like energy
+                        rising from the earth through the soles of your feet, moving slowly upward into your belly.</li>
+
+                    <li><strong>Quiet Release:</strong> Let your exhale be a quiet release, not a dramatic letting go,
+                        just a gentle unclenching of whatever you have been carrying for others today.</li>
+
+                    <li><strong>Linger:</strong> Linger here for three breaths. Not trying to feel anything in
+                        particular. Just noticing what it is like to be both grounded and alive at the same time.</li>
+                </ul>
+                <p>That is enough. That is, in fact, quite a lot.</p>
+            </div>
+        </div>
+
+        <!-- Footer / Closing -->
+        <div class="content-block">
+            <h2>A Closing Thought</h2>
+            <p>I keep coming back to that image: the horse discovering the open field. Not running wildly, not standing
+                still, but simply moving as itself. No longer in service of someone else's destination.</p>
+            <p>I think that is the invitation of this season. Not to reinvent yourself. Not to add more. But to remember
+                what your own rhythm actually feels like, and to trust it.</p>
+            <p>Thank you for exploring this quiet strength with me today. I hope you find moments of wise wildness in
+                the week ahead.</p>
+            <div class="spacer"></div>
+            <p>With warmth and gratitude,<br>
+                Laura ❤️</p>
+            <p><strong>Beyond the Bend Yoga</strong></p>
+        </div>
+
+        <!-- Footer Legals -->
+        <div class="footer">
+            <p>Reflections from Beyond the Bend | Sherwood Park, AB</p>
+            <p><a href="{{unsubscribe_link}}">Unsubscribe</a></p>
+        </div>
+    </div>
+
+</body>
+
+</html>

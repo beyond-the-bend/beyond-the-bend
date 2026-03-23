@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Sanctuary Studio | Beyond the Bend Yoga</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Override header for studio focus */
+        .main-header { background: #1a1a1a; border-bottom: 1px solid #333; box-shadow: none; color: white; }
+        .logo-link { color: var(--sage); }
+        .nav-desktop li a { color: #888; }
+        .nav-desktop li a:hover { color: white; }
+    </style>
+</head>
+<body>
+
+<header class="main-header">
+    <a href="index.html" class="logo-link">Beyond the Bend</a>
+    <nav>
+        <ul class="nav-desktop">
+            <li><a href="everything.html">Everything</a></li>
+            <li><a href="library.html">The Sanctuary</a></li>
+            <li><a href="#" style="background: var(--tara-maroon); color: white; padding: 5px 15px; border-radius: 2px;">EXIT STUDIO</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="studio-container">
+    <div class="video-stage">
+        <div class="mux-player-placeholder">
+            <div class="live-indicator">Live</div>
+            <div style="text-align: center; color: #444;">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                <p style="margin-top: 20px; font-family: 'Rufina', serif; font-style: italic; color: #666;">Waiting for the stream to begin...</p>
+            </div>
+        </div>
+        
+        <div class="studio-footer" style="width: 100%; max-width: 1000px; margin-top: 20px; border-radius: 8px;">
+            <div class="studio-title-info">
+                <h2>Somatic Vinyasa: Evening Flow</h2>
+                <p>Monday Practice • 6:00 PM - 7:00 PM</p>
+            </div>
+            <div style="display: flex; gap: 15px; align-items: center;">
+                <button class="panic-alert" onclick="alert('Technical Alert Sent to Teacher!')">I Can't Hear Audio</button>
+                <button class="mood-btn" id="fs-btn" onclick="toggleFullScreen()" style="background: var(--deep-sage); border-color: var(--deep-sage); color: white; padding: 10px 25px;">Full Screen</button>
+            </div>
+        </div>
+        
+        <script>
+            function toggleFullScreen() {
+                const container = document.querySelector('.studio-container');
+                const btn = document.getElementById('fs-btn');
+                
+                container.classList.toggle('fullscreen-mode');
+                
+                if(container.classList.contains('fullscreen-mode')) {
+                    btn.innerText = 'Exit Full Screen';
+                } else {
+                    btn.innerText = 'Full Screen';
+                }
+            }
+        </script>
+        
+        <div style="width: 100%; max-width: 1000px; margin-top: 20px; padding: 20px; background: rgba(168, 181, 162, 0.05); border-radius: 8px; border: 1px solid rgba(168, 181, 162, 0.1);">
+            <p style="font-size: 14px; color: var(--sage); margin: 0; font-family: 'Rufina', serif; font-style: italic;">
+                "The breath is the bridge which connects life to consciousness."
+            </p>
+        </div>
+    </div>
+
+    <aside class="sidebar-studio">
+        <div class="sidebar-header">
+            <h3>Who's on the Mat (12)</h3>
+        </div>
+        <div class="participant-list">
+            <div class="participant-item"><div class="participant-avatar">SB</div><span>Sarah B.</span></div>
+            <div class="participant-item"><div class="participant-avatar">MJ</div><span>Mary Jane</span></div>
+            <div class="participant-item"><div class="participant-avatar">DH</div><span>Diane H.</span></div>
+            <div class="participant-item"><div class="participant-avatar" style="background: var(--tara-maroon);">L</div><span style="font-weight: 700;">Laura (Teacher)</span></div>
+            <div class="participant-item"><div class="participant-avatar">RK</div><span>Rebecca K.</span></div>
+            <div class="participant-item"><div class="participant-avatar">TL</div><span>Teresa L.</span></div>
+        </div>
+        
+        <div class="chat-area">
+            <div class="sidebar-header" style="border-top: 1px solid #333; padding: 15px 24px;">
+                <h3 style="font-size: 12px;">Live Sanctuary Chat</h3>
+            </div>
+            <div class="chat-messages">
+                <div class="chat-message"><span class="chat-user">Sarah B.</span><span>Good evening everyone! Excited for tonight.</span></div>
+                <div class="chat-message"><span class="chat-user">Mary Jane</span><span>Settling in with my blocks. Ready.</span></div>
+                <div class="chat-message" style="opacity: 0.5;"><span class="chat-user">System</span><span>Diane H. joined the sanctuary.</span></div>
+            </div>
+            <div class="chat-input-wrapper">
+                <input type="text" class="chat-input" placeholder="Say something to the room...">
+            </div>
+        </div>
+    </aside>
+</main>
+
+</body>
+</html>

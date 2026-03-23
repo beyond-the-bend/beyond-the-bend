@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Things I Love | Beyond the Bend Yoga</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            background-color: #f7f7f5;
+            color: #4a4a4a;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
+
+        /* Header */
+        .page-header {
+            background-color: #faf0f0;
+            padding: 60px 40px;
+            text-align: center;
+            border-bottom: 4px solid #556b2f;
+        }
+
+        .page-header img {
+            max-width: 120px;
+            height: auto;
+            margin-bottom: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .page-header h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #556b2f;
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .page-header .subtitle {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #78866b;
+            font-size: 18px;
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        /* Intro */
+        .intro {
+            padding: 40px 50px;
+            border-bottom: 1px solid #e8e4df;
+        }
+
+        .intro p {
+            font-size: 16px;
+            line-height: 1.9;
+            margin-bottom: 15px;
+            color: #4a4a4a;
+        }
+
+        /* Brand Section */
+        .brand-section {
+            padding: 50px;
+            border-bottom: 1px solid #e8e4df;
+        }
+
+        .brand-header {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        .brand-logo {
+            max-width: 150px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .brand-header-text h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #556b2f;
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .brand-header-text .brand-tagline {
+            font-style: italic;
+            color: #78866b;
+            font-size: 15px;
+        }
+
+        .brand-badges {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-green { background-color: #e8f0e4; color: #556b2f; }
+        .badge-pink { background-color: #faf0f0; color: #8b5e5e; }
+        .badge-sand { background-color: #f5efe8; color: #8a7a6b; }
+
+        .brand-story {
+            margin-bottom: 30px;
+        }
+
+        .brand-story p {
+            font-size: 16px;
+            line-height: 1.9;
+            margin-bottom: 15px;
+        }
+
+        .why-i-love {
+            background-color: #f4f7f2;
+            border-left: 4px solid #A8B5A2;
+            padding: 25px 30px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 30px;
+        }
+
+        .why-i-love h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #556b2f;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .why-i-love p, .why-i-love li {
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .why-i-love ul {
+            padding-left: 20px;
+            margin-top: 8px;
+        }
+
+        .why-i-love li {
+            margin-bottom: 6px;
+        }
+
+        /* Product Cards */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .product-card {
+            background: #fcfbf9;
+            border: 1px solid #e8e4df;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            transition: box-shadow 0.2s;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #f0ece7;
+        }
+
+        .product-image-placeholder {
+            width: 100%;
+            height: 200px;
+            background-color: #f0ece7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #c4b8a8;
+            font-size: 14px;
+        }
+
+        .product-info {
+            padding: 18px;
+        }
+
+        .product-name {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #556b2f;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .product-desc {
+            font-size: 13px;
+            color: #8a7a6b;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+
+        .btn:hover { opacity: 0.85; }
+
+        .btn-sage {
+            background-color: #A8B5A2;
+            color: white;
+        }
+
+        .btn-forest {
+            background-color: #3F4A3C;
+            color: #F7F4EF;
+        }
+
+        .btn-small {
+            padding: 8px 20px;
+            font-size: 13px;
+        }
+
+        .shop-all {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        /* Discount callout */
+        .discount-box {
+            background-color: #faf0f0;
+            border: 2px dashed #E8C4C4;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .discount-box h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #556b2f;
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .discount-code {
+            font-size: 22px;
+            font-weight: 700;
+            color: #556b2f;
+            letter-spacing: 2px;
+            margin: 10px 0;
+        }
+
+        .discount-box p {
+            font-size: 14px;
+            color: #8a7a6b;
+        }
+
+        /* Coming Soon */
+        .coming-soon {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .coming-soon h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #556b2f;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .coming-soon p {
+            color: #8a7a6b;
+            font-size: 15px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .coming-soon-logos {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .coming-soon-item {
+            text-align: center;
+            color: #c4b8a8;
+            font-size: 14px;
+            font-style: italic;
+        }
+
+        /* Footer */
+        .page-footer {
+            background-color: #3F4A3C;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #F7F4EF;
+            letter-spacing: 1px;
+        }
+
+        .page-footer a {
+            color: #A8B5A2;
+            text-decoration: none;
+        }
+
+        /* Disclosure */
+        .disclosure {
+            padding: 20px 50px;
+            font-size: 12px;
+            color: #b0a89e;
+            line-height: 1.6;
+            border-top: 1px solid #e8e4df;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .page-header { padding: 40px 20px; }
+            .intro, .brand-section, .coming-soon { padding: 30px 20px; }
+            .page-header h1 { font-size: 28px; }
+            .brand-header { flex-direction: column; text-align: center; }
+            .products-grid { grid-template-columns: 1fr; }
+            .disclosure { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ═══ HEADER ═══ -->
+        <div class="page-header">
+            <img src="https://storage.googleapis.com/msgsndr/t19sOv208p64ldeUjJug/media/697996aad119a57c1575bb7d.png"
+                alt="Beyond the Bend Logo">
+            <h1>Things I Love</h1>
+            <p class="subtitle">Products I use, trust, and genuinely recommend</p>
+        </div>
+
+        <!-- ═══ INTRO ═══ -->
+        <div class="intro">
+            <p>I get asked all the time about the mat I use, the props in my studio, and where to find things that actually feel good to practice with. So I put this page together for you.</p>
+            <p>Everything here is something I have personally used, loved, and feel good recommending. I am not interested in filling this page with products just because they pay well. If it is here, it is because I believe in it. These are small, thoughtful companies that care about the same things we do: quality, sustainability, and making something with intention.</p>
+            <p>Some of these links are affiliate links, which means I may earn a small commission if you purchase through them. It never costs you anything extra, and it helps support the work I do at Beyond the Bend. Thank you for that.</p>
+        </div>
+
+        <!-- ═══ SCORIA WORLD ═══ -->
+        <div class="brand-section">
+            <div class="brand-header">
+                <div class="brand-header-text">
+                    <h2>Scoria World</h2>
+                    <span class="brand-tagline">Sustainable cork yoga mats and meditation products</span>
+                </div>
+            </div>
+
+            <div class="brand-badges">
+                <span class="badge badge-green">Woman Owned</span>
+                <span class="badge badge-green">Sustainable</span>
+                <span class="badge badge-pink">Small Business</span>
+                <span class="badge badge-sand">Cork &amp; Natural Materials</span>
+            </div>
+
+            <div class="brand-story">
+                <p>I have to tell you about Scoria because of something that happens in my studio almost every week. One of my students brings in her Scoria cork mat, and without fail, someone walks over, touches it, and says "where did you get this?" It is genuinely beautiful. The texture, the colour, the way it looks and feels. She gets a kick out of it every time, and honestly so do I.</p>
+                <p>I have not personally used their products yet (full transparency), but I have done my research and I love what this company stands for. Scoria is a woman owned small business that creates sustainably harvested cork yoga mats, bolsters, and meditation products. Cork provides natural grip that actually improves when your hands get warm, it is antimicrobial, and the trees are not cut down during harvesting. They regenerate. A portion of Scoria's proceeds also supports Indigenous youth through play based education, and all their deliveries are carbon neutral.</p>
+                <p>Many of you have been asking about bolsters for your home practice, and Scoria makes beautiful natural and organic yoga bolsters filled with buckwheat hulls. They come in several colours, the firmness is adjustable (you can add or remove the fill), and the covers are removable for washing. They ship free across Canada.</p>
+            </div>
+
+            <div class="why-i-love">
+                <h3>Why I Recommend Scoria</h3>
+                <ul>
+                    <li>I have seen their cork mat up close every week in my studio. The quality speaks for itself</li>
+                    <li>Woman owned, small batch, made with real intention</li>
+                    <li>Sustainably harvested cork. No trees are harmed in the process</li>
+                    <li>Their bolsters are organic, adjustable, and beautifully made</li>
+                    <li>A portion of proceeds supports Indigenous youth</li>
+                    <li>Carbon neutral shipping, free across Canada</li>
+                    <li>GOTS certified (fair trade and organic) fabrics and non toxic dyes</li>
+                </ul>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image-placeholder">Cork Yoga Mat</div>
+                    <div class="product-info">
+                        <div class="product-name">Cork Yoga Mat</div>
+                        <div class="product-desc">Natural grip that improves with warmth. Sustainable, antimicrobial, and beautifully textured.</div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-placeholder">Meditation Products</div>
+                    <div class="product-info">
+                        <div class="product-name">Meditation Collection</div>
+                        <div class="product-desc">Thoughtfully crafted cork meditation products for your home practice.</div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-placeholder">Full Collection</div>
+                    <div class="product-info">
+                        <div class="product-name">Browse Everything</div>
+                        <div class="product-desc">Explore Scoria's full range of sustainable cork yoga and wellness products.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AFFILIATE LINK: Replace # with your Scoria affiliate link when ready -->
+            <div class="shop-all">
+                <a href="#" class="btn btn-sage">Shop Scoria World</a>
+            </div>
+
+            <!-- DISCOUNT CODE: Uncomment and update if Scoria gives you a code for your students -->
+            <!--
+            <div class="discount-box">
+                <h3>A Little Something for You</h3>
+                <p>Use my code at checkout for 10% off your order:</p>
+                <div class="discount-code">BEYONDTHEBEND</div>
+                <p>Thank you for supporting small, sustainable businesses.</p>
+            </div>
+            -->
+        </div>
+
+        <!-- ═══ COMING SOON ═══ -->
+        <div class="coming-soon">
+            <h2>More Favourites Coming Soon</h2>
+            <p>I am always on the lookout for products that feel aligned with the way we practice. As I discover and test more brands, I will add them here.</p>
+        </div>
+
+        <!-- ═══ DISCLOSURE ═══ -->
+        <div class="disclosure">
+            <p><strong>Affiliate Disclosure:</strong> Some links on this page are affiliate links. This means I may earn a small commission if you make a purchase through them, at no additional cost to you. I only recommend products I personally use and believe in. Your trust means everything to me, and I will never recommend something just for the sake of a commission.</p>
+        </div>
+
+        <!-- ═══ FOOTER ═══ -->
+        <div class="page-footer">
+            BEYOND THE BEND YOGA<br>
+            Rising Moon Studio &middot; Sherwood Park, AB<br><br>
+            <a href="https://beyondthebendyoga.ca">beyondthebendyoga.ca</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

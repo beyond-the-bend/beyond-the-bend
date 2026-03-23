@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter | The Four Steps of RAIN</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+        body,
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            background-color: #f7f7f5;
+            color: #4a4a4a;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+
+        /* Header / Masthead */
+        .header {
+            background-color: #faf0f0;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 4px solid #556b2f;
+        }
+
+        .header img {
+            max-width: 140px;
+            height: auto;
+            margin-bottom: 25px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .masthead-title {
+            color: #556b2f;
+            font-family: 'Playfair Display', Georgia, serif;
+            line-height: 1.2;
+        }
+
+        .masthead-top {
+            display: block;
+            font-size: 28px;
+            font-style: italic;
+            font-weight: 400;
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+
+        .masthead-main {
+            display: block;
+            font-size: 32px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-top: 2px solid #556b2f;
+            border-bottom: 2px solid #556b2f;
+            padding: 15px 0;
+            margin-top: 10px;
+        }
+
+        .content-block {
+            padding: 40px 30px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #556b2f;
+            font-size: 26px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #78866b;
+            font-size: 22px;
+            margin-bottom: 10px;
+            margin-top: 20px;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .highlight-section {
+            background-color: #fcfbf9;
+            padding: 40px 30px;
+            border-left: 4px solid #556b2f;
+        }
+
+        .studio-section {
+            background-color: #f4f7f2;
+            padding: 40px 30px;
+            border-top: 1px solid #d8e4d0;
+        }
+
+        .practice-section {
+            background-color: #eef2eb;
+            padding: 30px 20px;
+            margin-top: 0;
+        }
+
+        .img-responsive {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin: 20px 0;
+            display: block;
+        }
+
+        /* Class schedule table */
+        .class-row td {
+            padding: 12px 15px;
+            font-size: 15px;
+            line-height: 1.6;
+            border-bottom: 1px solid #d8e4d0;
+        }
+
+        .class-day {
+            color: #556b2f;
+            font-weight: 700;
+        }
+
+        .new-badge {
+            background-color: #556b2f;
+            color: white;
+            font-size: 11px;
+            padding: 2px 7px;
+            border-radius: 10px;
+            letter-spacing: 1px;
+            vertical-align: middle;
+            margin-left: 6px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 15px;
+            letter-spacing: 1px;
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+        }
+
+        .btn-sage {
+            background-color: #A8B5A2;
+            color: white;
+        }
+
+        .btn-forest {
+            background-color: #3F4A3C;
+            color: #F7F4EF;
+        }
+
+        .embodied-card {
+            background-color: #F0F4EE;
+            border-left: 3px solid #A8B5A2;
+            padding: 20px 25px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .footer {
+            background-color: #3F4A3C;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #F7F4EF;
+            letter-spacing: 1px;
+        }
+
+        .footer a {
+            color: #A8B5A2;
+            text-decoration: none;
+        }
+
+        strong {
+            color: #556b2f;
+            font-weight: 600;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                width: 100% !important;
+            }
+
+            .header {
+                padding: 30px 15px;
+            }
+
+            .content-block,
+            .highlight-section,
+            .studio-section {
+                padding: 25px 15px;
+            }
+
+            .masthead-main {
+                font-size: 24px;
+                letter-spacing: 1px;
+            }
+
+            .masthead-top {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- ═══ MASTHEAD BANNER ═══ -->
+        <div class="header">
+            <img src="https://storage.googleapis.com/msgsndr/t19sOv208p64ldeUjJug/media/697996aad119a57c1575bb7d.png"
+                alt="Beyond the Bend Logo">
+            <div class="masthead-title">
+                <span class="masthead-top">Reflections from</span>
+                <span class="masthead-main">Beyond the Bend</span>
+            </div>
+        </div>
+
+        <!-- ═══ PERSONAL INTRO ═══ -->
+        <div class="content-block">
+            <p>Hi {{contact.first_name}},</p>
+            <p>I've been asked so many times: How do I start meditating at home?</p>
+            <p>And I get it. You know meditation would probably help. You've thought about it, maybe even tried it a few times. But then you sit down, close your eyes, and think... okay, now what? Do I just sit here? Try to clear my mind? Count my breaths? And within about ninety seconds your brain is making tomorrow's grocery list or replaying that conversation from last week, and you feel like you're doing it wrong.</p>
+            <p>Here's the truth: you're not doing it wrong. You just don't have a map yet.</p>
+            <p>That's why I want to share something with you this week that changed everything for me when I was learning to meditate. It's called RAIN, a practice developed by psychologist and meditation teacher Tara Brach.</p>
+            <p>RAIN isn't about emptying your mind or achieving some blissed out state. It's a gentle, structured way to actually be with yourself when you sit down to meditate. It gives you something to do. A way to meet whatever's here without trying to fix it, push it away, or pretend it's not happening.</p>
+            <p>And honestly? It's one of the most compassionate practices I know.</p>
+        </div>
+
+        <!-- ═══ WELLNESS WISDOM ═══ -->
+        <div class="highlight-section">
+            <h2>This Week's Wellness Wisdom</h2>
+
+            <!-- IMAGE — upload to GHL and replace this src URL -->
+            <img src="https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/69b5b136302795c458dc9808.jpg" alt="A calm, earthy, soft light image of warm meditation space" class="img-responsive">
+
+            <h3>The Four Steps of RAIN</h3>
+            <p><em>By Laura Harvey | Beyond the Bend Yoga</em></p>
+
+            <p>RAIN is an acronym that guides you through four steps. Each one is simple. Each one is kind. And together, they create a complete meditation practice you can do in five minutes or fifty.</p>
+            <p>Here's how it works:</p>
+
+            <p><strong>R – Recognize what is happening</strong></p>
+            <p>This is just noticing. What's here right now?</p>
+            <p>It sounds simple, but we skip this step constantly. We're so used to being in motion, reacting, fixing, managing, that we barely pause long enough to actually register what we're feeling. We just know something's off, and we're already trying to make it better.</p>
+            <p>Recognizing is different. It's stopping. Turning your attention inward. And naming what's actually present.</p>
+            <p>Maybe it's anxiety sitting in your chest. Maybe it's that familiar heaviness that shows up when you're overwhelmed. Maybe it's restlessness, or sadness, or irritation, or even just the relentless hum of a busy mind that won't settle.</p>
+            <p>You don't need fancy language for this. You're not diagnosing yourself. You're just acknowledging what's present.</p>
+            <p>And here's something subtle but important: there's a difference between saying <em>I am anxious</em> and saying <em>I feel anxiety</em>. One makes it who you are. The other makes it something you're experiencing.</p>
+            <p>When you say "I am angry," you're identifying with the anger. You become it. But when you say "I feel anger," there's space. There's you, and there's the feeling. They're not the same thing.</p>
+            <p>So when you recognize, you're naming what you feel, not labeling who you are. <em>I feel exhaustion. I feel anger. I feel fear.</em> You're witnessing an experience, not defining yourself by it.</p>
+            <p>And here's the important part: when you recognize, you just recognize. You don't attach to it. You don't try to fix it. You don't start spinning stories about why it's there or what it means or what you should do about it. You just notice it's there.</p>
+            <p>That's it. That's the whole step.</p>
+            <p>Sometimes just this act of naming creates a tiny bit of space between you and the feeling. You're no longer completely fused with it. You're witnessing it.</p>
+            <p>And that witnessing? That's where freedom starts.</p>
+
+            <p><strong>A – Allow the experience to be there, just as it is</strong></p>
+            <p>This might be the hardest step, because everything in us wants to fix, change, push away, or bypass what we don't like feeling.</p>
+            <p>We've been conditioned to solve. To make things better. To not wallow. To stay positive. And so when something uncomfortable arises, our first instinct is to shut it down, distract ourselves, or shame ourselves for feeling it in the first place.</p>
+            <p>Allowing is the opposite of all of that.</p>
+            <p>It's saying, <em>This feeling can be here. I'm not going to fight it right now. I'm not going to pretend it's not real. I'm just going to let it exist.</em></p>
+            <p>This doesn't mean you're saying it's okay. It doesn't mean you like it or want it to stay forever. It just means you're not adding resistance on top of the pain. You're not making it worse by going to war with yourself.</p>
+            <p>You're opening the door and saying, <em>You can sit here for a while. I see you.</em></p>
+            <p>And what happens when you stop resisting is remarkable. The feeling doesn't necessarily go away, but the suffering around it often does. Because so much of our pain comes not from the feeling itself, but from our refusal to let it be.</p>
+            <p>Allowing creates space. It softens the grip. It gives you room to breathe even when things are hard.</p>
+
+            <p><strong>I – Investigate with interest and care</strong></p>
+            <p>This is where the practice can get tricky, so I want to be really clear about what this step is not.</p>
+            <p>Investigation isn't analysis. It's not sitting there trying to figure out why you feel this way or where it came from or what it means. That's your mind doing what minds do: spinning, searching, trying to solve. And the moment you go there, you've left your body and you're back in your head, caught in the hamster wheel.</p>
+            <p>This kind of investigation is different. It's quieter. It's felt, not thought.</p>
+            <p>Tara is very clear about this in her teaching: the gateway to healing is opening to your embodied experience. Staying with the felt sense in your body instead of thinking about what's going on.</p>
+            <p>So you're asking gentle questions like: <em>What really wants my attention right now? Where do I feel this in my body?</em> And then you bring your attention to your throat, your chest, your belly. You feel into the sensations. Is it tight? Heavy? Hot? Pulling?</p>
+            <p>And then you just... stay with it. You let it be there without needing to understand it or name it or make it make sense.</p>
+            <p>Sometimes when I sit with something long enough without trying to figure it out, the knowing comes on its own. Not as a thought, but as a shift. A softening. A realization that arrives in my body, not my brain.</p>
+            <p>But if I go looking for answers with my intellect, if I start that loop of "what does this mean, where did this come from, why am I like this," I lose it completely. I'm back in the trance of thinking.</p>
+            <p>So investigation here means: Feel it. Stay with it. Let it speak to you in its own way, in its own time. Trust that your body knows things your mind hasn't figured out yet.</p>
+
+            <p><strong>N – Nurture with self-compassion</strong></p>
+            <p>This is the step people rush through or skip entirely because it can feel so awkward. Someone tells you to put your hand on your heart and whisper something kind to yourself, and you think, <em>Really? This is what healing looks like?</em></p>
+            <p>I get it. It can feel contrived. Like you're playacting at self love.</p>
+            <p>But here's the thing: nurturing isn't about the gesture itself. It's not about whether you say the right words or put your hand in the right place. It's about actually offering yourself something real.</p>
+            <p>This step is about asking the vulnerable part of you, <em>What do you need right now?</em> And then listening. Really listening. Not with your thinking mind, but with your whole body.</p>
+            <p>Does this part of you need to hear that it's not your fault? That you're not broken? That you're allowed to be tired, or scared, or overwhelmed? Does it need to know it's not alone? That someone sees it, even if that someone is you?</p>
+            <p>And then, however it feels true for you, you offer that. Maybe it is your hand on your heart. Maybe it's an exhale that softens your whole body. Maybe it's imagining yourself being held, or wrapped in warmth. Maybe it's just a quiet internal voice saying, <em>I'm here. I see you. You're okay.</em></p>
+            <p>What matters is that it's genuine. That you're not performing compassion, you're actually bringing it into your body. Letting yourself receive care, even if you're the one offering it.</p>
+            <p>This isn't positive thinking. It's not trying to convince yourself everything's fine when it's not. It's meeting the truth of your suffering and saying, <em>This is hard. And you deserve kindness anyway.</em></p>
+            <p>Sometimes this step brings tears. Sometimes it brings relief. Sometimes it just feels like a tiny crack of light in a dark room. All of that is okay.</p>
+            <p>You're learning to be with yourself the way you'd be with someone you truly love. Not fixing. Not rushing. Just... here.</p>
+
+            <br>
+            <p>Here's something I want you to know: every time you sit down to practice meditation, it doesn't have to be profound. It doesn't have to be a breakthrough or a big emotional release. Some days it will feel simple. Subtle. Some days it might honestly feel like nothing at all.</p>
+            <p>And that's okay. That's actually the practice.</p>
+            <p>Because what we're really doing here is learning to be fully present with ourselves. To actually care about the person we're sitting with. And that's something most of us never do. We distract ourselves. We keep busy. We put ourselves in positions where we don't have to look inward, where we can avoid this being, this essence of who we are beneath all the noise.</p>
+            <p>We don't take the time to even acknowledge that this exists. That we exist, beneath all the doing and thinking and proving.</p>
+            <p>So this practice isn't about fixing yourself or having some enlightenment moment every time you close your eyes. It's just a gentle welcoming. A quiet acknowledgment of who you really are. A few minutes where you're not running from yourself.</p>
+            <p>That's enough. That's actually everything.</p>
+        </div>
+
+        <!-- ═══ FROM THE STUDIO ═══ -->
+        <div class="studio-section">
+            <h2>From the Studio</h2>
+            <p>I'm so excited to share that Monday night Somatic Vinyasa is now full! It's been beautiful to watch this class come together, and I can't wait to practice with everyone starting in April.</p>
+            <p>There are still spots available in the other spring classes, and I would absolutely love to have you there:</p>
+
+            <!-- Class Schedule -->
+            <table width="100%" cellpadding="0" cellspacing="0"
+                style="margin: 20px 0; border-collapse: collapse; border-radius: 6px; overflow: hidden; border: 1px solid #d8e4d0;">
+                <tr class="class-row">
+                    <td
+                        style="padding: 12px 15px; border-bottom: 1px solid #d8e4d0; font-size: 15px; line-height: 1.6;">
+                        <span class="class-day">Tuesday mornings</span><br>
+                        Rise and Restore &middot; restorative and gentle flow
+                    </td>
+                </tr>
+                <tr class="class-row">
+                    <td
+                        style="padding: 12px 15px; border-bottom: 1px solid #d8e4d0; font-size: 15px; line-height: 1.6;">
+                        <span class="class-day">Tuesday evenings</span><br>
+                        Restore and Reclaim &middot; deep rest and nervous system support
+                    </td>
+                </tr>
+                <tr class="class-row">
+                    <td
+                        style="padding: 12px 15px; border-bottom: 1px solid #d8e4d0; font-size: 15px; line-height: 1.6;">
+                        <span class="class-day">Wednesday mornings</span><br>
+                        Somatic Hatha &middot; slow, grounded, mindful
+                    </td>
+                </tr>
+                <tr class="class-row">
+                    <td style="padding: 12px 15px; font-size: 15px; line-height: 1.6; background-color: #F0F4EE;">
+                        <span class="class-day">Wednesday evenings</span>
+                        <span class="new-badge">NEW</span><br>
+                        Embodied Flow &middot; somatic movement without mats, capped at 12
+                    </td>
+                </tr>
+            </table>
+
+            <p style="font-size: 15px;">All classes run for 11 weeks at Rising Moon Studio.</p>
+
+            <p style="font-size: 15px;">I know committing to 11 weeks can feel like a lot, especially when life is unpredictable. So here's what I want you to know: you always have the online option now. A lot of students last session took advantage of this, and it made all the difference. Anytime you know you're going to miss a class, you can make it up online at your own pace. Traveling? As long as you have Wi-Fi, you can still practice with us.</p>
+            
+            <p style="font-size: 15px;">I want to make this as easy as possible for you to show up for yourself this spring.</p>
+
+            <p style="text-align: center; margin: 30px 0;">
+                <a href="https://beyondthebendyoga.ca/classes" class="btn btn-sage">All the details and registration</a>
+            </p>
+        </div>
+
+        <!-- ═══ PRACTICE OF THE WEEK ═══ -->
+        <div class="content-block">
+            <div class="practice-section" style="border-radius: 4px; padding: 30px;">
+                <h2>Practice of the Week</h2>
+                <h3 style="margin-top: 8px;">Exploring RAIN</h3>
+                <p>You now have the tools. This week, let's explore what happens when you actually use them.</p>
+                <p>Find a quiet spot. Set a timer for five or ten minutes. Sit comfortably (couch, chair, cushion, whatever works). Close your eyes if that feels okay, or soften your gaze downward.</p>
+                <p>Then move through the four steps at your own pace:</p>
+                <p><strong>Recognize</strong> what's present. Name what you feel without attaching to it.</p>
+                <p><strong>Allow</strong> it to be here. No fixing, no pushing away.</p>
+                <p><strong>Investigate</strong> with your body, not your mind. Where do you feel this? What wants your attention?</p>
+                <p><strong>Nurture</strong> yourself. Offer whatever feels genuine and real.</p>
+                <p>Some days it will feel profound. Some days it will feel clunky. Some days you'll get distracted seventeen times. All of that is normal.</p>
+                <p>Try this two or three times this week and notice what shifts. You have everything you need to begin.</p>
+            </div>
+        </div>
+
+        <!-- ═══ CLOSING THOUGHT ═══ -->
+        <div class="content-block">
+            <h2>A Closing Thought</h2>
+            <p>Starting a meditation practice doesn't require perfection. It just requires showing up. Meeting yourself with kindness. Remembering that you're worth these few quiet minutes.</p>
+            <p>I'm grateful to Tara Brach for developing this practice and sharing it so generously. I hope RAIN gives you a way in. A structure gentle enough to hold you while you learn to hold yourself.</p>
+            <br>
+            <p>With warmth and gratitude,<br>Laura 🩷</p>
+        </div>
+
+        <!-- ═══ FOOTER ═══ -->
+        <div class="footer">
+            BEYOND THE BEND YOGA<br>
+            Rising Moon Studio &middot; Sherwood Park, AB<br><br>
+            <a href="{{unsubscribe_link}}">Unsubscribe</a>
+        </div>
+
+    </div>
+</body>
+
+</html>

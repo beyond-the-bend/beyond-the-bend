@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Classes | Beyond the Bend Yoga</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sage: #A8B5A2;
+            --deep-sage: #6B8063;
+            --darker-sage: #4d5f48;
+            --rosewood: #B06568;
+            --blush: #E8C4C4;
+            --blush-deep: #d4a0a3;
+            --sand: #E6D5C7;
+            --sand-dark: #cdb89e;
+            --text: #3a3a3a;
+            --light-text: #888;
+            --bg: #F9F7F5;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--white); /* The outer edges will be crisp white */
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .boxed-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: var(--bg); /* The inner page is the soft off-white background */
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 40px rgba(0,0,0,0.03);
+        }
+
+        /* ── SCROLL ANIMATIONS ── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.85s cubic-bezier(0.25,0.46,0.45,0.94), transform 0.85s cubic-bezier(0.25,0.46,0.45,0.94);
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .reveal-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.9s ease, transform 0.9s ease; }
+        .reveal-left.visible { opacity: 1; transform: translateX(0); }
+        .reveal-right { opacity: 0; transform: translateX(40px); transition: opacity 0.9s ease, transform 0.9s ease; }
+        .reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+        /* ══════════════════════════════════
+           HERO
+        ══════════════════════════════════ */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 650px;
+            overflow: hidden;
+        }
+
+        .hero-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 25%;
+            animation: heroZoom 14s ease forwards;
+        }
+
+        @keyframes heroZoom {
+            from { transform: scale(1.06); }
+            to   { transform: scale(1.0);  }
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                160deg,
+                rgba(30,42,28,0.1) 0%,
+                rgba(30,42,28,0.3) 50%,
+                rgba(30,42,28,0.75) 100%
+            );
+        }
+
+        /* big decorative circle top-right */
+        .hero-circle {
+            position: absolute;
+            top: -140px;
+            right: -140px;
+            width: 560px;
+            height: 560px;
+            border-radius: 50%;
+            border: 1px solid rgba(168,181,162,0.25);
+            pointer-events: none;
+            animation: fadeUp 1.5s 0.2s both;
+        }
+
+        .hero-circle-inner {
+            position: absolute;
+            top: 60px;
+            right: 60px;
+            width: 440px;
+            height: 440px;
+            border-radius: 50%;
+            border: 1px solid rgba(168,181,162,0.15);
+        }
+
+        .hero-inner {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            padding: 0 80px 80px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .hero-text { max-width: 650px; }
+
+        .hero-location {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            font-size: 0.8rem;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.65);
+            margin-bottom: 22px;
+            animation: fadeUp 1s 0.3s both;
+        }
+        .hero-location::before { content: ''; width: 50px; height: 1px; background: rgba(255,255,255,0.4); flex-shrink: 0; }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-style: italic;
+            font-size: 6rem;
+            color: var(--white);
+            line-height: 0.95;
+            margin-bottom: 26px;
+            letter-spacing: -0.02em;
+            animation: fadeUp 1s 0.5s both;
+        }
+
+        .hero-tagline {
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.85);
+            line-height: 1.7;
+            max-width: 440px;
+            animation: fadeUp 1s 0.7s both;
+        }
+
+        .hero-scroll {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.68rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            animation: fadeUp 1s 1s both;
+        }
+
+        .hero-scroll-line {
+            width: 1px;
+            height: 60px;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.5), transparent);
+            animation: scrollPulse 2.2s ease-in-out infinite;
+        }
+
+        @keyframes scrollPulse {
+            0%,100% { opacity:0.35; transform:scaleY(1); }
+            50%      { opacity:0.9;  transform:scaleY(1.1); }
+        }
+        @keyframes fadeUp {
+            from { opacity:0; transform:translateY(24px); }
+            to   { opacity:1; transform:translateY(0);    }
+        }
+
+        /* ══════════════════════════════════
+           TESTIMONIALS  — sage green
+        ══════════════════════════════════ */
+        .testimonials {
+            background: var(--darker-sage);
+            padding: 90px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* large decorative blobs */
+        .testimonials::before {
+            content: '';
+            position: absolute;
+            width: 500px; height: 500px;
+            border-radius: 50%;
+            background: rgba(168,181,162,0.08);
+            top: -200px; right: -150px;
+            pointer-events: none;
+        }
+        .testimonials::after {
+            content: '';
+            position: absolute;
+            width: 300px; height: 300px;
+            border-radius: 50%;
+            background: rgba(168,181,162,0.06);
+            bottom: -120px; left: -80px;
+            pointer-events: none;
+        }
+
+        .t-label {
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            font-size: 0.75rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 50px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            position: relative;
+        }
+        .t-label::after { content: ''; flex: 1; height: 1px; background: rgba(168,181,162,0.2); }
+
+        .t-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            position: relative;
+        }
+
+        .t-item {}
+
+        .t-quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.82);
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        .t-author {
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: var(--sage);
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .t-author::before { content: ''; width: 24px; height: 1px; background: var(--sage); opacity: 0.5; }
+
+        /* ══════════════════════════════════
+           INTRO  — split with colour panel
+        ══════════════════════════════════ */
+        .intro {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 620px;
+        }
+
+        .intro-text {
+            background: var(--white);
+            padding: 100px 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .eyebrow {
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+            font-size: 0.72rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--rosewood);
+            margin-bottom: 20px;
+        }
+
+        .intro-text h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-style: italic;
+            font-size: 3rem;
+            color: var(--deep-sage);
+            line-height: 1.2;
+            margin-bottom: 30px;
+        }
+
+        .intro-text p {
+            font-size: 1.05rem;
+            color: var(--text);
+            font-weight: 300;
+            line-height: 1.9;
+            margin-bottom: 18px;
+        }
+
+        .intro-closing {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            color: var(--sage);
+            line-height: 1.7;
+            margin-top: 10px;
+            padding-top: 24px;
+            border-top: 1px solid var(--sand);
+        }
+
+        .intro-image {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .intro-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 7s ease;
+        }
+        .intro-image:hover img { transform: scale(1.04); }
+
+        /* ══════════════════════════════════
+           SESSION BANNER  — blush with shapes
+        ══════════════════════════════════ */
+        .session-banner {
+            background: var(--blush);
+            padding: 70px 80px;
+            position: relative;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+        }
+
+        /* decorative circles */
+        .session-banner::before {
+            content: '';
+            position: absolute;
+            width: 500px; height: 500px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            top: -200px; right: -100px;
+            pointer-events: none;
+        }
+        .session-banner::after {
+            content: '';
+            position: absolute;
+            width: 280px; height: 280px;
+            border-radius: 50%;
+            background: rgba(176,101,104,0.12);
+            bottom: -120px; left: 120px;
+            pointer-events: none;
+        }
+
+        .s-left { position: relative; }
+
+        .s-left h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-size: 2.4rem;
+            color: var(--deep-sage);
+            margin-bottom: 10px;
+        }
+
+        .s-left p {
+            font-weight: 300;
+            font-size: 1rem;
+            color: var(--deep-sage);
+            opacity: 0.75;
+            line-height: 1.7;
+        }
+
+        .s-divider {
+            width: 1px;
+            height: 90px;
+            background: rgba(107,128,99,0.3);
+            margin: 0 70px;
+            position: relative;
+        }
+
+        .s-right {
+            text-align: right;
+            position: relative;
+        }
+
+        .s-right .price-label {
+            font-size: 0.72rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--deep-sage);
+            opacity: 0.6;
+            font-weight: 300;
+            margin-bottom: 8px;
+        }
+
+        .s-right .price-main {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-style: italic;
+            font-size: 2.8rem;
+            color: var(--deep-sage);
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .s-right .price-sub {
+            font-size: 0.92rem;
+            font-weight: 300;
+            color: var(--deep-sage);
+            opacity: 0.65;
+        }
+
+        /* ══════════════════════════════════
+           SCHEDULE  — sage bg with flair
+        ══════════════════════════════════ */
+        .schedule-section {
+            background: var(--bg);
+            padding: 100px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* big circle watermark */
+        .schedule-section::before {
+            content: '';
+            position: absolute;
+            width: 700px; height: 700px;
+            border-radius: 50%;
+            border: 1px solid rgba(168,181,162,0.15);
+            top: -200px; right: -200px;
+            pointer-events: none;
+        }
+
+        .schedule-inner { max-width: 1060px; margin: 0 auto; position: relative; }
+
+        .section-hdr {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            margin-bottom: 60px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--sand);
+        }
+
+        .section-hdr h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-size: 2.8rem;
+            color: var(--deep-sage);
+        }
+
+        .section-hdr p {
+            font-size: 0.9rem;
+            font-weight: 300;
+            color: var(--light-text);
+            text-align: right;
+            line-height: 1.7;
+        }
+
+        .sched-row {
+            display: grid;
+            grid-template-columns: 170px 1fr 210px;
+            padding: 26px 0;
+            border-bottom: 1px solid rgba(230,213,199,0.6);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .sched-row::before {
+            content: '';
+            position: absolute;
+            left: -80px; right: -80px;
+            top: 0; bottom: 0;
+            background: var(--white);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 0;
+            border-radius: 2px;
+        }
+        .sched-row:hover::before { opacity: 1; }
+        .sched-row > * { position: relative; z-index: 1; }
+
+        .sched-day {
+            font-size: 0.72rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--rosewood);
+            font-weight: 400;
+            padding-top: 6px;
+        }
+
+        .sched-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            font-size: 1.5rem;
+            color: var(--deep-sage);
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sched-desc {
+            font-size: 0.95rem;
+            font-weight: 300;
+            color: var(--light-text);
+        }
+
+        .sched-time {
+            text-align: right;
+            font-size: 1rem;
+            font-weight: 300;
+            color: var(--light-text);
+            padding-top: 6px;
+        }
+
+        .new-pill {
+            display: inline-flex;
+            align-items: center;
+            background: var(--rosewood);
+            color: white;
+            font-family: 'Lato', sans-serif;
+            font-size: 0.58rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            padding: 3px 9px;
+            border-radius: 20px;
+            font-weight: 400;
+        }
+
+        /* ══════════════════════════════════
+           CTA  — blush with big circles (the favourite!)
+        ══════════════════════════════════ */
+        .cta-main {
+            background: var(--blush);
+            padding: 130px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-main .circle-1 {
+            position: absolute;
+            width: 700px; height: 700px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.28);
+            top: -280px; right: -160px;
+            pointer-events: none;
+        }
+        .cta-main .circle-2 {
+            position: absolute;
+            width: 450px; height: 450px;
+            border-radius: 50%;
+            background: rgba(176,101,104,0.12);
+            bottom: -180px; left: -80px;
+            pointer-events: none;
+        }
+        .cta-main .circle-3 {
+            position: absolute;
+            width: 200px; height: 200px;
+            border-radius: 50%;
+            border: 1px solid rgba(107,128,99,0.2);
+            top: 60px; left: 80px;
+            pointer-events: none;
+        }
+        .cta-main .circle-4 {
+            position: absolute;
+            width: 120px; height: 120px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.35);
+            bottom: 60px; right: 140px;
+            pointer-events: none;
+        }
+
+        .cta-main h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-style: italic;
+            font-size: 4rem;
+            color: var(--deep-sage);
+            margin-bottom: 20px;
+            position: relative;
+            line-height: 1.1;
+        }
+
+        .cta-main p {
+            font-weight: 300;
+            font-size: 1.2rem;
+            color: var(--deep-sage);
+            max-width: 460px;
+            margin: 0 auto 44px;
+            position: relative;
+            opacity: 0.85;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 20px 60px;
+            background: var(--deep-sage);
+            color: var(--white);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            text-decoration: none;
+            letter-spacing: 0.04em;
+            transition: all 0.3s ease;
+            position: relative;
+            box-shadow: 0 6px 30px rgba(107,128,99,0.35);
+        }
+        .btn-primary:hover {
+            background: var(--darker-sage);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(107,128,99,0.45);
+        }
+
+        .cta-sub {
+            display: block;
+            margin-top: 22px;
+            font-size: 0.9rem;
+            font-weight: 300;
+            color: var(--deep-sage);
+            text-decoration: none;
+            opacity: 0.6;
+            letter-spacing: 0.05em;
+            transition: opacity 0.2s;
+            position: relative;
+        }
+        .cta-sub:hover { opacity: 1; }
+
+        /* ══════════════════════════════════
+           CLASS DETAILS  — alternating coloured panels
+        ══════════════════════════════════ */
+        .classes-section {
+            background: var(--white);
+        }
+
+        .classes-header {
+            text-align: center;
+            padding: 100px 80px 70px;
+            background: var(--white);
+        }
+
+        .classes-header h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-size: 3rem;
+            color: var(--deep-sage);
+            margin-top: 12px;
+        }
+
+        .class-entry {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 560px;
+        }
+
+        /* alternating image position */
+        .class-entry:nth-child(even) .class-img-wrap { order: 2; }
+        .class-entry:nth-child(even) .class-content   { order: 1; }
+
+        /* alternating background colours */
+        .class-entry:nth-child(1) .class-content { background: var(--bg); }
+        .class-entry:nth-child(2) .class-content { background: var(--sand); }
+        .class-entry:nth-child(3) .class-content { background: var(--blush); }
+        .class-entry:nth-child(4) .class-content { background: #dde5db; }
+        .class-entry:nth-child(5) .class-content { background: var(--deeper-rose, #e2b8ba); }
+
+        .class-img-wrap {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .class-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 7s ease;
+        }
+        .class-entry:hover .class-img-wrap img { transform: scale(1.04); }
+
+        /* colour accent bar at top of each content panel */
+        .class-content {
+            padding: 70px 70px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* decorative circle in each content panel */
+        .class-content::after {
+            content: '';
+            position: absolute;
+            width: 350px; height: 350px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.25);
+            bottom: -140px; right: -100px;
+            pointer-events: none;
+        }
+
+        .class-entry:nth-child(even) .class-content::after {
+            bottom: -140px; right: auto; left: -100px;
+        }
+
+        .class-entry-tag {
+            font-size: 0.7rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--deep-sage);
+            margin-bottom: 16px;
+            font-weight: 400;
+            opacity: 0.75;
+            position: relative;
+        }
+
+        .class-entry-tag.is-new { color: var(--rosewood); opacity: 1; }
+
+        .class-content h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-size: 2.8rem;
+            color: var(--deep-sage);
+            line-height: 1.05;
+            margin-bottom: 14px;
+            position: relative;
+        }
+
+        .class-entry-meta {
+            font-size: 0.9rem;
+            font-weight: 300;
+            color: var(--deep-sage);
+            opacity: 0.7;
+            line-height: 1.8;
+            margin-bottom: 28px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid rgba(107,128,99,0.2);
+            position: relative;
+        }
+        .class-entry-meta strong { font-weight: 400; opacity: 1; }
+
+        .class-entry-body { position: relative; }
+
+        .class-entry-body p {
+            font-weight: 300;
+            font-size: 1.05rem;
+            color: var(--text);
+            line-height: 1.9;
+            margin-bottom: 16px;
+        }
+
+        .class-entry-note {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--deep-sage);
+            opacity: 0.8;
+            margin-top: 8px;
+        }
+
+        /* ══════════════════════════════════
+           SAGE COLOUR BREAK
+        ══════════════════════════════════ */
+        .colour-break {
+            background: var(--sage);
+            padding: 80px 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .colour-break::before {
+            content: '';
+            position: absolute;
+            width: 500px; height: 500px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.15);
+            top: -200px; right: -100px;
+            pointer-events: none;
+        }
+
+        .colour-break::after {
+            content: '';
+            position: absolute;
+            width: 250px; height: 250px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            bottom: -120px; left: 200px;
+            pointer-events: none;
+        }
+
+        .colour-break h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-style: italic;
+            font-size: 2.2rem;
+            color: var(--white);
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .colour-break p {
+            font-weight: 300;
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.8);
+            max-width: 500px;
+            position: relative;
+        }
+
+        .btn-outline-white {
+            display: inline-block;
+            padding: 16px 44px;
+            border: 1px solid rgba(255,255,255,0.7);
+            color: var(--white);
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.15rem;
+            text-decoration: none;
+            white-space: nowrap;
+            flex-shrink: 0;
+            transition: all 0.25s ease;
+            position: relative;
+        }
+        .btn-outline-white:hover { background: rgba(255,255,255,0.2); }
+
+        /* ══════════════════════════════════
+           BOTTOM CTA  — dark sage
+        ══════════════════════════════════ */
+        .cta-bottom {
+            background: var(--darker-sage);
+            padding: 130px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-bottom .bc-1 {
+            position: absolute;
+            width: 600px; height: 600px;
+            border-radius: 50%;
+            background: rgba(168,181,162,0.1);
+            top: -250px; left: -150px;
+            pointer-events: none;
+        }
+        .cta-bottom .bc-2 {
+            position: absolute;
+            width: 400px; height: 400px;
+            border-radius: 50%;
+            background: rgba(168,181,162,0.07);
+            bottom: -170px; right: -100px;
+            pointer-events: none;
+        }
+        .cta-bottom .bc-3 {
+            position: absolute;
+            width: 180px; height: 180px;
+            border-radius: 50%;
+            border: 1px solid rgba(168,181,162,0.2);
+            top: 60px; right: 120px;
+            pointer-events: none;
+        }
+
+        /* big ghost word */
+        .cta-bottom::before {
+            content: 'Spring';
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 22rem;
+            color: rgba(255,255,255,0.025);
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            white-space: nowrap;
+            pointer-events: none;
+            line-height: 1;
+        }
+
+        .cta-bottom h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-style: italic;
+            font-size: 4rem;
+            color: var(--white);
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .cta-bottom p {
+            font-weight: 300;
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 44px;
+            position: relative;
+        }
+
+        .btn-light {
+            display: inline-block;
+            padding: 20px 60px;
+            background: var(--white);
+            color: var(--deep-sage);
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            box-shadow: 0 6px 30px rgba(0,0,0,0.2);
+        }
+        .btn-light:hover {
+            background: var(--sand);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+        }
+
+        /* ── HEADER NAVIGATION ── */
+        .main-header {
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 2000;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 60px;
+        }
+
+        .logo-link {
+            font-size: 24px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .nav-desktop {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-desktop li a {
+            font-family: 'Lato', sans-serif;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        /* ══════════════════════════════════
+           MOBILE
+        ══════════════════════════════════ */
+        @media (max-width: 900px) {
+            .hero h1 { font-size: 3.8rem; }
+            .hero-inner { padding: 0 30px 50px; flex-direction: column; align-items: flex-start; }
+            .hero-scroll { display: none; }
+            .testimonials { padding: 60px 30px; }
+            .t-grid { grid-template-columns: 1fr; gap: 30px; }
+            .intro { grid-template-columns: 1fr; }
+            .intro-image { height: 380px; }
+            .intro-text { padding: 70px 30px; }
+            .session-banner { grid-template-columns: 1fr; padding: 50px 30px; gap: 20px; }
+            .s-divider { display: none; }
+            .s-right { text-align: left; }
+            .schedule-section { padding: 70px 30px; }
+            .section-hdr { flex-direction: column; gap: 10px; }
+            .section-hdr p { text-align: left; }
+            .sched-row { grid-template-columns: 1fr; gap: 5px; }
+            .sched-time { text-align: left; }
+            .sched-row::before { left: -30px; right: -30px; }
+            .cta-main, .cta-bottom { padding: 80px 30px; }
+            .cta-main h2, .cta-bottom h2 { font-size: 2.8rem; }
+            .classes-header { padding: 70px 30px 50px; }
+            .class-entry { grid-template-columns: 1fr; min-height: auto; }
+            .class-entry:nth-child(even) .class-img-wrap { order: 0; }
+            .class-entry:nth-child(even) .class-content  { order: 0; }
+            .class-img-wrap { height: 320px; }
+            .class-content { padding: 50px 30px; }
+            .class-content h3 { font-size: 2.2rem; }
+            .colour-break { flex-direction: column; padding: 60px 30px; gap: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="boxed-wrapper">
+
+<!-- ══ HERO ══ -->
+<div class="hero">
+    <img class="hero-img"
+        src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/6930bba04d01f38687aa400c.jpg"
+        alt="Rising Moon Studio">
+    <div class="hero-overlay"></div>
+    <div class="hero-circle"><div class="hero-circle-inner"></div></div>
+    <div class="hero-inner">
+        <div class="hero-text">
+            <p class="hero-location">Rising Moon Studio &nbsp;·&nbsp; Sherwood Park, Alberta</p>
+            <h1>Studio<br>Classes</h1>
+            <p class="hero-tagline">A sanctuary for women ready to come home to themselves.</p>
+        </div>
+        <div class="hero-scroll">
+            <div class="hero-scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+    </div>
+</div>
+
+<!-- ══ TESTIMONIALS ══ -->
+<div class="testimonials">
+    <p class="t-label reveal">What students are saying</p>
+    <div class="t-grid">
+        <div class="t-item reveal">
+            <p class="t-quote">When I started practicing with Laura, I was still dealing with a serious shoulder injury from a ski accident. Through her gentle, mindful approach to movement, my shoulder fully healed, something I honestly did not think was possible. I am so grateful for her guidance.</p>
+            <p class="t-author">Lorna &nbsp;·&nbsp; Yoga Student</p>
+        </div>
+        <div class="t-item reveal" style="transition-delay:0.15s">
+            <p class="t-quote">Laura's restorative yoga sessions are wonderful and leave me feeling relaxed, refreshed and ready to take on my hectic week. Her sessions also have a personal touch that make the class feel like a community.</p>
+            <p class="t-author">Rachel &nbsp;·&nbsp; Yoga Student</p>
+        </div>
+        <div class="t-item reveal" style="transition-delay:0.3s">
+            <p class="t-quote">Laura's gentle approach, soothing voice and non-judgmental presence provides the perfect invitation into restorative work. Her knowledge and experience are evident as she guides you through poses and processes that will open you to healing.</p>
+            <p class="t-author">Maureen &nbsp;·&nbsp; Online Yoga Student</p>
+        </div>
+    </div>
+</div>
+
+<!-- ══ INTRO ══ -->
+<div class="intro">
+    <div class="intro-text reveal-left">
+        <p class="eyebrow">Spring 2026 &nbsp;·&nbsp; Sherwood Park</p>
+        <h2>You already know<br>how to come back<br>to yourself.</h2>
+        <p>These classes are not about working harder or bending yourself into shapes that do not fit anymore. They are about remembering what it feels like to breathe deeply, move gently, and reconnect with the part of you that knows exactly what you need.</p>
+        <p>Each class blends mindfulness, restorative movement, and heartfelt guidance to support your whole self: body, mind, and spirit.</p>
+        <p class="intro-closing">No flexibility required. No pretzels. No perfection.<br>Just presence, breath, and permission to soften.</p>
+    </div>
+    <div class="intro-image reveal-right">
+        <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/6932150381eaa194a5889805.jpg"
+            alt="Rising Moon Studio interior">
+    </div>
+</div>
+
+<!-- ══ SESSION BANNER ══ -->
+<div class="session-banner reveal">
+    <div class="s-left">
+        <h2>Spring Session 2026</h2>
+        <p>April 6 to June 24 &nbsp;·&nbsp; 11 consecutive weeks<br>Rising Moon Studio &nbsp;·&nbsp; 52219 Range Road 231, Sherwood Park</p>
+    </div>
+    <div class="s-divider"></div>
+    <div class="s-right">
+        <p class="price-label">Session Investment</p>
+        <p class="price-main">$187 + GST</p>
+        <p class="price-sub">$17 per class &nbsp;·&nbsp; $20 drop-in</p>
+    </div>
+</div>
+
+<!-- ══ SCHEDULE ══ -->
+<div class="schedule-section">
+    <div class="schedule-inner">
+        <div class="section-hdr reveal">
+            <h2>Spring Schedule</h2>
+            <p>All classes at Rising Moon Studio<br>Sherwood Park, Alberta</p>
+        </div>
+
+        <div class="sched-row reveal">
+            <div class="sched-day">Monday</div>
+            <div>
+                <div class="sched-name">Somatic Vinyasa &nbsp;<span class="new-pill" style="background:var(--text)">Full</span></div>
+                <div class="sched-desc">Breath-led mindful flow for release and embodied awareness</div>
+            </div>
+            <div class="sched-time">6:00 – 7:15 PM</div>
+        </div>
+
+        <div class="sched-row reveal">
+            <div class="sched-day">Tuesday AM</div>
+            <div>
+                <div class="sched-name">Rise and Restore</div>
+                <div class="sched-desc">Restorative yoga for a gentle, grounded start to your day</div>
+            </div>
+            <div class="sched-time">10:00 – 11:15 AM</div>
+        </div>
+
+        <div class="sched-row reveal">
+            <div class="sched-day">Tuesday PM</div>
+            <div>
+                <div class="sched-name">Restore and Reclaim</div>
+                <div class="sched-desc">Deep restorative yoga for nervous system recovery and rest</div>
+            </div>
+            <div class="sched-time">6:00 – 7:15 PM</div>
+        </div>
+
+        <div class="sched-row reveal">
+            <div class="sched-day">Wednesday AM</div>
+            <div>
+                <div class="sched-name">Somatic Hatha</div>
+                <div class="sched-desc">Flow, organic movement, and restorative stillness woven together</div>
+            </div>
+            <div class="sched-time">10:00 – 11:15 AM</div>
+        </div>
+
+        <div class="sched-row reveal">
+            <div class="sched-day">Wednesday PM</div>
+            <div>
+                <div class="sched-name">Embodied Flow &nbsp;<span class="new-pill">New</span></div>
+                <div class="sched-desc">No mat, no props. Just you, the ground, and movement that is entirely yours. Limited to 12 spots.</div>
+            </div>
+            <div class="sched-time">5:30 – 6:30 PM</div>
+        </div>
+    </div>
+</div>
+
+<!-- ══ CTA ══ -->
+<div class="cta-main">
+    <div class="circle-1"></div>
+    <div class="circle-2"></div>
+    <div class="circle-3"></div>
+    <div class="circle-4"></div>
+    <h2 class="reveal">Ready to join us<br>this spring?</h2>
+    <p class="reveal">Register for one class or all of them.<br>Your spot is waiting.</p>
+    <div class="reveal" style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap; align-items:center;">
+        <a href="https://link.fromleadstosales.com/widget/form/uCQdXMvU2xhHaGUwun89" class="btn-primary">Pay by E-Transfer</a>
+        <a href="https://link.fromleadstosales.com/widget/form/36Jeq3Ji5gCr6npGZAyL" class="btn-primary">Pay by Credit Card</a>
+    </div>
+    <a href="https://beyondthebendyoga.ca/livestream-yoga" class="cta-sub">Prefer to practice from home? View virtual options</a>
+</div>
+
+<!-- ══ CLASS DETAILS ══ -->
+<div class="classes-section">
+    <div class="classes-header reveal">
+        <p class="eyebrow">About Each Class</p>
+        <h2>Find the practice that calls to you</h2>
+    </div>
+
+    <!-- Somatic Vinyasa -->
+    <div class="class-entry">
+        <div class="class-img-wrap reveal-left">
+            <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/68d7183f6af2d8756d3897d5.png" alt="Somatic Vinyasa">
+        </div>
+        <div class="class-content reveal-right">
+            <p class="class-entry-tag">Mindful Movement &nbsp;<span class="new-pill" style="background:var(--text)">Spring Session Full</span></p>
+            <h3>Somatic<br>Vinyasa</h3>
+            <div class="class-entry-meta">
+                <strong>Mondays</strong> &nbsp;·&nbsp; 6:00 to 7:15 PM<br>
+                April 7 to June 23, 2026 &nbsp;·&nbsp; Rising Moon Studio
+            </div>
+            <div class="class-entry-body">
+                <p>This is not about doing more. It is about noticing more.</p>
+                <p>No pressure. No pretzels. Just movement that feels good in a real body on a real day. We move slow. We breathe deep. We actually pay attention to how things feel.</p>
+                <p class="class-entry-note">No yoga experience needed. No need to touch your toes. Just bring yourself.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rise and Restore -->
+    <div class="class-entry">
+        <div class="class-img-wrap reveal-right">
+            <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/687dc6268b576378e82a21f4.png" alt="Rise and Restore">
+        </div>
+        <div class="class-content reveal-left">
+            <p class="class-entry-tag">Restorative</p>
+            <h3>Rise and<br>Restore</h3>
+            <div class="class-entry-meta">
+                <strong>Tuesdays</strong> &nbsp;·&nbsp; 10:00 to 11:15 AM<br>
+                April 8 to June 24, 2026 &nbsp;·&nbsp; Rising Moon Studio
+            </div>
+            <div class="class-entry-body">
+                <p>Begin your day with calm and renewal.</p>
+                <p>Rise and Restore is designed to bring ease, stillness, and renewal into your morning. Natural light streaming in, nature all around, and a truly special space to breathe deeply and gently prepare for your day.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Restore and Reclaim -->
+    <div class="class-entry">
+        <div class="class-img-wrap reveal-left">
+            <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/68cdb01199621f0a24bcc9ca.png" alt="Restore and Reclaim">
+        </div>
+        <div class="class-content reveal-right">
+            <p class="class-entry-tag">Deep Rest</p>
+            <h3>Restore and<br>Reclaim</h3>
+            <div class="class-entry-meta">
+                <strong>Tuesdays</strong> &nbsp;·&nbsp; 6:00 to 7:15 PM<br>
+                April 8 to June 24, 2026 &nbsp;·&nbsp; Rising Moon Studio
+            </div>
+            <div class="class-entry-body">
+                <p>Come melt.</p>
+                <p>This 75-minute class is your permission slip to slow all the way down. Long-held, fully supported poses, gentle breathwork, and a space that feels like a deep exhale.</p>
+                <p class="class-entry-note">No flexibility required. Pajamas welcome.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Somatic Hatha -->
+    <div class="class-entry">
+        <div class="class-img-wrap reveal-right">
+            <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/68505662bd2be424baaeaf36.png" alt="Somatic Hatha">
+        </div>
+        <div class="class-content reveal-left">
+            <p class="class-entry-tag">Flow and Restore</p>
+            <h3>Somatic<br>Hatha</h3>
+            <div class="class-entry-meta">
+                <strong>Wednesdays</strong> &nbsp;·&nbsp; 10:00 to 11:15 AM<br>
+                April 9 to June 25, 2026 &nbsp;·&nbsp; Rising Moon Studio
+            </div>
+            <div class="class-entry-body">
+                <p>Somatic Hatha weaves together grounded yoga flow, organic movement, and supported restorative postures into a practice that feels both nourishing and alive.</p>
+                <p class="class-entry-note">No two classes are exactly the same, but every class will leave you feeling more at home in yourself.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Embodied Flow -->
+    <div class="class-entry">
+        <div class="class-img-wrap reveal-left">
+            <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/69aa2073c1e328b31bcf2e5e.jpg" alt="Rising Moon Studio">
+        </div>
+        <div class="class-content reveal-right">
+            <p class="class-entry-tag is-new">New This Spring &nbsp;·&nbsp; Limited to 12 Spots</p>
+            <h3>Embodied<br>Flow</h3>
+            <div class="class-entry-meta">
+                <strong>Wednesdays</strong> &nbsp;·&nbsp; 5:30 to 6:30 PM<br>
+                April 9 to June 25, 2026 &nbsp;·&nbsp; Rising Moon Studio
+            </div>
+            <div class="class-entry-body">
+                <p>Just you, the ground, and an hour of movement that belongs entirely to you.</p>
+                <p>No mat, no props, no choreography, no performance. We simply show up, tune in, and let the body lead.</p>
+                <p class="class-entry-note">Wear comfortable clothes you can move freely in. Long sleeves and layers recommended.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- ══ SAGE COLOUR BREAK ══ -->
+<div class="colour-break reveal">
+    <div>
+        <h3>Prefer to practice from home?</h3>
+        <p>A full virtual option is available at the same time as every in-person class. Join the community from wherever you are in the world.</p>
+    </div>
+    <a href="https://beyondthebendyoga.ca/livestream-yoga" class="btn-outline-white">View Live Stream Options</a>
+</div>
+
+<!-- ══ BOTTOM CTA ══ -->
+<div class="cta-bottom">
+    <div class="bc-1"></div>
+    <div class="bc-2"></div>
+    <div class="bc-3"></div>
+    <h2 class="reveal">Your space is waiting.</h2>
+    <p class="reveal">Spring session begins the week of April 6th. Spots are limited.</p>
+    <div class="reveal" style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap; align-items:center;">
+        <a href="https://link.fromleadstosales.com/widget/form/uCQdXMvU2xhHaGUwun89" class="btn-light">Pay by E-Transfer</a>
+        <a href="https://link.fromleadstosales.com/widget/form/36Jeq3Ji5gCr6npGZAyL" class="btn-light">Pay by Credit Card</a>
+    </div>
+</div>
+
+</div> <!-- End of boxed-wrapper -->
+
+
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

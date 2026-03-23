@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course | A Quiet Return</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+        :root {
+            /* Using the beautiful colors from the original Sales/Ad page */
+            --bg-content: #ffffff;
+            --text-main: #4a4a4a;
+            --text-dark: #3F4A3C;
+            --accent-green: #6B8063; /* The softer sales page green */
+            --accent-light: #f7f4ef;
+            --accent-sage: #A8B5A2;
+            --accent-rose: #cbb4af;
+            --border-light: #e8ddd4;
+        }
+
+        body {
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            /* The gorgeously calm gradient from the sales page */
+            background: linear-gradient(135deg, #f0f4ee 0%, #e8ddd4 50%, #e8c4c4 100%);
+            background-attachment: fixed;
+            color: var(--text-main);
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ═══ MASTHEAD & PROGRESS ═══ */
+        .masthead {
+            background-color: var(--bg-content);
+            padding: 40px 20px 20px;
+            text-align: center;
+            border-bottom: 2px solid var(--border-light);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text-dark);
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .progress-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .progress-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #e0e0e0;
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        .progress-dot.active {
+            background-color: var(--accent-green);
+            transform: scale(1.3);
+        }
+        
+        .progress-dot.completed {
+            background-color: var(--accent-sage);
+        }
+
+        .progress-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-sage);
+            margin-top: 10px;
+            display: block;
+        }
+
+        /* ═══ MAIN READING CONTAINER ═══ */
+        .course-container {
+            /* The narrow newsletter column */
+            max-width: 680px;
+            margin: 60px auto 100px;
+            background-color: var(--bg-content);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            min-height: 600px;
+        }
+
+        /* ═══ LESSON SECTIONS ═══ */
+        .lesson-section {
+            padding: 60px 50px;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.6s ease;
+        }
+
+        .lesson-section.active {
+            display: block;
+            opacity: 1;
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Typography inside lessons */
+        h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text-dark);
+            font-size: 32px;
+            font-weight: 600;
+            margin: 0 0 30px 0;
+            line-height: 1.3;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--accent-green);
+            font-size: 22px;
+            font-weight: 600;
+            margin: 40px 0 15px 0;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--accent-sage);
+            font-size: 18px;
+            font-weight: 400;
+            font-style: italic;
+            margin: 0 0 10px 0;
+        }
+
+        p { margin-bottom: 20px; font-size: 17px; }
+        
+        strong { color: var(--text-dark); font-weight: 700; }
+        em { font-style: italic; color: var(--accent-green); }
+
+        /* Quotes & Breakouts */
+        .quote-block {
+            background-color: var(--accent-light);
+            border-left: 3px solid var(--accent-sage);
+            padding: 25px 30px;
+            margin: 35px 0;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 19px;
+            font-style: italic;
+            color: var(--text-dark);
+        }
+
+        /* Elements */
+        .hero-image {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .media-player-box {
+            background-color: var(--accent-light);
+            border: 1px solid var(--border-light);
+            border-radius: 6px;
+            padding: 35px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .media-player-box .label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-sage);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        audio, video { width: 100%; outline: none; border-radius: 4px; }
+        audio::-webkit-media-controls-enclosure { background-color: var(--bg-content); }
+        video { background: #000; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+
+        /* The Companion Guide Download Box */
+        .pdf-box {
+            background-color: var(--accent-light);
+            border-radius: 6px;
+            padding: 40px 30px;
+            text-align: center;
+            margin: 40px 0;
+            border-top: 3px solid var(--accent-sage);
+        }
+
+        .btn-download {
+            display: inline-block;
+            padding: 14px 35px;
+            background-color: var(--accent-green);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 16px;
+            letter-spacing: 1px;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+        .btn-download:hover { background-color: #556b2f; }
+
+        /* Navigation Buttons */
+        .lesson-nav {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-light);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn-nav {
+            background: none;
+            border: none;
+            color: var(--accent-sage);
+            font-family: 'Lato', sans-serif;
+            font-size: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-nav:hover { color: var(--accent-green); }
+        .btn-nav.disabled { opacity: 0; pointer-events: none; }
+
+        .btn-primary {
+            background-color: var(--accent-green);
+            color: white;
+            padding: 16px 40px;
+            border-radius: 4px; /* Squared off like the sales page buttons */
+            border: none;
+            font-family: 'Lato', sans-serif;
+            font-size: 16px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .btn-primary:hover { background-color: #556b2f; }
+
+        /* Footer */
+        .course-footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 12px;
+            color: var(--text-dark);
+            letter-spacing: 1px;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 600px) {
+            .lesson-section { padding: 40px 25px; }
+            h1 { font-size: 28px; }
+            .course-container { margin: 20px 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ═══ HEADER & PROGRESS ═══ -->
+    <header class="masthead">
+        <div class="masthead-title">A Quiet Return</div>
+        <div class="progress-container" id="progress-dots">
+            <!-- Dots generated by JS -->
+        </div>
+        <span class="progress-label" id="progress-text">Part 1 of 5</span>
+    </header>
+
+    <!-- ═══ READING CONTAINER ═══ -->
+    <div class="course-container" id="course-container">
+        
+        <!-- MODULE 1: WELCOME -->
+        <div class="lesson-section" id="lesson-1">
+            <img src="assets/A%20Quiet%20Return%20Thumbnail.png" class="hero-image" alt="A Quiet Return">
+            <h1>Welcome. I'm glad you're here.</h1>
+            
+            <p>We spend so much of our lives rushing ahead, anticipating the next crisis, the next need, the next item on the list. We get so good at projecting our energy outward that we sometimes forget how to call it back.</p>
+            
+            <p>This is not a course to complete or move through quickly. It's a small, contained experience designed to be taken slowly and lived with.</p>
+            
+            <p>Inside this space you'll find a companion guide that forms an essential part of this journey, three guided audio meditations offered as embodied reflections, and an invitation to allow space between each one so the experience can integrate and settle.</p>
+            
+            <div class="quote-block">
+                This isn't another thing you have to "do." There is no grade here. There is no right way to feel. And most importantly, there is nothing you need to produce or achieve.
+            </div>
+            
+            <p>Think of "A Quiet Return" as a permission slip: permission to stop managing everyone else's experience and simply inhabit your own for a little while.</p>
+            
+            <div class="pdf-box">
+                <h2 style="margin: 0 0 10px 0;">Your Companion Guide</h2>
+                <p style="font-size: 15px; margin-bottom: 0;">It offers context for what you're about to move through and helps create the conditions for the experience to land more gently. Download it before you begin.</p>
+                <a href="assets/A%20Quiet%20Return%20-%20Guided%20Reflections.pdf" download class="btn-download">Download PDF Guide</a>
+            </div>
+            
+            <p>When you do move into the reflections, allow yourself to take just one at a time. There's no benefit to rushing. What matters here is not momentum, but presence.</p>
+            <p>Begin when you're ready.</p>
+
+            <div class="lesson-nav">
+                <button class="btn-nav disabled">← Previous</button>
+                <button class="btn-primary" onclick="goToLesson(2)">Begin Reflection 1 →</button>
+            </div>
+        </div>
+
+        <!-- MODULE 2: REFLECTION 1 -->
+        <div class="lesson-section" id="lesson-2">
+            <img src="assets/Thumbnail%20for%20Meditation%201.png" class="hero-image" alt="Meditation 1">
+            <h3>Reflection 1</h3>
+            <h1>Where am I leaving myself?</h1>
+            
+            <p>If you feel exhausted, it isn't always because you have done too much physical work. Often it is because you are existing in a dozen places at once.</p>
+            
+            <p>Part of you is at the office worrying about an email. Part of you is with your children or aging parents anticipating their needs. Part of you is replaying a conversation from ten years ago.</p>
+            
+            <p>We become fragmented. We leave little pieces of ourselves with everyone we meet and every task we manage. No wonder you feel tired. There is very little of you left right here.</p>
+            
+            <p>In this first reflection, we aren't trying to fix your schedule or solve the demands on your time. We are simply going to notice where you have drifted. We will gently and kindly call you back home.</p>
+            
+            <p>This meditation is just under six minutes. It's concentrated, but not rushed. There's substance here, quietly distilled into a form that fits your life without demanding more than you have to give.</p>
+            
+            <h2>How to Listen</h2>
+            <p><strong>1. Find a quiet corner.</strong> This could be a bedroom or a comfortable chair. It might even be your car. If you are using your car as a hideout (which I highly recommend), just make sure you are parked in the driveway. We want you to drift, but definitely not while you are navigating traffic.</p>
+            
+            <p><strong>2. Create a sense of sanctuary.</strong> Light a candle if it's evening. Wrap yourself in a blanket. Let your body know this is a moment set apart, just for you.</p>
+            
+            <p><strong>3. Use headphones.</strong> I strongly encourage you to listen with earbuds or headphones if you can. It changes the experience completely. When you listen through speakers, the sound is "out there" in the room with all the other distractions. When you use headphones, it brings the guidance inward. It creates a small, private sanctuary where the world falls away and you can truly rest.</p>
+            
+            <p><strong>4. Press play.</strong> Close your eyes if you feel comfortable with that. If not, simply find a soft gaze in front of you.</p>
+            
+            <div class="quote-block">
+                Take just one reflection per day. There's no benefit to rushing through all three at once. These practices are designed to land slowly, to be lived with rather than completed.
+            </div>
+
+            <p>After you listen, give yourself a few minutes before jumping back into the demands of your day. You don't need to journal or analyze what happened. Just let yourself sit quietly for a moment. Let the experience settle in your body.</p>
+            
+            <div class="media-player-box">
+                <span class="label">Audio Reflection</span>
+                <audio controls src="assets/A%20Quiet%20Return%20_%20Where%20am%20I%20leaving%20myself_.mp3"></audio>
+            </div>
+
+            <div class="lesson-nav">
+                <button class="btn-nav" onclick="goToLesson(1)">← Guide</button>
+                <button class="btn-primary" onclick="goToLesson(3)">Continue to Reflection 2 →</button>
+            </div>
+        </div>
+
+        <!-- MODULE 3: REFLECTION 2 -->
+        <div class="lesson-section" id="lesson-3">
+            <img src="assets/Thumbnail%20Meditation%202.png" class="hero-image" alt="Meditation 2">
+            <h3>Reflection 2</h3>
+            <h1>What happens when I stay?</h1>
+            
+            <p>We often think that once we finally stop rushing, we will immediately feel peaceful. We imagine that the moment we sit down, the clouds will part and everything will feel calm.</p>
+            
+            <p>But usually the opposite happens.</p>
+            
+            <p>When we finally stop moving, the internal noise gets louder. The to-do lists show up. The worries circle. The itch to get up and do "just one quick thing" becomes very strong.</p>
+            
+            <p>This is not because you are doing it wrong. It is simply because you have finally slowed down enough to hear what has been running in the background all along.</p>
+            
+            <p>In this second reflection, we are going to practice <em>staying</em>.</p>
+            
+            <p>Not forcing the mind to be quiet. Not pushing thoughts away. Just noticing what it's like to remain present with yourself, even when your system wants to move on.</p>
+            
+            <div class="quote-block">
+                We are teaching your body that it is safe to be here, right now, exactly as you are.
+            </div>
+            
+            <h2>A Few Things You Might Notice</h2>
+            <p>You might feel restless. You might remember five things you need to do right now. Your attention may want to check out and move on to the next thing. All of this is completely normal. We're not trying to make it go away. We're simply practicing the act of staying anyway.</p>
+            
+            <h2>How to Listen</h2>
+            <p>If this is your first time returning since Meditation 1, welcome back. The setup is the same: find your quiet corner, use headphones if possible, and give yourself permission to settle in without interruption.</p>
+            
+            <p>If possible, listen in the morning so the experience can move with you through your day. But evening works beautifully too.</p>
+
+            <div class="media-player-box">
+                <span class="label">Audio Reflection</span>
+                <audio controls src="assets/A%20Quiet%20Return%20_%20What%20happens%20when%20I%20stay_.mp3"></audio>
+            </div>
+
+            <div class="lesson-nav">
+                <button class="btn-nav" onclick="goToLesson(2)">← Reflection 1</button>
+                <button class="btn-primary" onclick="goToLesson(4)">Continue to Reflection 3 →</button>
+            </div>
+        </div>
+
+        <!-- MODULE 4: REFLECTION 3 -->
+        <div class="lesson-section" id="lesson-4">
+            <img src="assets/Thumbnail%20Meditation%203.png" class="hero-image" alt="Meditation 3">
+            <h3>Reflection 3</h3>
+            <h1>What do I know when I'm here?</h1>
+            
+            <p>We spend so much of our lives looking outside ourselves for answers. We look to experts, to schedules, to partners, and to endless research, hoping someone else can tell us what we need.</p>
+            
+            <p>But the most honest answers rarely come from the noise outside. They come from the quiet inside.</p>
+            
+            <p>In the first two reflections, you practiced coming back and settling in. Now, we simply listen.</p>
+            
+            <p>When the dust settles and the rushing stops, what's left? When you aren't trying to please anyone or fix anything, what do you already know?</p>
+            
+            <p>This isn't about analyzing your life or making decisions. It's about sinking into that deep, steady place that has known the way all along.</p>
+            
+            <div class="quote-block">
+                This is perhaps the reflection that asks the least and offers the most.
+            </div>
+            
+            <h2>What You Might Notice</h2>
+            <p>You may sense a quiet knowing that wasn't available when you were moving too fast to hear it. It might show up as a feeling of rightness, or a gentle "no," or simply as stillness. Whatever arises is welcome. We're not looking for dramatic revelations. We're reconnecting with the part of you that already knows, when given the space to surface.</p>
+            
+            <h2>How to Listen</h2>
+            <p>This is the last of the three reflections. After you listen, give yourself even more space than usual. Don't rush back into your day. Let this one breathe.</p>
+            
+            <p>The capacity to return to yourself, to notice where you are, to stay when everything else wants to pull you away... that doesn't end here. It's always available. Not as something you have to work at, but as something you can trust.</p>
+
+            <div class="media-player-box">
+                <span class="label">Audio Reflection</span>
+                <audio controls src="assets/A%20Quiet%20Return%20_%20What%20do%20I%20know%20when%20I_m%20here_.mp3"></audio>
+            </div>
+
+            <div class="lesson-nav">
+                <button class="btn-nav" onclick="goToLesson(3)">← Reflection 2</button>
+                <button class="btn-primary" onclick="goToLesson(5)">Continue to Closing →</button>
+            </div>
+        </div>
+
+        <!-- MODULE 5: CLOSING -->
+        <div class="lesson-section" id="lesson-5">
+            <h3>Final Notes</h3>
+            <h1>A Soft Closing</h1>
+            
+            <p>We often feel that peace is something we have to go find on a mountaintop or in a silent retreat. But what we've practiced here is the truth that peace is actually just underneath the noise. It was there the whole time, waiting for you to stop running long enough to notice.</p>
+            
+            <p>As you move back into your day, back to the emails, the family, the demands of the world, you don't have to leave this behind.</p>
+            
+            <p>You can't stay in meditation forever. We all have lives to live. But you can keep the door to this quiet room unlocked.</p>
+            
+            <div class="media-player-box" style="padding: 20px;">
+                <video controls poster="assets/A%20Quiet%20Return%20Thumbnail.png">
+                    <source src="assets/A_Quiet_Return_Closing.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <h2>What You've Built Here</h2>
+            <p>These three reflections aren't a one-time fix. They're an anchor you can return to whenever you feel yourself scattering again. When life feels overwhelming, when you notice you've drifted into a dozen places at once, you can come back. Not because you've failed, but because this is what practice looks like.</p>
+            
+            <p>If you lose your temper or get overwhelmed ten minutes from now, you haven't undone anything. You're human. The work doesn't disappear when life gets messy. It's still here, steady and available, whenever you choose to return.</p>
+            
+            <h2>Moving Forward</h2>
+            <p>You already know how to do this. You've just spent three days proving it to yourself. The capacity to notice where you are, to stay present, to trust what you know when you're here: that's yours now. Not as something fragile that requires perfect conditions, but as something reliable you can access anytime.</p>
+            
+            <div class="quote-block">
+                Before you close this screen, take a moment. Take three slow breaths. Look around the room you're in. This is what it feels like to be here.
+            </div>
+            
+            <p>Thank you for trusting me with your time, and for trusting yourself enough to stay.</p>
+
+            <div class="lesson-nav">
+                <button class="btn-nav" onclick="goToLesson(4)">← Reflection 3</button>
+                <div style="font-family: 'Playfair Display', Georgia, serif; font-style: italic; color: var(--accent-sage);">Journey Complete</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="course-footer">
+        BEYOND THE BEND YOGA &nbsp;&middot;&nbsp; RISING MOON STUDIO
+    </div>
+
+    <script>
+        const totalLessons = 5;
+        let currentLesson = 1;
+
+        function initProgressDots() {
+            const container = document.getElementById('progress-dots');
+            for(let i=1; i<=totalLessons; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'progress-dot';
+                dot.onclick = () => goToLesson(i);
+                container.appendChild(dot);
+            }
+        }
+
+        function goToLesson(lessonNumber) {
+            // Stop all playing media
+            document.querySelectorAll('audio, video').forEach(media => {
+                media.pause();
+                media.currentTime = 0;
+            });
+
+            // Hide old
+            const oldSection = document.getElementById('lesson-' + currentLesson);
+            if(oldSection) {
+                oldSection.classList.remove('active');
+            }
+
+            // Show new
+            currentLesson = lessonNumber;
+            const newSection = document.getElementById('lesson-' + currentLesson);
+            
+            if (newSection) {
+                setTimeout(() => {
+                    newSection.classList.add('active');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }, 50);
+            }
+
+            // Update Progress UI with plain string concatenation so no JS escaping issues
+            document.getElementById('progress-text').innerText = "Part " + currentLesson + " of " + totalLessons;
+            
+            const dots = document.querySelectorAll('.progress-dot');
+            dots.forEach((dot, index) => {
+                if (index + 1 === currentLesson) {
+                    dot.className = 'progress-dot active';
+                } else if (index + 1 < currentLesson) {
+                    dot.className = 'progress-dot completed';
+                } else {
+                    dot.className = 'progress-dot';
+                }
+            });
+        }
+
+        // Boot
+        initProgressDots();
+        goToLesson(1);
+    </script>
+</body>
+</html>

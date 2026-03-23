@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter | Swimming With the River</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+        body,
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            background-color: #f7f7f5;
+            color: #4a4a4a;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+
+        /* Header / Masthead */
+        .header {
+            background-color: #faf0f0;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 4px solid #556b2f;
+        }
+
+        .header img {
+            max-width: 140px;
+            height: auto;
+            margin-bottom: 25px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .masthead-title {
+            color: #556b2f;
+            font-family: 'Playfair Display', Georgia, serif;
+            line-height: 1.2;
+        }
+
+        .masthead-top {
+            display: block;
+            font-size: 28px;
+            font-style: italic;
+            font-weight: 400;
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+
+        .masthead-main {
+            display: block;
+            font-size: 32px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-top: 2px solid #556b2f;
+            border-bottom: 2px solid #556b2f;
+            padding: 15px 0;
+            margin-top: 10px;
+        }
+
+        .content-block {
+            padding: 40px 30px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #556b2f;
+            font-size: 26px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #78866b;
+            font-size: 22px;
+            margin-bottom: 10px;
+            margin-top: 20px;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .highlight-section {
+            background-color: #fcfbf9;
+            padding: 40px 30px;
+            border-left: 4px solid #556b2f;
+        }
+
+        .practice-section {
+            background-color: #eef2eb;
+            padding: 30px 20px;
+            margin-top: 0;
+        }
+
+        .img-responsive {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin: 20px 0;
+            display: block;
+        }
+
+        .studio-section {
+            background-color: #f4f7f2;
+            padding: 40px 30px;
+            border-top: 1px solid #d8e4d0;
+        }
+
+        .bolster-option {
+            background-color: #fcfbf9;
+            border: 1px solid #d8e4d0;
+            border-radius: 6px;
+            padding: 20px 25px;
+            margin: 15px 0;
+        }
+
+        .bolster-option h3 {
+            color: #556b2f;
+            font-style: normal;
+            font-size: 18px;
+            margin-top: 0;
+        }
+
+        .bolster-price {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 22px;
+            color: #556b2f;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        .btn-studio {
+            display: inline-block;
+            padding: 12px 28px;
+            background-color: #556b2f;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 15px;
+            margin-top: 10px;
+        }
+
+        .deadline-box {
+            background-color: #eef2eb;
+            border-radius: 6px;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .quote-block {
+            background-color: #F0F4EE;
+            border-left: 3px solid #A8B5A2;
+            padding: 20px 25px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 15px;
+            letter-spacing: 1px;
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+        }
+
+        .btn-sage {
+            background-color: #A8B5A2;
+            color: white;
+        }
+
+        .btn-forest {
+            background-color: #3F4A3C;
+            color: #F7F4EF;
+        }
+
+        .footer {
+            background-color: #3F4A3C;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #F7F4EF;
+            letter-spacing: 1px;
+        }
+
+        .footer a {
+            color: #A8B5A2;
+            text-decoration: none;
+        }
+
+        strong {
+            color: #556b2f;
+            font-weight: 600;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                width: 100% !important;
+            }
+
+            .header {
+                padding: 30px 15px;
+            }
+
+            .content-block,
+            .highlight-section {
+                padding: 25px 15px;
+            }
+
+            .masthead-main {
+                font-size: 24px;
+                letter-spacing: 1px;
+            }
+
+            .masthead-top {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- ═══ MASTHEAD BANNER ═══ -->
+        <div class="header">
+            <img src="https://storage.googleapis.com/msgsndr/t19sOv208p64ldeUjJug/media/697996aad119a57c1575bb7d.png"
+                alt="Beyond the Bend Logo">
+            <div class="masthead-title">
+                <span class="masthead-top">Reflections from</span>
+                <span class="masthead-main">Beyond the Bend</span>
+            </div>
+        </div>
+
+        <!-- ═══ PERSONAL INTRO ═══ -->
+        <div class="content-block">
+            <p>Hi {{contact.first_name}},</p>
+            <p>I've been rereading a book this week that I keep coming back to whenever I need to remember something I already know but keep forgetting. It's called <em>Talking Zen</em> by Alan Watts.</p>
+            <p>He had this way of making the most profound ideas feel like the most obvious ones, like he was just pointing at something sitting in plain sight and saying, <em>there, do you see it now?</em></p>
+            <p>There's one passage in particular that I've underlined so many times the page almost falls open on its own. I want to share it with you because it stopped me again this week, the way it always does.</p>
+        </div>
+
+        <!-- ═══ WELLNESS WISDOM ═══ -->
+        <div class="highlight-section">
+            <h2>This Week's Wellness Wisdom</h2>
+
+            <img src="https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/69bd8a68b54f0d73734fedea.jpg"
+                alt="A page from Talking Zen by Alan Watts about swimming with the river, with Great Analogy written in the margin"
+                class="img-responsive">
+
+            <h3>Swimming With the River</h3>
+            <p><em>By Laura Harvey | Beyond the Bend Yoga</em></p>
+
+            <p>Watts writes about the Tao, the fundamental flow of everything, and he compares it to a tremendous river that carries us all along whether we know it or not. Some people swim against the river, he says, and yet they are still being carried. Others have learned to swim with it. They are carried along too, but they are aware of it.</p>
+
+            <p>The ones swimming against the current <em>think</em> they are going in the opposite direction. But they're not. Not really.</p>
+
+            <p>And then he says this, which is the part I wrote "great analogy" beside in the margin:</p>
+
+            <div class="quote-block">
+                <p style="margin-bottom: 0;"><em>The person who gives up that pretense, who realizes they are inevitably carried by the river and chooses to swim with it, suddenly acquires behind everything they do the force of the river itself.</em></p>
+            </div>
+
+            <p>I think about who I was in my twenties, and I recognize someone who was swimming hard against the current and calling it ambition.</p>
+
+            <p>I thought life was something I had to make happen through sheer force of will. I gripped everything so tightly. My plans, my relationships, my ideas about how things were supposed to go. If something wasn't working, I pushed harder. And when that still didn't produce the result I wanted, I blamed myself for not trying hard enough.</p>
+
+            <p>That is an exhausting way to live. And I lived that way for a very long time.</p>
+
+            <p>What I didn't understand then is that the river was carrying me the whole time. Even when I was thrashing against it. Even when I was convinced I was failing. The current was still moving. Life was still unfolding.</p>
+
+            <p>Most of the suffering I felt came not from what was actually happening, but from my insistence that it should be happening differently.</p>
+
+            <p>I'm in my fifties now, and something has shifted that I don't think I could have rushed even if I'd wanted to. I've stopped trying to force the river to go where I think it should.</p>
+
+            <p>Not because I've given up. Not because I no longer care where I'm headed. It's actually the opposite. I care more deeply than I ever have. But I've learned that the caring doesn't require the gripping. I can have a direction without needing to control every turn. I can move with intention and still allow life to carry me where it needs to.</p>
+
+            <p>This is what surrender actually looks like. And it's nothing like what I used to think it was.</p>
+
+            <p>I used to believe surrender meant quitting. Lying down. Letting the world walk over you. But real surrender is the moment you stop exhausting yourself fighting what is already in motion, and you let the force of the river move through what you do instead.</p>
+
+            <p>It's not weakness. It's the most powerful thing I've ever experienced.</p>
+
+            <p>In my yoga practice and in my teaching, I see this constantly. The students who grip and force their way into a pose are the ones who struggle the most. The ones who breathe into it, who allow the body to open rather than demanding that it comply, are the ones who find the depth they were looking for.</p>
+
+            <p>It's the same principle. Just lived through the body instead of through philosophy.</p>
+
+            <p>The river is always there. In our breath. In our movement. In the quiet moments between all the doing.</p>
+        </div>
+
+        <!-- ═══ FROM THE STUDIO ═══ -->
+        <div class="studio-section">
+            <h2>From the Studio</h2>
+
+            <p>So many of you have been asking about bolsters for your home practice, and I have finally found something I feel really good about. A small company in Quebec called Amatherapy makes beautiful handmade rectangular bolsters filled with buckwheat hulls. The fill is adjustable (you can add or remove hulls to get the firmness just right), the cover is a linen cotton canvas that feels lovely, and they come with a carry strap. They are available in a natural linen or a beautiful sage pattern.</p>
+
+            <p>I am placing a group order so I can offer them to you at a better price than you would find on your own.</p>
+
+            <div class="bolster-option">
+                <div class="bolster-price">$120</div>
+                <p style="font-size: 14px; color: #78866b;">Rectangular bolster · buckwheat hull fill · 85% cotton 15% linen canvas · 26" x 10" x 6" · handmade in Quebec · available in natural linen or sage pattern</p>
+            </div>
+
+            <div class="deadline-box">
+                <p style="margin-bottom: 5px;"><strong>Group order deadline: Sunday, March 29th</strong></p>
+                <p style="font-size: 14px; color: #78866b; margin-bottom: 0;">Reply to this email or message me directly to reserve yours. Payment upfront to secure your order.</p>
+            </div>
+
+            <p style="margin-top: 30px;">And a gentle reminder that the spring session is right around the corner. Monday night Somatic Vinyasa is full (which makes my heart so happy), but there are still spots in the other classes. If you have been thinking about joining us, or coming back, this is your invitation. I would love to have you there.</p>
+            <p style="margin-top: 15px;"><a href="https://beyondthebendyoga.ca/classes" class="btn-studio">View Classes and Register</a></p>
+        </div>
+
+        <!-- ═══ PRACTICE OF THE WEEK ═══ -->
+        <div class="content-block">
+            <div class="practice-section" style="border-radius: 4px; padding: 30px;">
+                <h2>Practice of the Week</h2>
+                <h3 style="margin-top: 8px;">Where Are You Swimming Against the River?</h3>
+                <p>This week, I want to invite you into a simple noticing practice. You don't need a mat or a timer. You just need a few honest minutes with yourself.</p>
+                <p>At some point today, or tomorrow, or whenever it finds you, pause and ask yourself:</p>
+                <p><em>Where in my life am I forcing right now?</em></p>
+                <p>It might be a relationship you're trying to control. A situation at work you keep pushing against. A plan that isn't unfolding the way you decided it should. Or even something as small as rushing through your morning when your body is asking you to slow down.</p>
+                <p>Once you've found it, try this:</p>
+                <p>Take a breath. A real one. Let your shoulders drop. And just for a moment, stop swimming.</p>
+                <p>You don't have to fix anything. You don't have to let go of what matters to you. Just notice what it feels like to stop fighting the current, even for thirty seconds.</p>
+                <p>Ask yourself: <em>What would it feel like to let the river carry me here, instead of exhausting myself trying to redirect it?</em></p>
+                <p>You might feel relief. You might feel fear. You might feel nothing at all. Whatever comes is fine.</p>
+                <p>Try this once a day for the rest of the week. Just the pause. Just the question. And notice if anything starts to soften.</p>
+            </div>
+        </div>
+
+        <!-- ═══ CLOSING THOUGHT ═══ -->
+        <div class="content-block">
+            <h2>A Closing Thought</h2>
+            <p>If you've spent years swimming against the current, I want you to know something. The exhaustion you feel is not a sign that you aren't trying hard enough. It might be a sign that you've been trying too hard at the wrong thing.</p>
+            <p>The river was carrying you all along. It still is.</p>
+            <br>
+            <p>With warmth and gratitude,<br>Laura 🩷</p>
+        </div>
+
+        <!-- ═══ FOOTER ═══ -->
+        <div class="footer">
+            BEYOND THE BEND YOGA<br>
+            Rising Moon Studio &middot; Sherwood Park, AB<br><br>
+            <a href="{{unsubscribe_link}}">Unsubscribe</a>
+        </div>
+
+    </div>
+</body>
+
+</html>

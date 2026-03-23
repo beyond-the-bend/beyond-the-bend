@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Planner | Beyond the Bend</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+        :root {
+            --forest: #556b2f;
+            --sage: #A8B5A2;
+            --dark-forest: #3F4A3C;
+            --cream: #fcfbf9;
+            --light-sage: #f4f7f2;
+            --bg: #f7f7f5;
+            --text: #4a4a4a;
+            --border: #d8e4d0;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            border-top: 6px solid var(--forest);
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 20px 20px;
+            background-color: var(--light-sage);
+            border-bottom: 1px solid var(--border);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: var(--forest);
+            font-size: 36px;
+            margin: 0 0 10px 0;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            font-style: italic;
+            color: var(--dark-forest);
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .checklist-content {
+            padding: 30px 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--forest);
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--sage);
+            display: inline-block;
+        }
+
+        .task-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .task-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            padding: 12px 15px;
+            background-color: var(--cream);
+            border-radius: 8px;
+            border-left: 3px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .task-item:hover {
+            background-color: var(--light-sage);
+            border-left: 3px solid var(--sage);
+            transform: translateX(2px);
+        }
+
+        .task-item.completed {
+            opacity: 0.6;
+            background-color: #fafafa;
+        }
+
+        .task-item.completed .task-text {
+            text-decoration: line-through;
+            color: #888;
+        }
+
+        input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 22px;
+            height: 22px;
+            border: 2px solid var(--sage);
+            border-radius: 4px;
+            margin-top: 2px;
+            margin-right: 15px;
+            cursor: pointer;
+            position: relative;
+            background-color: #fff;
+            flex-shrink: 0;
+            transition: all 0.2s;
+        }
+
+        input[type="checkbox"]:checked {
+            background-color: var(--forest);
+            border-color: var(--forest);
+        }
+
+        input[type="checkbox"]:checked::after {
+            content: '✓';
+            position: absolute;
+            color: white;
+            font-size: 16px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .task-text {
+            font-size: 16px;
+            cursor: pointer;
+            flex-grow: 1;
+            user-select: none;
+        }
+
+        .task-note {
+            display: block;
+            font-size: 14px;
+            color: #666;
+            margin-top: 4px;
+            font-style: italic;
+        }
+        
+        strong {
+            color: var(--forest);
+        }
+
+        .actions {
+            background-color: var(--light-sage);
+            padding: 20px 40px;
+            text-align: right;
+            border-top: 1px solid var(--border);
+        }
+
+        .btn-reset {
+            background-color: var(--sage);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-family: 'Lato', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            letter-spacing: 1px;
+        }
+
+        .btn-reset:hover {
+            background-color: var(--forest);
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            margin: 20px 40px;
+            background-color: var(--border);
+            border-radius: 10px;
+            height: 8px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: var(--forest);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .progress-text {
+            text-align: center;
+            font-size: 14px;
+            color: var(--dark-forest);
+            font-style: italic;
+            margin-bottom: -10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Weekly Flow</h1>
+            <p class="subtitle">Focus on what matters. Let the rest go.</p>
+        </div>
+
+        <p class="progress-text" id="progress-text">0 / 0 tasks completed</p>
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+        <div class="checklist-content">
+            <!-- ═══ SECTION 1 ═══ -->
+            <div class="section">
+                <h2>Daily Non-Negotiables</h2>
+                <ul class="task-list">
+                    <li class="task-item">
+                        <input type="checkbox" id="sleep">
+                        <label for="sleep" class="task-text">
+                            <strong>Protect Sleep Schedule</strong> 
+                            <span class="task-note">In bed by 11:30 PM, awake by 7:30 AM (or midnight to 8:00 AM). No 2:00 AM nights.</span>
+                        </label>
+                    </li>
+                    <li class="task-item">
+                        <input type="checkbox" id="dating">
+                        <label for="dating" class="task-text">
+                            <strong>Dating App Check-in</strong> 
+                            <span class="task-note">Set a timer (15-20 min max). Don't let it become a time sink.</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- ═══ SECTION 2 ═══ -->
+            <div class="section">
+                <h2>Health & Movement</h2>
+                <ul class="task-list">
+                    <li class="task-item"><input type="checkbox" id="walk-1"><label for="walk-1" class="task-text"><strong>Walk 1</strong> (Outside)</label></li>
+                    <li class="task-item"><input type="checkbox" id="walk-2"><label for="walk-2" class="task-text"><strong>Walk 2</strong> (Outside)</label></li>
+                    <li class="task-item"><input type="checkbox" id="modo-1"><label for="modo-1" class="task-text"><strong>MODO Class 1</strong></label></li>
+                    <li class="task-item"><input type="checkbox" id="modo-2"><label for="modo-2" class="task-text"><strong>MODO Class 2</strong></label></li>
+                    <li class="task-item"><input type="checkbox" id="modo-3"><label for="modo-3" class="task-text"><strong>MODO Class 3</strong></label></li>
+                </ul>
+            </div>
+
+            <!-- ═══ SECTION 3 ═══ -->
+            <div class="section">
+                <h2>Content Creation</h2>
+                <ul class="task-list">
+                    <li class="task-item">
+                        <input type="checkbox" id="newsletter">
+                        <label for="newsletter" class="task-text">
+                            <strong>Newsletter & Substack</strong>
+                            <span class="task-note">Write newsletter -> AI formats GHL -> AI creates Substack essay.</span>
+                        </label>
+                    </li>
+                    <li class="task-item">
+                        <input type="checkbox" id="meditation-1">
+                        <label for="meditation-1" class="task-text"><strong>Meditation 1:</strong> Write & Record</label>
+                    </li>
+                    <li class="task-item">
+                        <input type="checkbox" id="meditation-2">
+                        <label for="meditation-2" class="task-text"><strong>Meditation 2:</strong> Write & Record</label>
+                    </li>
+                    <li class="task-item">
+                        <input type="checkbox" id="sanctuary-1">
+                        <label for="sanctuary-1" class="task-text"><strong>Sanctuary Yoga Class 1:</strong> Record</label>
+                    </li>
+                    <li class="task-item">
+                        <input type="checkbox" id="sanctuary-2">
+                        <label for="sanctuary-2" class="task-text"><strong>Sanctuary Yoga Class 2:</strong> Record</label>
+                    </li>
+                    <li class="task-item">
+                        <input type="checkbox" id="descript">
+                        <label for="descript" class="task-text">
+                            <strong>Live Stream Descript Edit</strong>
+                            <span class="task-note">Starting April 1st (Faster Wi-Fi required)</span>
+                        </label>
+                    </li>
+                    <li class="task-item">
+                        <input type="checkbox" id="fire-journey">
+                        <label for="fire-journey" class="task-text"><strong>Fire Journey:</strong> Complete weekly homework</label>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- ═══ SECTION 4 ═══ -->
+            <div class="section">
+                <h2>Admin & Strategy</h2>
+                <ul class="task-list">
+                    <li class="task-item">
+                        <input type="checkbox" id="finance">
+                        <label for="finance" class="task-text">
+                            <strong>Finances (1 Hour Limit)</strong>
+                            <span class="task-note">Set a timer. Don't bleed into the rest of the day.</span>
+                        </label>
+                    </li>
+                    <li class="task-item">
+                        <input type="checkbox" id="organize">
+                        <label for="organize" class="task-text">
+                            <strong>Digital Sandbox Organizing (1 Hour Limit)</strong>
+                            <span class="task-note">Clear files, tidy up desktop and tools.</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- ═══ SECTION 5 ═══ -->
+            <div class="section" style="margin-bottom: 0;">
+                <h2>Big Picture Projects <em>(Pick away at these)</em></h2>
+                <ul class="task-list">
+                    <li class="task-item"><input type="checkbox" id="project-website"><label for="project-website" class="task-text">Website / Sanctuary Build-out</label></li>
+                    <li class="task-item"><input type="checkbox" id="project-course"><label for="project-course" class="task-text">Put together your first course</label></li>
+                    <li class="task-item"><input type="checkbox" id="project-mux"><label for="project-mux" class="task-text">Zoom to Mux Livestreaming transition</label></li>
+                    <li class="task-item"><input type="checkbox" id="project-affiliate"><label for="project-affiliate" class="task-text">Affiliate Page completion</label></li>
+                </ul>
+            </div>
+            
+        </div>
+
+        <div class="actions">
+            <button class="btn-reset" onclick="resetChecklist()">Start Fresh Week</button>
+        </div>
+    </div>
+
+    <script>
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        const progressBar = document.getElementById('progress-bar');
+        const progressText = document.getElementById('progress-text');
+
+        // Load saved state from LocalStorage on page load
+        function loadSavedState() {
+            checkboxes.forEach(box => {
+                const savedValue = localStorage.getItem('btb_checklist_' + box.id);
+                if (savedValue === 'true') {
+                    box.checked = true;
+                    box.closest('.task-item').classList.add('completed');
+                }
+            });
+            updateProgress();
+        }
+
+        // Save state to LocalStorage when a checkbox is clicked
+        checkboxes.forEach(box => {
+            box.addEventListener('change', function() {
+                localStorage.setItem('btb_checklist_' + this.id, this.checked);
+                
+                if(this.checked) {
+                    this.closest('.task-item').classList.add('completed');
+                } else {
+                    this.closest('.task-item').classList.remove('completed');
+                }
+                updateProgress();
+            });
+        });
+
+        // Update the progress bar
+        function updateProgress() {
+            const total = checkboxes.length;
+            const checkedBoxes = document.querySelectorAll('input[type="checkbox"]:checked').length;
+            const percentage = (checkedBoxes / total) * 100;
+            
+            progressBar.style.width = percentage + '%';
+            progressText.innerText = `${checkedBoxes} of ${total} tasks completed`;
+        }
+
+        // Reset the entire checklist for a new week
+        function resetChecklist() {
+            if(confirm("Are you sure you want to clear all tasks and start a fresh week?")) {
+                checkboxes.forEach(box => {
+                    box.checked = false;
+                    localStorage.setItem('btb_checklist_' + box.id, 'false');
+                    box.closest('.task-item').classList.remove('completed');
+                });
+                updateProgress();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        // Initialize
+        loadSavedState();
+    </script>
+</body>
+</html>

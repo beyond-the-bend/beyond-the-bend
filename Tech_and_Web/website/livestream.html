@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Stream Classes | Beyond the Bend Yoga</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --sage: #A8B5A2;
+            --deep-sage: #6B8063;
+            --darker-sage: #4d5f48;
+            --rosewood: #B06568;
+            --blush: #E8C4C4;
+            --sand: #E6D5C7;
+            --sand-dark: #cdb89e;
+            --text: #3a3a3a;
+            --light-text: #888;
+            --bg: #F9F7F5;
+            --white: #ffffff;
+            --off-white: #faf8f6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--white);
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        
+        .boxed-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: var(--bg); /* The inner page is the set background */
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 40px rgba(0,0,0,0.03);
+            min-height: 80vh;
+        }
+
+        /* ── SCROLL ANIMATIONS ── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                        transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: opacity 0.9s ease, transform 0.9s ease;
+        }
+        .reveal-left.visible { opacity: 1; transform: translateX(0); }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: opacity 0.9s ease, transform 0.9s ease;
+        }
+        .reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+        /* ── HERO ── */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 650px;
+            overflow: hidden;
+        }
+
+        .hero-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 30%;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(30,42,28,0.3) 0%,
+                rgba(30,42,28,0.5) 50%,
+                rgba(30,42,28,0.75) 100%
+            );
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            align-items: center;     /* Centers the text vertically on the right wall */
+            justify-content: flex-end;
+            padding: 0 80px 18vh;   /* Pushes the content higher up towards the top */
+        }
+
+        .hero-text {
+            max-width: 750px;
+            padding: 70px 0 80px;
+            text-align: right;
+        }
+
+        .hero-location {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 10px;
+            font-family: 'Lato', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 22px;
+            text-shadow: 0 1px 8px rgba(0,0,0,0.4);
+            white-space: nowrap;
+        }
+
+        .hero-location .dot {
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--sage);
+            display: inline-block;
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-style: italic;
+            font-size: 5rem;
+            line-height: 1.05;
+            color: var(--white);
+            margin-bottom: 20px;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+        }
+
+        .hero-tagline {
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.8);
+            letter-spacing: 0.03em;
+            text-shadow: 0 1px 8px rgba(0,0,0,0.3);
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .hero-scroll .line {
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.4), transparent);
+            animation: scrollPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes scrollPulse {
+            0%, 100% { opacity: 0.4; transform: scaleY(1); }
+            50% { opacity: 1; transform: scaleY(1.3); }
+        }
+
+        /* ── INTRO SECTION ── */
+        .intro {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            min-height: 500px;
+        }
+
+        .intro-image {
+            overflow: hidden;
+        }
+
+        .intro-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 6s ease;
+        }
+
+        .intro-image:hover img {
+            transform: scale(1.03);
+        }
+
+        .intro-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 70px;
+            background: var(--white);
+        }
+
+        .eyebrow {
+            font-family: 'Lato', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--rosewood);
+            margin-bottom: 20px;
+        }
+
+        .intro-content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-style: italic;
+            font-size: 2.8rem;
+            line-height: 1.15;
+            color: var(--darker-sage);
+            margin-bottom: 24px;
+        }
+
+        .intro-content p {
+            font-weight: 300;
+            font-size: 1.05rem;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        /* ── SCHEDULE SECTION ── */
+        .schedule-section {
+            background: var(--darker-sage);
+            padding: 100px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .schedule-section::before {
+            content: 'Breathe';
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 18rem;
+            color: rgba(255,255,255,0.02);
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            white-space: nowrap;
+            pointer-events: none;
+        }
+
+        .schedule-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .schedule-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .schedule-header .eyebrow {
+            color: var(--sage);
+        }
+
+        .schedule-header h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-style: italic;
+            font-size: 3.5rem;
+            color: var(--white);
+        }
+
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .schedule-card {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(168,181,162,0.15);
+            padding: 40px;
+            transition: all 0.4s ease;
+        }
+
+        .schedule-card:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+        }
+
+        .schedule-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            font-size: 1.8rem;
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+
+        .schedule-card .time {
+            font-family: 'Lato', sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            color: var(--sage);
+            margin-bottom: 16px;
+        }
+
+        .schedule-card p {
+            font-weight: 300;
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.7;
+        }
+
+        /* ── CLASS PASS SECTION ── */
+        .passes-section {
+            padding: 100px 60px;
+            background: var(--bg);
+        }
+
+        .passes-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .passes-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .passes-header h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-style: italic;
+            font-size: 3.2rem;
+            color: var(--darker-sage);
+            margin-bottom: 12px;
+        }
+
+        .passes-header p {
+            font-weight: 300;
+            font-size: 1.1rem;
+            color: #888;
+        }
+
+        .passes-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .pass-card {
+            background: var(--white);
+            border: 1px solid rgba(168,181,162,0.2);
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .pass-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 50px rgba(0,0,0,0.08);
+            border-color: var(--sage);
+        }
+
+        .pass-card.popular {
+            border-color: var(--rosewood);
+            box-shadow: 0 8px 30px rgba(176,101,104,0.1);
+        }
+
+        .pass-card.popular::before {
+            content: 'Most Flexible';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--rosewood);
+            color: var(--white);
+            font-size: 0.65rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 5px 18px;
+            white-space: nowrap;
+        }
+
+        .pass-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            font-size: 1.5rem;
+            color: var(--darker-sage);
+            margin-bottom: 20px;
+        }
+
+        .pass-price {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            font-weight: 300;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+
+        .pass-gst {
+            font-size: 0.8rem;
+            color: #aaa;
+            margin-bottom: 8px;
+        }
+
+        .pass-per-class {
+            font-size: 0.85rem;
+            color: var(--rosewood);
+            font-weight: 400;
+            margin-bottom: 30px;
+            min-height: 20px;
+        }
+
+        .pass-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .btn-pass {
+            display: block;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-family: 'Lato', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.08em;
+            transition: all 0.3s ease;
+        }
+
+        .btn-pass-primary {
+            background: var(--deep-sage);
+            color: var(--white);
+        }
+
+        .btn-pass-primary:hover {
+            background: var(--darker-sage);
+            transform: translateY(-2px);
+        }
+
+        .btn-pass-secondary {
+            background: transparent;
+            color: var(--deep-sage);
+            border: 1px solid var(--sage);
+        }
+
+        .btn-pass-secondary:hover {
+            background: var(--sage);
+            color: var(--white);
+        }
+
+        /* ── LIVE ENERGY SECTION ── */
+        .live-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            min-height: 500px;
+        }
+
+        .live-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 70px;
+            background: var(--sand);
+        }
+
+        .live-content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-style: italic;
+            font-size: 2.8rem;
+            line-height: 1.15;
+            color: var(--darker-sage);
+            margin-bottom: 24px;
+        }
+
+        .live-content p {
+            font-weight: 300;
+            font-size: 1.05rem;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .live-image {
+            overflow: hidden;
+        }
+
+        .live-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 6s ease;
+        }
+
+        .live-image:hover img {
+            transform: scale(1.03);
+        }
+
+        /* ── HOW IT WORKS ── */
+        .how-section {
+            padding: 100px 60px;
+            background: var(--white);
+        }
+
+        .how-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .how-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .how-header h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-style: italic;
+            font-size: 3rem;
+            color: var(--darker-sage);
+            margin-bottom: 12px;
+        }
+
+        .how-header p {
+            font-weight: 300;
+            font-size: 1.1rem;
+            color: #888;
+        }
+
+        .how-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            text-align: center;
+        }
+
+        .how-step {
+            position: relative;
+        }
+
+        .step-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 24px;
+            overflow: hidden;
+        }
+
+        .step-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .how-step h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            font-size: 1.4rem;
+            color: var(--darker-sage);
+            margin-bottom: 12px;
+        }
+
+        .how-step p {
+            font-weight: 300;
+            font-size: 0.95rem;
+            color: #888;
+            line-height: 1.7;
+        }
+
+        .step-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 5rem;
+            font-weight: 300;
+            color: rgba(168,181,162,0.15);
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            pointer-events: none;
+            line-height: 1;
+        }
+
+        .how-note {
+            text-align: center;
+            margin-top: 50px;
+            font-weight: 300;
+            font-size: 1rem;
+            color: #888;
+            line-height: 1.8;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ── IN-STUDIO BAR ── */
+        .studio-bar {
+            background: var(--sage);
+            padding: 50px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .studio-bar-text h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            font-size: 1.6rem;
+            color: var(--white);
+            margin-bottom: 6px;
+        }
+
+        .studio-bar-text p {
+            font-weight: 300;
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .btn-outline-light {
+            display: inline-block;
+            padding: 14px 36px;
+            border: 1px solid var(--white);
+            color: var(--white);
+            font-family: 'Lato', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-light:hover {
+            background: var(--white);
+            color: var(--deep-sage);
+        }
+
+        /* ── BOTTOM CTA ── */
+        .cta-bottom {
+            background: var(--darker-sage);
+            padding: 120px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-bottom::before {
+            content: 'Home';
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 22rem;
+            color: rgba(255,255,255,0.025);
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            white-space: nowrap;
+            pointer-events: none;
+            line-height: 1;
+        }
+
+        .cta-bottom h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-style: italic;
+            font-size: 4rem;
+            color: var(--white);
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .cta-bottom p {
+            font-weight: 300;
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 44px;
+            position: relative;
+        }
+
+        .btn-light {
+            display: inline-block;
+            padding: 20px 60px;
+            background: var(--white);
+            color: var(--deep-sage);
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            box-shadow: 0 6px 30px rgba(0,0,0,0.2);
+        }
+
+        .btn-light:hover {
+            background: var(--sand);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+        }
+
+        /* ── NEWSLETTER BAR ── */
+        .newsletter-bar {
+            background: var(--blush);
+            padding: 50px 60px;
+            text-align: center;
+        }
+
+        .newsletter-bar p {
+            font-weight: 300;
+            font-size: 1rem;
+            color: var(--text);
+            margin-bottom: 20px;
+        }
+
+        .btn-newsletter {
+            display: inline-block;
+            padding: 14px 40px;
+            background: var(--rosewood);
+            color: var(--white);
+            font-family: 'Lato', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .btn-newsletter:hover {
+            background: #9a5558;
+            transform: translateY(-2px);
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: #2c3a29;
+            color: rgba(255,255,255,0.5);
+            text-align: center;
+            padding: 60px 40px 40px;
+        }
+
+        .footer-logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.5rem;
+            color: var(--sage);
+            margin-bottom: 24px;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover { color: var(--sage); }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+
+        .social-links a {
+            color: rgba(255,255,255,0.4);
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover { color: var(--sage); }
+
+        .footer-note {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.3);
+            max-width: 500px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* ══════════════════════════════════
+           MOBILE
+        ══════════════════════════════════ */
+        @media (max-width: 900px) {
+            .hero h1 { font-size: 3rem; }
+            .hero-inner { padding: 0 24px 40px; }
+            .hero-text { padding: 50px 40px 60px; border-radius: 30px; }
+            .hero-scroll { display: none; }
+            .intro { grid-template-columns: 1fr; }
+            .intro-content { padding: 50px 30px; }
+            .schedule-section { padding: 60px 24px; }
+            .schedule-grid { grid-template-columns: 1fr; gap: 20px; }
+            .schedule-header h2 { font-size: 2.5rem; }
+            .passes-section { padding: 60px 24px; }
+            .passes-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+            .pass-card { padding: 30px 20px; }
+            .pass-price { font-size: 2.2rem; }
+            .live-section { grid-template-columns: 1fr; }
+            .live-content { padding: 50px 30px; }
+            .how-section { padding: 60px 24px; }
+            .how-steps { grid-template-columns: 1fr; gap: 40px; }
+            .cta-bottom { padding: 80px 24px; }
+            .cta-bottom h2 { font-size: 2.8rem; }
+            .studio-bar { padding: 40px 24px; text-align: center; flex-direction: column; }
+        }
+
+        @media (max-width: 550px) {
+            .hero h1 { font-size: 2.4rem; }
+            .hero-text { padding: 40px 28px 50px; }
+            .passes-grid { grid-template-columns: 1fr; }
+            .cta-bottom h2 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="main-header" style="background: white; border-bottom: 1px solid rgba(168,181,162,0.2); z-index: 100; position: sticky; top: 0;">
+    <a href="index.html" class="logo-link" style="color: var(--rosewood); font-family: 'Lato', sans-serif;">Beyond the Bend</a>
+    <nav>
+        <ul class="nav-desktop">
+            <li><a href="everything.html" style="color: var(--text);">Start Here</a></li>
+            <li><a href="#" style="color: var(--text);">About</a></li>
+            <li><a href="classes.html" style="color: var(--text);">Calendar</a></li>
+            <li><a href="#" style="color: var(--text);">Teachings</a></li>
+            <li><a href="#" style="color: var(--text);">Blog</a></li>
+            <li><a href="#" style="color: var(--text);">Resources</a></li>
+            <li><a href="everything.html" style="color: var(--text);">Everything</a></li>
+            <li><a href="#" style="color: var(--text);">Courses</a></li>
+            <li><a href="livestream.html" class="active" style="color: var(--rosewood); font-weight: bold;">The Sanctuary</a></li>
+            <li><a href="#" style="background: var(--rosewood); color: white; padding: 5px 15px; border-radius: 2px;">LOGIN</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="boxed-wrapper">
+<!-- ══ HERO ══ -->
+<div class="hero">
+    <img class="hero-img" src="assets/laura_rested.png" alt="Livestream yoga from Beyond the Bend">
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+        <div class="hero-text">
+            <div class="hero-location">
+                Live from Rising Moon Studio <span class="dot"></span> Sherwood Park, Alberta
+            </div>
+            <h1>Your Sanctuary,<br>Right Where You Are</h1>
+            <div class="hero-tagline">The warmth, the community, and the practice, streamed directly to you.</div>
+        </div>
+    </div>
+    <div class="hero-scroll">
+        <div class="line"></div>
+    </div>
+</div>
+
+<!-- ══ INTRO ══ -->
+<div class="intro">
+    <div class="intro-image reveal-left">
+        <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/6932155481eaa1e08a88a0be.jpg" alt="Cozy home yoga practice">
+    </div>
+    <div class="intro-content reveal-right">
+        <p class="eyebrow">Live Stream Yoga</p>
+        <h2>For the days you need to pause, but can't get away.</h2>
+        <p>Practicing from home removes the pressure of getting somewhere on time while still offering the support of a live class. Livestream yoga allows you to move, breathe, and settle into your body in a way that fits your real life, exactly as it is.</p>
+        <p>You'll be guided in real time, with space to show up comfortably and without expectations.</p>
+    </div>
+</div>
+
+<!-- ══ SCHEDULE ══ -->
+<div class="schedule-section">
+    <div class="schedule-inner">
+        <div class="schedule-header reveal">
+            <p class="eyebrow">Weekly Rhythm</p>
+            <h2>The Livestream Sanctuary</h2>
+        </div>
+        <div class="schedule-grid">
+            <div class="schedule-card reveal">
+                <h3>Somatic Vinyasa</h3>
+                <div class="time">Mondays &nbsp;·&nbsp; 6:00 to 7:15 PM</div>
+                <p>A mindful flow where breath and movement connect. Instead of striving for shapes, you'll explore how your body feels from the inside out, releasing tension and moving naturally into stillness.</p>
+            </div>
+            <div class="schedule-card reveal">
+                <h3>Rise &amp; Restore</h3>
+                <div class="time">Tuesdays &nbsp;·&nbsp; 10:00 to 11:15 AM</div>
+                <p>A gentle morning practice to wake up your body with care. Supported postures and soft movement invite deep rest and renewal, soothing the nervous system so you can start your day grounded.</p>
+            </div>
+            <div class="schedule-card reveal">
+                <h3>Restore &amp; Reclaim</h3>
+                <div class="time">Tuesdays &nbsp;·&nbsp; 6:00 to 7:15 PM</div>
+                <p>An evening wind down designed to help you release the day. Through restorative poses, breathwork, and intentional rest, you'll reclaim a sense of calm and come home to yourself.</p>
+            </div>
+            <div class="schedule-card reveal">
+                <h3>Somatic Hatha</h3>
+                <div class="time">Wednesdays &nbsp;·&nbsp; 10:00 to 11:15 AM</div>
+                <p>Slow, steady movement through foundational poses. Somatic Hatha builds balance, strength, and ease while leaving you grounded and refreshed.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ══ CLASS PASSES ══ -->
+<div class="passes-section">
+    <div class="passes-inner">
+        <div class="passes-header reveal">
+            <p class="eyebrow">Choose Your Presence</p>
+            <h2>Choose the pass that fits your practice.</h2>
+            <p>No commitment, no expiry pressure. Just practice when it calls to you.</p>
+        </div>
+        <div class="passes-grid">
+            <!-- Single Drop In -->
+            <div class="pass-card reveal">
+                <h3>Single Drop In</h3>
+                <div class="pass-price">$18</div>
+                <div class="pass-gst">+ $0.90 GST = $18.90</div>
+                <div class="pass-per-class">&nbsp;</div>
+                <div class="pass-links">
+                    <a href="https://link.fromleadstosales.com/widget/form/tTJ98uvtpfoozh4YNCrF" class="btn-pass btn-pass-primary">Online Payment</a>
+                    <a href="https://link.fromleadstosales.com/widget/form/Ikdu0VchfAkPrNEmqLwz" class="btn-pass btn-pass-secondary">E Transfer</a>
+                </div>
+            </div>
+            <!-- 5 Class Pass -->
+            <div class="pass-card reveal">
+                <h3>5 Class Pass</h3>
+                <div class="pass-price">$80</div>
+                <div class="pass-gst">+ $4.00 GST = $84.00</div>
+                <div class="pass-per-class">$16.80 per class</div>
+                <div class="pass-links">
+                    <a href="https://link.fromleadstosales.com/widget/form/rFfsGHywTf9pdKsesVGO" class="btn-pass btn-pass-primary">Online Payment</a>
+                    <a href="https://link.fromleadstosales.com/widget/form/jgFedfyH1rzvaP4B0MwH" class="btn-pass btn-pass-secondary">E Transfer</a>
+                </div>
+            </div>
+            <!-- 10 Class Pass -->
+            <div class="pass-card popular reveal">
+                <h3>10 Class Pass</h3>
+                <div class="pass-price">$148</div>
+                <div class="pass-gst">+ $7.40 GST = $155.40</div>
+                <div class="pass-per-class">$15.54 per class</div>
+                <div class="pass-links">
+                    <a href="https://link.fromleadstosales.com/widget/form/CIgyBxVPBdq0aHahNdId" class="btn-pass btn-pass-primary">Online Payment</a>
+                    <a href="https://link.fromleadstosales.com/widget/form/9r69U9lJhScGikmJDyBP" class="btn-pass btn-pass-secondary">E Transfer</a>
+                </div>
+            </div>
+            <!-- 20 Class Pass -->
+            <div class="pass-card reveal">
+                <h3>20 Class Pass</h3>
+                <div class="pass-price">$260</div>
+                <div class="pass-gst">+ $13.00 GST = $273.00</div>
+                <div class="pass-per-class">$13.65 per class</div>
+                <div class="pass-links">
+                    <a href="https://link.fromleadstosales.com/widget/form/fA7IkrDKuSg8fzebL6mp" class="btn-pass btn-pass-primary">Online Payment</a>
+                    <a href="https://link.fromleadstosales.com/widget/form/AoaxC1j7Xe09g211fLYh" class="btn-pass btn-pass-secondary">E Transfer</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ══ LIVE ENERGY ══ -->
+<div class="live-section">
+    <div class="live-content reveal-left">
+        <p class="eyebrow">Real Connection</p>
+        <h2>The energy of a live class. The comfort of your own space.</h2>
+        <p>This isn't a pre-recorded video. When you log in, you are joining a real circle of women gathering at Rising Moon Studio in Sherwood Park, AB. You get to borrow the energy of the room without leaving your home.</p>
+    </div>
+    <div class="live-image reveal-right">
+        <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/6825534c9730a4498511f562.png" alt="Beyond the Bend Yoga community">
+    </div>
+</div>
+
+<!-- ══ HOW IT WORKS ══ -->
+<div class="how-section">
+    <div class="how-inner">
+        <div class="how-header reveal">
+            <h2>If you can click a link, you can do this.</h2>
+            <p>You don't need fancy equipment or a special microphone. Just you and your mat.</p>
+        </div>
+        <div class="how-steps">
+            <div class="how-step reveal">
+                <div class="step-number">1</div>
+                <div class="step-icon">
+                    <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/693a1d4df6cae9cc85f3160b.png" alt="Reserve your spot">
+                </div>
+                <h3>Reserve your spot</h3>
+                <p>Choose a class pass above and select the class that works for you.</p>
+            </div>
+            <div class="how-step reveal">
+                <div class="step-number">2</div>
+                <div class="step-icon">
+                    <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/693a1d48751b34bc424fc497.png" alt="Check your email">
+                </div>
+                <h3>Check your email</h3>
+                <p>A Zoom link will arrive in your inbox before class. Simple as that.</p>
+            </div>
+            <div class="how-step reveal">
+                <div class="step-number">3</div>
+                <div class="step-icon">
+                    <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/693a1d40f282861dd2094ce9.png" alt="Click join">
+                </div>
+                <h3>Click join</h3>
+                <p>From your phone, tablet, or computer. Roll out your mat and we'll be there with you.</p>
+            </div>
+        </div>
+        <p class="how-note reveal">You don't need any special setup or technical experience to join. If something unexpected comes up, you're always welcome to join another livestream class that week instead.</p>
+    </div>
+</div>
+
+<!-- ══ IN-STUDIO BAR ══ -->
+<div class="studio-bar reveal">
+    <div class="studio-bar-text">
+        <h3>Prefer to practice in person?</h3>
+        <p>Join us at Rising Moon Studio in Sherwood Park for the full in-studio experience.</p>
+    </div>
+    <a href="classes.html" class="btn-outline-light">View Studio Classes</a>
+</div>
+
+<!-- ══ BOTTOM CTA ══ -->
+<div class="cta-bottom">
+    <h2 class="reveal">Your mat is waiting.</h2>
+    <p class="reveal">Wherever you are, there is space for you here.</p>
+    <a href="#" class="btn-light" onclick="document.querySelector('.passes-section').scrollIntoView({behavior:'smooth'}); return false;">Choose Your Pass</a>
+</div>
+
+</div> <!-- End of boxed-wrapper -->
+
+<!-- ══ FOOTER ══ -->
+<footer class="main-footer" style="background: var(--bg); border: none; border-top: 1px solid rgba(107,128,99,0.2);">
+    <div class="footer-logo">BEYOND THE BEND</div>
+    <div class="footer-links" style="margin-bottom: 24px;">
+        <a href="everything.html" style="color: rgba(0,0,0,0.6); font-family: 'Lato', sans-serif; font-size: 0.85rem; letter-spacing: 0.05em; text-transform: none;">Start Here</a>
+        <a href="#" style="color: rgba(0,0,0,0.6); font-family: 'Lato', sans-serif; font-size: 0.85rem; letter-spacing: 0.05em; text-transform: none;">About</a>
+        <a href="classes.html" style="color: rgba(0,0,0,0.6); font-family: 'Lato', sans-serif; font-size: 0.85rem; letter-spacing: 0.05em; text-transform: none;">Classes</a>
+        <a href="livestream.html" style="color: rgba(0,0,0,0.6); font-family: 'Lato', sans-serif; font-size: 0.85rem; letter-spacing: 0.05em; text-transform: none;">Live Stream</a>
+        <a href="#" style="color: rgba(0,0,0,0.6); font-family: 'Lato', sans-serif; font-size: 0.85rem; letter-spacing: 0.05em; text-transform: none;">Contact</a>
+    </div>
+    <div style="opacity: 0.4; font-size: 11px; letter-spacing: 1px; color: black;">
+        Beyond the Bend Yoga &copy; 2026 🌿 Sherwood Park, Alberta
+    </div>
+</footer>
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
+        observer.observe(el);
+    });
+</script>
+
+</body>
+</html>

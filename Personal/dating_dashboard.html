@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laura's Dating Dashboard</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            background-color: #f7f7f5;
+            color: #4a4a4a;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .dashboard-header {
+            background-color: #e8f0ef;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 4px solid #7aacad;
+        }
+
+        .dashboard-header h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #7aacad;
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        .dashboard-header p {
+            color: #8a7a6b;
+            font-size: 14px;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        /* Status filter bar */
+        .filter-bar {
+            background: #fff;
+            padding: 15px 30px;
+            text-align: center;
+            border-bottom: 1px solid #e8e4df;
+        }
+
+        .filter-bar span {
+            display: inline-block;
+            padding: 6px 16px;
+            margin: 4px;
+            border-radius: 20px;
+            font-size: 13px;
+            cursor: pointer;
+            letter-spacing: 0.5px;
+        }
+
+        .status-active { background-color: #d4edda; color: #2d6a3f; }
+        .status-new { background-color: #d9eeef; color: #4a8a8b; }
+        .status-paused { background-color: #fff3cd; color: #856404; }
+        .status-no { background-color: #f5d5d5; color: #8b3a3a; }
+        .status-met { background-color: #e8daef; color: #6c3483; }
+
+        .legend-label {
+            font-size: 11px;
+            color: #999;
+            margin-right: 5px;
+        }
+
+        /* Cards container */
+        .cards-container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(520px, 1fr));
+            gap: 25px;
+        }
+
+        /* Individual profile card */
+        .profile-card {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid #e8e4df;
+        }
+
+        .card-top {
+            display: flex;
+            padding: 25px;
+            gap: 20px;
+            border-bottom: 1px solid #f0ece7;
+        }
+
+        .card-photo {
+            width: 120px;
+            height: 140px;
+            border-radius: 8px;
+            object-fit: cover;
+            background-color: #f0ece7;
+            flex-shrink: 0;
+        }
+
+        .card-photo-placeholder {
+            width: 120px;
+            height: 140px;
+            border-radius: 8px;
+            background-color: #f0ece7;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #c4b8a8;
+            font-size: 36px;
+        }
+
+        .card-header {
+            flex: 1;
+        }
+
+        .card-name {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 24px;
+            color: #6b4f43;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .card-tagline {
+            font-style: italic;
+            color: #8a7a6b;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .card-status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .card-quick-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px 15px;
+            font-size: 14px;
+        }
+
+        .card-quick-details span {
+            color: #8a7a6b;
+        }
+
+        .card-quick-details strong {
+            color: #6b4f43;
+            font-weight: 600;
+        }
+
+        /* Card sections */
+        .card-section {
+            padding: 20px 25px;
+            border-bottom: 1px solid #f0ece7;
+        }
+
+        .card-section:last-child {
+            border-bottom: none;
+        }
+
+        .card-section h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #6b4f43;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .card-section p, .card-section li {
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .card-section ul {
+            padding-left: 18px;
+        }
+
+        .card-section li {
+            margin-bottom: 4px;
+        }
+
+        /* Detail grid for life details */
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .detail-item {
+            font-size: 14px;
+        }
+
+        .detail-label {
+            color: #7aacad;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .detail-value {
+            color: #4a4a4a;
+        }
+
+        /* Spirituality indicator */
+        .spirit-dots {
+            display: inline-flex;
+            gap: 4px;
+        }
+
+        .spirit-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #e0d8cf;
+        }
+
+        .spirit-dot.filled {
+            background-color: #7aacad;
+        }
+
+        /* Notes section */
+        .notes-section {
+            background-color: #faf0ed;
+        }
+
+        .note-entry {
+            padding: 8px 0;
+            border-bottom: 1px dashed #e8e0d4;
+            font-size: 14px;
+        }
+
+        .note-entry:last-child {
+            border-bottom: none;
+        }
+
+        .note-date {
+            font-size: 11px;
+            color: #7aacad;
+            font-weight: 700;
+        }
+
+        /* Gut feeling */
+        .gut-feeling {
+            background-color: #f5eae6;
+            text-align: center;
+            padding: 15px 25px;
+        }
+
+        .gut-feeling p {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-style: italic;
+            color: #8a7a6b;
+            font-size: 15px;
+        }
+
+        /* Last updated */
+        .last-updated {
+            text-align: right;
+            padding: 8px 25px 12px;
+            font-size: 11px;
+            color: #c4b8a8;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .cards-container {
+                grid-template-columns: 1fr;
+            }
+
+            .card-top {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .card-quick-details {
+                grid-template-columns: 1fr;
+            }
+
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-header">
+        <h1>Laura's Dating Dashboard</h1>
+        <p>Private &middot; For my eyes only &middot; Updated as conversations unfold</p>
+    </div>
+
+    <div class="filter-bar">
+        <span class="legend-label">STATUS KEY:</span>
+        <span class="status-new">New / Early Chats</span>
+        <span class="status-active">Actively Talking</span>
+        <span class="status-met">Met in Person</span>
+        <span class="status-paused">Paused</span>
+        <span class="status-no">Not Interested</span>
+    </div>
+
+    <div class="cards-container">
+
+        <!-- ═══════════════════════════════════════ -->
+        <!-- PROFILE CARD — DAVE -->
+        <!-- ═══════════════════════════════════════ -->
+        <div class="profile-card">
+            <div class="card-top">
+                <img src="Dave.jpg" alt="Dave" class="card-photo">
+                <div class="card-header">
+                    <div class="card-name">Dave</div>
+                    <div class="card-tagline">Adventurous steamfitter with a farm-boy soul and a paddle board</div>
+                    <span class="card-status status-active">Actively Talking</span>
+                    <div class="card-quick-details">
+                        <span><strong>Age:</strong> 58</span>
+                        <span><strong>Height:</strong> —</span>
+                        <span><strong>Location:</strong> North Edmonton, Crystallina area</span>
+                        <span><strong>Kids:</strong> 1 daughter (married June 2025)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-section">
+                <h3>The Basics</h3>
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <span class="detail-label">Work</span>
+                        <span class="detail-value">Industrial steamfitter — 38 years with a local union. Currently in a busy shutdown schedule. Previously ran a tree removal side hustle (winding it down — keeping stump grinder and chainsaws).</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Family</span>
+                        <span class="detail-value">One daughter (married last June). "All my eggs in one basket." Youngest of four siblings. Grew up on an organic farm — holistic lifestyle before it was a thing.</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Interests</span>
+                        <span class="detail-value">Paddle boarding, rock climbing (started during Covid at Cliffhangers/The Hive), boating (cabin cruiser stored near Desolation Sound since 2017), hiking, mountains, BC coast exploring, drumming circles.</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Properties & Travel</span>
+                        <span class="detail-value">Owns a lot in Point Roberts, WA (stores camper, boat, toys). Worked 3+ years at Vancouver Shipyards. Loves BC coast — Gulf Islands, Pender Islands, Granville Island. Has a Voyager lounge pass.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-section">
+                <h3>Spirituality & Depth</h3>
+                <div class="spirit-dots">
+                    <div class="spirit-dot filled"></div>
+                    <div class="spirit-dot filled"></div>
+                    <div class="spirit-dot filled"></div>
+                    <div class="spirit-dot"></div>
+                    <div class="spirit-dot"></div>
+                </div>
+                <span style="font-size: 13px; color: #8a7a6b; margin-left: 8px;">Open and curious, but hasn't gone deep yet</span>
+                <p style="margin-top: 8px;">Says he's spiritual. Interested in your Integrity Seminars work — looked it up and was impressed. Curious about ayahuasca, shamanism, and journeying. Has done drumming in a small group. Admits: "I'm afraid of what I'm capable of accomplishing." Hasn't confronted his inner work head-on but seems genuinely ready to explore. Said "I think we both have some deep sides — I just haven't confronted mine head on like you. Maybe I'm long overdue."</p>
+            </div>
+
+            <div class="card-section">
+                <h3>What Caught My Attention</h3>
+                <p>Photos of him doing a headstand on a paddle board, on a paddle board, in the mountains, and climbing. Active, adventurous, outdoorsy — a lot of shared interests. BC coast connection. His openness and warmth right from the start.</p>
+            </div>
+
+            <div class="card-section">
+                <h3>Conversation Highlights</h3>
+                <ul>
+                    <li>"I believe that is what we all want — clarity." (On personal growth)</li>
+                    <li>"Having a group that supports each other and promotes looking honestly at yourself — that's amazing."</li>
+                    <li>"I think I'm afraid of what I'm capable of accomplishing."</li>
+                    <li>"Thank you for this warm connection. Feels good."</li>
+                    <li>Organized a social dance for a friend in long-term care — shows real heart</li>
+                    <li>Extensive BC coast adventures — Desolation Sound, Gulf Islands, 3-week boat trip up the Inner Passage</li>
+                    <li>Grew up on an organic farm — "We lived a holistic lifestyle before anybody around here knew what that was"</li>
+                    <li>Both don't like scary movies — "Well we can take that off the list"</li>
+                </ul>
+            </div>
+
+            <div class="card-section">
+                <h3>Flags</h3>
+                <p style="color: #2d6a3f;">🟢 Warm, open communicator — vulnerable and curious</p>
+                <p style="color: #2d6a3f;">🟢 Many shared interests — outdoors, BC, paddle boarding, climbing, spirituality</p>
+                <p style="color: #2d6a3f;">🟢 Caring — organized a dance for a friend in long-term care</p>
+                <p style="color: #2d6a3f;">🟢 Hardworking and resourceful — 38 years in his trade, multiple side hustles</p>
+                <p style="color: #856404;">🟡 Busy shutdown work schedule — first date attempt fell through due to last-minute travel</p>
+            </div>
+
+            <div class="card-section notes-section">
+                <h3>My Notes & Feelings</h3>
+                <div class="note-entry">
+                    <span class="note-date">March 21, 2026</span>
+                    <p>Strong connection through conversation. Lots of shared interests and values. He's open to depth even though he hasn't done the inner work yet — seems genuinely curious rather than just saying what I want to hear. Planned to meet but it fell through due to his work travel. Planning for next Saturday.</p>
+                </div>
+            </div>
+
+            <div class="gut-feeling">
+                <p>"Real potential here — shared adventures, shared curiosity, and he's not afraid to be warm"</p>
+            </div>
+
+            <div class="last-updated">Last updated: March 21, 2026</div>
+        </div>
+
+        <!-- ═══════════════════════════════════════ -->
+        <!-- PROFILE CARD — THOMAS -->
+        <!-- ═══════════════════════════════════════ -->
+        <div class="profile-card">
+            <div class="card-top">
+                <img src="Thomas.jpg" alt="Thomas" class="card-photo">
+                <div class="card-header">
+                    <div class="card-name">Thomas (Tom)</div>
+                    <div class="card-tagline">Deep, vulnerable, mountain-loving soul from Montreal — the real deal</div>
+                    <span class="card-status status-active">Actively Talking</span>
+                    <div class="card-quick-details">
+                        <span><strong>Age:</strong> 67</span>
+                        <span><strong>Height:</strong> 5'10"</span>
+                        <span><strong>Location:</strong> Calgary</span>
+                        <span><strong>Kids:</strong> None</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-section">
+                <h3>The Basics</h3>
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <span class="detail-label">Background</span>
+                        <span class="detail-value">Originally from Montreal. Has clients — possibly self-employed or in a professional role. One client signed up for the West Coast Trail and called just to share the news — speaks to the relationships he builds.</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Relationship History</span>
+                        <span class="detail-value">9-year relationship ended just before COVID. Hit a very dark, lonely place. Started counseling and was introduced to mindfulness by his therapist. Used that period to rebuild himself.</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Interests</span>
+                        <span class="detail-value">Mountain adventures (Kananaskis, Banff — his "reset buttons"). Hiking with friends. Foreign travel. Outdoors as a spiritual practice. Reading — currently: "Don't Believe Everything You Think" and "Tales from the Other Side of the Lane" (Montreal nostalgia).</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">What He's Looking For</span>
+                        <span class="detail-value">"Present, adventurous, active, curious female partner to share in life's wonders." Foreign travel and frequent weekends away are a must. Says he's "far from a typical 60-something year old man."</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-section">
+                <h3>Spirituality & Depth</h3>
+                <div class="spirit-dots">
+                    <div class="spirit-dot filled"></div>
+                    <div class="spirit-dot filled"></div>
+                    <div class="spirit-dot filled"></div>
+                    <div class="spirit-dot filled"></div>
+                    <div class="spirit-dot"></div>
+                </div>
+                <span style="font-size: 13px; color: #8a7a6b; margin-left: 8px;">Genuinely deep — has done real inner work</span>
+                <p style="margin-top: 8px;">Tara Brach was a huge part of his rebuild after his relationship ended — shares her teachings with others to this day. His profile says "the joy is in getting real with Tara Brach." Started mindfulness through counseling during a dark period. Believes in following instincts over overthinking. Interested in the Three Principles after you shared them. Hadn't heard of Alan Watts but immediately looked him up. His depth isn't performative — it comes from lived pain and real work on himself.</p>
+            </div>
+
+            <div class="card-section">
+                <h3>What Caught My Attention</h3>
+                <p>His very first message asked what book was on my bedside table — not what most men lead with. The depth of conversation immediately. His connection to nature as a spiritual reset. His vulnerability about his father and his past. The way he talks about what he wants in a relationship — peace, transparency, no fear of being judged. He quoted Brené Brown naturally in conversation.</p>
+            </div>
+
+            <div class="card-section">
+                <h3>Conversation Highlights</h3>
+                <ul>
+                    <li>"Following our instincts or our heart is better than following your head and overthinking things — listening to that inner voice."</li>
+                    <li>"Sometimes you have to break things down before you can build them up again."</li>
+                    <li>On what he wants: "It's being totally open and vulnerable and not being afraid of that. It's about being transparent when there is no fear of being judged... In a nutshell I think it's about being at peace."</li>
+                    <li>"True intimacy cannot be achieved without vulnerability."</li>
+                    <li>About his father: was highly critical, nothing was ever good enough. "I never measured up. Consequently it became a part of who I was — very self-critical and always believed I wasn't enough. I have since learned that I am enough."</li>
+                    <li>"The funny thing is I feel safe with you." (Before sharing about his father's suicide)</li>
+                    <li>Shared that his father committed suicide — an incredibly vulnerable disclosure on a first phone call</li>
+                    <li>"I sometimes feel like a kid on Christmas Eve the night before a mountain adventure."</li>
+                    <li>Gets so stimulated by the mountains he can't sleep — pure joy</li>
+                </ul>
+            </div>
+
+            <div class="card-section">
+                <h3>Flags</h3>
+                <p style="color: #2d6a3f;">🟢 Extraordinary emotional depth and vulnerability — has done real inner work</p>
+                <p style="color: #2d6a3f;">🟢 Shares your love of Tara Brach, mindfulness, nature as healing</p>
+                <p style="color: #2d6a3f;">🟢 Articulate about what he wants — peace, transparency, real intimacy</p>
+                <p style="color: #2d6a3f;">🟢 Said he feels safe with you — and then proved it</p>
+                <p style="color: #2d6a3f;">🟢 Phone call was "incredible" — real connection beyond text</p>
+                <p style="color: #856404;">🟡 Lives in Calgary — distance is a factor. Planning to meet in Red Deer (halfway)</p>
+                <p style="color: #856404;">🟡 Age gap (67 vs 56) — though he says he's far from typical</p>
+            </div>
+
+            <div class="card-section notes-section">
+                <h3>My Notes & Feelings</h3>
+                <div class="note-entry">
+                    <span class="note-date">March 21, 2026</span>
+                    <p>This one feels different. The depth of conversation from the very start has been extraordinary. He shared things about his father, his darkest times, and his rebuild with a level of honesty I haven't seen from the others. The phone call confirmed the connection. Planning to meet in Red Deer — both willing to make the drive, which says something. The distance is the big question mark.</p>
+                </div>
+            </div>
+
+            <div class="gut-feeling">
+                <p>"He feels safe, and I feel safe with him — that's rare and worth paying attention to"</p>
+            </div>
+
+            <div class="last-updated">Last updated: March 21, 2026</div>
+        </div>
+
+        <!-- ═══════════════════════════════════════ -->
+        <!-- PROFILE CARD — KIRK -->
+        <!-- ═══════════════════════════════════════ -->
+        <div class="profile-card">
+            <div class="card-top">
+                <img src="Kirk.jpg" alt="Kirk" class="card-photo">
+                <div class="card-header">
+                    <div class="card-name">Kirk</div>
+                    <div class="card-tagline">Talks about spirituality but keeps things surface level</div>
+                    <span class="card-status status-paused">Paused</span>
+                    <div class="card-quick-details">
+                        <span><strong>Age:</strong> 55</span>
+                        <span><strong>Height:</strong> 5'8"</span>
+                        <span><strong>Location:</strong> Local</span>
+                        <span><strong>Kids:</strong> —</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-section">
+                <h3>The Basics</h3>
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <span class="detail-label">Work</span>
+                        <span class="detail-value">Environmental consultant. Grad school degree. Creates his own schedule each week. Flexible time.</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Relationship History</span>
+                        <span class="detail-value">Had a profile on dating sites for a few years. Active since the beginning of 2026.</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Interests</span>
+                        <span class="detail-value">Rock concerts and festivals. Classic rock, 70s and 80s. Says he believes in "universal power." Does all his reading online. Not a book reader.</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Lifestyle</span>
+                        <span class="detail-value">Flexible schedule, creates new schedules weekly. "Likes to create full days." Not a texter, prefers in person.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-section">
+                <h3>Spirituality & Depth</h3>
+                <div class="spirit-dots">
+                    <div class="spirit-dot filled"></div>
+                    <div class="spirit-dot"></div>
+                    <div class="spirit-dot"></div>
+                    <div class="spirit-dot"></div>
+                    <div class="spirit-dot"></div>
+                </div>
+                <span style="font-size: 13px; color: #8a7a6b; margin-left: 8px;">Says the words but hasn't shown the depth</span>
+                <p style="margin-top: 8px;">Claims spirituality has helped him "excel forward in life" and says he believes in universal power. But when asked what book is on his nightstand, he assumed you'd say the Holy Bible, a self improvement book, or a romance novel. Doesn't read books at all. The spiritual talk feels more like a buzzword than a lived practice.</p>
+            </div>
+
+            <div class="card-section">
+                <h3>What Caught My Attention</h3>
+                <p>His opening message mentioned meaningful conversations and spiritual well-being. Initially seemed like he might be on the same wavelength.</p>
+            </div>
+
+            <div class="card-section">
+                <h3>Conversation Highlights</h3>
+                <ul>
+                    <li>"You already found the perfect guy" then immediately "maybe that might be a bit much"</li>
+                    <li>Assumed your nightstand book would be the Holy Bible, a self-help book, or a romance novel</li>
+                    <li>"It sounds like you're a real serious person, are you gonna make it hard for me to make you laugh?"</li>
+                    <li>"Your books are more instructional, how to do yoga or something?"</li>
+                    <li>"I like to create full days though" after you explained your teaching schedule, as if your days aren't full</li>
+                    <li>"Are you home now?" "Are you home yet?" Checking in feels a bit much</li>
+                </ul>
+            </div>
+
+            <div class="card-section">
+                <h3>Flags</h3>
+                <p style="color: #2d6a3f;">🟢 Says he prefers in-person conversation over texting (could be genuine)</p>
+                <p style="color: #2d6a3f;">🟢 Consistent in reaching out</p>
+                <p style="color: #8b3a3a;">🔴 Doesn't actually listen to your questions. Misread the nightstand question and answered what he thought YOU would say</p>
+                <p style="color: #8b3a3a;">🔴 Assumptions about you feel reductive: Holy Bible, romance novels, yoga instruction books</p>
+                <p style="color: #8b3a3a;">🔴 Subtly condescending about your schedule and your depth ("are you a real serious person")</p>
+                <p style="color: #8b3a3a;">🔴 Spirituality seems surface level. Doesn't read. No curiosity about going deeper</p>
+                <p style="color: #856404;">🟡 "Are you home now?" "Are you home yet?" pattern feels a bit monitoring</p>
+            </div>
+
+            <div class="card-section notes-section">
+                <h3>My Notes & Feelings</h3>
+                <div class="note-entry">
+                    <span class="note-date">March 21, 2026</span>
+                    <p>Not my favourite. Something feels off. He says the right words about spirituality but doesn't back it up. The assumptions he makes about me (Bible, romance novels, yoga books) suggest he's not really seeing me. The comment about my schedule felt condescending. Considering dropping him. Seeing this laid out might help me decide.</p>
+                </div>
+            </div>
+
+            <div class="gut-feeling">
+                <p>"He's saying the right words but I don't think he's hearing mine"</p>
+            </div>
+
+            <div class="last-updated">Last updated: March 21, 2026</div>
+        </div>
+
+        <!-- ═══════════════════════════════════════ -->
+        <!-- PROFILE CARD — CRAIG -->
+        <!-- ═══════════════════════════════════════ -->
+        <div class="profile-card">
+            <div class="card-top">
+                <img src="Craig.jpg" alt="Craig" class="card-photo">
+                <div class="card-header">
+                    <div class="card-name">Craig</div>
+                    <div class="card-tagline">Big smiles, tattooed arms, devoted dad who wants to dance in the kitchen</div>
+                    <span class="card-status status-active">Actively Talking</span>
+                    <div class="card-quick-details">
+                        <span><strong>Age:</strong> 55</span>
+                        <span><strong>Height:</strong> 6'2"</span>
+                        <span><strong>Location:</strong> Fort Saskatchewan</span>
+                        <span><strong>Kids:</strong> 3 adult sons (one in NZ, one in Minnesota, one local)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-section">
+                <h3>The Basics</h3>
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <span class="detail-label">Work</span>
+                        <span class="detail-value">Millwright in the oil sands up north. Works on pumps, compressors. 20+ years in the trade. Works 7 on, 7 off. Stays at a huge camp (3000 people) with his own room, gym, movie theatre, yoga instructors. 50% indoors, 50% outside. Hands have taken a beating but "they still work very well."</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Family</span>
+                        <span class="detail-value">3 amazing adult sons. Youngest is in New Zealand (visited for 2 weeks). Oldest in Minnesota (visited with middle son, went to hockey game). Very close with all three. Played cards and laughed all night when his flight was cancelled. Dad passed 4 years ago, thinks about him all the time. Has a younger and older brother.</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Interests</span>
+                        <span class="detail-value">Mountain biking (Abraham Lake, Nordegg). Hot yoga (done it 4 times, loved it). Hiking. Travel (New Zealand, Minnesota, Thailand, Maui, Mexico, all over Canada, never been to Europe). Hot tub and sauna at home. Red wine on occasion. Reads fiction (John Grisham) but not deep reader. College degree.</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Home Life</span>
+                        <span class="detail-value">House in Fort Saskatchewan with hot tub and sauna in the backyard. Says his home is truly his happy place. Had a dog named Maggie but rehomed her because of his 7 on/7 off schedule. Wasn't fair to kids or the dog.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-section">
+                <h3>Tattoos</h3>
+                <p><strong>Left arm (jungle theme):</strong> Lion with three cubs for himself and his 3 sons. A sloth for his mom. An elephant from Thailand.</p>
+                <p><strong>Right arm (Japanese themed):</strong> A koi fish for strength and perseverance.</p>
+            </div>
+
+            <div class="card-section">
+                <h3>Spirituality & Depth</h3>
+                <div class="spirit-dots">
+                    <div class="spirit-dot filled"></div>
+                    <div class="spirit-dot filled"></div>
+                    <div class="spirit-dot"></div>
+                    <div class="spirit-dot"></div>
+                    <div class="spirit-dot"></div>
+                </div>
+                <span style="font-size: 13px; color: #8a7a6b; margin-left: 8px;">Not intellectual about it, but emotionally open</span>
+                <p style="margin-top: 8px;">Not a deep reader or spiritual seeker in the traditional sense. Reads John Grisham, not Alan Watts. But he has done real emotional work since his divorce. Talks about "check-ins" as essential to a relationship. Says he's done the work and can process things. Values vulnerability, honesty, and emotional intimacy. Welcomes your deeper reading and conversations. His depth comes from lived experience and self-awareness rather than books.</p>
+            </div>
+
+            <div class="card-section">
+                <h3>What Caught My Attention</h3>
+                <p>Big smiles in every photo. Full sleeve of tattoos (each one meaningful, especially the lion with three cubs for his sons). The way he talks about his kids. He rehomed his dog because it wasn't fair to her. His dad is on his mind all the time. He's warm, affectionate, and not afraid to show it.</p>
+            </div>
+
+            <div class="card-section">
+                <h3>What He Wants in a Relationship</h3>
+                <ul>
+                    <li>"True love, honesty, loyalty, someone that is supportive in all aspects"</li>
+                    <li>Regular check-ins to talk about what's good and what needs work</li>
+                    <li>"Someone that is affectionate, enjoys quality time together and is good at having time apart"</li>
+                    <li>"I have done a lot of work on myself since my divorce and I want someone who has done work on themselves"</li>
+                    <li>"Being intimate is very important to me. I would want to get to a place where our bodies are an extension of each other's and everything feels natural and we feel joined as one"</li>
+                    <li>"Those conversations are worth more than anything to me"</li>
+                </ul>
+            </div>
+
+            <div class="card-section">
+                <h3>Conversation Highlights</h3>
+                <ul>
+                    <li>His dad taught him kindness, treating everyone with respect, helping others, and hard work</li>
+                    <li>"I have done the work and I'm able to process and work through things that may come up"</li>
+                    <li>On past relationships: "They may say that they have done it but they haven't and it shows up"</li>
+                    <li>Dream day: road trip to Banff, early morning coffees, beautiful hike, lunch, walk downtown, amazing dinner</li>
+                    <li>Loved your cozy answer: "Dancing in the kitchen as we cook would be fun as well"</li>
+                    <li>"Both are achievable" about combining your ideas for dates</li>
+                    <li>"If this doesn't wake you and you're still nestled under your blanket sleeping peacefully, have a beautiful Saturday" (early morning text)</li>
+                    <li>"You will always get them from me" (about kind words)</li>
+                    <li>Flight cancelled, played cards and laughed all night with his sons instead of being upset</li>
+                </ul>
+            </div>
+
+            <div class="card-section">
+                <h3>Flags</h3>
+                <p style="color: #2d6a3f;">🟢 Devoted, present father. Every tattoo tells a story about the people he loves</p>
+                <p style="color: #2d6a3f;">🟢 Has done real emotional work since his divorce. Talks about it with maturity</p>
+                <p style="color: #2d6a3f;">🟢 Affectionate and not afraid to show it. Sweet morning messages</p>
+                <p style="color: #2d6a3f;">🟢 Values check-ins, communication, and emotional intimacy</p>
+                <p style="color: #2d6a3f;">🟢 Offered to plan your first date. Thoughtful about it</p>
+                <p style="color: #2d6a3f;">🟢 Close by (Fort Saskatchewan)</p>
+                <p style="color: #2d6a3f;">🟢 Has hot tub and sauna. Enjoys hot yoga. Lifestyle overlap</p>
+                <p style="color: #2d6a3f;">🟢 Works 7 on/7 off up north. Built-in personal space, which is exactly what you want</p>
+                <p style="color: #856404;">🟡 Not a deep reader or intellectual. Might not match you there. But he's open to it</p>
+                <p style="color: #856404;">🟡 Repeated the Minnesota/NZ story, suggesting he's talking to multiple people and losing track (normal at this stage)</p>
+            </div>
+
+            <div class="card-section notes-section">
+                <h3>My Notes & Feelings</h3>
+                <div class="note-entry">
+                    <span class="note-date">March 21, 2026</span>
+                    <p>Craig is sweet, warm, and consistent. He's not the deepest intellectual but he's emotionally available and has done real work on himself. The way he talks about his sons and his dad says a lot about his character. He's close by, he's planning a thoughtful first date for next Saturday, and he's not playing games. The 7 on/7 off schedule is actually a green flag. Built-in personal time and then quality time together when he's home. He's a cute one with the tattoos.</p>
+                </div>
+            </div>
+
+            <div class="gut-feeling">
+                <p>"Warm, devoted, and real. Not the deepest thinker but the biggest heart so far"</p>
+            </div>
+
+            <div class="last-updated">Last updated: March 21, 2026</div>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -5,367 +5,312 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Quiet Return | Beyond the Bend Yoga</title>
     <meta name="description" content="Three guided embodied reflections for women in their prime. A gentle practice of returning to yourself.">
-    <link rel="stylesheet" href="style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
 
-        .course-hero {
+        :root {
+            --bg-content: #ffffff;
+            --text-main: #4a4a4a;
+            --text-dark: #3F4A3C;
+            --accent-green: #6B8063;
+            --accent-light: #f7f4ef;
+            --accent-sage: #A8B5A2;
+            --accent-rose: #cbb4af;
+            --border-light: #e8ddd4;
+        }
+
+        body {
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
             background: linear-gradient(135deg, #f0f4ee 0%, #e8ddd4 50%, #e8c4c4 100%);
-            padding: 80px 30px;
-            text-align: center;
+            background-attachment: fixed;
+            color: var(--text-main);
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px 0;
+            -webkit-font-smoothing: antialiased;
         }
 
-        .course-hero img {
-            max-width: 500px;
-            width: 100%;
-            border-radius: 8px;
+        /* ═══ MAIN READING CONTAINER ═══ */
+        .landing-container {
+            max-width: 680px;
+            margin: 20px auto 100px;
+            background-color: var(--bg-content);
             box-shadow: 0 12px 40px rgba(0,0,0,0.12);
-            margin-bottom: 40px;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
         }
 
-        .course-hero h1 {
-            font-family: 'Playfair Display', Georgia, serif;
-            color: #3F4A3C;
-            font-size: 48px;
-            font-weight: 600;
-            margin-bottom: 10px;
+        .section-padding {
+            padding: 50px 45px;
+        }
+
+        /* ═══ HERO ═══ */
+        .course-hero {
             text-align: center;
+            border-bottom: 1px solid var(--border-light);
         }
 
-        .course-hero .subtitle {
+        .hero-img {
+            width: 100%;
+            height: auto;
+            border-bottom: 3px solid var(--accent-sage);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text-dark);
+            font-size: 38px;
+            font-weight: 600;
+            margin: 30px 0 10px 0;
+            line-height: 1.2;
+        }
+
+        .subtitle {
             font-family: 'Playfair Display', Georgia, serif;
             font-style: italic;
-            color: #6B8063;
-            font-size: 22px;
-            margin-bottom: 30px;
+            color: var(--accent-green);
+            font-size: 20px;
+            margin-bottom: 25px;
         }
 
-        .course-hero .intro-text {
-            font-family: 'Lato', sans-serif;
-            color: #4a4a4a;
+        p {
             font-size: 17px;
-            line-height: 1.9;
-            max-width: 600px;
-            margin: 0 auto 35px;
+            color: var(--text-main);
+            margin-bottom: 20px;
+            text-align: left;
         }
 
         .course-price {
             font-family: 'Playfair Display', Georgia, serif;
-            font-size: 32px;
-            color: #3F4A3C;
+            font-size: 28px;
+            color: var(--text-dark);
             font-weight: 600;
-            margin-bottom: 8px;
+            margin: 30px 0 5px 0;
+            text-align: center;
         }
 
         .course-price-note {
-            font-family: 'Lato', sans-serif;
             font-size: 14px;
-            color: #78866b;
+            color: var(--accent-sage);
             margin-bottom: 25px;
+            text-align: center;
         }
 
         .btn-purchase {
-            display: inline-block;
-            padding: 16px 40px;
-            background-color: #6B8063;
+            display: block;
+            text-align: center;
+            padding: 18px 40px;
+            background-color: var(--accent-green);
             color: #ffffff;
             text-decoration: none;
             border-radius: 4px;
-            font-family: 'Lato', sans-serif;
             font-size: 16px;
             letter-spacing: 1px;
-            transition: background-color 0.3s;
+            transition: background 0.3s;
+            margin: 0 auto;
+            max-width: 300px;
         }
 
         .btn-purchase:hover {
             background-color: #556b2f;
         }
 
-        .course-section {
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 60px 30px;
-        }
-
-        .course-section h2 {
+        /* ═══ HEADINGS ═══ */
+        h2 {
             font-family: 'Playfair Display', Georgia, serif;
-            color: #3F4A3C;
-            font-size: 30px;
+            color: var(--text-dark);
+            font-size: 26px;
             font-weight: 600;
-            margin-bottom: 20px;
-            text-align: left;
-        }
-
-        .course-section p {
-            font-family: 'Lato', sans-serif;
-            color: #4a4a4a;
-            font-size: 16px;
-            line-height: 1.9;
-            margin-bottom: 18px;
+            margin: 40px 0 20px 0;
+            text-align: center;
         }
 
         .divider {
-            width: 60px;
+            width: 50px;
             height: 2px;
-            background-color: #A8B5A2;
-            margin: 0 auto;
+            background-color: var(--accent-sage);
+            margin: 40px auto;
         }
 
+        /* ═══ WHAT YOU GET ═══ */
         .what-you-get {
-            background-color: #f7f4ef;
-            padding: 60px 30px;
-        }
-
-        .what-you-get-inner {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .what-you-get h2 {
-            font-family: 'Playfair Display', Georgia, serif;
-            color: #3F4A3C;
-            font-size: 30px;
-            font-weight: 600;
-            margin-bottom: 35px;
-            text-align: center;
+            background-color: var(--accent-light);
+            border-top: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
         }
 
         .meditation-card {
             display: flex;
             align-items: center;
             background: #ffffff;
-            border-radius: 8px;
+            border-radius: 6px;
             overflow: hidden;
             margin-bottom: 20px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid var(--border-light);
         }
 
         .meditation-card img {
-            width: 180px;
-            height: 120px;
+            width: 140px;
+            height: 140px;
             object-fit: cover;
             flex-shrink: 0;
+            border-right: 1px solid var(--border-light);
         }
 
         .meditation-card-content {
             padding: 20px 25px;
         }
 
-        .meditation-card-content .card-label {
-            font-family: 'Lato', sans-serif;
-            font-size: 12px;
+        .card-label {
+            font-size: 11px;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: #A8B5A2;
+            color: var(--accent-sage);
             margin-bottom: 6px;
         }
 
-        .meditation-card-content h3 {
+        .meditation-card h3 {
             font-family: 'Playfair Display', Georgia, serif;
-            color: #3F4A3C;
+            color: var(--text-dark);
             font-size: 20px;
             font-weight: 600;
-            font-style: normal;
             margin: 0 0 8px 0;
-            text-align: left;
         }
 
-        .meditation-card-content p {
-            font-family: 'Lato', sans-serif;
+        .meditation-card p {
             font-size: 14px;
             color: #5A6658;
-            line-height: 1.6;
             margin: 0;
-        }
-
-        .pdf-card {
-            display: flex;
-            align-items: center;
-            background: #ffffff;
-            border-radius: 8px;
-            overflow: hidden;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-            padding: 25px 30px;
+            line-height: 1.5;
         }
 
         .pdf-icon {
-            width: 50px;
-            height: 60px;
-            background-color: #E8C4C4;
-            border-radius: 4px;
+            width: 140px;
+            height: 140px;
+            background-color: var(--accent-rose);
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
-            margin-right: 25px;
-            font-family: 'Lato', sans-serif;
-            font-size: 12px;
-            font-weight: 700;
-            color: #3F4A3C;
-            letter-spacing: 1px;
-        }
-
-        .who-section {
-            background-color: #ffffff;
-            padding: 60px 30px;
-        }
-
-        .who-inner {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .who-inner h2 {
             font-family: 'Playfair Display', Georgia, serif;
-            color: #3F4A3C;
-            font-size: 30px;
-            font-weight: 600;
-            margin-bottom: 25px;
-            text-align: left;
-        }
-
-        .who-inner p {
-            font-family: 'Lato', sans-serif;
-            color: #4a4a4a;
-            font-size: 16px;
-            line-height: 1.9;
-            margin-bottom: 15px;
-        }
-
-        .quote-section {
-            background: linear-gradient(135deg, #eef2eb 0%, #f7f4ef 100%);
-            padding: 60px 30px;
-            text-align: center;
-        }
-
-        .quote-section blockquote {
-            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 22px;
             font-style: italic;
-            color: #3F4A3C;
-            font-size: 24px;
+            color: #ffffff;
+            border-right: 1px solid var(--border-light);
+        }
+
+        /* ═══ QUOTE ═══ */
+        blockquote {
+            background-color: var(--bg-content);
+            border-left: 3px solid var(--accent-sage);
+            padding: 25px 30px;
+            margin: 40px 0;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 21px;
+            font-style: italic;
+            color: var(--text-dark);
             line-height: 1.6;
-            max-width: 600px;
-            margin: 0 auto 20px;
         }
-
-        .quote-section .attribution {
+        
+        .attribution {
+            display: block;
+            text-align: right;
+            font-size: 13px;
+            color: var(--accent-sage);
+            font-style: normal;
+            margin-top: 10px;
             font-family: 'Lato', sans-serif;
-            font-size: 14px;
-            color: #78866b;
         }
 
+        /* ═══ FOOTER CTA ═══ */
         .final-cta {
-            background-color: #3F4A3C;
-            padding: 60px 30px;
+            background-color: var(--text-dark);
             text-align: center;
+            color: var(--accent-light);
         }
 
         .final-cta h2 {
-            font-family: 'Playfair Display', Georgia, serif;
-            color: #F7F4EF;
-            font-size: 32px;
-            font-weight: 600;
-            margin-bottom: 15px;
+            color: #ffffff;
+            margin-top: 0;
+            border-bottom: none;
         }
 
         .final-cta p {
-            font-family: 'Lato', sans-serif;
-            color: #A8B5A2;
-            font-size: 16px;
-            line-height: 1.8;
-            max-width: 500px;
-            margin: 0 auto 30px;
-        }
-
-        .final-cta .course-price {
-            color: #F7F4EF;
+            color: var(--accent-sage);
+            text-align: center;
         }
 
         .final-cta .btn-purchase {
-            background-color: #A8B5A2;
-            color: #3F4A3C;
+            background-color: var(--accent-green);
+            color: #ffffff;
+            border: 1px solid var(--accent-green);
         }
 
         .final-cta .btn-purchase:hover {
-            background-color: #c4d0be;
+            background-color: #ffffff;
+            color: var(--text-dark);
+        }
+        
+        .final-cta .course-price {
+            color: #ffffff;
         }
 
-        .course-footer {
-            background-color: #3F4A3C;
-            padding: 30px 20px;
+        .copyright-footer {
             text-align: center;
-            font-family: 'Lato', sans-serif;
             font-size: 12px;
-            color: #A8B5A2;
+            color: var(--accent-sage);
             letter-spacing: 1px;
-            border-top: 1px solid #556b2f;
-        }
-
-        .course-footer a {
-            color: #E8C4C4;
-            text-decoration: none;
+            padding: 20px;
         }
 
         @media only screen and (max-width: 600px) {
-            .course-hero h1 {
-                font-size: 34px;
-            }
-
-            .course-hero .subtitle {
-                font-size: 18px;
-            }
-
-            .meditation-card {
-                flex-direction: column;
-            }
-
-            .meditation-card img {
-                width: 100%;
-                height: 160px;
-            }
-
-            .course-section, .who-inner {
-                padding: 40px 20px;
-            }
+            .section-padding { padding: 40px 25px; }
+            h1 { font-size: 32px; }
+            .meditation-card { flex-direction: column; }
+            .meditation-card img, .pdf-icon { width: 100%; height: 160px; border-right: none; border-bottom: 1px solid var(--border-light); }
+            .landing-container { margin: 10px; border-radius: 6px; }
         }
     </style>
 </head>
 <body>
 
+    <div class="landing-container">
+        
+        <!-- ═══ HERO ═══ -->
+        <div class="course-hero">
+            <img src="assets/A%20Quiet%20Return%20Thumbnail.png" class="hero-img" alt="A Quiet Return tree reflection thumbnail">
+            <div class="section-padding" style="padding-top: 20px;">
+                <h1>A Quiet Return</h1>
+                <div class="subtitle">Guided Embodied Reflections for Women in Their Prime</div>
+                
+                <p style="text-align: center;">Three gentle meditations designed not to change your thinking, but to change where your attention lives. This is not about effort or improvement. It is about allowing something to settle naturally.</p>
+                
+                <div class="course-price">$19.99</div>
+                <div class="course-price-note">Instant access. Listen at your own pace. Return whenever you need to.</div>
+                
+                <!-- Replace PUT_YOUR_STRIPE_LINK_HERE with your Stripe $19.99 link -->
+                <a href="PUT_YOUR_STRIPE_LINK_HERE" class="btn-purchase">Begin Your Quiet Return</a>
+            </div>
+        </div>
 
-    <!-- ═══ HERO ═══ -->
-    <div class="course-hero">
-        <img src="assets/A%20Quiet%20Return%20Thumbnail.png" alt="A Quiet Return course thumbnail showing a peaceful tree by water">
-        <h1>A Quiet Return</h1>
-        <p class="subtitle">Guided Embodied Reflections for Women in Their Prime</p>
-        <p class="intro-text">Three gentle meditations designed not to change your thinking, but to change where your attention lives. This is not about effort or improvement. It is about allowing something to settle naturally.</p>
-        <div class="course-price">$19.99</div>
-        <p class="course-price-note">Instant access. Listen at your own pace. Return whenever you need to.</p>
-        <!-- Replace the link below with your Stripe $19.99 link -->
-        <a href="PUT_YOUR_STRIPE_LINK_HERE" class="btn-purchase">Begin Your Quiet Return</a>
-    </div>
+        <!-- ═══ THE INVITATION ═══ -->
+        <div class="section-padding">
+            <h2 style="text-align: left; margin-top: 0;">What We're Actually Doing Here</h2>
+            <p>These reflections are not designed to change your thinking. They are designed to change where your attention lives.</p>
+            <p>Many women in their prime spend years with their attention directed outward. Responding, managing, caring, holding things together. This is not a flaw. It is often a sign of capability and responsibility.</p>
+            <p>Over time, however, attention that lives mostly outside the body can leave the system slightly strained. Not because anything is wrong, but because the nervous system does not get many chances to settle and reorganize from the inside.</p>
+            <p>When attention returns to the body and stays there gently, the system receives a different signal. Things begin to integrate on their own. You do not have to make that happen.</p>
+        </div>
 
-    <!-- ═══ THE INVITATION ═══ -->
-    <div class="course-section">
-        <h2>What We're Actually Doing Here</h2>
-        <p>These reflections are not designed to change your thinking. They are designed to change where your attention lives.</p>
-        <p>Many women in their prime spend years with their attention directed outward. Responding, managing, caring, holding things together. This is not a flaw. It is often a sign of capability and responsibility.</p>
-        <p>Over time, however, attention that lives mostly outside the body can leave the system slightly strained. Not because anything is wrong, but because the nervous system does not get many chances to settle and reorganize from the inside.</p>
-        <p>When attention returns to the body and stays there gently, the system receives a different signal. Things begin to integrate on their own. You do not have to make that happen.</p>
-    </div>
-
-    <div class="divider"></div>
-
-    <!-- ═══ WHAT YOU GET ═══ -->
-    <div class="what-you-get">
-        <div class="what-you-get-inner">
-            <h2>What's Inside</h2>
+        <!-- ═══ WHAT YOU GET ═══ -->
+        <div class="what-you-get section-padding">
+            <h2 style="margin-top: 0;">What's Inside</h2>
 
             <div class="meditation-card">
                 <img src="assets/Thumbnail%20for%20Meditation%201.png" alt="Meditation 1: Where am I leaving myself?">
                 <div class="meditation-card-content">
-                    <div class="card-label">Meditation One</div>
+                    <div class="card-label">Reflection One</div>
                     <h3>Where Am I Leaving Myself?</h3>
                     <p>A gentle practice of noticing where your attention actually lives, and what it feels like to bring it a little closer to home.</p>
                 </div>
@@ -374,7 +319,7 @@
             <div class="meditation-card">
                 <img src="assets/Thumbnail%20Meditation%202.png" alt="Meditation 2: What happens when I stay?">
                 <div class="meditation-card-content">
-                    <div class="card-label">Meditation Two</div>
+                    <div class="card-label">Reflection Two</div>
                     <h3>What Happens When I Stay?</h3>
                     <p>Exploring the quiet steadiness that forms when you stop rushing away. Not because you are doing anything right, but because you are not leaving.</p>
                 </div>
@@ -383,13 +328,13 @@
             <div class="meditation-card">
                 <img src="assets/Thumbnail%20Meditation%203.png" alt="Meditation 3: What do I know when I'm here?">
                 <div class="meditation-card-content">
-                    <div class="card-label">Meditation Three</div>
+                    <div class="card-label">Reflection Three</div>
                     <h3>What Do I Know When I'm Here?</h3>
                     <p>Resting in the kind of knowing that does not come from effort. Something in you already knows how to move when the time is right.</p>
                 </div>
             </div>
 
-            <div class="pdf-card">
+            <div class="meditation-card">
                 <div class="pdf-icon">PDF</div>
                 <div class="meditation-card-content">
                     <div class="card-label">Companion Guide</div>
@@ -398,39 +343,36 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- ═══ QUOTE ═══ -->
-    <div class="quote-section">
-        <blockquote>These practices may feel quiet. Sometimes almost uneventful. That does not mean nothing is happening.</blockquote>
-        <p class="attribution">From the Guided Reflections</p>
-    </div>
+        <!-- ═══ WHO THIS IS FOR ═══ -->
+        <div class="section-padding">
+            <blockquote>
+                These practices may feel quiet. Sometimes almost uneventful. That does not mean nothing is happening.
+                <span class="attribution">— From the Guided Reflections</span>
+            </blockquote>
 
-    <!-- ═══ WHO THIS IS FOR ═══ -->
-    <div class="who-section">
-        <div class="who-inner">
-            <h2>This Is For You If...</h2>
+            <div class="divider"></div>
+
+            <h2 style="text-align: left;">This Is For You If...</h2>
             <p>You have been holding a lot. Not because something is wrong, but because that is what capable women do. You manage, you respond, you care for others, and somewhere along the way your attention began living almost entirely outside of yourself.</p>
             <p>You do not need another thing to do. You do not need more tools or strategies or frameworks. You need a few quiet minutes where nothing is asked of you except to stay.</p>
             <p>These reflections are designed to be experienced slowly, with space in between. One reflection per day, in order. Then go about your day. Let the experience sit in your body in its own way. Often the most meaningful shifts happen later, quietly, without conscious thought.</p>
-            <p>You can return to any of the reflections whenever you feel the need to reorient or come back to yourself.</p>
         </div>
+
+        <!-- ═══ FINAL CTA ═══ -->
+        <div class="final-cta section-padding">
+            <h2>Your Quiet Return Begins Here</h2>
+            <p>Three reflections. One companion guide. A gentle practice of coming home to yourself.</p>
+            <div class="course-price">$19.99</div>
+            <br>
+            <!-- Replace PUT_YOUR_STRIPE_LINK_HERE with your Stripe $19.99 link -->
+            <a href="PUT_YOUR_STRIPE_LINK_HERE" class="btn-purchase">Begin Your Quiet Return</a>
+        </div>
+
     </div>
 
-    <!-- ═══ FINAL CTA ═══ -->
-    <div class="final-cta">
-        <h2>Your Quiet Return Begins Here</h2>
-        <p>Three meditations. One companion guide. A gentle practice of coming home to yourself.</p>
-        <div class="course-price">$19.99</div>
-        <br>
-        <!-- Replace the link below with your Stripe $19.99 link -->
-        <a href="PUT_YOUR_STRIPE_LINK_HERE" class="btn-purchase">Begin Your Quiet Return</a>
-    </div>
-
-    <div class="course-footer">
-        BEYOND THE BEND YOGA<br>
-        Rising Moon Studio &middot; Sherwood Park, AB<br><br>
-        <a href="index.html">Back to Home</a> &middot; <a href="library.html">The Sanctuary</a>
+    <div class="copyright-footer">
+        BEYOND THE BEND YOGA &nbsp;&middot;&nbsp; RISING MOON STUDIO
     </div>
 
 </body>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Quiet Return Facebook Ad Mockup</title>
+    <style>
+        :root {
+            --cream: #f6f1ea;
+            --stone: #e8dfd3;
+            --sage: #7a8b72;
+            --deep-sage: #566456;
+            --rose-clay: #c49b94;
+            --ink: #3f403b;
+            --soft-white: rgba(255, 255, 255, 0.78);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 32px;
+            background:
+                radial-gradient(circle at top left, #fbf8f3 0%, var(--cream) 45%, #ede4d8 100%);
+            color: var(--ink);
+            font-family: Georgia, "Times New Roman", serif;
+        }
+
+        .frame {
+            width: min(100%, 1080px);
+            display: grid;
+            gap: 22px;
+        }
+
+        .label {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--deep-sage);
+            opacity: 0.75;
+        }
+
+        .ad {
+            width: 1080px;
+            max-width: 100%;
+            aspect-ratio: 1 / 1;
+            background: linear-gradient(180deg, rgba(246, 241, 234, 0.96), rgba(235, 226, 216, 0.98));
+            border: 1px solid rgba(86, 100, 86, 0.12);
+            box-shadow: 0 30px 80px rgba(63, 64, 59, 0.12);
+            overflow: hidden;
+            position: relative;
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+        }
+
+        .photo-wrap {
+            position: relative;
+            overflow: hidden;
+            background: #d8d4ce;
+        }
+
+        .photo-wrap::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(90deg, rgba(86, 100, 86, 0.04), rgba(86, 100, 86, 0)),
+                linear-gradient(0deg, rgba(246, 241, 234, 0.04), rgba(246, 241, 234, 0.04));
+        }
+
+        .photo-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            filter: saturate(0.94) contrast(0.98);
+        }
+
+        .content {
+            padding: 76px 72px 68px 58px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.18)),
+                linear-gradient(135deg, rgba(196, 155, 148, 0.12), rgba(122, 139, 114, 0.08));
+        }
+
+        .eyebrow {
+            margin: 0 0 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--deep-sage);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 58px;
+            line-height: 0.95;
+            font-weight: 400;
+            color: #394137;
+        }
+
+        .subtitle {
+            margin: 18px 0 0;
+            font-size: 22px;
+            line-height: 1.45;
+            color: #5b5b55;
+            max-width: 24ch;
+        }
+
+        .quote {
+            margin: 28px 0 0;
+            padding: 24px 0 0;
+            border-top: 1px solid rgba(86, 100, 86, 0.2);
+            font-size: 27px;
+            line-height: 1.42;
+            color: #42463f;
+        }
+
+        .details {
+            margin-top: 28px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .pill {
+            padding: 10px 14px;
+            border-radius: 999px;
+            background: var(--soft-white);
+            border: 1px solid rgba(86, 100, 86, 0.12);
+            font-size: 13px;
+            letter-spacing: 0.03em;
+            color: var(--deep-sage);
+        }
+
+        .footer {
+            margin-top: 28px;
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            font-size: 16px;
+            line-height: 1.55;
+            color: #5a5c55;
+        }
+
+        .cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 156px;
+            padding: 15px 22px;
+            border-radius: 999px;
+            background: var(--deep-sage);
+            color: #fffdf8;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        .notes {
+            max-width: 820px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            line-height: 1.7;
+            color: #536053;
+        }
+
+        @media (max-width: 900px) {
+            .ad {
+                grid-template-columns: 1fr;
+                aspect-ratio: auto;
+            }
+
+            .photo-wrap {
+                min-height: 520px;
+            }
+
+            .content {
+                padding: 44px 30px 40px;
+            }
+
+            h1 {
+                font-size: 44px;
+            }
+
+            .quote {
+                font-size: 22px;
+            }
+
+            .footer {
+                align-items: start;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="frame">
+        <div class="label">Facebook Ad Mockup</div>
+
+        <section class="ad" aria-label="A Quiet Return Facebook ad concept">
+            <div class="photo-wrap">
+                <img src="../../Tech_and_Web/website/assets/laura_rested.png" alt="Laura Harvey seated with a mug in a calm indoor setting">
+            </div>
+
+            <div class="content">
+                <p class="eyebrow">Guided embodied reflections</p>
+                <h1>A Quiet Return</h1>
+                <p class="subtitle">For women in their prime who are ready to bring their attention gently back home.</p>
+
+                <p class="quote">These reflections are not about changing your thinking. They are about changing where your attention lives.</p>
+
+                <div class="details">
+                    <span class="pill">3 guided meditations</span>
+                    <span class="pill">Companion PDF</span>
+                    <span class="pill">$19.99</span>
+                </div>
+
+                <div class="footer">
+                    <div class="brand">
+                        Laura Harvey<br>
+                        Beyond the Bend Yoga
+                    </div>
+                    <a class="cta" href="#">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="notes">
+            Built as a calm square ad concept using your existing portrait. This is best as a visual direction and can be exported or recreated in Canva, Meta Ads, or the website later.
+        </div>
+    </div>
+</body>
+</html>

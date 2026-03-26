@@ -6,15 +6,8 @@
 *.wmv
 *.flv
 *.m4v
-*.pdf
 *.zip
 *.exe
-*.png
-*.jpg
-*.jpeg
-*.svg
-*.gif
-*.ico
 
 # Operating System Files
 Thumbs.db

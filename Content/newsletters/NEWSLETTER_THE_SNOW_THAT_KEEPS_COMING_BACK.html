@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter | The Snow That Keeps Coming Back</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+        body, p, h1, h2, h3, h4, h5, h6 {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            background-color: #f7f7f5;
+            color: #4a4a4a;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+
+        /* Header / Masthead */
+        .header {
+            background-color: #faf0f0;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 4px solid #556b2f;
+        }
+
+        .header img {
+            max-width: 140px;
+            height: auto;
+            margin-bottom: 25px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .masthead-title {
+            color: #556b2f;
+            font-family: 'Playfair Display', Georgia, serif;
+            line-height: 1.2;
+        }
+
+        .masthead-top {
+            display: block;
+            font-size: 28px;
+            font-style: italic;
+            font-weight: 400;
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+
+        .masthead-main {
+            display: block;
+            font-size: 32px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-top: 2px solid #556b2f;
+            border-bottom: 2px solid #556b2f;
+            padding: 15px 0;
+            margin-top: 10px;
+        }
+
+        .content-block {
+            padding: 40px 30px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #556b2f;
+            font-size: 26px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #78866b;
+            font-size: 22px;
+            margin-bottom: 10px;
+            margin-top: 20px;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .highlight-section {
+            background-color: #fcfbf9;
+            padding: 40px 30px;
+            border-left: 4px solid #556b2f;
+        }
+
+        .practice-section {
+            background-color: #eef2eb;
+            padding: 30px 20px;
+            margin-top: 0;
+        }
+
+        .img-responsive {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin: 20px 0;
+            display: block;
+        }
+
+        .studio-section {
+            background-color: #f4f7f2;
+            padding: 40px 30px;
+            border-top: 1px solid #d8e4d0;
+        }
+
+        .btn-studio {
+            display: inline-block;
+            padding: 14px 32px;
+            background-color: #556b2f;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 16px;
+            margin-top: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .deadline-box {
+            background-color: #eef2eb;
+            border-radius: 6px;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .quote-block {
+            background-color: #F0F4EE;
+            border-left: 3px solid #A8B5A2;
+            padding: 20px 25px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .footer {
+            background-color: #3F4A3C;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #F7F4EF;
+            letter-spacing: 1px;
+        }
+
+        .footer a {
+            color: #A8B5A2;
+            text-decoration: none;
+        }
+
+        strong {
+            color: #556b2f;
+            font-weight: 600;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container { width: 100% !important; }
+            .header { padding: 30px 15px; }
+            .content-block, .highlight-section { padding: 25px 15px; }
+            .masthead-main { font-size: 24px; letter-spacing: 1px; }
+            .masthead-top { font-size: 22px; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- ═══ MASTHEAD BANNER ═══ -->
+        <div class="header">
+            <img src="https://storage.googleapis.com/msgsndr/t19sOv208p64ldeUjJug/media/697996aad119a57c1575bb7d.png"
+                alt="Beyond the Bend Logo">
+            <div class="masthead-title">
+                <span class="masthead-top">Reflections from</span>
+                <span class="masthead-main">Beyond the Bend</span>
+            </div>
+        </div>
+
+        <!-- ═══ PERSONAL INTRO ═══ -->
+        <div class="content-block">
+            <p>Hello {{contact.first_name}},</p>
+            <p>If you live in Alberta, you already know what I'm about to say.</p>
+            <p>Spring keeps showing up and then changing its mind.</p>
+            <p>A few days ago the sun was so warm I could feel it through my jacket. The snow was melting, the birds were doing that tentative chirping thing, and something in me just... exhaled. Finally.</p>
+            <p>And then I woke up later in the week to fresh snow covering the ground again, and a sky the colour of old concrete.</p>
+            <p>I laughed. And then I sighed. And then I thought, well. This is also exactly what's happening inside me right now.</p>
+        </div>
+
+        <!-- ═══ WELLNESS WISDOM ═══ -->
+        <div class="highlight-section">
+            <h2>Wellness Wisdom</h2>
+            
+            <img src="https://beyond-the-bend.github.io/beyond-the-bend/Brand_Assets/Photos/Photos%20-%20Laura/Laura-3.jpg"
+                alt="Laura crouching softly in front of the window"
+                class="img-responsive">
+
+            <h3>The Snow That Keeps Coming Back</h3>
+
+            <p>I've been in a season of inner shifting lately.</p>
+            <p>Not dramatic transformation, nothing I could point to and say <em>there, that's where everything changed.</em> Just a quiet, persistent sense that something in the way I see things is moving. The lens is adjusting. And there have been moments, real and unmistakable moments, where I've landed somewhere new.</p>
+            <p>You might know this feeling.</p>
+            <p>It's a stillness that doesn't feel like emptiness. It feels like finally arriving somewhere you didn't know you'd been searching for. The chest softens. The belly releases. The shoulders drop, not partway, but fully, all the way down. The noise in the mind quiets to something more like background weather than a storm you're standing in. And the world through that lens looks... workable. Even beautiful. Not because anything outside has changed, but because of where you're looking from.</p>
+            <p>It feels like the first real day of spring. Like light coming through after a long grey stretch.</p>
+            <p>And then the snow comes back.</p>
+            <p>I'm back in an old reaction I thought I'd moved past. I'm back in a familiar tightness in my chest, a flutter of anxiety, a heaviness in my belly. There's a dullness to it, a kind of cloud. And underneath all of that is something I didn't used to feel quite this clearly: sadness. Because now I know what the other side feels like. Now I know what I'm temporarily without.</p>
+            <p>And with the sadness comes a whisper of fear. <em>What if I can't find my way back? What if that stillness was a one time thing and I've somehow used it up?</em></p>
+            <p>But here's where I've landed, again and again, each time the snow returns:</p>
+            <p>It's not <em>hope</em> that steadies me. Hope can feel thin, a little desperate, like wishing into the dark. What steadies me is something more like recognition. Evidence. The memory of having been there before.</p>
+            <p>Because spring has never once failed to arrive.</p>
+            <p>Not one year. Not ever. Even when it was stubbornly, frustratingly late. Even when it kept retreating. It always came. The birds always started up again. The earth always softened. The smell of green came back, that particular smell that you can't quite describe but your whole body recognizes the moment it arrives.</p>
+            
+            <div class="quote-block">
+                <p style="margin-bottom: 0;"><em>I've already seen my own spring. I've already felt that stillness, that open heart, that quieter lens. It's not theoretical for me anymore. It's evidence. And evidence is steadier ground than hope.</em></p>
+            </div>
+
+            <p>So now, when the snow comes back, I try to practice something gentler than pushing through: <strong>patient recognition.</strong></p>
+            <p>I am aware that I'm in a storm. I know what this weather is. I know it passes. I don't have to force the thaw. I just have to not confuse the current forecast with the permanent climate.</p>
+        </div>
+
+        <!-- ═══ FROM THE STUDIO (REVAMPED SALES SECTION) ═══ -->
+        <div class="studio-section">
+            <h2 style="text-align: center;">From the Studio</h2>
+            
+            <p>This is it, we are officially in the final week before our Spring Session begins! </p>
+            <p>While my studio door is always open and you are welcome to gracefully drop in or join us at any point during the season, there is something deeply grounding about crossing the starting line together on Day One.</p>
+            <p>If you've been quietly thinking about joining us for a class this season, let this be your gentle nudge. While my Monday night Somatic Vinyasa class is officially full (which makes my heart so deeply happy!), I still have a few mats warmly waiting for you in the other four classes:</p>
+            <ul style="margin-left: 20px; margin-bottom: 20px; font-size: 16px; line-height: 1.8;">
+                <li><strong>Rise and Restore</strong> (Tuesday mornings)</li>
+                <li><strong>Restore and Reclaim</strong> (Tuesday evenings)</li>
+                <li><strong>Somatic Hatha</strong> (Wednesday mornings)</li>
+                <li><strong>Embodied Flow</strong> (Wednesday evenings)</li>
+            </ul>
+            <p>These beautiful classes are offered locally in person at Rising Moon Studio, with the morning classes also available via livestream for those gracefully joining from the comfort of home.</p>
+            
+            <div style="text-align: center;">
+                <a href="https://beyond-the-bend.github.io/beyond-the-bend/Tech_and_Web/website/spring-session.html" class="btn-studio">Reserve Your Mat For Spring</a>
+            </div>
+        </div>
+
+        <!-- ═══ PRACTICE OF THE WEEK (JOURNALING) ═══ -->
+        <div class="content-block">
+            <div class="practice-section" style="border-radius: 4px; padding: 30px;">
+                <h2>Practice of the Week</h2>
+                <h3 style="margin-top: 8px;">Documenting the Thaw (A Journaling Practice)</h3>
+                
+                <p>When the inner weather turns cold, a strange kind of amnesia happens in our bodies. Our nervous system literally forgets that we have ever felt warm. We do not just feel sad, we feel convinced that the sadness is permanent.</p>
+                <p>This week, your practice is to build a lifeline for your future self. I call this gathering evidence.</p>
+                
+                <p>You do not need to write a massive, overwhelming journal entry. I just want you to find one small scrap of paper. Think about a moment in the last month where you felt a genuine, undeniable exhale. Maybe it was the way your tea tasted on a slow morning. Maybe it was a moment your shoulders finally dropped while listening to the birds. Maybe it was just a fleeting second where the world felt workable, and you felt okay.</p>
+                
+                <p>Write down exactly what that specific moment felt like in your physical body. Did your belly soften? Did your jaw unclench? Do not write about the story, write about the physical sensation of the thaw.</p>
+                
+                <p>When you write it down, you are taking that moment out of your unreliable memory and turning it into tangible, physical evidence.</p>
+                
+                <p>Take that piece of paper and fold it up. Place it somewhere you will find it on a heavy day, perhaps tucked inside your planner or sitting quietly on your nightstand.</p>
+                
+                <p>The next time the snow inevitably comes back, you do not have to rely on thin, desperate hope. You can unfold that paper, hold it in your hands, and read the absolute proof that your spring is real. You have already lived it.</p>
+            </div>
+        </div>
+
+        <!-- ═══ CLOSING THOUGHT (EXPANDED) ═══ -->
+        <div class="content-block">
+            <h2>A Closing Thought</h2>
+            <p>It is so incredibly easy to feel discouraged when the tightness returns. It is so easy to believe the ego when it loudly insists that this cold spell is the one that will last forever.</p>
+            <p>But I want you to look outside. The earth doesn't panic when it snows in April. The trees don't forget how to bloom just because they temporarily got buried again. They just wait. They know the thaw is inevitable.</p>
+            <p>Be as patient with your own nervous system as you are with the Alberta spring. You cannot un-know the warmth once you have felt it. The stillness you have already touched is real, and the fact that you know what it feels like is your ultimate compass.</p>
+            <p>Spring is coming. It always does.</p>
+            <br>
+            <p>With warmth and gratitude,<br>Laura 🩷</p>
+        </div>
+
+        <!-- ═══ FOOTER ═══ -->
+        <div class="footer">
+            BEYOND THE BEND YOGA<br>
+            Rising Moon Studio &middot; Sherwood Park, AB<br><br>
+            <a href="{{unsubscribe_link}}">Unsubscribe</a>
+        </div>
+
+    </div>
+</body>
+
+</html>

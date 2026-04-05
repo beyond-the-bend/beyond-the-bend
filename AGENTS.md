@@ -42,3 +42,4 @@ This file contains a growing ruleset that improves over time. **At session start
 <!-- New rules are appended below this line. Do not edit above this section. -->
 1. [PROCESS] Always write learned rules to AGENTS.md, never to CLAUDE.md, GEMINI.md, or CODEX.md - those are redirect files only. AGENTS.md is the single source of truth.
 2. [PROCESS] Always keep simple context tasks light and fast unless the user asks for a deep pass - because this workspace should not feel slow or heavy for easy questions.
+3. [STYLE] Never use em-dashes (—) or hyphens (-) anywhere in any copy or written text. The user explicitly hates them. This is a strict rule across all newsletters, ads, and website copy. Use commas or reword the sentence.

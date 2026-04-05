@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter | When Letting Go Shakes the Ground Beneath You</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+        body,
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            background-color: #f7f7f5;
+            color: #4a4a4a;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+
+        /* Header / Masthead */
+        .header {
+            background-color: #faf0f0;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 4px solid #556b2f;
+        }
+
+        .header img {
+            max-width: 140px;
+            height: auto;
+            margin-bottom: 25px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .masthead-title {
+            color: #556b2f;
+            font-family: 'Playfair Display', Georgia, serif;
+            line-height: 1.2;
+        }
+
+        .masthead-top {
+            display: block;
+            font-size: 28px;
+            font-style: italic;
+            font-weight: 400;
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+
+        .masthead-main {
+            display: block;
+            font-size: 32px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-top: 2px solid #556b2f;
+            border-bottom: 2px solid #556b2f;
+            padding: 15px 0;
+            margin-top: 10px;
+        }
+
+        .content-block {
+            padding: 40px 30px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #556b2f;
+            font-size: 26px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #78866b;
+            font-size: 22px;
+            margin-bottom: 10px;
+            margin-top: 20px;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .highlight-section {
+            background-color: #fcfbf9;
+            padding: 40px 30px;
+            border-left: 4px solid #556b2f;
+        }
+
+        .studio-section {
+            background-color: #f4f7f2;
+            padding: 40px 30px;
+            border-top: 1px solid #d8e4d0;
+        }
+
+        .practice-section {
+            background-color: #eef2eb;
+            padding: 30px 20px;
+            margin-top: 0;
+        }
+
+        .img-responsive {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin: 20px 0;
+            display: block;
+        }
+
+        /* Class schedule table */
+        .class-row td {
+            padding: 12px 15px;
+            font-size: 15px;
+            line-height: 1.6;
+            border-bottom: 1px solid #d8e4d0;
+        }
+
+        .class-day {
+            color: #556b2f;
+            font-weight: 700;
+        }
+
+        .new-badge {
+            background-color: #556b2f;
+            color: white;
+            font-size: 11px;
+            padding: 2px 7px;
+            border-radius: 10px;
+            letter-spacing: 1px;
+            vertical-align: middle;
+            margin-left: 6px;
+        }
+
+        .btn-group {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 15px;
+            letter-spacing: 1px;
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            margin: 10px;
+        }
+
+        .btn-sage {
+            background-color: #A8B5A2;
+            color: white;
+        }
+
+        .btn-forest {
+            background-color: #3F4A3C;
+            color: #F7F4EF;
+        }
+
+        .footer {
+            background-color: #3F4A3C;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #F7F4EF;
+            letter-spacing: 1px;
+        }
+
+        .footer a {
+            color: #A8B5A2;
+            text-decoration: none;
+        }
+
+        strong {
+            color: #556b2f;
+            font-weight: 600;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                width: 100% !important;
+            }
+
+            .header {
+                padding: 30px 15px;
+            }
+
+            .content-block,
+            .highlight-section,
+            .studio-section {
+                padding: 25px 15px;
+            }
+
+            .masthead-main {
+                font-size: 24px;
+                letter-spacing: 1px;
+            }
+
+            .masthead-top {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- ═══ MASTHEAD BANNER ═══ -->
+        <div class="header">
+            <img src="https://storage.googleapis.com/msgsndr/t19sOv208p64ldeUjJug/media/697996aad119a57c1575bb7d.png"
+                alt="Beyond the Bend Logo">
+            <div class="masthead-title">
+                <span class="masthead-top">Reflections from</span>
+                <span class="masthead-main">Beyond the Bend</span>
+            </div>
+        </div>
+
+        <!-- ═══ PERSONAL INTRO ═══ -->
+        <div class="content-block">
+            <p>Hi {{contact.first_name}},</p>
+            <p>I've been sitting with something this week. Something I made a hard choice about, something I had been holding onto for a long time because it felt like solid ground. Familiar. Known. Safe in the way that only something deeply habitual can feel safe.</p>
+            <p>And then I let it go.</p>
+            <p>I want to be honest with you about what happened next, because it surprised me and I suspect I'm not the only one who has felt this way. It didn't feel like relief. Not at first. What it felt like was a kind of freefall. That disorienting moment when something you've been gripping simply isn't there anymore, and your whole system has to remember how to stand on its own again.</p>
+            <p>I think so many of us carry an unspoken expectation that releasing something that wasn't good for us should feel freeing. And sometimes it does. But sometimes the body doesn't get that memo right away. Sometimes the nervous system just registers: the anchor is gone. And it reaches.</p>
+            <p>That's where I've been this week. Still a little unsteady. Still finding my feet. And somehow, that felt worth sharing.</p>
+            <p>I hope it resonates with you the way it's been resonating with me.</p>
+            <p>With warmth and gratitude,<br>Laura 🩷</p>
+        </div>
+
+        <!-- ═══ WELLNESS WISDOM ═══ -->
+        <div class="highlight-section">
+            <h2>This Week's Wellness Wisdom</h2>
+
+            <!-- IMAGE — This is the pensive and content portrait from GHL -->
+            <img src="https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/69d1981ea7dcb4cff0989cb4.png"
+                alt="A pensive and content woman reflecting on new ground" class="img-responsive">
+
+            <h3>When Letting Go Shakes the Ground Beneath You</h3>
+            <p><em>By Laura Harvey | Beyond the Bend Yoga</em></p>
+
+            <p>There is a story we tell ourselves about letting go.</p>
+            <p>It sounds like freedom. Like a long exhale after holding something for too long. Like finally setting down a weight and feeling the lightness pour in.</p>
+            <p>And sometimes, that is exactly how it feels.</p>
+            <p>But sometimes it doesn't. Sometimes letting go, even of something that was hurting us, keeping us small, holding us back from the life that's actually waiting, leaves us standing in a strange open space. Feeling less like we've been freed and more like we've lost our footing altogether. The nervous system, that ancient and faithful part of us that is always scanning for safety, doesn't distinguish between a cage and a shelter. It simply notices that something familiar is gone.</p>
+            <p>I've been thinking about that this week. About how counterintuitive it is. How you can know, with every clear and honest part of yourself, that something needed to end. And still feel the loss of it in your body like something essential has been removed.</p>
+            <p>That feeling is not a sign that you made a mistake.</p>
+            <p>I want to say that again, because I've needed to hear it myself this week: the unsteadiness is not a signal to go back. It's not your inner wisdom questioning your decision. It's simply what happens when the body is catching up to something the heart has already understood.</p>
+            <p>Our nervous systems are built to seek safety in what is known. Even when the known has stopped being good for us, familiarity itself can feel like ground. When we let it go, whether it's a relationship, a pattern, a version of ourselves we've outgrown, the system often registers the loss before it registers the freedom. That's not a flaw. That's evidence that you're human and that the things you choose actually matter to you.</p>
+            <p>So where does that leave us, in those in between days when the old thing is gone and the new footing hasn't fully arrived?</p>
+            <p>I honestly don't think there's a perfect answer to that. But I've been sitting with one idea that keeps coming back to me: what if the ground we're looking for was never meant to come from outside of us in the first place?</p>
+            <p>Not the steadiness of having something to hold onto. But the quieter steadiness of being able to feel your own feet. Your own breath. Your own presence, still here, still moving, still honest.</p>
+            <p>That kind of ground doesn't leave when circumstances change. It lives in the body. It lives in awareness. It lives in the practice of coming back to yourself, especially on the days when that feels harder than it should.</p>
+            <p>I'm not saying this from the other side of it. I'm saying it from right in the middle of it, which maybe makes it more useful and maybe makes it less polished. But it feels true, and that's enough for me to share it.</p>
+            <p>Letting go is not a single moment. It unfolds over days, sometimes weeks. There will be mornings that feel clear and evenings that feel like starting over. Both are part of the same process. Neither is wrong.</p>
+            <p>And underneath all of it, something is quietly becoming. A new orientation. A growing trust in your own capacity. A different kind of stability, one that doesn't depend on everything staying the same.</p>
+            <p>That's what I'm reaching toward this week. Maybe you are too.</p>
+        </div>
+
+        <!-- ═══ FROM THE STUDIO ═══ -->
+        <div class="studio-section">
+            <h2>From the Studio</h2>
+            <p>Spring session begins next week, and I want to make sure you have all the details before we get started.</p>
+            <p>I do have one change to share. The Wednesday morning somatic hatha class at Rising Moon will not be running in studio this spring. The universe had other plans for that one, and I've learned to listen. The good news is that the class is still very much happening. It will just be moving online, taught from my home studio via Zoom. So if that class was on your radar, it's still available to you. You'll simply roll out your mat at home.</p>
+            
+            <p><strong>Here is where things stand for the spring session:</strong></p>
+            <table width="100%" cellpadding="0" cellspacing="0"
+                style="margin: 20px 0; border-collapse: collapse; border-radius: 6px; overflow: hidden; border: 1px solid #d8e4d0;">
+                <tr class="class-row">
+                    <td style="padding: 12px 15px; border-bottom: 1px solid #d8e4d0; font-size: 15px; line-height: 1.6;">
+                        <span class="class-day">Monday evenings</span><br>
+                        Somatic Vinyasa &middot; <strong>FULL</strong> (Waitlist available)
+                    </td>
+                </tr>
+                <tr class="class-row">
+                    <td style="padding: 12px 15px; border-bottom: 1px solid #d8e4d0; font-size: 15px; line-height: 1.6;">
+                        <span class="class-day">Tuesday mornings</span><br>
+                        Rise and Restore &middot; A few spots available
+                    </td>
+                </tr>
+                <tr class="class-row">
+                    <td style="padding: 12px 15px; border-bottom: 1px solid #d8e4d0; font-size: 15px; line-height: 1.6;">
+                        <span class="class-day">Tuesday evenings</span><br>
+                        Restore and Reclaim &middot; <strong>Just one spot left</strong>
+                    </td>
+                </tr>
+                <tr class="class-row">
+                    <td style="padding: 12px 15px; font-size: 15px; line-height: 1.6;">
+                        <span class="class-day">Wednesday evenings</span><br>
+                        Organic Movement &middot; A few spots remaining
+                    </td>
+                </tr>
+            </table>
+
+            <p>Classes are filling quickly, so if something has been calling to you, now is a good time to listen to that.</p>
+            <p>And if in person doesn't work for your life right now, please know that all four classes are also available to join online. Whether you're local and prefer your living room, or you're joining from somewhere else entirely, you're welcome. Class passes are available in 5, 10, or 20 class options, or you can simply drop in whenever it works for you.</p>
+
+            <div class="btn-group">
+                <a href="https://beyondthebendyoga.ca/classes" class="btn btn-sage">In Person and Online Classes</a>
+                <a href="https://beyondthebendyoga.ca/livestream-yoga" class="btn btn-forest">Livestream Classes</a>
+            </div>
+
+            <p style="font-size: 15px; margin-top: 20px;">I'd love to have you in the room, or on the screen, this spring. If you have any questions, just reply to this email.</p>
+        </div>
+
+        <!-- ═══ PRACTICE OF THE WEEK ═══ -->
+        <div class="content-block">
+            <div class="practice-section" style="border-radius: 4px; padding: 30px;">
+                <h2>Practice of the Week</h2>
+                <h3 style="margin-top: 8px;">Finding the Ground Within</h3>
+                <p><em>Before you begin, read through this practice once so the shape of it is in you. Then close your eyes and let it unfold however it does. There's no right way to do this.</em></p>
+                
+                <p>Find a comfortable seat, or lie down if that feels more honest in your body today. Let your eyes close, or soften your gaze toward the floor.</p>
+                <p>Take one slow breath in through your nose. Let the exhale come through your mouth without shaping it. Just release.</p>
+                <p>Now bring your attention to the places where your body meets the earth. The weight of your hips in the seat. The press of your feet on the floor. The quiet, faithful fact that something is holding you, even now, even here.</p>
+                <p>You don't have to feel okay. You don't have to feel steady. You only have to feel what is actually here.</p>
+                <p>Let your breath continue at its own pace and bring your awareness to the center of your chest. Not to fix anything there. Just to be with it. Notice what you find. Tightness, perhaps. A hollow, open space. Grief. Or maybe something quieter: a flicker of relief, a calm you didn't expect. Whatever is there, let it be exactly that.</p>
+                <p>Very gently, place one hand over your heart. Feel the warmth of your own touch. This is not a small thing. This is you, choosing to stay with yourself.</p>
+                <p>Breathe here for a few rounds. With each exhale, let your weight drop a little more into what is supporting you. Let the floor, the chair, the earth do its work. You don't have to hold yourself up right now.</p>
+                <p>Notice that beneath everything you are feeling, beneath the uncertainty and the reaching and the quiet grief, there is something that has not moved. A presence. An awareness that has been here through all of it.</p>
+                <p><strong>That is the ground within.</strong> It was there before you let go. It is here now. It will be here as you find your way forward.</p>
+                <p>When you're ready, take one full breath and let your eyes open gently.</p>
+            </div>
+        </div>
+
+        <!-- ═══ CLOSING THOUGHT ═══ -->
+        <div class="content-block">
+            <h2>🌙 A Closing Thought</h2>
+            <p>The days after letting go, the uncertain, tender, recalibrating days, ask something of us too. They ask us to trust that we are enough to stand on. That we have always been enough.</p>
+            <p>You are not behind. You are not lost. You are simply in the part of the story where the new ground is still forming.</p>
+            <p>Keep coming back to yourself. That's all this asks.</p>
+            <br>
+            <p>With warmth and gratitude,<br>Laura 🩷</p>
+        </div>
+
+        <!-- ═══ FOOTER ═══ -->
+        <div class="footer">
+            BEYOND THE BEND YOGA<br>
+            Rising Moon Studio &middot; Sherwood Park, AB<br><br>
+            <a href="{{unsubscribe_link}}">Unsubscribe</a>
+        </div>
+
+    </div>
+</body>
+
+</html>

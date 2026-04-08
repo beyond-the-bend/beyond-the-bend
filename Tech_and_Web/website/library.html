@@ -9,6 +9,22 @@
 </head>
 <body>
 
+<script>
+    // A simple, calm password protection layer
+    const sanctuaryPassword = "rest";
+    if (sessionStorage.getItem("sanctuary_auth") !== "true") {
+        let entry = prompt("Welcome to The Sanctuary. Please enter your password to come inside:");
+        if (entry === sanctuaryPassword) {
+            sessionStorage.setItem("sanctuary_auth", "true");
+        } else {
+            document.body.innerHTML = `<div style="text-align: center; padding: 150px 20px; font-family: 'Rufina', serif; font-size: 24px; color: var(--tara-maroon);">
+                The door is locked. <br><br>
+                <a href="index.html" style="font-size: 16px; color: #666; text-decoration: none; border-bottom: 1px solid #ccc;">Return to the front porch</a>
+            </div>`;
+        }
+    }
+</script>
+
 <header class="main-header">
     <a href="index.html" class="logo-link">Beyond the Bend</a>
     <nav>

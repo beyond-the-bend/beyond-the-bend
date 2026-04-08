@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&family=Roboto+Condensed:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Condensed:wght@300;400;700&display=swap');
 
 :root {
-    --tara-maroon: #9b2d6c;
-    --tara-purple: #563276;
-    --tara-olive: #769648;
-    --tara-text: #5e6464;
-    --tara-bg: #ffffff;
-    --tara-light-grey: #f8f8f8;
+    --brand-primary: #556b2f;
+    --brand-dark: #3F4A3C;
+    --brand-accent: #A8B5A2;
+    --brand-text: #4a4a4a;
+    --brand-bg: #ffffff;
+    --brand-light: #f7f7f5;
     --container-width: 1080px;
 
     /* Sanctuary Palette */
@@ -22,18 +22,18 @@
 }
 
 body {
-    background-color: var(--tara-bg);
-    color: var(--tara-text);
-    font-family: 'Open Sans', sans-serif;
+    background-color: var(--brand-bg);
+    color: var(--brand-text);
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.8;
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Rufina', serif;
+    font-family: 'Playfair Display', Georgia, serif;
     font-weight: 400;
-    color: var(--tara-maroon);
+    color: var(--brand-primary);
     text-align: center;
 }
 
@@ -52,12 +52,12 @@ h1, h2, h3, h4 {
 }
 
 .logo-link {
-    font-family: 'Rufina', serif;
+    font-family: 'Playfair Display', Georgia, serif;
     font-size: 24px;
     letter-spacing: 4px;
     text-transform: uppercase;
     text-decoration: none;
-    color: var(--tara-maroon);
+    color: var(--brand-primary);
     font-weight: 700;
 }
 
@@ -73,18 +73,18 @@ h1, h2, h3, h4 {
     font-family: 'Roboto Condensed', sans-serif;
     text-transform: uppercase;
     text-decoration: none;
-    color: var(--tara-text);
+    color: var(--brand-text);
     font-size: 14px;
     letter-spacing: 1px;
     font-weight: 700;
 }
 
 .nav-desktop li a:hover {
-    color: var(--tara-maroon);
+    color: var(--brand-primary);
 }
 
 .nav-desktop li a.active {
-    color: var(--tara-maroon);
+    color: var(--brand-primary);
 }
 
 /* Hamburger for mobile only */
@@ -120,13 +120,13 @@ h1, h2, h3, h4 {
     font-family: 'Roboto Condensed', sans-serif;
     text-transform: uppercase;
     text-decoration: none;
-    color: var(--tara-text);
+    color: var(--brand-text);
     font-size: 16px;
     letter-spacing: 1px;
 }
 
 .nav-menu li a:hover {
-    color: var(--tara-purple);
+    color: var(--brand-dark);
 }
 
 /* 1:1 Hero */
@@ -162,14 +162,14 @@ h1, h2, h3, h4 {
 }
 
 .hero-box p {
-    font-family: 'Rufina', serif;
+    font-family: 'Playfair Display', Georgia, serif;
     font-style: italic;
     font-size: 28px;
     margin-bottom: 40px;
 }
 
 .btn-olive {
-    background: var(--tara-olive);
+    background: var(--brand-accent);
     color: white;
     padding: 18px 45px;
     text-decoration: none;
@@ -205,7 +205,7 @@ h1, h2, h3, h4 {
 .title-underline {
     width: 45px;
     height: 2px;
-    background: var(--tara-maroon);
+    background: var(--brand-primary);
     margin: 0 auto;
 }
 
@@ -237,7 +237,7 @@ h1, h2, h3, h4 {
 
 .banner-ghost-btn:hover {
     background: white;
-    color: var(--tara-maroon);
+    color: var(--brand-primary);
 }
 
 /* 1:1 Recent Grid (Meditations/Talks) */
@@ -259,14 +259,14 @@ h1, h2, h3, h4 {
 
 /* 1:1 Footer */
 .main-footer {
-    background: var(--tara-purple);
+    background: var(--brand-dark);
     color: white;
     padding: 100px 40px;
     text-align: center;
 }
 
 .footer-logo {
-    font-family: 'Rufina', serif;
+    font-family: 'Playfair Display', Georgia, serif;
     font-size: 28px;
     letter-spacing: 4px;
     margin-bottom: 40px;
@@ -369,11 +369,11 @@ h1, h2, h3, h4 {
 }
 
 .card-title {
-    font-family: 'Rufina', serif;
+    font-family: 'Playfair Display', Georgia, serif;
     font-size: 20px;
     margin: 0 0 10px 0;
     text-align: left;
-    color: var(--tara-text);
+    color: var(--brand-text);
 }
 
 .card-meta {
@@ -392,7 +392,7 @@ h1, h2, h3, h4 {
 }
 
 .mood-label {
-    font-family: 'Rufina', serif;
+    font-family: 'Playfair Display', Georgia, serif;
     font-style: italic;
     font-size: 18px;
     margin-right: 10px;

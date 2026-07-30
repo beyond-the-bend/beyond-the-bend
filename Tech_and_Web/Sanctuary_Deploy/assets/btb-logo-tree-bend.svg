@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Beyond the Bend tree logo</title>
+  <desc id="desc">A simple Beyond the Bend logo with a tree beside a curved bend motif.</desc>
+  <defs>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,500&amp;family=Inter:wght@500;600&amp;display=swap");
+      .ink { fill: #2f332d; }
+      .muted { fill: #6b7065; }
+      .sage-fill { fill: #6f8065; }
+      .rose-stroke { stroke: #b98178; }
+      .sand-stroke { stroke: #d8cfc3; }
+      .text-main {
+        font-family: "Literata", Georgia, serif;
+        font-size: 86px;
+        font-weight: 400;
+        letter-spacing: -1.8px;
+      }
+      .text-small {
+        font-family: "Inter", Arial, sans-serif;
+        font-size: 17px;
+        font-weight: 600;
+        letter-spacing: 4.6px;
+      }
+    </style>
+  </defs>
+
+  <rect width="1200" height="520" fill="#fffaf2"/>
+
+  <g transform="translate(104 68)">
+    <circle cx="184" cy="190" r="154" fill="none" stroke="#d8cfc3" stroke-width="2"/>
+    <path class="sand-stroke" d="M70 280 C116 214, 174 214, 218 246 C250 270, 300 270, 334 220" fill="none" stroke-width="22" stroke-linecap="round"/>
+    <path class="rose-stroke" d="M78 282 C124 226, 178 228, 218 256 C252 280, 302 274, 340 226" fill="none" stroke-width="5" stroke-linecap="round"/>
+
+    <path d="M184 258 C186 220, 186 174, 182 128" fill="none" stroke="#4f6049" stroke-width="12" stroke-linecap="round"/>
+    <path d="M184 178 C158 160, 132 152, 110 156" fill="none" stroke="#4f6049" stroke-width="9" stroke-linecap="round"/>
+    <path d="M184 160 C214 138, 244 130, 274 136" fill="none" stroke="#4f6049" stroke-width="9" stroke-linecap="round"/>
+    <path d="M184 136 C170 112, 152 98, 128 92" fill="none" stroke="#4f6049" stroke-width="7" stroke-linecap="round"/>
+    <path d="M184 132 C210 100, 238 86, 270 86" fill="none" stroke="#4f6049" stroke-width="7" stroke-linecap="round"/>
+
+    <ellipse class="sage-fill" cx="108" cy="154" rx="34" ry="20" transform="rotate(-16 108 154)" opacity="0.78"/>
+    <ellipse class="sage-fill" cx="132" cy="96" rx="32" ry="19" transform="rotate(28 132 96)" opacity="0.82"/>
+    <ellipse class="sage-fill" cx="222" cy="102" rx="42" ry="24" transform="rotate(-24 222 102)" opacity="0.86"/>
+    <ellipse class="sage-fill" cx="276" cy="136" rx="36" ry="20" transform="rotate(17 276 136)" opacity="0.76"/>
+    <ellipse class="sage-fill" cx="154" cy="150" rx="28" ry="17" transform="rotate(10 154 150)" opacity="0.72"/>
+  </g>
+
+  <g transform="translate(400 162)">
+    <text class="text-main ink" x="0" y="0" dominant-baseline="hanging">Beyond the Bend</text>
+    <line x1="4" y1="122" x2="536" y2="122" stroke="#d8cfc3" stroke-width="1"/>
+    <text class="text-small muted" x="4" y="158">COME HOME TO YOURSELF</text>
+  </g>
+</svg>

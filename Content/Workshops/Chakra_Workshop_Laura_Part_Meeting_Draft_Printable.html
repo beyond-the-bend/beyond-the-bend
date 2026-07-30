@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chakra Workshop, Laura Part Meeting Draft</title>
+  <style>
+    @page {
+      margin: 0.55in;
+    }
+
+    :root {
+      --paper: #fbfaf6;
+      --ink: #29241d;
+      --soft: #5a5044;
+      --line: #ded4c3;
+      --sage: #6f7f66;
+      --rose: #b06568;
+      --gold: #b7964b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #f2eee6;
+      color: var(--ink);
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .page {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 40px 34px 70px;
+      background: var(--paper);
+    }
+
+    header {
+      text-align: center;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 24px;
+      margin-bottom: 26px;
+    }
+
+    .eyebrow {
+      color: var(--sage);
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: Georgia, serif;
+      font-weight: 400;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 34px;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: 23px;
+      margin: 32px 0 12px;
+      padding-bottom: 7px;
+      border-bottom: 1px solid var(--line);
+      color: var(--ink);
+    }
+
+    h3 {
+      font-size: 17px;
+      margin: 18px 0 8px;
+      color: var(--rose);
+    }
+
+    p {
+      margin: 7px 0;
+    }
+
+    ol {
+      margin: 8px 0 12px 22px;
+      padding: 0;
+    }
+
+    li {
+      margin: 4px 0;
+    }
+
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px 16px;
+      text-align: left;
+      margin: 20px auto 0;
+      max-width: 680px;
+      font-size: 13px;
+      color: var(--soft);
+    }
+
+    .meta div {
+      border-top: 1px solid var(--line);
+      padding-top: 8px;
+    }
+
+    .meta strong,
+    .label {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .note {
+      border-left: 3px solid var(--sage);
+      background: #ffffff;
+      padding: 14px 17px;
+      margin: 14px 0;
+    }
+
+    .script {
+      border: 1px solid var(--line);
+      background: #ffffff;
+      padding: 14px 17px;
+      margin: 10px 0 16px;
+      font-family: Georgia, serif;
+      font-size: 15px;
+      color: var(--soft);
+    }
+
+    .chakra {
+      break-inside: avoid;
+      page-break-inside: avoid;
+      margin-top: 30px;
+      padding-top: 4px;
+    }
+
+    .chakra-title {
+      display: flex;
+      gap: 15px;
+      align-items: baseline;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 9px;
+      margin-bottom: 11px;
+    }
+
+    .number {
+      width: 36px;
+      height: 36px;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Georgia, serif;
+      font-size: 19px;
+      flex: 0 0 auto;
+    }
+
+    .chakra-title h2 {
+      border: 0;
+      padding: 0;
+      margin: 0;
+      flex: 1;
+    }
+
+    .details {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      margin: 10px 0 16px;
+      font-size: 13px;
+      color: var(--soft);
+    }
+
+    .details div {
+      background: #ffffff;
+      border: 1px solid var(--line);
+      padding: 9px 10px;
+    }
+
+    .closing-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .page-break {
+      break-before: page;
+      page-break-before: always;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+      }
+
+      .page {
+        max-width: none;
+        padding: 0;
+        background: #ffffff;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .page {
+        padding: 26px 18px 50px;
+      }
+
+      .meta,
+      .details,
+      .closing-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="eyebrow">Beyond the Bend Yoga</div>
+      <h1>Chakra Workshop, Laura Part Meeting Draft</h1>
+      <p>A working outline for the planning conversation with Zorana</p>
+      <div class="meta">
+        <div><strong>Created:</strong> May 27, 2026</div>
+        <div><strong>Workshop date:</strong> Tuesday, July 28, 2026</div>
+        <div><strong>Time:</strong> 6:00 PM to 9:00 PM</div>
+        <div><strong>Location:</strong> Rising Moon Studio</div>
+        <div><strong>Capacity:</strong> Fourteen students</div>
+        <div><strong>Co facilitator:</strong> Zorana, Reiki Master</div>
+      </div>
+    </header>
+
+    <section>
+      <h2>Purpose Of This Document</h2>
+      <p>This is a working outline for the planning conversation with Zorana. It is not final public copy.</p>
+      <p>The goal is to make Laura's part of the workshop feel grounded, meaningful, organized, and special. The workshop is not simply a long restorative yoga class. It is a three hour journey through the seven chakras, with restorative yoga, breathwork, meditation, reflection, and Reiki woven together.</p>
+    </section>
+
+    <section>
+      <h2>Big Picture Intention</h2>
+      <p>The workshop introduces the seven chakras as a map of the body, the inner life, and the human journey from grounding to connection.</p>
+      <p class="label">The tone should be:</p>
+      <ol>
+        <li>Grounded.</li>
+        <li>Spacious.</li>
+        <li>Reflective.</li>
+        <li>Accessible.</li>
+        <li>Spiritual without being vague.</li>
+        <li>Restorative without feeling passive.</li>
+        <li>Deep, but not emotionally overwhelming.</li>
+      </ol>
+      <div class="note">
+        <p><strong>The central invitation:</strong></p>
+        <p>We are not trying to fix or force the chakras into balance. We are listening through the body, noticing where there is flow, where there is holding, and where each center may be asking for care.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Shared Structure With Zorana</h2>
+      <p>The two facilitators can work in tandem rather than taking separate turns.</p>
+      <p class="label">Possible rhythm for each chakra:</p>
+      <ol>
+        <li>Laura introduces the chakra in simple, embodied language.</li>
+        <li>Laura leads students into the restorative shape or breath practice.</li>
+        <li>Zorana offers Reiki while students are held in the posture.</li>
+        <li>Laura offers short spoken cues, imagery, or silence.</li>
+        <li>Laura closes the chakra with one sentence of integration or one reflective question.</li>
+        <li>Zorana may add a brief energetic insight or closing phrase if that feels natural.</li>
+      </ol>
+      <p>This keeps the workshop collaborative, but not crowded.</p>
+    </section>
+
+    <section>
+      <h2>Suggested Timing</h2>
+      <p>Total time: Three hours.</p>
+      <ol>
+        <li>Arrival and opening: Fifteen minutes.</li>
+        <li>Root chakra: Eighteen minutes.</li>
+        <li>Sacral chakra: Eighteen minutes.</li>
+        <li>Solar plexus chakra: Eighteen minutes.</li>
+        <li>Heart chakra: Twenty minutes.</li>
+        <li>Short pause and water: Eight minutes.</li>
+        <li>Throat chakra: Eighteen minutes.</li>
+        <li>Third eye chakra: Eighteen minutes.</li>
+        <li>Crown chakra: Twenty minutes.</li>
+        <li>Final integration, journaling, and closing: Twenty five minutes.</li>
+      </ol>
+      <p>This gives enough room for the work to breathe and gives Zorana time to offer Reiki without making each chakra feel rushed.</p>
+    </section>
+
+    <section class="page-break">
+      <h2>Opening, Fifteen Minutes</h2>
+      <h3>Laura's Role</h3>
+      <p>Welcome everyone into the space. Name that this is an experiential journey, not a lecture. Invite students to listen to their own bodies and take care of themselves.</p>
+      <div class="script">
+        <p>Tonight we are going to move through the seven chakras as a map of the body and the inner life. We are not here to perfect anything or force anything open. We are here to listen, to rest, to notice, and to allow the body to show us where there may be steadiness, tenderness, holding, or quiet wisdom.</p>
+      </div>
+      <h3>Opening Practice</h3>
+      <ol>
+        <li>Comfortable seated position or reclined constructive rest.</li>
+        <li>One hand on the lower belly, one hand on the heart.</li>
+        <li>Three slow breaths.</li>
+        <li>Invite students to notice the support beneath them.</li>
+        <li>Let Zorana introduce the Reiki element and how she will be moving through the room.</li>
+      </ol>
+      <h3>Opening Question</h3>
+      <p>What am I carrying into this room, and what would I like to set down for the next three hours?</p>
+    </section>
+
+    <section class="chakra">
+      <div class="chakra-title">
+        <span class="number">1</span>
+        <h2>Root Chakra, Muladhara</h2>
+      </div>
+      <div class="details">
+        <div><strong>Theme:</strong> Safety, belonging, steadiness, the right to be here.</div>
+        <div><strong>Element:</strong> Earth.</div>
+        <div><strong>Body focus:</strong> Feet, legs, pelvis, base of spine, weight.</div>
+      </div>
+      <h3>Laura's Restorative Practice</h3>
+      <p><strong>Rooted constructive rest with feet on the floor.</strong></p>
+      <p>This is stronger than placing a bolster under the knees because the soles of the feet stay connected to the ground. For the root chakra, that contact matters. Students should be able to feel the floor through the feet, the weight of the pelvis, and the support of the earth underneath them. A folded blanket between the knees with a strap around the thighs adds containment, so the legs can stay connected without effort.</p>
+      <p class="label">Set up:</p>
+      <ol>
+        <li>Students lie on their backs with knees bent.</li>
+        <li>Feet are placed on the floor, about hip width apart.</li>
+        <li>Heels are close enough to the body that the legs can rest without gripping.</li>
+        <li>A folded blanket can go under the head.</li>
+        <li>A blanket can cover the body for warmth.</li>
+        <li>Optional eye pillow.</li>
+        <li>Place a folded blanket between the knees.</li>
+        <li>Add a strap loosely around the thighs so the legs feel held and contained without muscular effort.</li>
+        <li>Invite students to feel the four corners of each foot, the weight of the pelvis, and the back body resting into the mat.</li>
+      </ol>
+      <p><strong>Optional variation:</strong> If someone cannot comfortably keep the feet on the floor, they can place calves on a chair instead, but the main teaching cue should stay with the felt sense of grounding through the lower body.</p>
+      <h3>Breath Practice</h3>
+      <p>Weighted exhale breath.</p>
+      <div class="script">
+        <p>Breathe in and feel the body gently expand. Breathe out and let the soles of the feet become heavier. Feel the floor meeting you through the feet, the pelvis, and the back body. Nothing to hold. Nothing to prove. Just the simple fact of being here.</p>
+      </div>
+      <h3>Meditation Cue</h3>
+      <p>The root asks: Do I feel supported enough to soften?</p>
+      <h3>Reiki Weaving</h3>
+      <p>This is a good place for Zorana to offer grounding Reiki, beginning at the feet or lower body if that is her practice. Laura can hold silence while Zorana works, then close with a short phrase.</p>
+      <p><strong>Closing phrase:</strong> May the ground beneath you remind you that you are allowed to be here.</p>
+    </section>
+
+    <section class="chakra">
+      <div class="chakra-title">
+        <span class="number">2</span>
+        <h2>Sacral Chakra, Svadhisthana</h2>
+      </div>
+      <div class="details">
+        <div><strong>Theme:</strong> Feeling, flow, pleasure, creativity, emotional permission.</div>
+        <div><strong>Element:</strong> Water.</div>
+        <div><strong>Body focus:</strong> Hips, pelvis, lower belly, fluid body.</div>
+      </div>
+      <h3>Laura's Restorative Practice</h3>
+      <p><strong>Supported reclined butterfly.</strong></p>
+      <p class="label">Set up:</p>
+      <ol>
+        <li>Bolster lengthwise under the spine.</li>
+        <li>Soles of feet together.</li>
+        <li>Knees supported by blocks or blankets.</li>
+        <li>Blanket over pelvis and belly.</li>
+        <li>Encourage full support under the thighs so there is no gripping.</li>
+      </ol>
+      <h3>Breath Practice</h3>
+      <p>Pelvic bowl breath.</p>
+      <div class="script">
+        <p>Imagine the pelvis as a bowl of water. With each inhale, the water gently fills. With each exhale, the surface softens. There is nothing to force open here. We are practicing the possibility of flow.</p>
+      </div>
+      <h3>Meditation Cue</h3>
+      <p>The sacral asks: What feelings have I been bracing against, and what might soften if I stopped resisting them?</p>
+      <h3>Reiki Weaving</h3>
+      <p>Zorana may work with the lower abdomen, hips, or sacral field while Laura offers silence. This chakra may be tender for some people, so the language should stay gentle and choice based.</p>
+      <p><strong>Closing phrase:</strong> May what has been held too tightly begin to find its own movement.</p>
+    </section>
+
+    <section class="chakra page-break">
+      <div class="chakra-title">
+        <span class="number">3</span>
+        <h2>Solar Plexus Chakra, Manipura</h2>
+      </div>
+      <div class="details">
+        <div><strong>Theme:</strong> Will, identity, boundaries, confidence, personal authority.</div>
+        <div><strong>Element:</strong> Fire.</div>
+        <div><strong>Body focus:</strong> Belly, ribs, diaphragm, center line.</div>
+      </div>
+      <h3>Laura's Restorative Practice</h3>
+      <p><strong>Supported prone rest with belly support.</strong></p>
+      <p class="label">Set up:</p>
+      <ol>
+        <li>Students lie face down.</li>
+        <li>Bolster or folded blankets under abdomen and lower ribs.</li>
+        <li>Forehead rests on hands or turned to one side.</li>
+        <li>Blanket over back if desired.</li>
+        <li>Encourage softness in the belly and jaw.</li>
+      </ol>
+      <h3>Breath Practice</h3>
+      <p>Steady center breath.</p>
+      <div class="script">
+        <p>Let the breath move into the place beneath the ribs. Not a forceful breath, not a fiery push, just a steady warmth at the center of you.</p>
+      </div>
+      <h3>Meditation Cue</h3>
+      <p>The solar plexus asks: Where have I given away my power, and where am I ready to stand quietly within myself again?</p>
+      <h3>Reiki Weaving</h3>
+      <p>This is a strong place for Reiki around the solar plexus, the diaphragm, or the back body. Laura can keep the cueing minimal so students feel held rather than pushed.</p>
+      <p><strong>Closing phrase:</strong> May your power return to you without force, without apology, and without needing to harden.</p>
+    </section>
+
+    <section class="chakra">
+      <div class="chakra-title">
+        <span class="number">4</span>
+        <h2>Heart Chakra, Anahata</h2>
+      </div>
+      <div class="details">
+        <div><strong>Theme:</strong> Love, grief, tenderness, connection, receiving.</div>
+        <div><strong>Element:</strong> Air.</div>
+        <div><strong>Body focus:</strong> Chest, upper back, lungs, arms, hands.</div>
+      </div>
+      <h3>Laura's Restorative Practice</h3>
+      <p><strong>Supported heart opener over bolster.</strong></p>
+      <p class="label">Set up:</p>
+      <ol>
+        <li>Bolster under the spine or across the shoulder blades depending on what feels most accessible.</li>
+        <li>Blanket under head.</li>
+        <li>Arms supported by blankets in a cactus shape or resting wide.</li>
+        <li>Legs extended or knees supported.</li>
+        <li>Make sure the backbend is gentle, not dramatic.</li>
+      </ol>
+      <h3>Breath Practice</h3>
+      <p>Three part receiving breath.</p>
+      <div class="script">
+        <p>Breathe into the back of the heart. Breathe into the sides of the ribs. Breathe into the front of the chest. Let the breath arrive from all directions, as if support could reach you from more than one place.</p>
+      </div>
+      <h3>Meditation Cue</h3>
+      <p>The heart asks: What have I protected, and what am I ready to let be held?</p>
+      <h3>Reiki Weaving</h3>
+      <p>This may be one of the strongest Reiki moments. Zorana may work around the heart field while Laura gives more silence. This is also a good place for soft music or a longer quiet pause.</p>
+      <p><strong>Closing phrase:</strong> May the heart remember that opening and protection can both be forms of wisdom.</p>
+    </section>
+
+    <section>
+      <h2>Short Pause, Eight Minutes</h2>
+      <p><strong>Purpose:</strong> Let students return slowly, drink water, use the washroom, and stay inward.</p>
+      <div class="script">
+        <p>We will take a few quiet minutes here. Try to stay close to the practice. Move slowly, drink some water, and notice what is present before we continue upward.</p>
+      </div>
+    </section>
+
+    <section class="chakra page-break">
+      <div class="chakra-title">
+        <span class="number">5</span>
+        <h2>Throat Chakra, Vishuddha</h2>
+      </div>
+      <div class="details">
+        <div><strong>Theme:</strong> Voice, truth, expression, listening.</div>
+        <div><strong>Element:</strong> Sound.</div>
+        <div><strong>Body focus:</strong> Throat, jaw, neck, mouth, ears.</div>
+      </div>
+      <h3>Laura's Restorative Practice</h3>
+      <p><strong>Supported fish or supported reclined throat opener.</strong></p>
+      <p class="label">Set up:</p>
+      <ol>
+        <li>Bolster lengthwise under spine.</li>
+        <li>Blanket roll under neck if needed.</li>
+        <li>Head supported enough that there is no strain.</li>
+        <li>Arms open or hands resting on lower ribs.</li>
+        <li>Keep the throat opening gentle.</li>
+      </ol>
+      <h3>Breath Practice</h3>
+      <p>Humming exhale.</p>
+      <div class="script">
+        <p>Inhale through the nose. As you exhale, offer a soft hum, just enough to feel vibration in the throat, lips, jaw, or chest. This is not performance. This is sound as medicine for the inner body.</p>
+      </div>
+      <h3>Meditation Cue</h3>
+      <p>The throat asks: What truth has been waiting for a safe enough space to be heard?</p>
+      <h3>Reiki Weaving</h3>
+      <p>Zorana may work around the throat, shoulders, jaw, or upper chest. Laura can offer two or three rounds of humming, then silence.</p>
+      <p><strong>Closing phrase:</strong> May your voice return first as vibration, then as truth, then as a way of belonging to yourself.</p>
+    </section>
+
+    <section class="chakra">
+      <div class="chakra-title">
+        <span class="number">6</span>
+        <h2>Third Eye Chakra, Ajna</h2>
+      </div>
+      <div class="details">
+        <div><strong>Theme:</strong> Intuition, inner seeing, imagination, clarity.</div>
+        <div><strong>Element:</strong> Light.</div>
+        <div><strong>Body focus:</strong> Brow, eyes, forehead, inner gaze.</div>
+      </div>
+      <h3>Laura's Restorative Practice</h3>
+      <p><strong>Supported forward fold with forehead contact.</strong></p>
+      <p class="label">Set up:</p>
+      <ol>
+        <li>Seated with legs crossed, kneeling, or wide legged depending on comfort.</li>
+        <li>Bolster or stacked blocks in front.</li>
+        <li>Forehead rests on support.</li>
+        <li>Arms relaxed.</li>
+        <li>The key is gentle pressure at the forehead.</li>
+      </ol>
+      <h3>Breath Practice</h3>
+      <p>Quiet counting breath.</p>
+      <div class="script">
+        <p>Inhale for a slow count of four. Exhale for a slow count of six. Let the longer exhale quiet the surface of the mind so the deeper seeing has room to come forward.</p>
+      </div>
+      <h3>Meditation Cue</h3>
+      <p>The third eye asks: What do I know when I stop arguing with my own knowing?</p>
+      <h3>Reiki Weaving</h3>
+      <p>Zorana may offer Reiki around the head, brow, or crown preparation. Laura can guide a brief visualization of indigo light or simply invite inner listening.</p>
+      <p><strong>Closing phrase:</strong> May you trust the quiet knowing that does not need to shout.</p>
+    </section>
+
+    <section class="chakra page-break">
+      <div class="chakra-title">
+        <span class="number">7</span>
+        <h2>Crown Chakra, Sahasrara</h2>
+      </div>
+      <div class="details">
+        <div><strong>Theme:</strong> Surrender, meaning, connection, unity, being held by something larger.</div>
+        <div><strong>Element:</strong> Thought or spirit.</div>
+        <div><strong>Body focus:</strong> Crown of head, vertical axis, whole body.</div>
+      </div>
+      <h3>Laura's Restorative Practice</h3>
+      <p><strong>Final supported savasana or elevated legs on chair.</strong></p>
+      <p class="label">Set up:</p>
+      <ol>
+        <li>Students lie on their backs.</li>
+        <li>Bolster under knees or legs on chairs.</li>
+        <li>Blanket over body.</li>
+        <li>Eye pillow.</li>
+        <li>Head supported.</li>
+        <li>Full warmth and stillness.</li>
+      </ol>
+      <h3>Breath Practice</h3>
+      <p>No technique, just natural breath.</p>
+      <div class="script">
+        <p>Let the breath breathe itself. Let the body be breathed. Nothing to manage now. Nothing to improve. Just the quiet possibility of being held.</p>
+      </div>
+      <h3>Meditation Cue</h3>
+      <p>The crown asks: What supports me beyond my own effort?</p>
+      <h3>Reiki Weaving</h3>
+      <p>This is the strongest integration window for Zorana. Laura can hold a long silence while Zorana offers Reiki. This should feel like the culmination of the journey, not just the final pose.</p>
+      <p><strong>Closing phrase:</strong> May you remember that you do not have to carry your life alone.</p>
+    </section>
+
+    <section>
+      <h2>Final Integration, Twenty Five Minutes</h2>
+      <h3>Return</h3>
+      <ol>
+        <li>Deepen breath.</li>
+        <li>Feel the support beneath the body.</li>
+        <li>Small movement in fingers and toes.</li>
+        <li>Roll to one side.</li>
+        <li>Pause before coming up.</li>
+        <li>Return to seated.</li>
+      </ol>
+      <h3>Journaling</h3>
+      <p>Offer three prompts and let students choose one.</p>
+      <ol>
+        <li>Which chakra felt most alive or open tonight?</li>
+        <li>Which chakra felt most tender, quiet, blocked, or in need of care?</li>
+        <li>What is one gentle action I can take this week to support that part of myself?</li>
+      </ol>
+      <h3>Closing Circle</h3>
+      <p>Students may share one word, or sharing can be optional.</p>
+      <div class="script">
+        <p>Thank you for taking this journey through the body with us. You may notice things continuing to move or settle after tonight. Be gentle with yourself. Drink water, rest if you can, and let the practice keep unfolding without needing to understand it all right away.</p>
+      </div>
+    </section>
+
+    <section class="page-break">
+      <h2>Meeting Notes For Laura And Zorana</h2>
+      <div class="closing-grid">
+        <div>
+          <h3>What Laura Should Bring</h3>
+          <ol>
+            <li>This outline.</li>
+            <li>The question of whether Zorana wants to open each chakra energetically or work mostly during the posture.</li>
+            <li>The question of whether students receive Reiki individually, generally, or both.</li>
+            <li>A decision about whether journaling happens at the end only or briefly after each chakra.</li>
+            <li>A decision about music, silence, bells, and transitions.</li>
+            <li>A prop list based on fourteen students.</li>
+            <li>A decision about whether there is a water and washroom pause halfway through.</li>
+          </ol>
+        </div>
+        <div>
+          <h3>Prop List For Fourteen Students</h3>
+          <ol>
+            <li>One mat per student.</li>
+            <li>One bolster per student.</li>
+            <li>Two blocks per student.</li>
+            <li>Two blankets per student.</li>
+            <li>One eye pillow per student.</li>
+            <li>Optional straps.</li>
+            <li>Chairs available for legs up on chair and supported seated options.</li>
+          </ol>
+          <p>If props are limited, simplify the sequence around bolsters, blankets, and chairs.</p>
+        </div>
+      </div>
+      <h3>Possible Workshop Title Ideas</h3>
+      <ol>
+        <li>Seven Gateways To Balance.</li>
+        <li>Restoring The Energy Body.</li>
+        <li>The Seven Gateways, A Restorative Chakra Journey.</li>
+        <li>From Root To Crown.</li>
+        <li>The Body's Sacred Architecture.</li>
+      </ol>
+      <h3>Notes For Revision</h3>
+      <p>This version is designed for planning. The next version can become a facilitator script, a student handout, a sales page, a pretty HTML page, or a printable workshop run sheet.</p>
+    </section>
+  </main>
+</body>
+</html>

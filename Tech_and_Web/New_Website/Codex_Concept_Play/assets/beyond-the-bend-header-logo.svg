@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="35 320 930 335" role="img" aria-labelledby="title description">
+  <title id="title">Beyond the Bend</title>
+  <desc id="description">The original Beyond the Bend tree and winding path logo without the word Yoga.</desc>
+  <defs>
+    <mask id="remove-yoga">
+      <rect x="0" y="0" width="1000" height="1000" fill="white"/>
+      <rect x="330" y="580" width="670" height="110" fill="black"/>
+    </mask>
+  </defs>
+  <image href="beyond-the-bend-original-logo.svg" x="0" y="0" width="1000" height="1000" mask="url(#remove-yoga)"/>
+</svg>

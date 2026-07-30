@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In | The Sanctuary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            min-height: 100vh;
+            background: #1a1a18;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Lato', sans-serif;
+            color: #f5f0e8;
+            padding: 24px;
+        }
+        .logo { height: 70px; margin-bottom: 32px; opacity: 0.9; }
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(24px, 4vw, 36px);
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+        p {
+            font-size: 15px;
+            color: #b8b0a0;
+            text-align: center;
+            margin-bottom: 36px;
+            line-height: 1.6;
+        }
+        .form-wrap {
+            width: 100%;
+            max-width: 360px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 14px 16px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 4px;
+            color: #f5f0e8;
+            font-family: 'Lato', sans-serif;
+            font-size: 15px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        input[type="email"]:focus, input[type="password"]:focus { border-color: #7c8c72; }
+        input[type="email"]::placeholder, input[type="password"]::placeholder { color: #6b6560; }
+        .btn {
+            width: 100%;
+            padding: 14px;
+            background: #7c8c72;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-family: 'Lato', sans-serif;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .btn:hover { background: #6a7a60; }
+        .error-msg {
+            background: rgba(180,80,80,0.15);
+            border: 1px solid rgba(180,80,80,0.3);
+            color: #e0a0a0;
+            padding: 12px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+            text-align: center;
+            display: none;
+        }
+        .back-link {
+            margin-top: 32px;
+            font-size: 13px;
+            color: #6b6560;
+        }
+        .back-link a { color: #7c8c72; text-decoration: none; }
+        .back-link a:hover { text-decoration: underline; }
+        .helper-text {
+            font-size: 13px;
+            color: #6b6560;
+            text-align: center;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://btb-assets.b-cdn.net/assets/beyond-the-bend-no-yoga.svg" alt="Beyond the Bend" class="logo">
+    <h1>Welcome Back</h1>
+    <p>Enter the email you used at checkout<br>to go straight to your dashboard.</p>
+
+    <div class="form-wrap">
+        <div class="error-msg" id="error-msg"></div>
+        <form method="get" action="/api/signin" id="signin-form">
+            <div style="display:flex;flex-direction:column;gap:12px;">
+                <input type="email" name="email" placeholder="your@email.com" required autocomplete="email">
+                <button type="submit" class="btn">Sign In</button>
+            </div>
+        </form>
+        <p class="helper-text">Use the same email address you used when you joined.<br>If you need help, please contact Laura.</p>
+    </div>
+
+    <p class="back-link"><a href="/login.html">← Back</a></p>
+
+    <script>
+        // Show error messages from query params
+        const params = new URLSearchParams(window.location.search);
+        const error = params.get('error');
+        const errorEl = document.getElementById('error-msg');
+        const messages = {
+            'email_required': 'Please enter your email address.',
+            'not_found': 'We could not find a Sanctuary membership for that email. Please check and try again, or join below.',
+            'no_subscription': 'Your membership may have lapsed. Please rejoin to continue.',
+            'server_error': 'Something went wrong. Please try again in a moment.'
+        };
+        if (error && messages[error]) {
+            errorEl.textContent = messages[error];
+            errorEl.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

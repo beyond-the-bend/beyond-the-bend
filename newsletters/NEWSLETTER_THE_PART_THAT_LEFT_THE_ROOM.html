@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter | Beyond the Bend</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+        body,
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            background-color: #f7f7f5;
+            color: #4a4a4a;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+
+        /* Header / Masthead */
+        .header {
+            background-color: #faf0f0;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 4px solid #556b2f;
+        }
+
+        .header img {
+            height: 96px;
+            width: auto;
+            margin-bottom: 25px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .masthead-title {
+            color: #556b2f;
+            font-family: 'Playfair Display', Georgia, serif;
+            line-height: 1.2;
+        }
+
+        .masthead-top {
+            display: block;
+            font-size: 28px;
+            font-style: italic;
+            font-weight: 400;
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+
+        .masthead-main {
+            display: block;
+            font-size: 32px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-top: 2px solid #556b2f;
+            border-bottom: 2px solid #556b2f;
+            padding: 15px 0;
+            margin-top: 10px;
+        }
+
+        .content-block {
+            padding: 40px 30px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #556b2f;
+            font-size: 26px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #78866b;
+            font-size: 22px;
+            margin-bottom: 10px;
+            margin-top: 20px;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .highlight-section {
+            background-color: #fcfbf9;
+            padding: 40px 30px;
+            border-left: 4px solid #556b2f;
+        }
+
+        .practice-section {
+            background-color: #eef2eb;
+            padding: 30px 20px;
+            margin-top: 0;
+        }
+
+        .sanctuary-box {
+            background-color: #faf0f0;
+            padding: 30px;
+            border-radius: 4px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 15px;
+            letter-spacing: 1px;
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+        }
+
+        .btn-sage {
+            background-color: #A8B5A2;
+            color: white;
+        }
+
+        .btn-forest {
+            background-color: #3F4A3C;
+            color: #F7F4EF;
+        }
+
+        .embodied-card {
+            background-color: #ffffff;
+            border-left: 3px solid #A8B5A2;
+            padding: 20px 25px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .img-responsive {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin: 20px 0;
+            display: block;
+        }
+
+        strong {
+            color: #556b2f;
+            font-weight: 600;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        .footer {
+            background-color: #3F4A3C;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #F7F4EF;
+            letter-spacing: 1px;
+            line-height: 1.8;
+        }
+
+        .footer a {
+            color: #A8B5A2;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                width: 100% !important;
+            }
+
+            .header {
+                padding: 30px 15px;
+            }
+
+            .content-block,
+            .highlight-section {
+                padding: 25px 15px;
+            }
+
+            .masthead-main {
+                font-size: 24px;
+                letter-spacing: 1px;
+            }
+
+            .masthead-top {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- ═══ MASTHEAD BANNER ═══ -->
+        <div class="header">
+            <img src="https://btb-assets.b-cdn.net/assets/beyond-the-bend-no-yoga.svg" alt="Beyond the Bend Logo">
+            <div class="masthead-title">
+                <span class="masthead-top">Reflections from</span>
+                <span class="masthead-main">Beyond the Bend</span>
+            </div>
+        </div>
+
+        <!-- ═══ PERSONAL INTRO ═══ -->
+        <div class="content-block">
+            <p>Hello {$name},</p>
+            <p>I have been spending a lot of time lately sitting with some older teachings that shaped me years ago. It is always interesting to see how something you learned in one season of your life comes back to meet you in an entirely different way when you need it again.</p>
+            <p>This week, my thoughts have been returning to a concept that I first encountered during my early shamanic training. Back then, it felt like a profound teaching. Today, it feels more like a quiet, tender truth that we all seem to live with in our own everyday ways.</p>
+            <p>I wanted to share it with you, in case it offers a slightly gentler way to look at some of the places where you might feel stuck or disconnected.</p>
+        </div>
+
+        <!-- ═══ WELLNESS WISDOM ═══ -->
+        <div class="highlight-section">
+            <h2>This Week's Wellness Wisdom</h2>
+
+            <!-- IMAGE -->
+            <img src="https://btb-assets.b-cdn.net/newsletters/the_part_that_left.png" alt="A quiet forest path in morning light" class="img-responsive">
+
+            <h3>The Part That Left the Room</h3>
+            <p><em>By Laura Harvey | Beyond the Bend Yoga</em></p>
+
+            <p>I have been thinking lately about those moments most of us have lived through, the times when we found ourselves in the middle of an experience that simply felt too big to hold. Perhaps it was a difficult season, a sudden transition, or a space where it was hard to remain fully present. In those moments, at some point, it often feels as though our whole self simply stops being available for what is happening. We are still standing there, and our mouths are still moving, but something vital has quietly slipped away to be somewhere else.</p>
+            
+            <p>I am beginning to notice that we often see this disconnection as a failure or a weakness. But I have been wondering if it might actually be one of the most intelligent things a human being can do. I first read Sandra Ingerman's work on soul retrieval more than a decade ago as part of my shamanism training, and her perspective has never fully left me. She suggests that whenever we go through an experience that is too overwhelming, a vital piece of our essence actually leaves to protect itself. A part of a child retreats from a chaotic room, or a part of a woman steps away from a relationship long before her physical life changes. What is left behind is not a dramatic crisis, but rather a quiet, ongoing sense of not fully being here.</p>
+            
+            <p>This is the kind of suffering that rarely announces itself, so it almost never gets named. We keep functioning beautifully on the surface. We manage our lives, tend to our work, and show up for the people who need us. Yet some part of the engine feels missing, and navigating daily life just runs a little harder because of it. Soul retrieval, in the tradition Ingerman teaches, is the practice of going back for that missing part. A practitioner journeys with the intention of finding it, often resting right where it was left behind. It is not so much a rescue as it is a gentle negotiation. The part that left went away for a very good reason, and it needs to trust that the life it is returning to is safer than the one it fled.</p>
+            
+            <p>I do not say any of this with absolute certainty, but I have watched this closely enough in my own life to know it feels true. The part that leaves does not simply wait quietly forever. It keeps asking for our attention. Sometimes it asks sideways, causing us to live the same wound again in a different costume, arranging our lives around one unfinished sentence in relationships or work. I am coming to believe that this repetition is not bad luck at all. It is an old, unanswered hope, still trying to bring something home. There is something profoundly freeing in asking a different question than the one we usually default to. Instead of asking what is wrong with us, we might gently ask what left, and what it would take for that part to finally believe it is safe enough to return.</p>
+            
+            <p>I do not have a tidy way to close this inquiry, as I am very much still living inside the question myself. But I keep coming back to this one comforting thought. The part of you that feels missing did not go anywhere strange. It went exactly where it needed to go to keep the rest of you alive, and it is still beautifully yours. It is just waiting for the right invitation. I would love to know if this resonates with you. As you navigate your week, I invite you to notice if there is a part of you that feels like it stepped away somewhere along the line, and perhaps, just sit with it in curiosity without feeling any rush to fix it.</p>
+        </div>
+
+        <!-- ═══ FROM THE STUDIO: THE SANCTUARY ═══ -->
+        <div class="content-block">
+            <div class="sanctuary-box">
+                <h2>From the Studio</h2>
+
+                <img src="https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/6a55cc7157d22a2f53219115.png" alt="Inside The Sanctuary Portal" class="img-responsive" style="margin-bottom: 25px;">
+
+                <h3 style="margin-top: 8px;">An Invitation to Your Online Sanctuary</h3>
+
+                <p>I built the Sanctuary because I wanted to create a quiet, unhurried space where you can practice somatic movement, gentle yoga, and nervous system regulation in the comfort of your own home. It is designed to be an antidote to the busy, performance driven energy of the world, a held container where you do not have to prove anything, shift anything, or rush through your practice.</p>
+
+                <p>Inside the Sanctuary, you will find a growing library of practices that meet you exactly where you are today:</p>
+
+                <div class="embodied-card">
+                    <p style="margin-bottom: 10px; font-weight: 600; color: #556b2f;">What is Included in Your Membership:</p>
+                    <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
+                        <li><strong>55 plus Class Videos:</strong> A library of Somatic Hatha, Restorative, and gentle Flow practices that grows every week.</li>
+                        <li><strong>Our First Guided Somatic Course:</strong> Complete access to <em>A Quiet Return</em>, with more structured programs currently being built.</li>
+                        <li><strong>A Growing Meditation Library:</strong> A quiet collection of guided audio meditations to support your nervous system.</li>
+                        <li><strong>Weekly Additions:</strong> Fresh classes, replays, and new learning tools added every single week as the Sanctuary grows.</li>
+                    </ul>
+                </div>
+
+                <p>The most beautiful part of joining now is that you can lock in our founding member rate. It is only <strong>$22 per month</strong>, and your price will stay the same forever. Even as the library grows, your rate will never increase.</p>
+
+                <div style="text-align: center; margin: 30px 0 10px;">
+                    <a href="https://btb-sanctuary.vercel.app/login.html" class="btn btn-forest" style="display: inline-block; color: #F7F4EF !important; text-decoration: none;">Join the Sanctuary as a Founding Member</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══ PRACTICE OF THE WEEK ═══ -->
+        <div class="content-block">
+            <div class="practice-section" style="border-radius: 4px; padding: 30px;">
+                <h2>Practice of the Week</h2>
+                <h3 style="margin-top: 8px;">Tending the Threshold</h3>
+                <p>In traditional shamanic healing, soul retrieval is a guided ceremony, a held space where a practitioner goes looking for the parts of us that stepped away. When we are working on our own, our goal is not to force a retrieval or go searching in the dark. Instead, our practice is simply to tend the threshold, to make the present moment safe and warm enough that our lost parts might eventually feel invited to return on their own.</p>
+                
+                <p>Find a comfortable place to sit where you feel supported. Start by letting your eyes slowly look around your room, noticing three neutral or pleasant things: a soft color, the texture of a rug, or the light coming through a window. This simple act of orienting tells your nervous system that you are here, in the present, and that you are safe in this physical space right now.</p>
+                
+                <p>Once you feel grounded, bring your attention to your breath, letting it move naturally without trying to change it. Bring to mind the gentle awareness that some part of you, perhaps your voice, your playfulness, or your ease, is currently resting somewhere else. You do not need to know where it is or why it left.</p>
+                
+                <p>Instead of trying to go search for it or force it back, simply turn your attention toward the edge of your awareness. Imagine yourself sitting at the threshold of a warm, quiet room. Send a silent, spacious message in that direction: <em>"I am here, and I am learning how to build a safe home for us. You do not have to come back today, but I want you to know that the door is unlocked, and there is a place for you when you are ready."</em></p>
+                
+                <p>Sit with that quiet invitation for just a minute, allowing yourself to feel the warmth of the offer without expecting any immediate response. If you notice any tension, grief, or impatience rising, simply acknowledge those feelings as well, letting them be part of the landscape.</p>
+                
+                <p style="margin-bottom: 0;">Then, gently return your focus to the physical sensations of the present: your feet resting on the floor, the support of the chair beneath you, and the temperature of the air on your skin. This rhythmic shifting, moving from the soft invitation back to the steady grounding of the present moment, is how we show our nervous system that we can hold both the longing and the safety at the same time. Let that brief moment of connection be entirely enough for today, and trust that the part of you that left knows exactly how to hear you.</p>
+            </div>
+        </div>
+
+        <!-- ═══ CLOSING THOUGHT ═══ -->
+        <div class="content-block">
+            <h2>A Closing Thought</h2>
+            <p>I hope this week brings you at least one quiet moment where you feel a little more connected to yourself. We spend so much time trying to improve or fix the parts of us that feel broken, when perhaps all they really need is to be invited back to the table.</p>
+            <p>The parts of us that had to leave were protecting something real. And I believe they are always waiting to see if it is safe to come home. I think sometimes even the smallest act of kindness toward ourselves sends a signal that the door is open.</p>
+            <p>As always, if this piece stirred anything in you, I would love to hear about it. Just hit reply.</p>
+            <br>
+            <p>With warmth &amp; gratitude,<br>Laura</p>
+        </div>
+
+        <!-- ═══ FOOTER ═══ -->
+        <div class="footer">
+            BEYOND THE BEND YOGA<br>
+            Rising Moon Studio &middot; Sherwood Park, AB<br><br>
+            <a href="{$unsubscribe}">Unsubscribe</a>
+        </div>
+
+    </div>
+</body>
+
+</html>

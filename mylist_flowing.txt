@@ -1,0 +1,3 @@
+file 'C:\BTB\Sanctuary\Sanctuary_Master_Content\01_Video_Library\Livestream_Recordings\Intros and Outros\Meditation_Intro.mp4'
+file 'C:\BTB\main_meditation_flowing.mp4'
+file 'C:\BTB\Sanctuary\Sanctuary_Master_Content\01_Video_Library\Livestream_Recordings\Intros and Outros\Rising_Moon_Outro.mp4'

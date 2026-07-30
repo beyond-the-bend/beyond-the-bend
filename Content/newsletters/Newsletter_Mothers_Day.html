@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter | Beyond the Bend</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+        body,
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            background-color: #f7f7f5;
+            color: #4a4a4a;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+
+        /* Header / Masthead */
+        .header {
+            background-color: #faf0f0;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 4px solid #556b2f;
+        }
+
+        .header img {
+            max-width: 140px;
+            height: auto;
+            margin-bottom: 25px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .masthead-title {
+            color: #556b2f;
+            font-family: 'Playfair Display', Georgia, serif;
+            line-height: 1.2;
+        }
+
+        .masthead-top {
+            display: block;
+            font-size: 28px;
+            font-style: italic;
+            font-weight: 400;
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+
+        .masthead-main {
+            display: block;
+            font-size: 32px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-top: 2px solid #556b2f;
+            border-bottom: 2px solid #556b2f;
+            padding: 15px 0;
+            margin-top: 10px;
+        }
+
+        .content-block {
+            padding: 40px 30px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #556b2f;
+            font-size: 26px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #78866b;
+            font-size: 22px;
+            margin-bottom: 10px;
+            margin-top: 20px;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        ul {
+            font-size: 16px;
+            color: #4a4a4a;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .highlight-section {
+            background-color: #fcfbf9;
+            padding: 40px 30px;
+            border-left: 4px solid #556b2f;
+        }
+
+        .studio-section {
+            background-color: #f4f7f2;
+            padding: 40px 30px;
+            border-top: 1px solid #d8e4d0;
+        }
+
+        .practice-section {
+            background-color: #eef2eb;
+            padding: 30px 20px;
+            margin-top: 0;
+        }
+
+        .img-responsive {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin: 20px 0;
+            display: block;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 15px;
+            letter-spacing: 1px;
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+        }
+
+        .btn-sage {
+            background-color: #A8B5A2;
+            color: white;
+        }
+
+        .btn-forest {
+            background-color: #3F4A3C;
+            color: #F7F4EF;
+        }
+
+        .embodied-card {
+            background-color: #F0F4EE;
+            border-left: 3px solid #A8B5A2;
+            padding: 20px 25px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .footer {
+            background-color: #3F4A3C;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #F7F4EF;
+            letter-spacing: 1px;
+        }
+
+        .footer a {
+            color: #A8B5A2;
+            text-decoration: none;
+        }
+
+        strong {
+            color: #556b2f;
+            font-weight: 600;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                width: 100% !important;
+            }
+
+            .header {
+                padding: 30px 15px;
+            }
+
+            .content-block,
+            .highlight-section,
+            .studio-section {
+                padding: 25px 15px;
+            }
+
+            .masthead-main {
+                font-size: 24px;
+                letter-spacing: 1px;
+            }
+
+            .masthead-top {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- ═══ MASTHEAD BANNER ═══ -->
+        <div class="header">
+            <img src="https://storage.googleapis.com/msgsndr/t19sOv208p64ldeUjJug/media/697996aad119a57c1575bb7d.png"
+                alt="Beyond the Bend Logo">
+            <div class="masthead-title">
+                <span class="masthead-top">Reflections from</span>
+                <span class="masthead-main">Beyond the Bend</span>
+            </div>
+        </div>
+
+        <!-- ═══ PERSONAL INTRO ═══ -->
+        <div class="content-block">
+
+
+            <p>Hello {{contact.first_name}},</p>
+            <p>This morning I came across a Mother's Day message from Sarah McLachlan, and something in it cracked me open just a little.</p>
+            <p>She has been a voice in my life since long before I became a mother. Her music found me in my younger years and stayed, the way certain art does when it touches something true in you. So when she spoke about Mother's Day the way it actually feels for so many of us, not just the flowers and the warmth and the beautiful memories, but the grief and the longing and the moments we wish we could reach back and do differently, I felt it land somewhere deep.</p>
+            <p>I sat with that for a while.</p>
+            <p>Because I think there is a version of Mother's Day that we do not talk about very much. It lives alongside the gratitude and the love, quietly, in the same body, on the same day. It is the version where you look back across the years and feel the beauty and the ache all at once, not separately, but woven together in a way that is hard to explain to someone who has not felt it.</p>
+        </div>
+
+        <!-- ═══ WELLNESS WISDOM ═══ -->
+        <div class="highlight-section">
+            <h2>This Week's Wellness Wisdom</h2>
+
+            <!-- IMAGE -->
+            <img src="https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/6a01575abc1f77cc35796bf5.jpg"
+                alt="Laura with her two kids" class="img-responsive">
+
+            <h3>The Weight We Carry Quietly</h3>
+            <p><em>By Laura Harvey | Beyond the Bend</em></p>
+
+            <p>I have two adult children. And when I think about those years of raising them, what rises in me is not one clean feeling. It is everything at the same time. The moments that still make my heart full. And the moments I am still learning to forgive myself for.</p>
+            <p>I was never not trying. Not for a single day. Every decision I made, I made because I believed with my whole heart that it was right. I pushed as hard as I possibly could to show up the way I wanted to show up. And still, there are places where I know I fell short. Places where my own brokenness got in the way of the mother I so desperately wanted to be.</p>
+            <p>That is a particular kind of grief. It is not failure exactly. It is something quieter and harder to name, the grief of loving more than you knew how to hold, inside a season of your own life when you were still being shaped yourself. When you were still becoming.</p>
+            <p>I wonder how many women sat with that today, quietly, underneath the celebrations. Because I did.</p>
+            <p>And perhaps what I am finding my way toward, slowly and not always gracefully, is that there comes a point where we have to make a choice. Not to pretend the past was different than it was. Not to minimize the impact of our mistakes on the people we love most. But to finally, tenderly, extend to ourselves the same understanding we would offer any other human being who loved that hard and was that broken at the same time.</p>
+            <p>We were human. We are human. And human is messy and imperfect and does not follow the script we wrote for ourselves before we knew how hard it would actually be.</p>
+            <p>Mothering does not end when our children become adults. I believe that more deeply now than I ever have. And perhaps the gifts I was not able to give my children then, because I was still in the middle of becoming myself, are the ones I am learning to offer now. A steadier presence. A softer heart. The hard won wisdom that only comes from having walked through the fire and chosen, on the other side, to stop punishing yourself for having burned.</p>
+            <p>That path runs through forgiveness. Not the kind that dismisses what happened, but the kind that says I did the best I could with who I was, and who I am now is still growing, still softening, still learning to be gentle with myself so that I can be genuinely present for the people I love.</p>
+            <p>That is the work. Not just the yoga or the breathwork or the stillness, though those are part of it. It is the deeper practice of coming home to yourself, again and again, with a little less judgment each time. Of learning to hold your own heart the way you always wished someone had held it for you.</p>
+            <p>And if our children end up in therapy somewhere along the way, well, perhaps that is just part of the cycle of becoming. We do our best. They do their own becoming. And with any grace at all, we find our way back to each other, changed and more honest and perhaps more capable of real love than we ever were before.</p>
+        </div>
+
+        <!-- ═══ PRACTICE OF THE WEEK ═══ -->
+        <div class="content-block">
+            <div class="practice-section" style="border-radius: 4px; padding: 30px;">
+                <h2>Practice of the Week</h2>
+                <h3 style="margin-top: 8px;">A Letter to the Woman in the Photo</h3>
+                <p>This week, I invite you to find an old photograph of yourself from a time when your children were young, or from a season of your life that felt particularly heavy.</p>
+                <p>Instead of looking at it with a critical eye, try to look at the woman in the picture with deep, genuine compassion. Silently acknowledge how hard she was trying, how much she loved, and how she continued to show up even when she was exhausted.</p>
+                <p style="margin-bottom: 0;">Then, take a piece of paper and write a short letter to her. Tell her exactly what she desperately needed to hear back then. Offer her the grace, understanding, and forgiveness that she may not have known how to give herself. You do not have to fix her mistakes. Just let her know that she was, and always has been, enough.</p>
+            </div>
+        </div>
+
+        <!-- ═══ FROM THE STUDIO ═══ -->
+        <div class="studio-section">
+            <h2>From the Studio</h2>
+            
+            <div class="embodied-card" style="background-color: #ffffff; border-left: 4px solid #A8B5A2; padding: 25px; margin-bottom: 30px;">
+                <h3 style="margin-top: 0; color: #556b2f; font-style: normal; font-weight: 600;">A Project Near and Dear to My Heart</h3>
+                
+                <!-- POSTER IMAGE PLACEHOLDER -->
+                <img src="https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/6a01588f0f3ad81fbd183267.jpg" alt="Hearts on Fire Poster" class="img-responsive" style="margin-top: 10px; margin-bottom: 20px;">
+
+                <p>As some of you know, I have been moving through my Level 3 journey with Integrity Seminars. As part of our project together, our group has poured our hearts into creating something truly special for our community.</p>
+                
+                <p>We are hosting the <strong>Hearts on Fire Variety Show and Fundraiser</strong>, and I would absolutely love for you to be there. It is going to be a beautiful night filled with live entertainment, fun, and profound connection.</p>
+                
+                <p>This evening is entirely dedicated to supporting the people right here in our own backyard. We are raising funds for specific causes that are deeply personal to our group, extending care and resources to our neighbors who need it most. You can read more about the incredible causes we are supporting at our full event website: <a href="https://hearts-on-fire.netlify.app/" style="color: #556b2f; font-weight: bold;">hearts-on-fire.netlify.app</a></p>
+                
+                <a href="https://www.bloomtickets.ca/event/1171?HeartsonFire2026" target="_blank" class="btn btn-sage" style="margin-top: 15px; margin-bottom: 20px; display: inline-block;">Get Your Tickets Here</a>
+
+                <p>If you cannot make it to the event, that is completely okay! You can still be a huge part of this. If you are able to donate whatever you can comfortably afford, it goes directly toward helping our community. You can send donations via e-transfer directly to: <strong>heartsonfire2026@outlook.com</strong></p>
+
+                <p style="margin-bottom: 0;">Thank you for your endless support, for helping your neighbor, and for keeping the heart of this community beating so strong. I hope to see you there!</p>
+            </div>
+        </div>
+
+        <!-- ═══ CLOSING THOUGHT ═══ -->
+        <div class="content-block">
+            <h2>A Closing Thought</h2>
+            <p>Today, whatever Mother's Day held for you, I hope you found one moment of genuine kindness toward yourself. Not because you were perfect. But because you loved, fully, imperfectly, and without stopping.</p>
+            <p>That has always been enough.</p>
+            <br>
+            <p>With warmth and gratitude,<br>Laura 🩷</p>
+        </div>
+
+        <!-- ═══ FOOTER ═══ -->
+        <div class="footer">
+            BEYOND THE BEND<br>
+            Rising Moon Studio &middot; Sherwood Park, AB<br><br>
+            <a href="{{unsubscribe_link}}">Unsubscribe</a>
+        </div>
+
+    </div>
+</body>
+
+</html>

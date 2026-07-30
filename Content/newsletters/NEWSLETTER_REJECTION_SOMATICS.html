@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter | What Rejection Taught My Body</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+        body,
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            background-color: #f7f7f5;
+            color: #4a4a4a;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+
+        /* Header / Masthead */
+        .header {
+            background-color: #faf0f0;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 4px solid #556b2f;
+        }
+
+        .header img {
+            max-width: 140px;
+            height: auto;
+            margin-bottom: 25px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .masthead-title {
+            color: #556b2f;
+            font-family: 'Playfair Display', Georgia, serif;
+            line-height: 1.2;
+        }
+
+        .masthead-top {
+            display: block;
+            font-size: 28px;
+            font-style: italic;
+            font-weight: 400;
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+
+        .masthead-main {
+            display: block;
+            font-size: 32px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-top: 2px solid #556b2f;
+            border-bottom: 2px solid #556b2f;
+            padding: 15px 0;
+            margin-top: 10px;
+        }
+
+        .content-block {
+            padding: 40px 30px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #556b2f;
+            font-size: 26px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #78866b;
+            font-size: 22px;
+            margin-bottom: 10px;
+            margin-top: 20px;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .highlight-section {
+            background-color: #fcfbf9;
+            padding: 40px 30px;
+            border-left: 4px solid #556b2f;
+        }
+
+        .studio-section {
+            background-color: #f4f7f2;
+            padding: 40px 30px;
+            border-top: 1px solid #d8e4d0;
+        }
+
+        .practice-section {
+            background-color: #eef2eb;
+            padding: 30px 20px;
+            margin-top: 0;
+        }
+
+        .img-responsive {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin: 20px 0;
+            display: block;
+        }
+
+        /* Class schedule table */
+        .class-row td {
+            padding: 12px 15px;
+            font-size: 15px;
+            line-height: 1.6;
+            border-bottom: 1px solid #d8e4d0;
+        }
+
+        .class-day {
+            color: #556b2f;
+            font-weight: 700;
+        }
+
+        .new-badge {
+            background-color: #556b2f;
+            color: white;
+            font-size: 11px;
+            padding: 2px 7px;
+            border-radius: 10px;
+            letter-spacing: 1px;
+            vertical-align: middle;
+            margin-left: 6px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 15px;
+            letter-spacing: 1px;
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+        }
+
+        .btn-sage {
+            background-color: #A8B5A2;
+            color: white;
+        }
+
+        .btn-forest {
+            background-color: #3F4A3C;
+            color: #F7F4EF;
+        }
+
+        .embodied-card {
+            background-color: #F0F4EE;
+            border-left: 3px solid #A8B5A2;
+            padding: 20px 25px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .footer {
+            background-color: #3F4A3C;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #F7F4EF;
+            letter-spacing: 1px;
+        }
+
+        .footer a {
+            color: #A8B5A2;
+            text-decoration: none;
+        }
+
+        strong {
+            color: #556b2f;
+            font-weight: 600;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                width: 100% !important;
+            }
+
+            .header {
+                padding: 30px 15px;
+            }
+
+            .content-block,
+            .highlight-section,
+            .studio-section {
+                padding: 25px 15px;
+            }
+
+            .masthead-main {
+                font-size: 24px;
+                letter-spacing: 1px;
+            }
+
+            .masthead-top {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- ═══ MASTHEAD BANNER ═══ -->
+        <div class="header">
+            <img src="https://storage.googleapis.com/msgsndr/t19sOv208p64ldeUjJug/media/697996aad119a57c1575bb7d.png"
+                alt="Beyond the Bend Logo">
+            <div class="masthead-title">
+                <span class="masthead-top">Reflections from</span>
+                <span class="masthead-main">Beyond the Bend</span>
+            </div>
+        </div>
+
+        <!-- ═══ PERSONAL INTRO ═══ -->
+        <div class="content-block">
+            <p>Hello {{contact.first_name}},</p>
+            <p>I've been sitting with a book lately called <em>Rejection Proof</em> by Jia Jiang. I picked it up expecting something motivational about grit and mindset, and there's certainly some of that in the writing. However, as I read it, something quieter and more interesting cracked open in me.</p>
+            <p>Jia spent 100 days seeking rejection by walking up to strangers and making outrageous requests. He did this day after day and request after request, even when he was almost certain to be turned down. Eventually, something shifted in him. It happened not because he got tougher or learned to stop caring, but because his body eventually stopped sounding the alarm.</p>
+            <p>That's the part of the story that's stayed with me.</p>
+            <p>With love,<br>Laura</p>
+        </div>
+
+        <!-- ═══ WELLNESS WISDOM ═══ -->
+        <div class="highlight-section">
+            <h2>This Week's Wellness Wisdom</h2>
+
+            <!-- IMAGE -->
+            <img src="https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/69ea9396717d5dd4e1744a20.png"
+                alt="A peaceful and grounded visual" class="img-responsive">
+
+            <h3>What Rejection Actually Taught My Body</h3>
+            <p><em>By Laura Harvey | Beyond the Bend Yoga</em></p>
+
+            <p>From my years of working with the body, I've learned that the fear of rejection doesn't begin in the mind. It begins in the nervous system. Long before a coherent thought forms, there's a contraction, a bracing, and a subtle pulling inward. The body's already decided that something's dangerous, and it's protecting you the only way it knows how.</p>
+            <p>For most of us, that wiring made complete sense at one time. When we were younger, other people's opinions genuinely did determine whether we belonged, whether we were loved, and whether we were safe. The body learned and remembered those feelings, and it's been faithfully carrying that memory ever since.</p>
+            <p>Therefore, when an opportunity arises and something in you hesitates, shrinks, or talks you out of it before you've even begun, that's not a sign of weakness. That's an old protective pattern doing exactly what it was designed to do, even if it's no longer serving you.</p>
+            <p>I know this pattern intimately. I've spent many years avoiding things that called to me because I was afraid of what others would think. I was afraid of being seen and found lacking, and I was afraid of putting something real into the world only to have it rejected. Building this business has brought every one of those fears to the surface. Creating, writing, teaching, and putting my work out into the world is an act of vulnerability every single time. The voices still come, and they may always come.</p>
+            <p>Last weekend, I was at a public speaking workshop. I've stood in front of classrooms filled with yoga students every week for the last two decades, so speaking in front of people has become very natural to me. However, when it was my turn to stand up and be seen in this different environment, the tightening still came. I felt the old contraction in my throat and chest, which is that ancient body memory that whispers you're too much, not enough, or both at once. I won't pretend it didn't surprise me a little, but I also knew what it was. I could name it, feel it, breathe into it, and keep going anyway. That's not the absence of fear; rather, it's what it looks like to have a relationship with fear.</p>
+            <p>Something's shifted as I've moved into this chapter of my life. At 56, other people's opinions simply mean less to me than they used to. It's not because I've stopped caring about people, but because I've slowly and steadily learned to come home to myself instead. I've learned to feel the fear in my body rather than flee it, and I've learned to get curious about the contraction instead of collapsing into it or pushing it away. I ask gently what old belief is speaking right now, and then I let it move through and release.</p>
+            <p>This is somatic work, and this is what we do.</p>
+            <p>What I now understand about those days of deliberate rejection is that Jia Jiang was doing somatic work too. He just didn't have that language for it at the time. Every time he walked toward the thing that scared him and survived it, he was giving his nervous system new information. He was teaching himself that he was okay, that the threat was not real, and that he could do this and still be whole. Through repetition and exposure, his body learned a different response.</p>
+            <p>That's not a mindset shift. That's regulation. That's the body being gently and persistently taught that it's safe to be seen.</p>
+            <p>I think about the women I work with, so many of whom carry this same quiet burden. This often shows up as a held breath before speaking, a tightening in the chest when someone asks too much of them, or even the way the throat closes around the truth before it can be spoken.</p>
+            <p>What if that contraction isn't a stop sign? What if it's simply the body asking for accompaniment, or for someone to sit with it in the discomfort rather than rushing past it?</p>
+        </div>
+
+        <!-- ═══ FROM THE STUDIO ═══ -->
+        <div class="studio-section">
+            <h2>From the Studio</h2>
+            
+            <!-- Wednesday Morning Inquiry Card -->
+            <div class="embodied-card" style="background-color: #ffffff; border-left: 4px solid #A8B5A2; padding: 25px; margin-bottom: 30px;">
+                <h3 style="margin-top: 0; color: #556b2f; font-style: normal; font-weight: 600;">Wednesday Morning In Person | Interest Inquiry</h3>
+                <p style="font-style: italic; color: #78866b; margin-bottom: 10px;">Is it time to return?</p>
+                <p>I've heard from many of you lately that you're missing our Wednesday morning practice together. While we didn't have quite enough numbers to begin this class at the start of the spring session, the interest has continued to grow. Because I want to honor those requests, I'm now considering a special <strong>six week session</strong> running from <strong>May 6th to June 10th</strong>.</p>
+                
+                <p><strong>How to let me know:</strong><br>
+                If you'd like to join us in person for this session, please simply <strong>reply to this email</strong> and let me know. Once I have a sense of the interest level, I'll let everyone know if we're moving forward!</p>
+            </div>
+
+            <!-- Online Sessions Card -->
+            <div style="padding: 10px 0;">
+                <h3 style="margin-top: 0; color: #556b2f; font-style: normal; font-weight: 600;">Wednesday Online Sessions | Always Available</h3>
+                <p style="font-style: italic; color: #78866b; margin-bottom: 10px;">Your practice, from the comfort of home.</p>
+                <p>Regardless of our studio schedule, my Wednesday online classes will remain a permanent part of the calendar. These sessions are a beautiful way to settle into your day without having to leave your own sanctuary, and they'll continue as usual.</p>
+                
+                <p style="text-align: center; margin: 30px 0;">
+                    <a href="https://beyondthebendyoga.ca/livestream-yoga" class="btn btn-forest">View Online Options & Register</a>
+                </p>
+            </div>
+
+            <p style="font-size: 15px; margin-top: 20px; border-top: 1px solid #d8e4d0; padding-top: 20px;">If you have any questions about these options, just reply to this email. I'm always happy to help you find the right fit for your practice.</p>
+        </div>
+
+        <!-- ═══ PRACTICE OF THE WEEK ═══ -->
+        <div class="content-block">
+            <div class="practice-section" style="border-radius: 4px; padding: 30px;">
+                <h2>Practice of the Week</h2>
+                <h3 style="margin-top: 8px;">Accompaniment</h3>
+                <p>You don't have to make 100 rejection requests, and you don't have to throw yourself into the fire to heal. However, you might try this instead.</p>
+                <p>The next time you feel that familiar pull away from something that calls you, please pause. Place a hand on your chest or your belly and feel what's actually there. Try to focus on the sensation itself rather than the story about it, and simply breathe into the feeling as you let it be what it is.</p>
+                <p>You may find, as I've found, that most of what we've been protecting ourselves from is something that already happened a long time ago. The body, when given the chance, knows exactly how to let it go.</p>
+            </div>
+        </div>
+
+        <!-- ═══ CLOSING THOUGHT ═══ -->
+        <div class="content-block">
+            <h2>A Closing Thought</h2>
+            <p>The world needs what you are here to offer, but more than that, you deserve the experience of being fully yourself in the world. We often spend so much of our lives waiting for the perfect moment or for the fear to disappear, but the truth is that the fear may always be part of the journey.</p>
+            <p>The real practice is not to wait for the alarm to stop, but to learn how to keep yourself company while it sounds. When you choose to show up, even with a racing heart or a tight chest, you are giving yourself a gift that is far more valuable than anyone's approval. You are proving to your own nervous system that you are here, you are whole, and you are finally ready to be seen.</p>
+            <br>
+            <p>With love,<br>Laura 🩷</p>
+        </div>
+
+        <!-- ═══ FOOTER ═══ -->
+        <div class="footer">
+            BEYOND THE BEND YOGA<br>
+            Rising Moon Studio &middot; Sherwood Park, AB<br><br>
+            <a href="{{unsubscribe_link}}">Unsubscribe</a>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,645 @@
+@import url("https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,300;7..72,400;7..72,500&family=Inter:wght@400;500;600&display=swap");
+
+:root {
+    --ink: #2f332d;
+    --muted: #697063;
+    --soft: #f4efe7;
+    --paper: #fffaf2;
+    --linen: #e9dfd1;
+    --sage: #7c8c72;
+    --sage-dark: #4f6049;
+    --rose: #b98178;
+    --clay: #b66f55;
+    --border: rgba(47, 51, 45, 0.14);
+    --container: 1180px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    background:
+        radial-gradient(circle at top left, rgba(185, 129, 120, 0.16), transparent 32rem),
+        linear-gradient(180deg, var(--paper), var(--soft));
+    font-family: "Inter", Arial, sans-serif;
+    line-height: 1.65;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("../../../Sanctuary/Sanctuary_Master_Content/Inspiration/Vibe_Linen_Textures.jpg");
+    background-size: cover;
+    opacity: 0.08;
+    mix-blend-mode: multiply;
+}
+
+a {
+    color: inherit;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    padding: 18px clamp(20px, 5vw, 56px);
+    border-bottom: 1px solid var(--border);
+    background: rgba(255, 250, 242, 0.86);
+    backdrop-filter: blur(18px);
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--ink);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+}
+
+.brand-mark {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    font-family: "Literata", Georgia, serif;
+    font-size: 13px;
+    color: var(--sage-dark);
+    background: rgba(255, 255, 255, 0.44);
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.nav-links a,
+.header-cta,
+.button,
+.text-link,
+.pathway a {
+    text-decoration: none;
+}
+
+.nav-links a:hover,
+.text-link:hover,
+.pathway a:hover {
+    color: var(--sage-dark);
+}
+
+.header-cta,
+.button,
+.signup-form button {
+    border: 1px solid var(--sage-dark);
+    border-radius: 999px;
+    padding: 11px 18px;
+    color: var(--paper);
+    background: var(--sage-dark);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+}
+
+.hero,
+.intro-panel,
+.pathways,
+.sanctuary-section,
+.classes-section,
+.about-section,
+.courses-section,
+.contact-section,
+.site-footer {
+    width: min(var(--container), calc(100% - 40px));
+    margin-inline: auto;
+}
+
+.hero {
+    min-height: calc(100vh - 80px);
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.92fr);
+    gap: clamp(36px, 6vw, 88px);
+    align-items: center;
+    padding: clamp(56px, 9vw, 110px) 0;
+}
+
+.eyebrow {
+    margin: 0 0 14px;
+    color: var(--clay);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Literata", Georgia, serif;
+    font-weight: 300;
+    line-height: 1.03;
+    margin: 0;
+}
+
+h1 {
+    max-width: 780px;
+    font-size: clamp(54px, 9vw, 112px);
+    letter-spacing: -0.065em;
+}
+
+h2 {
+    font-size: clamp(38px, 6vw, 72px);
+    letter-spacing: -0.045em;
+}
+
+h3 {
+    font-size: clamp(28px, 3.4vw, 42px);
+    letter-spacing: -0.035em;
+}
+
+.hero-text {
+    max-width: 650px;
+    margin: 26px 0 0;
+    color: var(--muted);
+    font-size: clamp(18px, 2vw, 22px);
+}
+
+.hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 34px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding-inline: 22px;
+}
+
+.button.secondary {
+    color: var(--sage-dark);
+    background: transparent;
+}
+
+.hero-art {
+    position: relative;
+    min-height: 580px;
+    border: 1px solid var(--border);
+    border-radius: 38px;
+    overflow: hidden;
+    background:
+        linear-gradient(140deg, rgba(124, 140, 114, 0.18), transparent 58%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.58), rgba(233, 223, 209, 0.65));
+}
+
+.hero-art::before,
+.hero-art::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(79, 96, 73, 0.18);
+}
+
+.hero-art::before {
+    width: 430px;
+    height: 430px;
+    right: -100px;
+    top: -72px;
+}
+
+.hero-art::after {
+    width: 260px;
+    height: 260px;
+    left: -90px;
+    bottom: 40px;
+}
+
+.moon {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 92px;
+    right: 92px;
+    border-radius: 50%;
+    background: rgba(255, 250, 242, 0.78);
+    border: 1px solid var(--border);
+}
+
+.paper-card {
+    position: absolute;
+    width: min(300px, 70%);
+    padding: 24px;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    background: rgba(255, 250, 242, 0.88);
+}
+
+.paper-card span {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.paper-card strong {
+    display: block;
+    font-family: "Literata", Georgia, serif;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1.06;
+}
+
+.card-one {
+    left: 42px;
+    top: 112px;
+}
+
+.card-two {
+    right: 48px;
+    bottom: 166px;
+}
+
+.card-three {
+    left: 78px;
+    bottom: 62px;
+}
+
+.intro-panel {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: clamp(28px, 6vw, 78px);
+    align-items: end;
+    padding: 76px clamp(22px, 5vw, 72px);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.intro-panel p:last-child,
+.section-copy p,
+.section-heading p,
+.about-section p,
+.course-card p,
+.contact-section h2 + p {
+    color: var(--muted);
+}
+
+.pathways {
+    display: grid;
+    grid-template-columns: 1.2fr 0.9fr 0.9fr;
+    gap: 18px;
+    padding: 80px 0;
+}
+
+.pathway {
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: clamp(24px, 4vw, 40px);
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    background: rgba(255, 250, 242, 0.52);
+}
+
+.pathway.large {
+    background: var(--sage-dark);
+    color: var(--paper);
+}
+
+.pathway.large .eyebrow,
+.pathway.large p,
+.pathway.large a {
+    color: rgba(255, 250, 242, 0.78);
+}
+
+.pathway p {
+    color: var(--muted);
+}
+
+.pathway a,
+.text-link {
+    width: fit-content;
+    margin-top: 24px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid currentColor;
+    color: var(--sage-dark);
+    font-weight: 600;
+}
+
+.sanctuary-section {
+    display: grid;
+    grid-template-columns: 0.92fr 1.08fr;
+    gap: clamp(30px, 6vw, 80px);
+    align-items: start;
+    padding: clamp(70px, 9vw, 110px) clamp(22px, 5vw, 64px);
+    border-radius: 42px;
+    background: var(--ink);
+    color: var(--paper);
+}
+
+.sanctuary-section p,
+.sanctuary-grid p {
+    color: rgba(255, 250, 242, 0.68);
+}
+
+.sanctuary-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: rgba(255, 250, 242, 0.18);
+    border: 1px solid rgba(255, 250, 242, 0.18);
+}
+
+.sanctuary-grid div {
+    min-height: 230px;
+    padding: 26px;
+    background: var(--ink);
+}
+
+.sanctuary-grid span {
+    display: block;
+    margin-bottom: 34px;
+    color: var(--rose);
+    font-size: 13px;
+}
+
+.sanctuary-grid strong {
+    display: block;
+    font-family: "Literata", Georgia, serif;
+    font-size: 27px;
+    font-weight: 300;
+    line-height: 1.1;
+}
+
+.classes-section,
+.about-section,
+.courses-section,
+.contact-section {
+    padding: clamp(70px, 9vw, 110px) 0;
+}
+
+.section-heading {
+    max-width: 720px;
+    margin-bottom: 38px;
+}
+
+.schedule-list {
+    display: grid;
+    gap: 12px;
+}
+
+.schedule-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: center;
+    padding: 28px 32px;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    background: rgba(255, 250, 242, 0.62);
+}
+
+.schedule-item p {
+    margin: 0 0 6px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.schedule-item h3 {
+    font-size: clamp(28px, 4vw, 48px);
+}
+
+.schedule-item span {
+    min-width: max-content;
+    color: var(--sage-dark);
+    font-weight: 600;
+}
+
+.schedule-item.featured {
+    background: var(--linen);
+}
+
+.about-section {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: clamp(34px, 7vw, 100px);
+    align-items: center;
+    border-top: 1px solid var(--border);
+}
+
+.portrait-card {
+    min-height: 440px;
+    display: grid;
+    align-content: end;
+    padding: 28px;
+    border-radius: 34px;
+    background: linear-gradient(180deg, rgba(185, 129, 120, 0.18), rgba(124, 140, 114, 0.2));
+    border: 1px solid var(--border);
+}
+
+.portrait-shape {
+    width: 72%;
+    aspect-ratio: 1;
+    margin: 0 auto 44px;
+    border-radius: 50% 50% 46% 54%;
+    border: 1px solid rgba(79, 96, 73, 0.2);
+    background: rgba(255, 250, 242, 0.58);
+}
+
+.portrait-card p {
+    margin: 0;
+    font-family: "Literata", Georgia, serif;
+    font-size: 46px;
+    color: var(--sage-dark);
+}
+
+.courses-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.course-card {
+    padding: clamp(28px, 4vw, 46px);
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    background: rgba(255, 250, 242, 0.62);
+}
+
+.course-card.muted {
+    background: rgba(124, 140, 114, 0.14);
+}
+
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr 0.86fr;
+    gap: clamp(32px, 7vw, 90px);
+    align-items: start;
+    border-top: 1px solid var(--border);
+}
+
+.signup-form {
+    display: grid;
+    gap: 16px;
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    background: rgba(255, 250, 242, 0.7);
+}
+
+.signup-form label {
+    display: grid;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.signup-form input {
+    width: 100%;
+    min-height: 48px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0 16px;
+    color: var(--ink);
+    background: rgba(255, 255, 255, 0.68);
+    font: inherit;
+}
+
+.signup-form button {
+    min-height: 50px;
+    cursor: pointer;
+}
+
+.signup-form p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 38px 0 48px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+.site-footer strong {
+    color: var(--ink);
+}
+
+@media (max-width: 980px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero,
+    .intro-panel,
+    .sanctuary-section,
+    .about-section,
+    .contact-section {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-art {
+        min-height: 480px;
+    }
+
+    .pathways,
+    .courses-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 680px) {
+    .site-header {
+        align-items: flex-start;
+    }
+
+    .header-cta {
+        display: none;
+    }
+
+    .hero,
+    .classes-section,
+    .about-section,
+    .courses-section,
+    .contact-section {
+        padding-block: 58px;
+    }
+
+    .hero-art {
+        min-height: 420px;
+        border-radius: 28px;
+    }
+
+    .paper-card {
+        width: 78%;
+    }
+
+    .card-one {
+        left: 22px;
+        top: 64px;
+    }
+
+    .card-two {
+        right: 18px;
+        bottom: 150px;
+    }
+
+    .card-three {
+        left: 30px;
+        bottom: 42px;
+    }
+
+    .intro-panel,
+    .sanctuary-section {
+        width: min(100% - 24px, var(--container));
+        padding: 44px 22px;
+        border-radius: 28px;
+    }
+
+    .sanctuary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .schedule-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .site-footer {
+        flex-direction: column;
+    }
+}

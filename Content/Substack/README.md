@@ -58,12 +58,27 @@ Each Substack version:
 | 20_Seven_Gateways_to_Balance.md | 7 Gateways to Balance | Aug 17, 2025 |
 | 21_Honouring_Your_Bodys_Natural_Rhythm.md | Honouring Your Body's Natural Rhythm | Sep 14, 2025 |
 | 22_Returning_to_the_Calm_Within.md | Returning to the Calm Within | Sep 3, 2025 |
+| 23_The_Four_Steps_of_RAIN.md | The Four Steps of RAIN | — |
+| 24_Swimming_With_the_River.md | Swimming With the River | — |
+| 25_The_Snow_That_Keeps_Coming_Back.md | The Snow That Keeps Coming Back | — |
+| 26_When_Letting_Go_Shakes_the_Ground.md | When Letting Go Shakes the Ground | — |
+| 27_When_the_Mind_Steeps_Too_Long.md | When the Mind Steeps Too Long | Apr 13, 2026 |
+| 28_When_the_Dream_Asks_to_Be_Lived.md | When the Dream Asks to Be Lived | May 18, 2026 |
+| 29_Remembering_the_Feminine_Divine.md | Remembering the Feminine Divine | Jun 1, 2026 |
+| 30_The_Descent.md | The Descent | Jun 14, 2026 |
 
 ---
 
 ## Going Forward
 
-After each new newsletter is finished in GHL, ask me to:
-"Can you create the Substack version of this newsletter?"
+New newsletter HTML files saved in `C:\BTB\Content\newsletters` are checked by the BTB Newsletter To Substack automation.
 
-I'll strip it down and save it here as the next numbered file.
+The local converter lives here:
+
+`C:\BTB\Tech_and_Web\Newsletter_Automation`
+
+The Codex app automation checks the folder every hour. If you want the Substack version immediately, run:
+
+`C:\BTB\Tech_and_Web\Newsletter_Automation\Double_Click_To_Update_Substack_Now.bat`
+
+The generated draft will appear in this folder as the next numbered markdown file.

@@ -1,0 +1,2173 @@
+﻿<!-- Beyond the Bend Sanctuary GoHighLevel custom HTML -->
+<!-- Paste this entire block into the matching GoHighLevel page custom HTML element. -->
+<script>
+document.body.classList.add('sanctuary-app');
+</script>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,300;7..72,400;7..72,500&family=Inter:wght@400;500;600&display=swap");
+
+:root {
+    --ink: #2f332d;
+    --muted: #697063;
+    --soft: #f4efe7;
+    --paper: #fffaf2;
+    --linen: #e9dfd1;
+    --sage: #7c8c72;
+    --sage-dark: #4f6049;
+    --rose: #b98178;
+    --clay: #b66f55;
+    --border: rgba(47, 51, 45, 0.14);
+    --container: 1180px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    background:
+        radial-gradient(circle at top left, rgba(185, 129, 120, 0.16), transparent 32rem),
+        linear-gradient(180deg, var(--paper), var(--soft));
+    font-family: "Inter", Arial, sans-serif;
+    line-height: 1.65;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("../../../Sanctuary/Sanctuary_Master_Content/Inspiration/Vibe_Linen_Textures.jpg");
+    background-size: cover;
+    opacity: 0.08;
+    mix-blend-mode: multiply;
+}
+
+a {
+    color: inherit;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    padding: 18px clamp(20px, 5vw, 56px);
+    border-bottom: 1px solid var(--border);
+    background: rgba(255, 250, 242, 0.86);
+    backdrop-filter: blur(18px);
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--ink);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+}
+
+.brand-logo-crop {
+    display: flex;
+    align-items: center;
+}
+
+.brand-logo-crop img {
+    display: block;
+    height: 96px;
+    width: auto;
+}
+
+.brand-logo-cover {
+    display: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.nav-links a,
+.header-cta,
+.button,
+.text-link,
+.pathway a {
+    text-decoration: none;
+}
+
+.nav-links a:hover,
+.text-link:hover,
+.pathway a:hover {
+    color: var(--sage-dark);
+}
+
+.header-cta,
+.button,
+.signup-form button {
+    border: 1px solid var(--sage-dark);
+    border-radius: 999px;
+    padding: 11px 18px;
+    color: var(--paper);
+    background: var(--sage-dark);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+}
+
+.hero,
+.intro-panel,
+.pathways,
+.sanctuary-section,
+.classes-section,
+.about-section,
+.courses-section,
+.contact-section,
+.site-footer {
+    width: min(var(--container), calc(100% - 40px));
+    margin-inline: auto;
+}
+
+.hero {
+    min-height: calc(100vh - 80px);
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.92fr);
+    gap: clamp(36px, 6vw, 88px);
+    align-items: center;
+    padding: clamp(56px, 9vw, 110px) 0;
+}
+
+.eyebrow {
+    margin: 0 0 14px;
+    color: var(--clay);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Literata", Georgia, serif;
+    font-weight: 300;
+    line-height: 1.03;
+    margin: 0;
+}
+
+h1 {
+    max-width: 780px;
+    font-size: clamp(48px, 6.2vw, 80px);
+    letter-spacing: -0.065em;
+}
+
+.stacked-heading span {
+    display: block;
+}
+
+.intro-heading {
+    font-size: clamp(36px, 4.6vw, 58px);
+}
+
+h2 {
+    font-size: clamp(38px, 6vw, 72px);
+    letter-spacing: -0.045em;
+}
+
+h3 {
+    font-size: clamp(28px, 3.4vw, 42px);
+    letter-spacing: -0.035em;
+}
+
+.hero-text {
+    max-width: 650px;
+    margin: 26px 0 0;
+    color: var(--muted);
+    font-size: clamp(18px, 2vw, 22px);
+}
+
+.hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 34px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding-inline: 22px;
+}
+
+.button.secondary {
+    color: var(--sage-dark);
+    background: transparent;
+}
+
+.hero-art {
+    position: relative;
+    min-height: 580px;
+    border: 1px solid var(--border);
+    border-radius: 38px;
+    overflow: hidden;
+    background:
+        linear-gradient(140deg, rgba(124, 140, 114, 0.18), transparent 58%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.58), rgba(233, 223, 209, 0.65));
+}
+
+.hero-art::before,
+.hero-art::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(79, 96, 73, 0.18);
+}
+
+.hero-art::before {
+    width: 430px;
+    height: 430px;
+    right: -100px;
+    top: -72px;
+}
+
+.hero-art::after {
+    width: 260px;
+    height: 260px;
+    left: -90px;
+    bottom: 40px;
+}
+
+.moon {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 92px;
+    right: 92px;
+    border-radius: 50%;
+    background: rgba(255, 250, 242, 0.78);
+    border: 1px solid var(--border);
+}
+
+.paper-card {
+    position: absolute;
+    width: min(300px, 70%);
+    padding: 24px;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    background: rgba(255, 250, 242, 0.88);
+}
+
+.paper-card span {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.paper-card strong {
+    display: block;
+    font-family: "Literata", Georgia, serif;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1.06;
+}
+
+.card-one {
+    left: 42px;
+    top: 112px;
+}
+
+.card-two {
+    right: 48px;
+    bottom: 166px;
+}
+
+.card-three {
+    left: 78px;
+    bottom: 62px;
+}
+
+.intro-panel {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: clamp(28px, 6vw, 78px);
+    align-items: end;
+    padding: 76px clamp(22px, 5vw, 72px);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.private-section {
+    width: min(1060px, calc(100% - 40px));
+    margin: 84px auto 0;
+    padding: clamp(42px, 6vw, 70px);
+    border: 1px solid var(--border);
+    border-radius: 34px;
+    background: var(--linen);
+    color: var(--ink);
+}
+
+.private-heading {
+    max-width: 780px;
+    margin: 0 auto clamp(38px, 5vw, 58px);
+    text-align: center;
+}
+
+.private-heading h2 {
+    color: var(--ink);
+    font-size: clamp(36px, 4.5vw, 58px);
+    letter-spacing: -0.045em;
+    line-height: 1.04;
+}
+
+.private-introduction {
+    max-width: 690px;
+    margin: 22px auto 0;
+    color: var(--muted);
+    font-size: clamp(18px, 2vw, 22px);
+}
+
+.private-content {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1.22fr);
+    gap: clamp(38px, 7vw, 86px);
+    align-items: center;
+}
+
+.private-photo {
+    min-height: 500px;
+    overflow: hidden;
+    border-radius: 28px;
+    background: var(--soft);
+}
+
+.private-photo img {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    display: block;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.private-copy > p {
+    color: var(--muted);
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.private-laura {
+    margin: 0 0 22px;
+}
+
+.private-lead {
+    margin: 0 0 24px;
+}
+
+.private-button {
+    margin-top: 14px;
+    border-color: var(--sage-dark);
+    color: var(--paper);
+    background: var(--sage-dark);
+}
+
+.consultation-note {
+    max-width: 530px;
+    margin: 18px 0 0;
+}
+
+.intro-panel p:last-child,
+.section-copy p,
+.section-heading p,
+.about-section p,
+.course-card p,
+.contact-section h2 + p {
+    color: var(--muted);
+}
+
+.pathways {
+    display: grid;
+    grid-template-columns: 1.2fr 0.9fr 0.9fr;
+    gap: 18px;
+    padding: 80px 0;
+}
+
+.pathway {
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: clamp(24px, 4vw, 40px);
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    background: rgba(255, 250, 242, 0.52);
+}
+
+.pathway.large {
+    background: var(--sage-dark);
+    color: var(--paper);
+}
+
+.pathway.large .eyebrow,
+.pathway.large p,
+.pathway.large a {
+    color: rgba(255, 250, 242, 0.78);
+}
+
+.pathway p {
+    color: var(--muted);
+}
+
+.pathway a,
+.text-link {
+    width: fit-content;
+    margin-top: 24px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid currentColor;
+    color: var(--sage-dark);
+    font-weight: 600;
+}
+
+.sanctuary-section {
+    display: grid;
+    grid-template-columns: 0.92fr 1.08fr;
+    gap: clamp(30px, 6vw, 80px);
+    align-items: start;
+    padding: clamp(70px, 9vw, 110px) clamp(22px, 5vw, 64px);
+    border-radius: 42px;
+    background: var(--ink);
+    color: var(--paper);
+}
+
+.sanctuary-section p,
+.sanctuary-grid p {
+    color: rgba(255, 250, 242, 0.68);
+}
+
+.sanctuary-button {
+    margin-top: 24px;
+    border-color: var(--paper);
+    color: var(--ink);
+    background: var(--paper);
+}
+
+.sanctuary-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: rgba(255, 250, 242, 0.18);
+    border: 1px solid rgba(255, 250, 242, 0.18);
+}
+
+.sanctuary-grid div {
+    min-height: 230px;
+    padding: 26px;
+    background: var(--ink);
+}
+
+.sanctuary-grid span {
+    display: block;
+    margin-bottom: 34px;
+    color: var(--rose);
+    font-size: 13px;
+}
+
+.sanctuary-grid strong {
+    display: block;
+    font-family: "Literata", Georgia, serif;
+    font-size: 27px;
+    font-weight: 300;
+    line-height: 1.1;
+}
+
+.classes-section,
+.about-section,
+.courses-section,
+.contact-section {
+    padding: clamp(70px, 9vw, 110px) 0;
+}
+
+.section-heading {
+    max-width: 720px;
+    margin-bottom: 38px;
+}
+
+.schedule-list {
+    display: grid;
+    gap: 12px;
+}
+
+.schedule-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: center;
+    padding: 28px 32px;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    background: rgba(255, 250, 242, 0.62);
+}
+
+.schedule-item p {
+    margin: 0 0 6px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.schedule-item h3 {
+    font-size: clamp(28px, 4vw, 48px);
+}
+
+.schedule-item span {
+    min-width: max-content;
+    color: var(--sage-dark);
+    font-weight: 600;
+}
+
+.schedule-item.featured {
+    background: var(--linen);
+}
+
+.about-section {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: clamp(34px, 7vw, 100px);
+    align-items: center;
+    border-top: 1px solid var(--border);
+}
+
+.portrait-card {
+    min-height: 540px;
+    overflow: hidden;
+    border-radius: 34px;
+    background: linear-gradient(180deg, rgba(185, 129, 120, 0.18), rgba(124, 140, 114, 0.2));
+    border: 1px solid var(--border);
+}
+
+.portrait-card img {
+    width: 100%;
+    height: 100%;
+    min-height: 540px;
+    display: block;
+    object-fit: cover;
+}
+
+.courses-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.course-card {
+    padding: clamp(28px, 4vw, 46px);
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    background: rgba(255, 250, 242, 0.62);
+}
+
+.course-card.muted {
+    background: rgba(124, 140, 114, 0.14);
+}
+
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr 0.86fr;
+    gap: clamp(32px, 7vw, 90px);
+    align-items: start;
+    border-top: 1px solid var(--border);
+}
+
+.signup-form {
+    display: grid;
+    gap: 16px;
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    background: rgba(255, 250, 242, 0.7);
+}
+
+.signup-form label {
+    display: grid;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.signup-form input {
+    width: 100%;
+    min-height: 48px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0 16px;
+    color: var(--ink);
+    background: rgba(255, 255, 255, 0.68);
+    font: inherit;
+}
+
+.signup-form button {
+    min-height: 50px;
+    cursor: pointer;
+}
+
+.signup-form p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 38px 0 48px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+.site-footer strong {
+    color: var(--ink);
+}
+
+@media (max-width: 980px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero,
+    .intro-panel,
+    .sanctuary-section,
+    .about-section,
+    .contact-section {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-art {
+        min-height: 480px;
+    }
+
+    .pathways,
+    .courses-section {
+        grid-template-columns: 1fr;
+    }
+
+    .private-content {
+        grid-template-columns: 1fr;
+    }
+
+    .private-photo {
+        width: min(440px, 100%);
+        min-height: 520px;
+        margin: 0 auto;
+    }
+
+    .private-photo img {
+        min-height: 520px;
+    }
+}
+
+@media (max-width: 680px) {
+    .site-header {
+        align-items: flex-start;
+    }
+
+    .brand-logo-crop {
+        display: flex;
+        align-items: center;
+    }
+    
+    .brand-logo-crop img {
+        height: 72px;
+        width: auto;
+    }
+    
+    .brand-logo-cover {
+        display: none;
+    }
+
+    .header-cta {
+        display: none;
+    }
+
+    .hero,
+    .classes-section,
+    .about-section,
+    .courses-section,
+    .contact-section {
+        padding-block: 58px;
+    }
+
+    .hero-art {
+        min-height: 420px;
+        border-radius: 28px;
+    }
+
+    .paper-card {
+        width: 78%;
+    }
+
+    .card-one {
+        left: 22px;
+        top: 64px;
+    }
+
+    .card-two {
+        right: 18px;
+        bottom: 150px;
+    }
+
+    .card-three {
+        left: 30px;
+        bottom: 42px;
+    }
+
+    .intro-panel,
+    .private-section,
+    .sanctuary-section {
+        width: min(100% - 24px, var(--container));
+        padding: 44px 22px;
+        border-radius: 28px;
+    }
+
+
+    .sanctuary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .schedule-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .site-footer {
+        flex-direction: column;
+    }
+}
+
+/* ==========================================================================
+   SANCTUARY MEMBERSHIP DASHBOARD
+   ========================================================================== */
+
+body.sanctuary-app {
+    background: var(--soft);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.app-layout {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.app-sidebar {
+    width: 280px;
+    background: var(--paper);
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    padding: 32px 0;
+    flex-shrink: 0;
+}
+
+.sidebar-brand {
+    padding: 0 32px 32px;
+}
+
+.sidebar-logo {
+    height: 96px;
+    width: auto;
+    max-width: 100%;
+}
+
+.sidebar-nav {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-item {
+    padding: 12px 32px;
+    text-decoration: none;
+    color: var(--muted);
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.nav-item:hover {
+    color: var(--ink);
+    background: rgba(185, 129, 120, 0.05); /* faint rose */
+}
+
+.nav-item.active {
+    color: var(--clay);
+    border-left-color: var(--clay);
+    background: rgba(185, 129, 120, 0.08);
+}
+
+.sidebar-footer {
+    border-top: 1px solid var(--border);
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main Content */
+.app-main {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 48px clamp(24px, 5vw, 64px);
+    background: linear-gradient(180deg, var(--paper) 0%, var(--soft) 100%);
+}
+
+.app-header {
+    margin-bottom: 48px;
+}
+
+.app-header h1 {
+    font-family: "Literata", serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin: 0 0 8px 0;
+    color: var(--ink);
+}
+
+.greeting-subtitle {
+    color: var(--muted);
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Featured Hero */
+.featured-hero {
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 56px;
+    overflow: hidden;
+}
+
+.featured-image-container {
+    width: 100%;
+    height: 220px;
+    background-image: url("https://btb-assets.b-cdn.net/assets/A Quiet Return Thumbnail.png");
+    background-size: cover;
+    background-position: right center;
+}
+
+.featured-content {
+    padding: 48px;
+    width: 100%;
+}
+
+.featured-content p {
+    margin-bottom: 24px;
+}
+
+.featured-content h2 {
+    font-family: "Literata", serif;
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 8px 0 16px;
+}
+
+/* Library Grid */
+.library-section h2 {
+    font-family: "Literata", serif;
+    font-weight: 300;
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 12px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 32px;
+    margin-bottom: 64px;
+}
+
+.category-card {
+    text-decoration: none;
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.category-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(47, 51, 45, 0.08);
+}
+
+.card-image {
+    height: 180px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.category-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-meta {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-meta h3 {
+    font-family: "Literata", serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+    margin: 0 0 8px 0;
+    color: var(--ink);
+}
+
+.card-meta p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Sanctuary Newsletter override */
+.sanctuary-newsletter {
+    margin-top: 64px;
+    border-top: 1px solid var(--border);
+    padding-top: 48px;
+    background: none; /* override index style if needed */
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .app-layout {
+        flex-direction: column;
+    }
+    .app-sidebar {
+        width: 100%;
+        height: auto;
+        padding: 16px 0;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+    .sidebar-brand {
+        padding: 0 24px 16px;
+    }
+    .sidebar-nav {
+        flex-direction: row;
+        overflow-x: auto;
+        padding-bottom: 8px;
+    }
+    .nav-item {
+        padding: 8px 24px;
+        border-left: none;
+        border-bottom: 3px solid transparent;
+        white-space: nowrap;
+    }
+    .nav-item.active {
+        border-bottom-color: var(--clay);
+    }
+    .sidebar-footer {
+        display: none; /* hide on mobile or move to menu */
+    }
+    body.sanctuary-app {
+        height: auto;
+        overflow: auto;
+    }
+    .app-main {
+        padding: 32px 24px;
+    }
+    .featured-hero {
+        padding: 32px;
+    }
+    .featured-hero::before {
+        background: linear-gradient(to top, rgba(255,250,242,0.95) 0%, rgba(255,250,242,0.8) 100%);
+    }
+}
+
+/* ==========================================================================
+   LIVESTREAM REPLAYS PAGE (HORIZONTAL SCROLL)
+   ========================================================================== */
+
+.library-header {
+    margin-bottom: 56px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 32px;
+}
+
+.orientation-feature {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+    gap: 32px;
+    align-items: center;
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 32px;
+    margin-bottom: 56px;
+}
+
+.orientation-copy h2 {
+    font-family: "Literata", serif;
+    font-weight: 300;
+    font-size: clamp(2rem, 4vw, 3.1rem);
+    line-height: 1.08;
+    margin: 8px 0 16px;
+    color: var(--ink);
+}
+
+.orientation-copy p {
+    max-width: 620px;
+    margin: 0;
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.orientation-card {
+    cursor: pointer;
+}
+
+.orientation-card .video-thumbnail {
+    margin-bottom: 14px;
+}
+
+.orientation-card .play-overlay {
+    opacity: 1;
+    background: rgba(47, 51, 45, 0.12);
+}
+
+@media (max-width: 840px) {
+    .orientation-feature {
+        grid-template-columns: 1fr;
+        padding: 24px;
+    }
+}
+
+.video-row-section {
+    margin-bottom: 64px;
+}
+
+.row-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 24px;
+}
+
+.row-header h2 {
+    font-family: "Literata", serif;
+    font-weight: 300;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.view-all {
+    color: var(--clay);
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: opacity 0.2s;
+}
+
+.view-all:hover {
+    opacity: 0.8;
+}
+
+.horizontal-scroller {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    padding-bottom: 24px;
+    margin-right: -24px;
+    padding-right: 24px;
+    /* smooth scrolling on touch devices */
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+}
+
+.horizontal-scroller::-webkit-scrollbar {
+    height: 6px;
+}
+
+.horizontal-scroller::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.horizontal-scroller::-webkit-scrollbar-thumb {
+    background-color: var(--border);
+    border-radius: 10px;
+}
+
+.horizontal-scroller .video-card {
+    flex: 0 0 320px;
+    scroll-snap-align: start;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.horizontal-scroller .video-card:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.video-thumbnail {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    margin-bottom: 16px;
+    background: var(--muted);
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.video-card:hover .video-thumbnail img {
+    transform: scale(1.05);
+}
+
+.play-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(47, 51, 45, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.video-card:hover .play-overlay {
+    opacity: 1;
+}
+
+.play-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 250, 242, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--clay);
+    font-size: 1.2rem;
+    padding-left: 4px; /* visual center for play triangle */
+}
+
+.duration-badge {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(47, 51, 45, 0.85);
+    color: var(--paper);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.video-meta h3 {
+    font-size: 1.1rem;
+    margin: 0 0 4px 0;
+    color: var(--ink);
+    font-weight: 600;
+}
+
+.video-meta p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   VIDEO PLAYER MODAL
+   ========================================================================== */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(47, 51, 45, 0.95);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    padding: 24px;
+    backdrop-filter: blur(8px);
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    background: #000;
+    border-radius: 12px;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
+}
+
+.video-container {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.modal-close {
+    position: absolute;
+    top: -48px;
+    right: 0;
+    background: none;
+    border: none;
+    color: var(--paper);
+    font-size: 2.5rem;
+    font-weight: 300;
+    cursor: pointer;
+    line-height: 1;
+    padding: 8px;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.modal-close:hover {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .modal-overlay {
+        padding: 0;
+        background: #000;
+    }
+    .modal-content {
+        border-radius: 0;
+    }
+    .video-container {
+        border-radius: 0;
+    }
+    .modal-close {
+        top: 16px;
+        right: 16px;
+        z-index: 10;
+        background: rgba(0,0,0,0.5);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+    }
+}
+
+/* ==========================================================================
+   VIDEO COMPLETED STATE
+   ========================================================================== */
+
+.modal-actions {
+    padding: 24px;
+    background: var(--paper);
+    border-radius: 0 0 12px 12px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .modal-actions {
+        border-radius: 0;
+    }
+}
+
+.completed-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: var(--sage);
+    color: var(--paper);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.video-card.completed .completed-badge {
+    opacity: 1;
+    visibility: visible;
+}
+
+.video-card.completed .video-thumbnail img {
+    opacity: 0.4;
+    filter: grayscale(40%);
+}
+
+.video-card.completed .video-meta {
+    opacity: 0.6;
+}
+
+
+
+/* FORCE EYEBROW AND NEWSLETTER SIZES */
+.eyebrow {
+    font-size: 15px !important;
+    letter-spacing: 0.12em !important;
+}
+
+.sanctuary-newsletter h3 {
+    font-size: clamp(20px, 2.2vw, 24px) !important;
+    margin-bottom: 12px !important;
+}
+
+</style>
+<div class="app-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="app-sidebar">
+            <div class="sidebar-brand">
+                <a href="https://beyondthebendyoga.ca/dashboard" aria-label="Beyond the Bend home">
+                    <img src="https://btb-assets.b-cdn.net/assets/beyond-the-bend-no-yoga.svg" alt="Beyond the Bend Logo" class="sidebar-logo">
+                </a>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="https://beyondthebendyoga.ca/dashboard" class="nav-item">Dashboard</a>
+                <a href="https://beyondthebendyoga.ca/livestreams" class="nav-item active">Livestream Replays</a>
+                <a href="https://beyondthebendyoga.ca/guided-explorations" class="nav-item">Guided Explorations</a>
+                <a href="https://beyondthebendyoga.ca/meditations" class="nav-item">Meditations &amp; Audio</a>
+                <a href="https://beyondthebendyoga.ca/courses" class="nav-item">Courses</a>
+                <a href="#" class="nav-item">Reflective Tools</a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" class="nav-item">Account</a>
+                <a href="#" class="nav-item">Log Out</a>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="app-main">
+            <header class="app-header library-header">
+                <div>
+                    <h1>Livestream Replays</h1>
+                    <p class="greeting-subtitle">Unedited recordings of our live studio sessions. Real, gentle, and grounded.</p>
+                </div>
+            </header>            <section class="video-row-section">
+                <div class="row-header">
+                    <h2>Somatic Vinyasa</h2>
+                    <span class="view-all" style="cursor: default; text-decoration: none; font-size: 0.8rem;">Scroll to see more &rarr;</span>
+                </div>
+                <div class="horizontal-scroller">                    <div class="video-card" id="card-ffb6c597-def3-439d-bc31-4674c52b7520" data-video-id="ffb6c597-def3-439d-bc31-4674c52b7520">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_vinyasa.png" alt="Somatic Vinyasa" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">60 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Monday Somatic Vinyasa</h3>
+                            <p>June 08, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-baadbc63-5446-4486-bb21-8d69f90e97eb" data-video-id="baadbc63-5446-4486-bb21-8d69f90e97eb">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_vinyasa_2.png" alt="Somatic Vinyasa" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">60 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Monday Somatic Vinyasa</h3>
+                            <p>June 01, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-86054609-0460-4e36-baf6-6ec46637fd3a" data-video-id="86054609-0460-4e36-baf6-6ec46637fd3a">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_vinyasa_3.png" alt="Somatic Vinyasa" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">60 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Monday Somatic Vinyasa</h3>
+                            <p>May 25, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-9805a266-0a73-48af-a810-16bb4c3cd19c" data-video-id="9805a266-0a73-48af-a810-16bb4c3cd19c">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_vinyasa_4.png" alt="Somatic Vinyasa" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">60 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Monday Somatic Vinyasa</h3>
+                            <p>May 18, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-601320a3-3fab-4215-a379-4f993a466b95" data-video-id="601320a3-3fab-4215-a379-4f993a466b95">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_vinyasa.png" alt="Somatic Vinyasa" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">60 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Monday Somatic Vinyasa</h3>
+                            <p>May 11, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-39569d55-91f5-43bb-9248-b0cdd46fdf70" data-video-id="39569d55-91f5-43bb-9248-b0cdd46fdf70">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_vinyasa_2.png" alt="Somatic Vinyasa" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">60 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Monday Somatic Vinyasa</h3>
+                            <p>April 13, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-2b46f3e5-fd40-49f0-ba70-c022b44a55e6" data-video-id="2b46f3e5-fd40-49f0-ba70-c022b44a55e6">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_vinyasa_3.png" alt="Somatic Vinyasa" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">60 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Monday Somatic Vinyasa</h3>
+                            <p>April 06, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-7a5737f9-4019-41dc-9f0a-50b442222fd1" data-video-id="7a5737f9-4019-41dc-9f0a-50b442222fd1">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_vinyasa_4.png" alt="Somatic Vinyasa" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">60 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Monday Somatic Vinyasa</h3>
+                            <p>March 30, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-11051133-fe2b-44c0-9578-e6e69d7d818e" data-video-id="11051133-fe2b-44c0-9578-e6e69d7d818e">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_vinyasa.png" alt="Somatic Vinyasa" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">60 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Monday Somatic Vinyasa</h3>
+                            <p>March 23, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-4b3a154a-0fa2-43dc-8314-7083711a2366" data-video-id="4b3a154a-0fa2-43dc-8314-7083711a2366">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_vinyasa_2.png" alt="Somatic Vinyasa" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">60 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Monday Somatic Vinyasa</h3>
+                            <p>March 16, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-c5be3726-e312-4f8c-b356-81179b7c2370" data-video-id="c5be3726-e312-4f8c-b356-81179b7c2370">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_vinyasa_3.png" alt="Somatic Vinyasa" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">60 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Monday Somatic Vinyasa</h3>
+                            <p>March 02, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-16910e4a-02d2-4792-9208-27975a07f40e" data-video-id="16910e4a-02d2-4792-9208-27975a07f40e">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_vinyasa_4.png" alt="Somatic Vinyasa" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">60 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Monday Somatic Vinyasa</h3>
+                            <p>February 16, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-28a021e9-ad26-4842-b3c4-1310bc2768b4" data-video-id="28a021e9-ad26-4842-b3c4-1310bc2768b4">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_vinyasa.png" alt="Somatic Vinyasa" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">60 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Monday Somatic Vinyasa</h3>
+                            <p>February 09, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-373bf1e6-6335-42c9-8b0a-acb2f65d9446" data-video-id="373bf1e6-6335-42c9-8b0a-acb2f65d9446">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_vinyasa_2.png" alt="Somatic Vinyasa" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">60 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Monday Somatic Vinyasa</h3>
+                            <p>January 19, 2026</p>
+                        </div>
+                    </div>                </div>
+            </section>            <section class="video-row-section">
+                <div class="row-header">
+                    <h2>Restorative</h2>
+                    <span class="view-all" style="cursor: default; text-decoration: none; font-size: 0.8rem;">Scroll to see more &rarr;</span>
+                </div>
+                <div class="horizontal-scroller">                    <div class="video-card" id="card-9ed0102b-e93b-4fc9-903e-dace00ffa1c1" data-video-id="9ed0102b-e93b-4fc9-903e-dace00ffa1c1">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_restorative.png" alt="Restorative" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">75 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Tuesday Restorative</h3>
+                            <p>June 09, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-490ba9c0-26ec-434f-8520-f41e339ec0bc" data-video-id="490ba9c0-26ec-434f-8520-f41e339ec0bc">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_restorative_2.png" alt="Restorative" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">75 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Tuesday Restorative</h3>
+                            <p>June 09, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-3b7a1e05-a707-4174-8087-68b8cdd3c038" data-video-id="3b7a1e05-a707-4174-8087-68b8cdd3c038">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_restorative_3.png" alt="Restorative" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">75 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Tuesday Restorative</h3>
+                            <p>June 02, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-b8605870-0c18-46a1-b6d8-cd39ce27eb4b" data-video-id="b8605870-0c18-46a1-b6d8-cd39ce27eb4b">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_restorative_4.png" alt="Restorative" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">75 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Tuesday Restorative</h3>
+                            <p>June 02, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-d8b4eaa8-2549-4713-96ae-5f4e69235b2c" data-video-id="d8b4eaa8-2549-4713-96ae-5f4e69235b2c">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_restorative.png" alt="Restorative" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">75 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Tuesday Restorative</h3>
+                            <p>May 26, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-9c026248-f394-4e0c-bc3f-40ea198ec06f" data-video-id="9c026248-f394-4e0c-bc3f-40ea198ec06f">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_restorative_2.png" alt="Restorative" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">75 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Tuesday Restorative</h3>
+                            <p>May 26, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-a192e25d-0427-4910-bf74-b50cd8d88d8a" data-video-id="a192e25d-0427-4910-bf74-b50cd8d88d8a">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_restorative_3.png" alt="Restorative" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">75 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Tuesday Restorative</h3>
+                            <p>May 19, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-b05e526f-d46a-40eb-925a-e2c8490f4cd9" data-video-id="b05e526f-d46a-40eb-925a-e2c8490f4cd9">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_restorative_4.png" alt="Restorative" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">75 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Tuesday Restorative</h3>
+                            <p>May 19, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-a5f28817-e80e-4de9-829a-eaf6e3ede5c4" data-video-id="a5f28817-e80e-4de9-829a-eaf6e3ede5c4">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_restorative.png" alt="Restorative" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">75 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Tuesday Restorative</h3>
+                            <p>May 12, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-2ca82257-49c8-4481-a606-37fd359a1ed5" data-video-id="2ca82257-49c8-4481-a606-37fd359a1ed5">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_restorative_2.png" alt="Restorative" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">75 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Tuesday Restorative</h3>
+                            <p>May 12, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-07e40609-a30d-4c64-9d6c-0f64064fc7e3" data-video-id="07e40609-a30d-4c64-9d6c-0f64064fc7e3">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_restorative_3.png" alt="Restorative" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">75 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Tuesday Restorative</h3>
+                            <p>April 21, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-f6c0b601-dd80-4afe-a8c7-9ebf8e51f07e" data-video-id="f6c0b601-dd80-4afe-a8c7-9ebf8e51f07e">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_restorative_4.png" alt="Restorative" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">75 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Tuesday Restorative</h3>
+                            <p>April 21, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-2203c7a0-e692-47ac-ba2b-2b5a99e408c5" data-video-id="2203c7a0-e692-47ac-ba2b-2b5a99e408c5">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_restorative.png" alt="Restorative" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">75 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Tuesday Restorative</h3>
+                            <p>April 14, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-c1a7d253-0a91-43d1-89f1-efbc312c19bc" data-video-id="c1a7d253-0a91-43d1-89f1-efbc312c19bc">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_restorative_2.png" alt="Restorative" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">75 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Tuesday Restorative</h3>
+                            <p>April 07, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-9450ac22-aa0f-4cf1-8049-e156b3644313" data-video-id="9450ac22-aa0f-4cf1-8049-e156b3644313">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_restorative_3.png" alt="Restorative" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">75 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Tuesday Restorative</h3>
+                            <p>March 31, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-1eff0e3c-01ae-4d68-ad45-1a609d45f53c" data-video-id="1eff0e3c-01ae-4d68-ad45-1a609d45f53c">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_restorative_4.png" alt="Restorative" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">75 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Tuesday Restorative</h3>
+                            <p>March 31, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-e5d27e3e-4890-4a96-ab71-078640e7cd90" data-video-id="e5d27e3e-4890-4a96-ab71-078640e7cd90">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_restorative.png" alt="Restorative" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">75 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Tuesday Restorative</h3>
+                            <p>March 24, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-b228ac9a-1a59-41b8-a3c1-1d8c71d1384e" data-video-id="b228ac9a-1a59-41b8-a3c1-1d8c71d1384e">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_restorative_2.png" alt="Restorative" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">75 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Tuesday Restorative</h3>
+                            <p>March 24, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-8273d13d-0711-455c-801e-bc0eb345c8f5" data-video-id="8273d13d-0711-455c-801e-bc0eb345c8f5">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_restorative_3.png" alt="Restorative" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">75 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Tuesday Restorative</h3>
+                            <p>March 17, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-feeaa0ca-6d6d-4077-9c92-260e9b81d7f4" data-video-id="feeaa0ca-6d6d-4077-9c92-260e9b81d7f4">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_restorative_4.png" alt="Restorative" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">75 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Tuesday Restorative</h3>
+                            <p>March 17, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-4f34b45f-b447-4950-873a-499b8e0216dd" data-video-id="4f34b45f-b447-4950-873a-499b8e0216dd">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_restorative.png" alt="Restorative" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">75 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Tuesday Restorative</h3>
+                            <p>March 10, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-79aad1d4-65d4-4f5c-8166-0803b3e7b785" data-video-id="79aad1d4-65d4-4f5c-8166-0803b3e7b785">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_restorative_2.png" alt="Restorative" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">75 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Tuesday Restorative</h3>
+                            <p>March 10, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-2d804b8a-699c-491e-9254-6179d27ffaf6" data-video-id="2d804b8a-699c-491e-9254-6179d27ffaf6">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_restorative_3.png" alt="Restorative" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">75 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Tuesday Restorative</h3>
+                            <p>March 03, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-9a129984-dffb-4ff7-8dd8-e2095557e445" data-video-id="9a129984-dffb-4ff7-8dd8-e2095557e445">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_restorative_4.png" alt="Restorative" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">75 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Tuesday Restorative</h3>
+                            <p>February 24, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-05508cf1-847c-434d-84c6-70d093cbe687" data-video-id="05508cf1-847c-434d-84c6-70d093cbe687">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_restorative.png" alt="Restorative" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">75 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Tuesday Restorative</h3>
+                            <p>February 17, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-286f4edd-76da-49b7-8b5e-bb29fdb6fb5d" data-video-id="286f4edd-76da-49b7-8b5e-bb29fdb6fb5d">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_restorative_2.png" alt="Restorative" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">75 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Tuesday Restorative</h3>
+                            <p>February 10, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-32c0c874-fd9a-41dc-97e5-bae879228f36" data-video-id="32c0c874-fd9a-41dc-97e5-bae879228f36">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_restorative_3.png" alt="Restorative" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">75 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Tuesday Restorative</h3>
+                            <p>February 03, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-f7c9e634-5e40-4e86-be00-38eed43d3bed" data-video-id="f7c9e634-5e40-4e86-be00-38eed43d3bed">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_restorative_4.png" alt="Restorative" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">75 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Tuesday Restorative</h3>
+                            <p>February 03, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-92c4e2ed-8929-4905-952b-1fc5ca04b4d8" data-video-id="92c4e2ed-8929-4905-952b-1fc5ca04b4d8">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_restorative.png" alt="Restorative" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">75 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Tuesday Restorative</h3>
+                            <p>January 27, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-fef05173-e42d-4acb-b5f8-eb39952ddf78" data-video-id="fef05173-e42d-4acb-b5f8-eb39952ddf78">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_restorative_2.png" alt="Restorative" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">75 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Tuesday Restorative</h3>
+                            <p>January 27, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-dbb8029c-a5c8-4bca-97df-7e2fae0d2920" data-video-id="dbb8029c-a5c8-4bca-97df-7e2fae0d2920">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_restorative_3.png" alt="Restorative" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">75 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Tuesday Restorative</h3>
+                            <p>January 20, 2026</p>
+                        </div>
+                    </div>                </div>
+            </section>            <section class="video-row-section">
+                <div class="row-header">
+                    <h2>Somatic Hatha</h2>
+                    <span class="view-all" style="cursor: default; text-decoration: none; font-size: 0.8rem;">Scroll to see more &rarr;</span>
+                </div>
+                <div class="horizontal-scroller">                    <div class="video-card" id="card-ee5871fd-7b33-427e-a762-a4eb661433d9" data-video-id="ee5871fd-7b33-427e-a762-a4eb661433d9">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_hatha.png" alt="Somatic Hatha" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">60 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Wednesday Somatic Hatha</h3>
+                            <p>June 10, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-6433c805-f199-4f7d-b344-dfec71311dd4" data-video-id="6433c805-f199-4f7d-b344-dfec71311dd4">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_hatha_2.png" alt="Somatic Hatha" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">60 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Wednesday Somatic Hatha</h3>
+                            <p>June 03, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-efb95183-8c31-4a0e-bea0-9401b6042104" data-video-id="efb95183-8c31-4a0e-bea0-9401b6042104">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_hatha_3.png" alt="Somatic Hatha" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">60 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Wednesday Somatic Hatha</h3>
+                            <p>May 27, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-bbf5772d-d1e4-44ec-bffc-1539c0a50f67" data-video-id="bbf5772d-d1e4-44ec-bffc-1539c0a50f67">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_hatha_4.png" alt="Somatic Hatha" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">60 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Wednesday Somatic Hatha</h3>
+                            <p>May 20, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-70242ec7-b6d9-46dd-adfe-72436f182bec" data-video-id="70242ec7-b6d9-46dd-adfe-72436f182bec">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_hatha.png" alt="Somatic Hatha" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">60 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Wednesday Somatic Hatha</h3>
+                            <p>April 15, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-bb973b66-7b2f-4181-9da6-e788ed7e1233" data-video-id="bb973b66-7b2f-4181-9da6-e788ed7e1233">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_hatha_2.png" alt="Somatic Hatha" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">60 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Wednesday Somatic Hatha</h3>
+                            <p>April 01, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-f2609483-dc7a-415a-88ff-aa059fd790cf" data-video-id="f2609483-dc7a-415a-88ff-aa059fd790cf">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_hatha_3.png" alt="Somatic Hatha" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">60 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Wednesday Somatic Hatha</h3>
+                            <p>March 25, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-f6c3919c-bbd3-426c-814a-ed970b24cb15" data-video-id="f6c3919c-bbd3-426c-814a-ed970b24cb15">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_hatha_4.png" alt="Somatic Hatha" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">60 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Wednesday Somatic Hatha</h3>
+                            <p>March 18, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-3415509d-dcc3-4aed-971d-22148d7bb646" data-video-id="3415509d-dcc3-4aed-971d-22148d7bb646">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_hatha.png" alt="Somatic Hatha" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">60 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Wednesday Somatic Hatha</h3>
+                            <p>March 11, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-2e48a443-021b-4149-a6b7-8e7842dbdd5f" data-video-id="2e48a443-021b-4149-a6b7-8e7842dbdd5f">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_hatha_2.png" alt="Somatic Hatha" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">60 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Wednesday Somatic Hatha</h3>
+                            <p>March 04, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-e3ab064b-b93c-4a09-9080-74c5b1272455" data-video-id="e3ab064b-b93c-4a09-9080-74c5b1272455">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_hatha_3.png" alt="Somatic Hatha" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">60 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Wednesday Somatic Hatha</h3>
+                            <p>February 25, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-e673a8fc-a06d-4e6f-8a00-1ca3fe476e16" data-video-id="e673a8fc-a06d-4e6f-8a00-1ca3fe476e16">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_hatha_4.png" alt="Somatic Hatha" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">60 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Wednesday Somatic Hatha</h3>
+                            <p>February 18, 2026</p>
+                        </div>
+                    </div>                    <div class="video-card" id="card-22c2140d-06da-4d6b-8bcd-89c1530ef44a" data-video-id="22c2140d-06da-4d6b-8bcd-89c1530ef44a">
+                        <div class="video-thumbnail">
+                            <img src="https://btb-assets.b-cdn.net/assets/thumb_hatha.png" alt="Somatic Hatha" loading="lazy">
+                            <div class="completed-badge">Ã¢Å“â€œ Completed</div>
+                            <div class="play-overlay"><span class="play-icon">&#9658;</span></div>
+                            <span class="duration-badge">60 min</span>
+                        </div>
+                        <div class="video-meta">
+                            <h3>Wednesday Somatic Hatha</h3>
+                            <p>February 04, 2026</p>
+                        </div>
+                    </div>                </div>
+            </section>        </main>
+    </div>
+
+    <!-- Video Modal Overlay -->
+    <div id="videoModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeVideoModal()" aria-label="Close video">&times;</button>
+            <div class="video-container">
+                <iframe id="bunnyIframe" src="" loading="lazy" style="border:0;position:absolute;top:0;height:100%;width:100%;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
+            </div>
+            <div class="modal-actions">
+                <button id="markCompleteBtn" class="button primary" onclick="markCurrentVideoComplete()">Mark as Complete</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const LIBRARY_ID = '656394';
+        const modal = document.getElementById('videoModal');
+        const iframe = document.getElementById('bunnyIframe');
+        let currentVideoId = null;
+
+        // Initialize completed states on load
+        document.addEventListener('DOMContentLoaded', () => {
+            const completedStr = localStorage.getItem('btb_completed_videos') || '[]';
+            const completedVideos = JSON.parse(completedStr);
+            completedVideos.forEach(id => {
+                const card = document.getElementById('card-' + id);
+                if (card) {
+                    card.classList.add('completed');
+                }
+            });
+        });
+
+                // Event delegation for video cards (GoHighLevel safe)
+        document.addEventListener('click', function(e) {
+            const card = e.target.closest('.video-card[data-video-id]');
+            if (card) {
+                openVideoModal(card.getAttribute('data-video-id'));
+            }
+        });
+
+        function openVideoModal(videoId) {
+            currentVideoId = videoId;
+            const videoUrl = `https://iframe.mediadelivery.net/embed/${LIBRARY_ID}/${videoId}?autoplay=true&preload=true`;
+            iframe.src = videoUrl;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            // Check if already completed and update button text
+            const completedStr = localStorage.getItem('btb_completed_videos') || '[]';
+            const completedVideos = JSON.parse(completedStr);
+            const btn = document.getElementById('markCompleteBtn');
+            if (completedVideos.includes(videoId)) {
+                btn.textContent = "Completed Ã¢Å“â€œ";
+                btn.classList.add('secondary');
+                btn.classList.remove('primary');
+            } else {
+                btn.textContent = "Mark as Complete";
+                btn.classList.add('primary');
+                btn.classList.remove('secondary');
+            }
+        }
+
+        function closeVideoModal() {
+            modal.classList.remove('active');
+            iframe.src = '';
+            document.body.style.overflow = '';
+            currentVideoId = null;
+        }
+        
+        function markCurrentVideoComplete() {
+            if (!currentVideoId) return;
+            
+            let completedStr = localStorage.getItem('btb_completed_videos') || '[]';
+            let completedVideos = JSON.parse(completedStr);
+            
+            if (!completedVideos.includes(currentVideoId)) {
+                completedVideos.push(currentVideoId);
+                localStorage.setItem('btb_completed_videos', JSON.stringify(completedVideos));
+                
+                // Update UI on the card
+                const card = document.getElementById('card-' + currentVideoId);
+                if (card) {
+                    card.classList.add('completed');
+                }
+            }
+            closeVideoModal();
+        }
+
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeVideoModal();
+            }
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeVideoModal();
+            }
+        });
+    </script>
+

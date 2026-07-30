@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Quiet Return | Beyond the Bend Yoga</title>
+    <meta name="description" content="Three guided embodied reflections for women in their prime. A gentle practice of returning to yourself.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+        :root {
+            --bg-content: #ffffff;
+            --text-main: #4a4a4a;
+            --text-dark: #3F4A3C;
+            --accent-green: #6B8063;
+            --accent-light: #f7f4ef;
+            --accent-sage: #A8B5A2;
+            --accent-rose: #cbb4af;
+            --border-light: #e8ddd4;
+        }
+
+        body {
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #f0f4ee 0%, #e8ddd4 50%, #e8c4c4 100%);
+            background-attachment: fixed;
+            color: var(--text-main);
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ═══ MAIN READING CONTAINER ═══ */
+        .landing-container {
+            max-width: 680px;
+            margin: 20px auto 100px;
+            background-color: var(--bg-content);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .section-padding {
+            padding: 50px 45px;
+        }
+
+        /* ═══ HERO ═══ */
+        .course-hero {
+            text-align: center;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .hero-img {
+            width: 100%;
+            height: auto;
+            border-bottom: 3px solid var(--accent-sage);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text-dark);
+            font-size: 38px;
+            font-weight: 600;
+            margin: 30px 0 10px 0;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-style: italic;
+            color: var(--accent-green);
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        p {
+            font-size: 17px;
+            color: var(--text-main);
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .course-price {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 28px;
+            color: var(--text-dark);
+            font-weight: 600;
+            margin: 30px 0 5px 0;
+            text-align: center;
+        }
+
+        .course-price-note {
+            font-size: 14px;
+            color: var(--accent-sage);
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .btn-purchase {
+            display: block;
+            text-align: center;
+            padding: 18px 40px;
+            background-color: var(--accent-green);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 16px;
+            letter-spacing: 1px;
+            transition: background 0.3s;
+            margin: 0 auto;
+            max-width: 300px;
+        }
+
+        .btn-purchase:hover {
+            background-color: #556b2f;
+        }
+
+        /* ═══ HEADINGS ═══ */
+        h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text-dark);
+            font-size: 26px;
+            font-weight: 600;
+            margin: 40px 0 20px 0;
+            text-align: center;
+        }
+
+        .divider {
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent-sage);
+            margin: 40px auto;
+        }
+
+        /* ═══ WHAT YOU GET ═══ */
+        .what-you-get {
+            background-color: var(--accent-light);
+            border-top: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .meditation-card {
+            display: flex;
+            flex-direction: column;
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            border: 1px solid var(--border-light);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+        }
+
+        .meditation-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-right: none;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .meditation-card-content {
+            padding: 25px 30px;
+        }
+
+        .card-label {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent-sage);
+            margin-bottom: 6px;
+        }
+
+        .meditation-card h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text-dark);
+            font-size: 20px;
+            font-weight: 600;
+            margin: 0 0 8px 0;
+        }
+
+        .meditation-card p {
+            font-size: 14px;
+            color: #5A6658;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+
+
+        /* ═══ QUOTE ═══ */
+        blockquote {
+            background-color: var(--bg-content);
+            border-left: 3px solid var(--accent-sage);
+            padding: 25px 30px;
+            margin: 40px 0;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 21px;
+            font-style: italic;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        
+        .attribution {
+            display: block;
+            text-align: right;
+            font-size: 13px;
+            color: var(--accent-sage);
+            font-style: normal;
+            margin-top: 10px;
+            font-family: 'Lato', sans-serif;
+        }
+
+        /* ═══ FOOTER CTA ═══ */
+        .final-cta {
+            background-color: var(--text-dark);
+            text-align: center;
+            color: var(--accent-light);
+        }
+
+        .final-cta h2 {
+            color: #ffffff;
+            margin-top: 0;
+            border-bottom: none;
+        }
+
+        .final-cta p {
+            color: var(--accent-sage);
+            text-align: center;
+        }
+
+        .final-cta .btn-purchase {
+            background-color: var(--accent-green);
+            color: #ffffff;
+            border: 1px solid var(--accent-green);
+        }
+
+        .final-cta .btn-purchase:hover {
+            background-color: #ffffff;
+            color: var(--text-dark);
+        }
+        
+        .final-cta .course-price {
+            color: #ffffff;
+        }
+
+        .copyright-footer {
+            text-align: center;
+            font-size: 12px;
+            color: var(--accent-sage);
+            letter-spacing: 1px;
+            padding: 20px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .section-padding { padding: 40px 25px; }
+            h1 { font-size: 32px; }
+            .meditation-card img { height: 180px; }
+            .landing-container { margin: 10px; border-radius: 6px; }
+        }
+    </style>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1115790293777092');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1115790293777092&ev=PageView&noscript=1"/></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+<body>
+
+    <div class="landing-container">
+        
+        <!-- ═══ HERO ═══ -->
+        <div class="course-hero">
+            <img src="assets/A%20Quiet%20Return%20Thumbnail.png" class="hero-img" alt="A Quiet Return tree reflection thumbnail">
+            <div class="section-padding" style="padding-top: 20px;">
+                <h1>A Quiet Return</h1>
+                <div class="subtitle">Guided Embodied Reflections for Women in Their Prime</div>
+                
+                <p style="text-align: center;">Three gentle meditations designed not to change your thinking, but to change where your attention lives. This is not about effort or improvement. It is about allowing something to settle naturally.</p>
+                
+                <div class="course-price">$19.99</div>
+                <div class="course-price-note">Instant access. Listen at your own pace. Return whenever you need to.</div>
+                
+                <!-- Stripe $19.99 link -->
+                <a href="https://buy.stripe.com/eVqdR9eKn7hGeNVdI2gIo00" class="btn-purchase">Begin Your Quiet Return</a>
+            </div>
+        </div>
+
+        <!-- ═══ THE INVITATION ═══ -->
+        <div class="section-padding">
+            <h2 style="text-align: left; margin-top: 0;">What We're Actually Doing Here</h2>
+            <p>These reflections are not designed to change your thinking. They are designed to change where your attention lives.</p>
+            <p>Many women in their prime spend years with their attention directed outward. Responding, managing, caring, holding things together. This is not a flaw. It is often a sign of capability and responsibility.</p>
+            <p>Over time, however, attention that lives mostly outside the body can leave the system slightly strained. Not because anything is wrong, but because the nervous system does not get many chances to settle and reorganize from the inside.</p>
+            <p>When attention returns to the body and stays there gently, the system receives a different signal. Things begin to integrate on their own. You do not have to make that happen.</p>
+        </div>
+
+        <!-- ═══ WHAT YOU GET ═══ -->
+        <div class="what-you-get section-padding">
+            <h2 style="margin-top: 0;">What's Inside</h2>
+
+            <div class="meditation-card">
+                <img src="assets/artistic_reflection.png" alt="Guided Reflections Companion Guide">
+                <div class="meditation-card-content">
+                    <div class="card-label">Companion Guide</div>
+                    <h3>Guided Reflections</h3>
+                    <p>A beautifully designed companion PDF with guidance on how to use these reflections, what to expect, and why subtle shifts are often the ones that last.</p>
+                </div>
+            </div>
+
+            <div class="meditation-card">
+                <img src="assets/Thumbnail%20for%20Meditation%201.png" alt="Meditation 1: Where am I leaving myself?">
+                <div class="meditation-card-content">
+                    <div class="card-label">Reflection One</div>
+                    <h3>Where Am I Leaving Myself?</h3>
+                    <p>A gentle practice of noticing where your attention actually lives, and what it feels like to bring it a little closer to home.</p>
+                </div>
+            </div>
+
+            <div class="meditation-card">
+                <img src="assets/Thumbnail%20Meditation%202.png" alt="Meditation 2: What happens when I stay?">
+                <div class="meditation-card-content">
+                    <div class="card-label">Reflection Two</div>
+                    <h3>What Happens When I Stay?</h3>
+                    <p>Exploring the quiet steadiness that forms when you stop rushing away. Not because you are doing anything right, but because you are not leaving.</p>
+                </div>
+            </div>
+
+            <div class="meditation-card">
+                <img src="assets/Thumbnail%20Meditation%203.png" alt="Meditation 3: What do I know when I'm here?">
+                <div class="meditation-card-content">
+                    <div class="card-label">Reflection Three</div>
+                    <h3>What Do I Know When I'm Here?</h3>
+                    <p>Resting in the kind of knowing that does not come from effort. Something in you already knows how to move when the time is right.</p>
+                </div>
+        </div>
+
+        <!-- ═══ WHO THIS IS FOR ═══ -->
+        <div class="section-padding">
+            <blockquote>
+                These practices may feel quiet. Sometimes almost uneventful. That does not mean nothing is happening.
+                <span class="attribution">— From the Guided Reflections</span>
+            </blockquote>
+
+            <div class="divider"></div>
+
+            <h2 style="text-align: left;">This Is For You If...</h2>
+            <p>You have been holding a lot. Not because something is wrong, but because that is what capable women do. You manage, you respond, you care for others, and somewhere along the way your attention began living almost entirely outside of yourself.</p>
+            <p>You do not need another thing to do. You do not need more tools or strategies or frameworks. You need a few quiet minutes where nothing is asked of you except to stay.</p>
+            <p>These reflections are designed to be experienced slowly, with space in between. One reflection per day, in order. Then go about your day. Let the experience sit in your body in its own way. Often the most meaningful shifts happen later, quietly, without conscious thought.</p>
+        </div>
+
+        <!-- ═══ FINAL CTA ═══ -->
+        <div class="final-cta section-padding">
+            <h2>Your Quiet Return Begins Here</h2>
+            <p>Three reflections. One companion guide. A gentle practice of coming home to yourself.</p>
+            <div class="course-price">$19.99</div>
+            <br>
+            <!-- Stripe $19.99 link -->
+            <a href="https://buy.stripe.com/eVqdR9eKn7hGeNVdI2gIo00" class="btn-purchase">Begin Your Quiet Return</a>
+        </div>
+
+    </div>
+
+    <!-- ═══ SOFT DOWNSELL (CATCH THE LEAKY BUCKET) ═══ -->
+    <div style="text-align: center; max-width: 600px; margin: -40px auto 40px; padding: 30px; color: var(--text-dark);">
+        <p style="font-family: 'Playfair Display', Georgia, serif; font-size: 22px; font-style: italic; margin-bottom: 10px;">Not quite ready for a full course?</p>
+        <p style="font-size: 15px; color: var(--text-main); line-height: 1.6; margin-bottom: 25px;">I write a free, reflective newsletter exploring how to find quiet in an incredibly loud world. Join exactly as you are.</p>
+        <a href="https://link.fromleadstosales.com/widget/form/NFdWjQJ4Bw166ZxO9vJc" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 12px 30px; border: 1px solid var(--accent-sage); color: var(--text-dark); text-decoration: none; border-radius: 4px; font-size: 13px; letter-spacing: 1px; transition: background 0.3s;" onmouseover="this.style.backgroundColor='var(--accent-sage)'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='var(--text-dark)';">Join the Weekly Newsletter</a>
+    </div>
+
+    <div class="copyright-footer" style="padding-top: 0;">
+        BEYOND THE BEND YOGA &nbsp;&middot;&nbsp; RISING MOON STUDIO
+    </div>
+
+</body>
+</html>

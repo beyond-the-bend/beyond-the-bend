@@ -48,9 +48,13 @@ Always place newly generated content, code, or images into one of these 5 design
     *   `C:\BTB\Business_Operations\Financial_Sanctuary`
     *   `C:\BTB\Business_Operations\Legacy_Scripts_And_Code`
 
+### 6. 🌱 Personal and Professional Growth -> `C:\BTB\Personal_Professional_Growth`
+*   **What goes here:** Journal entries, reflections on visibility and voice, notes from workshops like the Integrity program, and any personal development materials.
+
+
 ### Exceptions
 *   `C:\BTB\Weekly_Checklist.html` stays in the root folder for easy access.
 *   Hidden system folders (like `.git` and `.agents`) stay in the root folder.
 
 ---
-**Core Golden Rule:** Every single time you generate or save a file, categorize it into one of these 5 main buckets. Do not pollute `C:\BTB` with loose files!
+**Core Golden Rule:** Every single time you generate or save a file, categorize it into one of these 6 main buckets. Do not pollute `C:\BTB` with loose files!

@@ -1,0 +1,447 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Somatic Work Intake Form Printable</title>
+  <style>
+    :root {
+      --ink: #2f2926;
+      --muted: #6f625c;
+      --line: #d8cec7;
+      --soft: #f8f1ed;
+      --paper: #fffdfb;
+      --accent: #8a5f4d;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #efe6df;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.5;
+    }
+
+    .page {
+      width: min(900px, calc(100% - 32px));
+      margin: 32px auto;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 50px rgba(47, 41, 38, 0.12);
+    }
+
+    header {
+      padding: 42px 52px 28px;
+      border-bottom: 1px solid var(--line);
+      background: #fff8f4;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: 38px;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 24px;
+    }
+
+    .label {
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .line {
+      border-bottom: 1px solid var(--line);
+      min-height: 30px;
+      padding-top: 8px;
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+    }
+
+    .intro {
+      padding: 30px 52px 6px;
+      font-size: 17px;
+    }
+
+    main {
+      padding: 0 52px 52px;
+    }
+
+    section {
+      padding: 30px 0;
+      border-bottom: 1px solid var(--line);
+      break-inside: avoid;
+    }
+
+    section:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      color: var(--accent);
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px 28px;
+    }
+
+    .question {
+      margin-top: 20px;
+    }
+
+    .question p {
+      margin: 0 0 10px;
+      font-size: 17px;
+    }
+
+    .answer {
+      background-image: repeating-linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent 31px,
+        var(--line) 32px
+      );
+      min-height: 128px;
+    }
+
+    .answer.short {
+      min-height: 82px;
+    }
+
+    .answer.tall {
+      min-height: 174px;
+    }
+
+    .checks {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px 24px;
+      margin-top: 12px;
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+    }
+
+    .box {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin-right: 8px;
+      border: 1px solid var(--line);
+      vertical-align: -2px;
+      background: #fff;
+    }
+
+    .scale {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 20px;
+      margin-top: 18px;
+      align-items: start;
+    }
+
+    .score {
+      border-bottom: 1px solid var(--line);
+      min-height: 34px;
+      font-family: Arial, sans-serif;
+      padding-top: 8px;
+    }
+
+    .actions {
+      position: sticky;
+      bottom: 16px;
+      display: flex;
+      justify-content: flex-end;
+      width: min(900px, calc(100% - 32px));
+      margin: 0 auto 28px;
+      pointer-events: none;
+    }
+
+    button {
+      border: 0;
+      border-radius: 6px;
+      background: var(--accent);
+      color: #fff;
+      font: 700 14px Arial, sans-serif;
+      padding: 12px 18px;
+      cursor: pointer;
+      pointer-events: auto;
+      box-shadow: 0 10px 24px rgba(47, 41, 38, 0.18);
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: 100%;
+        margin: 0;
+        border: 0;
+      }
+
+      header,
+      .intro,
+      main {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+
+      h1 {
+        font-size: 31px;
+      }
+
+      .meta,
+      .grid,
+      .checks,
+      .scale {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        width: 100%;
+        margin: 0;
+        border: 0;
+        box-shadow: none;
+      }
+
+      header,
+      .intro,
+      main {
+        padding-left: 28px;
+        padding-right: 28px;
+      }
+
+      .actions {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Somatic Work Intake Form</h1>
+      <div class="meta">
+        <div>
+          <div class="label">Practitioner</div>
+          <div class="line">Laura Harvey</div>
+        </div>
+        <div>
+          <div class="label">Client</div>
+          <div class="line">Beverly Lucki</div>
+        </div>
+        <div>
+          <div class="label">Date completed</div>
+          <div class="line"></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="intro">
+      <p>Bev, thank you for taking the time to fill this out.</p>
+      <p>This form is meant to help shape our private sessions in a way that feels supportive, respectful, and safe for your body and nervous system.</p>
+      <p>You do not need to answer anything perfectly. You are welcome to write as much or as little as feels right. If a question feels too much, you can skip it or simply write that you would rather talk about it in person.</p>
+      <p>This work is not therapy or medical treatment. It is body based, restorative, reflective support. My intention is to work alongside the care you already have in place, including your therapist, doctor, and any other providers who support you.</p>
+    </div>
+
+    <main>
+      <section>
+        <h2>Contact Information</h2>
+        <div class="grid">
+          <div><div class="label">Full name</div><div class="line"></div></div>
+          <div><div class="label">Preferred name</div><div class="line"></div></div>
+          <div><div class="label">Phone number</div><div class="line"></div></div>
+          <div><div class="label">Email</div><div class="line"></div></div>
+          <div><div class="label">Emergency contact name</div><div class="line"></div></div>
+          <div><div class="label">Emergency contact phone number</div><div class="line"></div></div>
+          <div><div class="label">Relationship to you</div><div class="line"></div></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Therapist Or Counsellor Information</h2>
+        <div class="grid">
+          <div><div class="label">Therapist or counsellor name</div><div class="line"></div></div>
+          <div><div class="label">Clinic or practice name</div><div class="line"></div></div>
+          <div><div class="label">Phone number</div><div class="line"></div></div>
+          <div><div class="label">Email</div><div class="line"></div></div>
+        </div>
+        <div class="question">
+          <p>Are you comfortable with Laura connecting with your therapist or counsellor?</p>
+          <div class="checks">
+            <div><span class="box"></span>Yes</div>
+            <div><span class="box"></span>No</div>
+            <div><span class="box"></span>Not right now</div>
+          </div>
+        </div>
+        <div class="question">
+          <p>If yes, what are you comfortable with Laura sharing or asking about?</p>
+          <div class="answer"></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Current Medical And Support Team</h2>
+        <p>Are you currently working with any of the following?</p>
+        <div class="checks">
+          <div><span class="box"></span>Family doctor</div>
+          <div><span class="box"></span>Psychiatrist</div>
+          <div><span class="box"></span>Therapist or counsellor</div>
+          <div><span class="box"></span>Naturopath</div>
+          <div><span class="box"></span>Physiotherapist</div>
+          <div><span class="box"></span>Chiropractor</div>
+          <div><span class="box"></span>Acupuncturist</div>
+          <div><span class="box"></span>Other practitioner</div>
+        </div>
+        <div class="question">
+          <p>Please list any providers you would like Laura to know about.</p>
+          <div class="answer"></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Medication And Health Information</h2>
+        <p>You are welcome to share your current medications if you feel comfortable. This helps Laura understand your overall support picture, recent changes, and anything that may affect energy, sleep, mood, balance, breath, or physical practice.</p>
+        <div class="grid">
+          <div><div class="label">Medication name</div><div class="line"></div></div>
+          <div><div class="label">What it is for</div><div class="line"></div></div>
+          <div><div class="label">Dose, if you want to include it</div><div class="line"></div></div>
+          <div><div class="label">Prescribing provider</div><div class="line"></div></div>
+        </div>
+        <div class="question"><p>Recent changes or side effects you want Laura to know about.</p><div class="answer short"></div></div>
+        <div class="grid question">
+          <div><div class="label">Medication name</div><div class="line"></div></div>
+          <div><div class="label">What it is for</div><div class="line"></div></div>
+          <div><div class="label">Dose, if you want to include it</div><div class="line"></div></div>
+          <div><div class="label">Prescribing provider</div><div class="line"></div></div>
+        </div>
+        <div class="question"><p>Recent changes or side effects you want Laura to know about.</p><div class="answer short"></div></div>
+        <div class="grid question">
+          <div><div class="label">Medication name</div><div class="line"></div></div>
+          <div><div class="label">What it is for</div><div class="line"></div></div>
+          <div><div class="label">Dose, if you want to include it</div><div class="line"></div></div>
+          <div><div class="label">Prescribing provider</div><div class="line"></div></div>
+        </div>
+        <div class="question"><p>Recent changes or side effects you want Laura to know about.</p><div class="answer short"></div></div>
+        <div class="question">
+          <p>Are there any current medical conditions, diagnoses, hormonal changes, injuries, surgeries, or physical limitations Laura should know about before working with you privately?</p>
+          <div class="answer"></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>What You Are Hoping For</h2>
+        <div class="question"><p>When you imagine feeling more supported, what do you hope would feel different?</p><div class="answer"></div></div>
+        <div class="question"><p>If private sessions felt helpful after a few weeks, what might you notice changing in your body, mood, sleep, relationships, or daily life?</p><div class="answer"></div></div>
+        <div class="question"><p>What feels hardest right now?</p><div class="answer"></div></div>
+        <div class="question"><p>What do you most want to feel more connected to?</p><div class="answer"></div></div>
+      </section>
+
+      <section>
+        <h2>Your Body This Week</h2>
+        <div class="question"><p>What have you been noticing in your body this week?</p><div class="answer"></div></div>
+        <div class="question"><p>Where are you holding stress or tension in this moment?</p><div class="answer"></div></div>
+        <div class="question"><p>Where do you feel heaviness, pain, tightness, numbness, or pressure?</p><div class="answer"></div></div>
+        <div class="question"><p>Are there any places in your body that feel neutral, comfortable, warm, open, or even slightly easier?</p><div class="answer"></div></div>
+        <div class="question"><p>When your body feels difficult to trust, inhabit, or listen to, what does that feel like for you?</p><div class="answer"></div></div>
+      </section>
+
+      <section>
+        <h2>Weekly Check In</h2>
+        <div class="scale">
+          <div><div class="label">Sleep, 1 to 10</div><div class="score"></div></div>
+          <div><p>Anything you want to say about your sleep.</p><div class="answer short"></div></div>
+        </div>
+        <div class="scale">
+          <div><div class="label">Energy, 1 to 10</div><div class="score"></div></div>
+          <div><p>Anything you want to say about your energy.</p><div class="answer short"></div></div>
+        </div>
+        <div class="scale">
+          <div><div class="label">Emotional steadiness, 1 to 10</div><div class="score"></div></div>
+          <div><p>Anything you want to say about your emotional steadiness.</p><div class="answer short"></div></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Restorative Yoga Experience</h2>
+        <div class="question"><p>In restorative yoga classes, what has felt most helpful?</p><div class="answer"></div></div>
+        <div class="question"><p>What parts of class feel especially calming, nourishing, or useful to you?</p><div class="answer"></div></div>
+        <div class="question"><p>Are there any parts of practice that do not feel helpful for you?</p><div class="answer"></div></div>
+        <div class="question"><p>Are there any postures, breath practices, meditations, words, themes, sounds, or moments of stillness that feel too much, unsafe, or unsupported?</p><div class="answer"></div></div>
+      </section>
+
+      <section>
+        <h2>Safety, Choice, And Consent</h2>
+        <div class="question"><p>Is there any kind of movement, breath practice, language, touch, music, silence, or stillness that does not feel safe or supportive for you?</p><div class="answer"></div></div>
+        <div class="question"><p>Are there any topics or experiences you do not want to explore in this kind of setting?</p><div class="answer"></div></div>
+        <div class="question"><p>Is there anything that tends to make you feel uncomfortable in a private practice setting?</p><div class="answer"></div></div>
+        <div class="question"><p>If something feels uncomfortable during a session, how would you prefer to let Laura know?</p><div class="answer"></div></div>
+        <div class="question"><p>Do you prefer more guidance, less guidance, or a mixture?</p><div class="answer short"></div></div>
+      </section>
+
+      <section>
+        <h2>Reflective And Spiritual Support</h2>
+        <div class="question"><p>Are you open to more reflective or spiritual pieces if they feel appropriate, such as journaling, guided inner work, ritual, or shamanic inspired journeying?</p><div class="answer"></div></div>
+        <div class="question"><p>Are there any spiritual practices, words, beliefs, images, or traditions that feel supportive to you?</p><div class="answer"></div></div>
+        <div class="question"><p>Are there any spiritual practices, words, beliefs, images, or traditions that do not feel supportive to you?</p><div class="answer"></div></div>
+        <div class="question"><p>When you think about your intuition, inner knowing, or connection with something larger than yourself, what do you miss or long for?</p><div class="answer"></div></div>
+      </section>
+
+      <section>
+        <h2>What Helps You Come Back</h2>
+        <div class="question"><p>When you feel anxious, activated, shut down, overwhelmed, or disconnected, what helps you come back even a little?</p><div class="answer"></div></div>
+        <p>What does your body usually need more of?</p>
+        <div class="checks">
+          <div><span class="box"></span>Rest</div>
+          <div><span class="box"></span>Movement</div>
+          <div><span class="box"></span>Warmth</div>
+          <div><span class="box"></span>Pressure or weight</div>
+          <div><span class="box"></span>Space</div>
+          <div><span class="box"></span>Quiet</div>
+          <div><span class="box"></span>Sound</div>
+          <div><span class="box"></span>Breath</div>
+          <div><span class="box"></span>Reassurance</div>
+          <div><span class="box"></span>Choice</div>
+          <div><span class="box"></span>Connection</div>
+          <div><span class="box"></span>Something else</div>
+        </div>
+        <div class="question"><p>Notes.</p><div class="answer short"></div></div>
+        <div class="question"><p>What would help you feel safe enough to receive support?</p><div class="answer"></div></div>
+      </section>
+
+      <section>
+        <h2>Anything Else</h2>
+        <div class="question"><p>Is there anything else you want Laura to know before beginning private work together?</p><div class="answer"></div></div>
+        <div class="question"><p>Is there anything you are nervous to say out loud, but would like Laura to hold gently as you begin?</p><div class="answer"></div></div>
+        <div class="question"><p>What is one thing you want to remember about yourself as you begin this work?</p><div class="answer"></div></div>
+      </section>
+    </main>
+  </div>
+
+  <div class="actions">
+    <button type="button" onclick="window.print()">Print Form</button>
+  </div>
+</body>
+</html>
+

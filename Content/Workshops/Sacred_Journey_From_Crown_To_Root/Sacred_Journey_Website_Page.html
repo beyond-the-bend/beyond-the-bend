@@ -1,0 +1,607 @@
+�<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sacred Journey: From Crown to Root | Beyond the Bend</title>
+    <link rel="stylesheet" href="style.css?v=2">
+    <style>
+        /* Immersive Dark Theme matching the chosen illustration */
+        .sj-wrapper {
+            background-color: #0b111e; /* Deep dark teal night background matching the illustration */
+            color: #e2e8f0;
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            line-height: 1.9;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .sj-wrapper * {
+            box-sizing: border-box;
+        }
+
+        /* Pulsing energy background glow */
+        .sj-bg-glow {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(85, 107, 47, 0.15) 0%, rgba(230, 213, 199, 0.03) 50%, transparent 100%);
+            z-index: 1;
+            pointer-events: none;
+            animation: pulseGlow 12s infinite alternate ease-in-out;
+        }
+
+        @keyframes pulseGlow {
+            0% { opacity: 0.6; width: 500px; height: 500px; }
+            100% { opacity: 1; width: 700px; height: 700px; }
+        }
+
+        .sj-wrapper h1, 
+        .sj-wrapper h2, 
+        .sj-wrapper h3, 
+        .sj-wrapper h4 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 400;
+            color: #e6c280; /* Soft luminous gold */
+            text-align: center;
+            margin: 0;
+        }
+
+        .sj-wrapper p {
+            margin: 0 0 25px 0;
+            opacity: 0.9;
+        }
+
+        /* Creative Hero */
+        .sj-hero-container {
+            position: relative;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 80px 20px 60px;
+            z-index: 10;
+            text-align: center;
+        }
+
+        .sj-eyebrow {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 18px; /* Made bigger as requested */
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            color: #a8b5a2; /* Sage green */
+            margin-bottom: 35px;
+            font-weight: 700;
+            display: block;
+        }
+
+        /* The Focal Image Frame with Floating Animation */
+        .sj-image-frame {
+            position: relative;
+            max-width: 780px;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+            overflow: visible;
+            animation: floatImage 8s infinite alternate ease-in-out;
+        }
+
+        @keyframes floatImage {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-12px); }
+        }
+
+        .sj-featured-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            border: 1px solid rgba(168, 181, 162, 0.2);
+        }
+
+        /* Luminous Gold Halo Effect behind the image */
+        .sj-image-frame::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            border-radius: 8px;
+            box-shadow: 0 0 50px rgba(230, 194, 128, 0.25);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Translucent title box sitting naturally below the image */
+        .sj-title-overlay {
+            margin: 40px auto 0; /* Moved off the picture, centering below it */
+            width: 100%;
+            max-width: 780px;
+            background: rgba(11, 17, 30, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(230, 194, 128, 0.25);
+            border-radius: 6px;
+            padding: 30px 35px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+            z-index: 15;
+        }
+
+        .sj-title {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            line-height: 1.2;
+            color: #ffffff;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .sj-subtitle {
+            display: block;
+            font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+            color: #e6c280; /* Luminous gold */
+            font-family: 'Playfair Display', Georgia, serif;
+            font-style: italic;
+            margin-top: 15px;
+            letter-spacing: 2px;
+            text-transform: none;
+        }
+
+        .sj-tagline {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 16px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: #a8b5a2;
+            margin-top: 50px;
+            margin-bottom: 0;
+            font-weight: 700;
+        }
+
+        /* Flowing, Creative Meta Details */
+        .sj-details-flow {
+            max-width: 780px;
+            margin: 60px auto 0;
+            text-align: center;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 20px;
+            color: #e6c280; /* Gold text */
+            line-height: 1.8;
+            border-top: 1px solid rgba(168, 181, 162, 0.15);
+            border-bottom: 1px solid rgba(168, 181, 162, 0.15);
+            padding: 40px 20px;
+        }
+
+        .sj-details-line {
+            margin-bottom: 10px;
+        }
+
+        .sj-details-divider {
+            width: 80px;
+            height: 1px;
+            background-color: rgba(230, 194, 128, 0.3);
+            margin: 25px auto;
+        }
+
+        .sj-details-facilitators {
+            font-size: 17px;
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            color: #e6c280; /* Gold text */
+            margin: 0;
+        }
+
+        .sj-highlight {
+            color: #e6c280;
+            font-weight: 600;
+        }
+
+        /* Introduction Section */
+        .sj-intro {
+            padding: 100px 20px 80px;
+            background-color: #0b111e;
+            position: relative;
+            z-index: 10;
+        }
+
+        .sj-intro-container {
+            max-width: 780px;
+            margin: 0 auto;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(168, 181, 162, 0.1);
+            padding: 50px 45px;
+            border-radius: 6px;
+            box-shadow: inset 0 0 20px rgba(255,255,255,0.01);
+        }
+
+        .sj-intro-container p {
+            font-size: 18px;
+            line-height: 1.9;
+            color: #cbd5e1;
+            margin-bottom: 35px;
+        }
+
+        .sj-intro-container p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* The Unfolding Section */
+        .sj-unfolding {
+            padding: 80px 20px;
+            background-color: #080d17; /* Slightly darker depth contrast */
+            position: relative;
+            z-index: 10;
+        }
+
+        .sj-unfolding-container {
+            max-width: 780px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .sj-unfolding h2 {
+            font-size: 34px;
+            color: #e6c280;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .sj-unfolding p {
+            font-size: 17px;
+            line-height: 1.9;
+            color: #cbd5e1;
+            margin-bottom: 35px;
+        }
+
+        .sj-unfolding p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Register Box */
+        .sj-register {
+            padding: 100px 20px;
+            background-color: #0b111e;
+            position: relative;
+            z-index: 10;
+        }
+
+        .sj-register-container {
+            max-width: 650px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(230, 194, 128, 0.25);
+            padding: 60px 45px;
+            border-radius: 8px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            text-align: center;
+        }
+
+        .sj-register-container h2 {
+            font-size: 32px;
+            color: #e6c280;
+            margin-bottom: 20px;
+        }
+
+        .sj-spaces-left {
+            display: inline-block;
+            background-color: rgba(232, 196, 196, 0.15);
+            color: #f87171;
+            border: 1px solid rgba(248, 113, 113, 0.3);
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 35px;
+        }
+
+        .sj-pricing-boxes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 45px;
+        }
+
+        .sj-price-card {
+            border: 1px solid rgba(168, 181, 162, 0.2);
+            border-radius: 4px;
+            padding: 30px 15px;
+            background: rgba(255, 255, 255, 0.01);
+            transition: all 0.3s ease;
+        }
+
+        .sj-price-card.active {
+            border: 2px solid #e6c280;
+            background: rgba(230, 194, 128, 0.03);
+            box-shadow: 0 0 20px rgba(230, 194, 128, 0.1);
+        }
+
+        .sj-price-title {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #a8b5a2;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .sj-price-amount {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 46px;
+            color: #e6c280;
+            margin-bottom: 15px;
+            line-height: 1;
+        }
+
+        .sj-price-note {
+            font-size: 13px;
+            color: #94a3b8;
+        }
+
+        .sj-register-btn {
+            display: block;
+            width: 100%;
+            background-color: #556b2f;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 16px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(85, 107, 77, 0.3);
+        }
+
+        .sj-register-btn:hover {
+            background-color: #3f4a3c;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(85, 107, 77, 0.5);
+        }
+
+        /* Meet Your Guides Section */
+        .sj-guides {
+            padding: 80px 20px;
+            background-color: #0b111e;
+            position: relative;
+            z-index: 10;
+            border-top: 1px solid rgba(168, 181, 162, 0.1);
+        }
+
+        .sj-guides-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .sj-guides h2 {
+            font-size: 34px;
+            color: #e6c280;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .sj-guides-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .sj-guide-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(230, 194, 128, 0.15);
+            border-radius: 6px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sj-guide-img-frame {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 25px;
+            border: 2px solid #e6c280;
+            box-shadow: 0 0 20px rgba(230, 194, 128, 0.2);
+        }
+
+        .sj-guide-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .sj-guide-name {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 24px;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+
+        .sj-guide-title {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #a8b5a2;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .sj-guide-bio {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #cbd5e1;
+            margin: 0;
+            text-align: left;
+        }
+
+        @media (max-width: 768px) {
+            .sj-pricing-boxes {
+                grid-template-columns: 1fr;
+            }
+            .sj-guides-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .sj-guide-card {
+                padding: 30px 20px;
+            }
+            .sj-meta-strip {
+                flex-direction: column;
+                gap: 20px;
+                padding-left: 20px;
+                text-align: center;
+            }
+            .sj-meta-item {
+                text-align: center;
+            }
+            .sj-title-overlay {
+                width: 100%;
+                padding: 25px 20px;
+            }
+            .sj-hero-container {
+                padding-top: 40px;
+            }
+            .sj-image-frame {
+                margin-bottom: 70px;
+            }
+            .sj-intro {
+                padding-top: 120px;
+            }
+            .sj-intro-container {
+                padding: 35px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="main-header">
+    <a href="index.html" class="logo-link">Beyond the Bend</a>
+    <nav>
+        <ul class="nav-desktop">
+            <li><a href="about.html">About</a></li>
+            <li><a href="private-sessions.html">Private Sessions</a></li>
+            <li>
+                <a href="#" style="cursor: pointer;">Classes ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="classes.html">In-Studio</a></li>
+                    <li><a href="virtual.html">Livestream</a></li>
+                </ul>
+            </li>
+            <li><a href="https://substack.com/@lauraleeharvey" target="_blank">Reflections</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="library.html">The Sanctuary</a></li>
+            <li><a href="everything.html">Everything</a></li>
+            <li><a href="#" style="background: var(--brand-primary); color: white; padding: 5px 15px; border-radius: 2px;">LOGIN</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="sj-wrapper">
+    <!-- Background energy glow animation -->
+    <div class="sj-bg-glow"></div>
+
+    <!-- HERO SECTION WITH OVERLAYING TITLE -->
+    <section class="sj-hero-container">
+        <span class="sj-eyebrow">Special Summer Workshop</span>
+        
+        <!-- The Focal Image Frame -->
+        <div class="sj-image-frame">
+            <img src="assets/sacred_journey_illustration.png" alt="The Sacred Journey: From Crown to Root" class="sj-featured-image">
+        </div>
+
+        <!-- Translucent glass container now sitting cleanly off the picture -->
+        <div class="sj-title-overlay">
+            <h1 class="sj-title">
+                The Sacred Journey
+                <span class="sj-subtitle">From Crown to Root</span>
+            </h1>
+            <p class="sj-tagline">A Somatic Restorative Yoga and Reiki Workshop</p>
+        </div>
+
+        <!-- Flowing, Creative Meta Details -->
+        <div class="sj-details-flow">
+            <p class="sj-details-line">Gathering on Tuesday, July 28, 2026</p>
+            <p class="sj-details-line">From 6:00 PM to 9:00 PM at the Rising Moon Studio</p>
+            <div class="sj-details-divider"></div>
+            <p class="sj-details-facilitators">Held in presence by Laura Harvey, Somatic Guide, and Zorana Michalsky, Reiki Master</p>
+        </div>
+    </section>
+
+    <!-- THE INVITATION -->
+    <section class="sj-intro">
+        <div class="sj-intro-container">
+            <p>You move through your life carrying so much of the day in your shoulders, your jaw, and the quiet spaces of your body. Often, you might try to solve restlessness, fatigue, or heavy emotions with the mind, thinking your way out of tension. But true ease arrives when you slow down enough to listen to both the somatic structure of your body and the subtle flow of energy beneath the thoughts.</p>
+            <p>This three hour immersion is designed to guide your awareness inward. Unlike many chakra experiences that build from the ground up, this journey begins at the crown, gently descending through each energy center to finish at your root, inviting a deep sense of grounding, stability, and return. You will move through the seven chakras as a map of your body and your inner life, using them as guides rather than things you need to fix. This is a space for you to listen, to rest, to notice, and to allow your body to show you where there may be steadiness, tenderness, holding, and quiet wisdom.</p>
+            <p>This journey weaves together restorative yoga postures, somatic embodiment practice, and the subtle currents of Reiki to hold space for both the physical and the energetic layers of your experience. As you settle into fully supported restorative shapes, Laura will lead you through somatic guidance to help you land deeply in your body and release physical tension. Alongside this physical softening, Zorana will guide your awareness into the subtle body, sharing reflections on the energy of each chakra and offering hands on Reiki to support the release of your deeper emotional holding. It is a slow, spacious practice of presence, complete with quiet moments for reflective journaling, warm herbal tea, and seasonal fruit to gently ground your body and senses. Here is a safe container for you to soften, integrate, and return home to yourself.</p>
+        </div>
+    </section>
+
+    <!-- MEET YOUR GUIDES -->
+    <section class="sj-guides">
+        <div class="sj-guides-container">
+            <h2>Meet Your Guides</h2>
+            <div class="sj-guides-grid">
+                <!-- Laura Harvey -->
+                <div class="sj-guide-card">
+                    <div class="sj-guide-img-frame">
+                        <img src="assets/laura_beach.jpg" alt="Laura Harvey" class="sj-guide-img">
+                    </div>
+                    <h3 class="sj-guide-name">Laura Harvey</h3>
+                    <span class="sj-guide-title">Somatic Guide and Yoga / Meditation Instructor</span>
+                    <p class="sj-guide-bio">Laura Harvey is a somatic guide and yoga / meditation instructor who has been teaching yoga and mindfulness for over twenty years. Having trained in vinyasa, hatha, and restorative yoga, and holding certifications in breathwork, trauma informed practice, somatic healing, meditation, Chinese medicine, and shamanic practices, she weaves deep presence with practical wisdom. Having navigated her own seasons of burnout and exhaustion, she knows firsthand what it takes to rebuild, reconnect, and restore. With a background in philosophy, she brings a deeply reflective and inquiring approach to her guidance, holding space to help you quiet the planning mind, release physical tension, and land in the wisdom of your body.</p>
+                </div>
+
+                <!-- Zorana Michalsky -->
+                <div class="sj-guide-card">
+                    <div class="sj-guide-img-frame">
+                        <img src="assets/zorana.jpg" alt="Zorana Michalsky" class="sj-guide-img">
+                    </div>
+                    <h3 class="sj-guide-name">Zorana Michalsky</h3>
+                    <span class="sj-guide-title">Holistic Nervous System Regulation Coach</span>
+                    <p class="sj-guide-bio">Zorana Michalsky is a holistic nervous system regulation coach who guides people in releasing chronic pain, anxiety, and the subconscious survival patterns that quietly govern their lives. Born in former Yugoslavia, her early years were shaped by war and fear, wiring her nervous system for survival long before she understood what safety felt like. Her own path through chronic pain, anxiety, depression, and a dead end fibromyalgia diagnosis became the foundation of her life's work. Rather than accepting those limitations, she turned inward, and healed. Certified in Reiki, hypnotherapy, NLP, breathwork, and trauma informed coaching and facilitation, Zorana brings both professional training and lived experience to every room she enters. In this sacred space she will guide your awareness into the subtle body, supporting the release of what your energy field has quietly been holding.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REGISTER -->
+    <section class="sj-register">
+        <div class="sj-register-container">
+            <h2>This Gathering Is Now Full</h2>
+            <span class="sj-spaces-left">Thank You For The Beautiful Response</span>
+            <p style="color: #cbd5e1; opacity: 0.8; margin-bottom: 35px; font-size: 16px;">
+                The Sacred Journey has now reached its full capacity. Thank you for the care, interest, and beautiful response to this intimate evening.
+            </p>
+        </div>
+    </section>
+</div>
+
+<footer class="main-footer">
+    <div class="footer-logo">BEYOND THE BEND</div>
+    <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="private-sessions.html">Private Sessions</a>
+        <a href="classes.html">Classes</a>
+        <a href="everything.html">Everything</a>
+        <a href="#">Contact</a>
+    </div>
+    <div style="opacity: 0.5; font-size: 11px; letter-spacing: 1px; text-transform: uppercase;">
+        Beyond the Bend &copy; 2026 �xR� Sherwood Park, Alberta
+        <br><br>
+        <span style="font-family: 'Playfair Display', serif; font-style: italic; text-transform: none; font-size: 15px; opacity: 0.8;">May all beings find their way home to peace.</span>
+    </div>
+</footer>
+
+</body>
+</html>
+

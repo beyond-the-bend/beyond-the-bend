@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter | When the Dream Asks to Be Lived</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+        body,
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            background-color: #f7f7f5;
+            color: #4a4a4a;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+
+        .header {
+            background-color: #faf0f0;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 4px solid #556b2f;
+        }
+
+        .header img {
+            max-width: 140px;
+            height: auto;
+            margin-bottom: 25px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .masthead-title {
+            color: #556b2f;
+            font-family: 'Playfair Display', Georgia, serif;
+            line-height: 1.2;
+        }
+
+        .masthead-top {
+            display: block;
+            font-size: 28px;
+            font-style: italic;
+            font-weight: 400;
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+
+        .masthead-main {
+            display: block;
+            font-size: 32px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-top: 2px solid #556b2f;
+            border-bottom: 2px solid #556b2f;
+            padding: 15px 0;
+            margin-top: 10px;
+        }
+
+        .content-block {
+            padding: 40px 30px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #556b2f;
+            font-size: 26px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #78866b;
+            font-size: 22px;
+            margin-bottom: 10px;
+            margin-top: 20px;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        h4 {
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            color: #556b2f;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .highlight-section {
+            background-color: #fcfbf9;
+            padding: 40px 30px;
+            border-left: 4px solid #556b2f;
+        }
+
+        .studio-section {
+            background-color: #f4f7f2;
+            padding: 40px 30px;
+            border-top: 1px solid #d8e4d0;
+        }
+
+        .practice-section {
+            background-color: #eef2eb;
+            padding: 30px;
+            margin-top: 0;
+            border-radius: 4px;
+        }
+
+        .img-responsive {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin: 20px 0;
+            display: block;
+        }
+
+        .class-card {
+            background-color: #ffffff;
+            border: 1px solid #d8e4d0;
+            border-left: 4px solid #A8B5A2;
+            border-radius: 6px;
+            padding: 18px 20px;
+            margin: 15px 0;
+        }
+
+        .class-time {
+            color: #3F4A3C;
+            font-weight: 700;
+            font-size: 15px;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .class-card p {
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        .notice-box {
+            background-color: #ffffff;
+            border: 1px solid #d8e4d0;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 20px 0 25px 0;
+            text-align: center;
+        }
+
+        .notice-box p {
+            margin-bottom: 0;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 15px;
+            letter-spacing: 1px;
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+        }
+
+        .btn-sage {
+            background-color: #A8B5A2;
+            color: white;
+        }
+
+        .footer {
+            background-color: #3F4A3C;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #F7F4EF;
+            letter-spacing: 1px;
+        }
+
+        .footer a {
+            color: #A8B5A2;
+            text-decoration: none;
+        }
+
+        strong {
+            color: #556b2f;
+            font-weight: 600;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                width: 100% !important;
+            }
+
+            .header {
+                padding: 30px 15px;
+            }
+
+            .content-block,
+            .highlight-section,
+            .studio-section {
+                padding: 25px 15px;
+            }
+
+            .masthead-main {
+                font-size: 24px;
+                letter-spacing: 1px;
+            }
+
+            .masthead-top {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="header">
+            <img src="https://storage.googleapis.com/msgsndr/t19sOv208p64ldeUjJug/media/697996aad119a57c1575bb7d.png"
+                alt="Beyond the Bend Logo">
+            <div class="masthead-title">
+                <span class="masthead-top">Reflections from</span>
+                <span class="masthead-main">Beyond the Bend</span>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <p>Hello {{contact.first_name}},</p>
+            <p>I have been sitting with something tender this week, and I am not sure I have it fully sorted out yet. Maybe that is why it feels worth writing about. I keep noticing how easy it is to hold certain dreams, longings, or quiet inner knowings just outside of myself, close enough that I can feel them, but not so close that I have to fully live them.</p>
+            <p>This week's reflection comes from that place. It is about preparation, fear, embodiment, and the strange ways we sometimes protect the very things we most deeply care about. I am writing from inside the question, not from the other side of it, and I have a feeling some part of it may be familiar to you too.</p>
+            <p>With warmth and gratitude,<br>Laura</p>
+        </div>
+
+        <div class="highlight-section">
+            <h2>This Week's Wellness Wisdom</h2>
+
+            <img src="https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/6a0b56b5c474827cc40c2cfe.png"
+                alt="A quiet visual for When the Dream Asks to Be Lived" class="img-responsive">
+
+            <h3>When the Dream Asks to Be Lived</h3>
+            <p><em>By Laura Harvey | Beyond the Bend Yoga</em></p>
+
+            <p>I have been wondering lately if the dream is always as far away as I sometimes imagine it to be. I do not say that with certainty, because I am still very much in the middle of this question myself. But I can feel something in me beginning to suspect that perhaps the clarity, the longing, and even the quiet sense of calling may already be closer than I have allowed myself to believe.</p>
+
+            <p>What I notice is how easy it can be to hold the life I want slightly outside of myself. I can keep it close enough to feel inspired by it, close enough to think about it, plan around it, and imagine what it might become, but still far enough away that I do not have to fully step into it. There is a certain safety in relating to our deepest longings as something distant or aspirational. As long as they remain just beyond our reach, we can continue preparing for them rather than allowing them to ask anything real of us.</p>
+
+            <p>I am beginning to wonder if I am not always afraid of the dream itself, but of what my life might ask of me if I allowed that dream to move fully into my body and become real. Once something becomes embodied, it can no longer remain theoretical. It begins to ask for action, responsibility, courage, and the willingness to be seen before we feel entirely ready. It asks us to stop endlessly organizing, refining, researching, and preparing, and to begin living as though we might already trust some part of what we know.</p>
+
+            <p>I can see this tendency in myself very clearly, even if I do not always like admitting it. I often tell myself that I need to figure out the technology, the structure, the systems, the details, or the perfect next step before I can truly move forward. Those things do matter, and I do not want to dismiss the practical realities of bringing something into form. But I am beginning to recognize how easily preparation can also become a place to hide. It can create the feeling of movement while protecting me from the vulnerability of actual embodiment.</p>
+
+            <p>What has surprised me most is realizing that the deeper longing underneath all of this may not be about building something impressive or becoming some perfected version of myself. If anything, I think it has something to do with becoming more fully present and more deeply connected to what feels sacred and alive within me. Yoga has been one doorway into that experience, and for a long time it has been the doorway I have known how to name. But I am beginning to wonder if I have also used it, at times, as a kind of shelter. A place to stand that feels familiar and acceptable, while something wider in me waits to be trusted. There are other doorways I have spent years learning, studying, and living my way into, quieter forms of wisdom that have shaped how I understand the body, the spirit, and the strange, beautiful connection between the two. There are ways of listening and guiding that reach beyond the shape of a yoga class, and I am beginning to admit that perhaps they are asking for more room in my life too.</p>
+
+            <p>I do not think those moments of recognition and return belong to yoga alone. I think they speak to something profoundly human within all of us. The older I get, the more I question whether embodiment is really about becoming someone new at all. Perhaps it is about allowing ourselves to stop living at such a distance from our own lives. Perhaps it is about allowing what we already know, somewhere beneath the noise and fear and distraction, to have a little more room to live through us.</p>
+
+            <p>I wonder how many of us are standing at the edge of something we already know is true for us, while continuing to hold it just far enough away that we never have to fully step into it. I know I can do this. I can tell myself I am waiting for clarity, when what I may really be waiting for is certainty. I can tell myself I need more time, when what I may need is the courage to begin imperfectly. There is tenderness in this, because the dream matters. We do not protect what we do not care about. But I am also beginning to see that there is a quiet cost to keeping our deepest knowing at a distance.</p>
+
+            <p>So this is the question I am carrying this week. What might become possible if we stopped waiting to feel completely ready and allowed ourselves to begin living from the inside out? Not dramatically, not recklessly, and not all at once, but honestly. Perhaps the next step is smaller than we think. Perhaps it is simply the moment we stop treating the dream as something far away and begin letting it belong, however imperfectly, to the life we are already living.</p>
+        </div>
+
+        <div class="studio-section">
+            <h2>From the Studio</h2>
+            <p>If this week's reflection stirred something in you, this may be a good time to step back onto your mat.</p>
+
+            <div class="notice-box">
+                <p><strong>Our current live session runs until June 24, and there is still room in a few classes.</strong> Because we are partway through the session, I am happy to prorate the cost for anyone who would like to join now.</p>
+            </div>
+
+            <p>You do not have to wait for the next session to begin. You can come in exactly where you are.</p>
+
+            <h3 style="margin-top: 25px;">Current Classes With Space Available</h3>
+
+            <div class="class-card">
+                <h4>Monday Evening Somatic Vinyasa</h4>
+                <div class="class-time">6:00 to 7:15 PM</div>
+                <p>A mindful movement practice for breath, strength, release, and returning to your body at the end of the day.</p>
+            </div>
+
+            <div class="class-card">
+                <h4>Tuesday Morning Rise and Restore</h4>
+                <div class="class-time">10:00 to 11:15 AM</div>
+                <p>A slower, supportive practice for deep rest, quiet, and helping the body settle.</p>
+            </div>
+
+            <div class="class-card">
+                <h4>Wednesday Evening Embodied Flow</h4>
+                <div class="class-time">5:30 to 6:30 PM</div>
+                <p>A body led movement practice with no rigid sequences, no pressure to perform, and space to move from the inside out.</p>
+            </div>
+
+            <p style="text-align: center; margin: 30px 0;">
+                <a href="https://beyondthebendyoga.ca/classes" class="btn btn-sage">View Classes</a>
+            </p>
+
+            <p>If one of these classes feels like it might be the right fit, simply reply to this email. I will let you know the prorated amount and help you choose the practice that makes the most sense for you.</p>
+        </div>
+
+        <div class="content-block">
+            <div class="practice-section">
+                <h2>Practice of the Week</h2>
+                <h3 style="margin-top: 8px;">The Next Honest Step</h3>
+                <p>This week, I invite you to sit quietly with something you may have been holding at a distance. It does not have to be a large dream or a dramatic life change. It might be a conversation you know you need to have, a creative longing you keep postponing, a way of caring for your body that you keep delaying, or a small truth that has been trying to get your attention.</p>
+                <p>Rather than trying to solve it, begin by noticing how it feels to let it come a little closer. You might place a hand on your heart or simply feel your feet on the floor and ask, gently, what is the next honest step I already know is mine to take? Let the answer be small enough that your body can stay with it. Sometimes the next step is sending the message, writing the paragraph, clearing the space, making the call, or finally admitting that you are afraid.</p>
+                <p>The size of the step is not the measure of its importance. The practice is learning to stay close enough to your own knowing that you do not abandon it simply because you do not yet know everything.</p>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h2>A Closing Thought</h2>
+            <p>Maybe the dream does not always arrive as certainty. Maybe sometimes it arrives as a quiet knowing that keeps returning, even when we try to explain it away. I am beginning to think that we do not have to wait until we feel fearless before we begin. We may only need to become honest enough to admit what we already sense, and gentle enough with ourselves to take one small step while fear is still present.</p>
+            <p>May you listen for the next honest step this week, and may you trust that beginning imperfectly still counts as beginning.</p>
+            <p>With warmth and gratitude,<br>Laura</p>
+        </div>
+
+        <div class="footer">
+            BEYOND THE BEND YOGA<br>
+            Rising Moon Studio &middot; Sherwood Park, AB<br><br>
+            <a href="{{unsubscribe_link}}">Unsubscribe</a>
+        </div>
+
+    </div>
+</body>
+
+</html>
+

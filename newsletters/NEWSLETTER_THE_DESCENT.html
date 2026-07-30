@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter | Beyond the Bend</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+        body,
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            background-color: #f7f7f5;
+            color: #4a4a4a;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+
+        /* Header / Masthead */
+        .header {
+            background-color: #faf0f0;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 4px solid #556b2f;
+        }
+
+        .header img {
+            max-width: 140px;
+            height: auto;
+            margin-bottom: 25px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .masthead-title {
+            color: #556b2f;
+            font-family: 'Playfair Display', Georgia, serif;
+            line-height: 1.2;
+        }
+
+        .masthead-top {
+            display: block;
+            font-size: 28px;
+            font-style: italic;
+            font-weight: 400;
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+
+        .masthead-main {
+            display: block;
+            font-size: 32px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-top: 2px solid #556b2f;
+            border-bottom: 2px solid #556b2f;
+            padding: 15px 0;
+            margin-top: 10px;
+        }
+
+        .content-block {
+            padding: 40px 30px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #556b2f;
+            font-size: 26px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #78866b;
+            font-size: 22px;
+            margin-bottom: 10px;
+            margin-top: 20px;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        ul {
+            font-size: 16px;
+            color: #4a4a4a;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .highlight-section {
+            background-color: #fcfbf9;
+            padding: 40px 30px;
+            border-left: 4px solid #556b2f;
+        }
+
+        .studio-section {
+            background-color: #f4f7f2;
+            padding: 40px 30px;
+            border-top: 1px solid #d8e4d0;
+        }
+
+        .practice-section {
+            background-color: #eef2eb;
+            padding: 30px 20px;
+            margin-top: 0;
+        }
+
+        .img-responsive {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin: 20px 0;
+            display: block;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 15px;
+            letter-spacing: 1px;
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+        }
+
+        .btn-sage {
+            background-color: #A8B5A2;
+            color: white;
+        }
+
+        .btn-forest {
+            background-color: #3F4A3C;
+            color: #F7F4EF;
+        }
+
+        .embodied-card {
+            background-color: #F0F4EE;
+            border-left: 3px solid #A8B5A2;
+            padding: 20px 25px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .footer {
+            background-color: #3F4A3C;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #F7F4EF;
+            letter-spacing: 1px;
+        }
+
+        .footer a {
+            color: #A8B5A2;
+            text-decoration: none;
+        }
+
+        strong {
+            color: #556b2f;
+            font-weight: 600;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                width: 100% !important;
+            }
+
+            .header {
+                padding: 30px 15px;
+            }
+
+            .content-block,
+            .highlight-section,
+            .studio-section {
+                padding: 25px 15px;
+            }
+
+            .masthead-main {
+                font-size: 24px;
+                letter-spacing: 1px;
+            }
+
+            .masthead-top {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- ═══ MASTHEAD BANNER ═══ -->
+        <div class="header">
+            <img src="https://storage.googleapis.com/msgsndr/t19sOv208p64ldeUjJug/media/697996aad119a57c1575bb7d.png"
+                alt="Beyond the Bend Logo">
+            <div class="masthead-title">
+                <span class="masthead-top">Reflections from</span>
+                <span class="masthead-main">Beyond the Bend</span>
+            </div>
+        </div>
+
+        <!-- ═══ PERSONAL INTRO ═══ -->
+        <div class="content-block">
+            <p>Hello {{contact.first_name}},</p>
+            <p>I have been thinking a lot lately about the things we carry. Not the physical things, but the stories, the identities, and the expectations that accumulate so quietly over the years that we eventually mistake them for who we are.</p>
+            <p>It is easy to keep carrying them. It is what we know. But lately, I have been noticing a different kind of invitation. A quiet nudge to set some of it down.</p>
+            <p>I wanted to share something with you this week about that process. It is not about self improvement or fixing anything that is broken. It is simply about the profoundly necessary work of letting go.</p>
+            <p>I hope it meets you wherever you are today.</p>
+        </div>
+
+        <!-- ═══ WELLNESS WISDOM ═══ -->
+        <div class="highlight-section">
+            <h2>This Week's Wellness Wisdom</h2>
+
+            <!-- IMAGE -->
+            <img src="https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/6a2da3aec5c6223206679dc6.png"
+                alt="A silhouette of a mature woman in front of a giant moon, walking into the dark" class="img-responsive">
+
+            <h3>The Descent</h3>
+            <p><em>By Laura Harvey | Beyond the Bend Yoga</em></p>
+
+            <p>I picked up this book on purpose. I knew what it held, because I had read it almost twenty years ago during one of the most demanding seasons of my life, and it had cracked something open in me that needed to be cracked. I put it down when that season passed, but now, at this particular turn in the road, I have reached for it again. It is not because I am in the same darkness I was in then, because I am not. I am picking it up because I am beginning to notice that something in me is ready to go deep again, to look honestly at what is ready to be released, and to stop carrying what was never mine to carry in the first place. I am sharing this with you today because I suspect I am not the only one feeling this way. So many of the women I talk to are moving through their own quiet rearranging right now.</p>
+            
+            <p>The first time I read this book I was moving through a divorce, and with it came that particular kind of disorientation that happens when the shape of your entire life changes. The book met me exactly there. It tells the story of Inanna, a queen in ancient mythology who is called downward to the underworld. She does not fall, but instead descends deliberately and with intention. At each of the seven gates she must pass through on her way down, she is asked to surrender something. Her crown, her robes, and her jewels are taken from her. The symbols of everything she is and everything she has built are left behind.</p>
+            
+            <p>By the time she reaches the bottom, she is stripped of every identity, every role, and every protection she carried. She does not just step into darkness; she steps into death. It is an excruciating, horrible place where she is left hanging raw and naked, with everything she thought she was completely ripped away. I have been wondering about this place recently, because I think it is the part we most want to rush past. We love the idea of transformation and rising, but we are much less comfortable with the agonizing pain of the stripping away. We do not want to hang in the ugly, hard reality of losing what we thought was ours. Yet that place, where you must simply sit and allow the death of what was in order for the light to eventually come on the other side, is profoundly necessary.</p>
+            
+            <p>Twenty years ago, the gates were real for me. I had to set down the identity of wife, the life I had been building, and the version of myself I had organized everything around. The stripping away was excruciating, and the pain of being laid so bare you barely recognize yourself is something I know from the inside. But I can tell you from the other side of that descent that who I came back as was not who went down. Something had been remade quietly in the dark.</p>
+            
+            <p>Now I am here again, almost two decades later, at another threshold. My life is good right now, and there is real joy and groundedness in it. But midlife has a way of making the invitation very clear even when everything on the surface looks fine. What I am noticing is not crisis, but the weight of accumulated story. I am noticing the beliefs I absorbed in childhood that I never chose, the version of myself shaped by other people's judgments, and the feeling of not enough that I carried for so long it started to feel like the truth about who I am. I suspect half of those stories were never mine to carry, but I have been carrying them anyway.</p>
+            
+            <p>I am coming to understand that this is exactly what midlife is asking of us. We are being gently invited to descend and let the gates take what they take. We are being asked to leave the old identities, the inherited beliefs, the feeling of failure, and the not enoughness at the gate. This is not because we are broken, but because underneath all of that, something true is waiting. Inanna comes back from the dark transformed, carrying only what is real. I do not say this with certainty for everyone, but my experience is that you do not come back up carrying what you brought down. That is the gift hidden inside the darkness.</p>
+            
+            <p>When there is nothing left to grip or prove, what was never truly yours simply falls away. It is not forced out or fought, but just released. What rises is the you that existed before you learned to make yourself smaller so the world around you could be more comfortable. She was always there waiting quietly the way truth always waits, without urgency and without judgment. I am beginning to see this as the particular grace of this season of life. We have lived enough to know what was never ours to carry. And when we come back up from the descent we come back up lighter and clearer.</p>
+        </div>
+
+        <!-- ═══ FROM THE STUDIO ═══ -->
+        <div class="studio-section">
+            <h2>From the Studio</h2>
+            
+            <!-- Banner Image -->
+            <img src="https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/6a2dd113c5c622320670c133.png" alt="The Sacred Journey Banner" class="img-responsive" style="margin-bottom: 25px;">
+            
+            <h3>An Invitation to Slow Down: The Sacred Journey Workshop</h3>
+            
+            <p>As we move into the middle of summer, it is easy to let the outer rhythm of the season pull us away from our center. To help you return to your body, Zorana and I are hosting a special three hour immersion, <strong>The Sacred Journey: From Crown to Root</strong>, on <strong>Tuesday, July 28, from 6:00 PM to 9:00 PM</strong>.</p>
+            
+            <p>We will gather at <strong>Rising Moon Studio</strong> for an evening of restorative yoga, somatic embodiment guidance, and hands on Reiki. To keep this container intimate, quiet, and supportive for everyone in the room, we are limiting capacity to <strong>only 14 spaces</strong>.</p>
+            
+            <p>Our early bird price of <strong>$62</strong> is available until July 7, after which registration will be <strong>$71</strong>. We would love to hold space for you.</p>
+            
+            <div style="text-align: center; margin: 30px 0 10px;">
+                <a href="https://beyondthebendyoga.ca/the-sacred-journey" class="btn btn-sage">Learn More About the Workshop</a>
+            </div>
+        </div>
+
+        <!-- ═══ PRACTICE OF THE WEEK ═══ -->
+        <div class="content-block">
+            <div class="practice-section" style="border-radius: 4px; padding: 30px;">
+                <h2>Practice of the Week</h2>
+                <h3 style="margin-top: 8px;">Free Writing at the Gate</h3>
+                <p>If something in you recognizes this story, I want to invite you to sit down with a journal this week. Find ten quiet minutes somewhere you will not be interrupted, put your pen to the paper, and simply write. The invitation is to write without editing, without worrying about punctuation or grammar, and without any expectation of what should emerge. Just let your hand move, letting the raw truth of what you are carrying spill out onto the page.</p>
+                <p>Use these questions to guide your pen, writing with whichever one calls to you first:</p>
+                <ul style="padding-left: 20px; line-height: 1.8;">
+                    <li>What feels heavy in my life right now?</li>
+                    <li>What is a story or belief I am carrying that was never actually mine?</li>
+                    <li>What identity or role am I holding onto that no longer fits who I am becoming?</li>
+                    <li>What might I be ready to gently set down at the gate?</li>
+                </ul>
+                <p style="margin-bottom: 0;">Write until the page is full, or until you feel a sense of release. You do not have to make it pretty, and you do not have to figure it all out. The body knows things the mind is still catching up to, and sometimes the hand can find what the thoughts have been trying to hide.</p>
+            </div>
+        </div>
+
+        <!-- ═══ CLOSING THOUGHT ═══ -->
+        <div class="content-block">
+            <h2>A Closing Thought</h2>
+            <p>I am glad you are here. Whatever season you are in right now, and whatever you might be asked to leave at the gate, I want you to know you do not have to walk through it alone.</p>
+            <p>There is a particular kind of freedom waiting on the other side of the descent, and I am honored to be sharing the journey with you.</p>
+            <p>As always, if anything here resonated with you, I would love to hear about it. Just hit reply. I read every single one.</p>
+            <br>
+            <p>With warmth and gratitude,<br>Laura 🩷</p>
+        </div>
+
+        <!-- ═══ FOOTER ═══ -->
+        <div class="footer">
+            BEYOND THE BEND YOGA<br>
+            Rising Moon Studio &middot; Sherwood Park, AB<br><br>
+            <a href="{{unsubscribe_link}}">Unsubscribe</a>
+        </div>
+
+    </div>
+</body>
+
+</html>

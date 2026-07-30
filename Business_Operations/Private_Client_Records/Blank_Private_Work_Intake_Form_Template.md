@@ -1,0 +1,463 @@
+# Somatic Work Intake Form
+
+Practitioner: Laura Harvey
+
+Client: 
+
+Date completed:
+
+## Before You Begin
+
+Thank you for taking the time to fill this out.
+
+This form is meant to help shape our private sessions in a way that feels supportive, respectful, and safe for your body and nervous system.
+
+You do not need to answer anything perfectly. You are welcome to write as much or as little as feels right. If a question feels too much, you can skip it or simply write that you would rather talk about it in person.
+
+This work is not therapy or medical treatment. It is body based, restorative, reflective support. My intention is to work alongside the care you already have in place, including your therapist, doctor, and any other providers who support you.
+
+## Contact Information
+
+Full name:
+
+Preferred name:
+
+Birthday:
+
+Phone number:
+
+Email:
+
+Emergency contact name:
+
+Emergency contact phone number:
+
+Relationship to you:
+
+## Therapist Or Counsellor Information
+
+Therapist or counsellor name:
+
+Clinic or practice name:
+
+Phone number:
+
+Email:
+
+Are you comfortable with Laura connecting with your therapist or counsellor?
+
+Yes:
+
+No:
+
+Not right now:
+
+If yes, what are you comfortable with Laura sharing or asking about?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+## Current Medical And Support Team
+
+Are you currently working with any of the following?
+
+1. Family doctor
+2. Psychiatrist
+3. Therapist or counsellor
+4. Naturopath
+5. Physiotherapist
+6. Chiropractor
+7. Acupuncturist
+8. Other practitioner
+
+Please list any providers you would like Laura to know about:
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+## Medication And Health Information
+
+You are welcome to share your current medications if you feel comfortable. This helps Laura understand your overall support picture, recent changes, and anything that may affect energy, sleep, mood, balance, breath, or physical practice.
+
+Medication name:
+
+What it is for:
+
+Dose, if you want to include it:
+
+Prescribing provider:
+
+Recent changes or side effects you want Laura to know about:
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+Medication name:
+
+What it is for:
+
+Dose, if you want to include it:
+
+Prescribing provider:
+
+Recent changes or side effects you want Laura to know about:
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+Medication name:
+
+What it is for:
+
+Dose, if you want to include it:
+
+Prescribing provider:
+
+Recent changes or side effects you want Laura to know about:
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+Are there any current medical conditions, diagnoses, hormonal changes, injuries, surgeries, or physical limitations Laura should know about before working with you privately?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+## What You Are Hoping For
+
+When you imagine feeling more supported, what do you hope would feel different?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+If private sessions felt helpful after a few weeks, what might you notice changing in your body, mood, sleep, relationships, or daily life?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+What feels hardest right now?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+What do you most want to feel more connected to?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+## Your Body This Week
+
+What have you been noticing in your body this week?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+Where are you holding stress or tension in this moment?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+Where do you feel heaviness, pain, tightness, numbness, or pressure?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+Are there any places in your body that feel neutral, comfortable, warm, open, or even slightly easier?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+When your body feels difficult to trust, inhabit, or listen to, what does that feel like for you?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+## Hormone And Sleep Support
+
+What changes have you noticed since beginning hormone therapy?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+What sleep medication are you currently taking, and what is the prescribed dose?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+What concerns arise when you imagine sleeping without the medication?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+## Injuries And Physical Activity
+
+Please describe the current condition of your ankle and foot, wrist, chest, hips, and knees.
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+What guidance or restrictions have you received from a doctor, physiotherapist, or other healthcare provider?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+How has reducing or stopping exercise affected your mood, identity, sleep, and ability to cope?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+When pain appears, how do you decide whether to continue, change what you are doing, or stop?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+## Responsibility And Rest
+
+What do you fear might happen if you stopped monitoring or managing everything for a short time?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+What happens in your body when you try to rest?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+Are there any responsibilities that could safely be shared, even in a small way?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+## Restorative Yoga Experience
+
+In restorative yoga classes, what has felt most helpful?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+What parts of class feel especially calming, nourishing, or useful to you?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+Are there any parts of practice that do not feel helpful for you?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+Are there any postures, breath practices, meditations, words, themes, sounds, or moments of stillness that feel too much, unsafe, or unsupported?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+## Safety, Choice, And Consent
+
+Is there any kind of movement, breath practice, language, touch, music, silence, or stillness that does not feel safe or supportive for you?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+Are there any topics or experiences you do not want to explore in this kind of setting?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+Is there anything that tends to make you feel uncomfortable in a private practice setting?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+If something feels uncomfortable during a session, how would you prefer to let Laura know?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+Do you prefer more guidance, less guidance, or a mixture?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+## Reflective And Spiritual Support
+
+Are you open to more reflective or spiritual pieces if they feel appropriate, such as journaling, guided inner work, ritual, or shamanic inspired journeying?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+Are there any spiritual practices, words, beliefs, images, or traditions that feel supportive to you?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+Are there any spiritual practices, words, beliefs, images, or traditions that do not feel supportive to you?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+When you think about your intuition, inner knowing, or connection with something larger than yourself, what do you miss or long for?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+## What Helps You Come Back
+
+When you feel anxious, activated, shut down, overwhelmed, or disconnected, what helps you come back even a little?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+What does your body usually need more of?
+
+1. Rest
+2. Movement
+3. Warmth
+4. Pressure or weight
+5. Space
+6. Quiet
+7. Sound
+8. Breath
+9. Reassurance
+10. Choice
+11. Connection
+12. Something else
+
+Notes:
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+What would help you feel safe enough to receive support?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+## Anything Else
+
+Is there anything else you want Laura to know before beginning private work together?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+Is there anything you are nervous to say out loud, but would like Laura to hold gently as you begin?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+What is one thing you want to remember about yourself as you begin this work?
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+

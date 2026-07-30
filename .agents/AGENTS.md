@@ -1,0 +1,2 @@
+69. [DATA] Always refer to the newsletter as 'A Calmer Way Through the Week' instead of 'A Quieter Way Through the Week'.
+70. [PROCESS] Never convert local .html filenames into GoHighLevel URL slugs (e.g., changing sanctuary_courses.html to /courses) unless the user explicitly provides the live GoHighLevel paths. Always preserve exact .html local filenames in navigation links so local previews and direct GHL uploads continue to match what was built together.

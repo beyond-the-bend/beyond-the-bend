@@ -1,0 +1,8 @@
+{
+  "name": "btb-sanctuary",
+  "version": "1.0.0",
+  "dependencies": {
+    "stripe": "^16.12.0",
+    "jose": "^5.9.6"
+  }
+}

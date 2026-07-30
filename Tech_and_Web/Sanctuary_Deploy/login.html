@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sanctuary | Beyond the Bend Yoga</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            min-height: 100vh;
+            color: #2f332d;
+            background:
+                radial-gradient(circle at top left, rgba(185, 129, 120, 0.12), transparent 32rem),
+                linear-gradient(180deg, #fffaf2, #f4efe7);
+            font-family: 'Lato', sans-serif;
+            padding: 60px 24px;
+            line-height: 1.65;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 860px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo { 
+            height: 96px; 
+            margin-bottom: 24px; 
+            display: block;
+        }
+        
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(38px, 6vw, 56px);
+            font-weight: 300;
+            letter-spacing: 0.03em;
+            margin-bottom: 12px;
+            text-align: center;
+            color: #2f332d;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #697063;
+            text-align: center;
+            margin-bottom: 16px;
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+        }
+
+        .price-note {
+            font-size: 13px;
+            color: #7c8c72;
+            text-align: center;
+            margin-bottom: 8px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .price-detail {
+            font-size: 15px;
+            color: #697063;
+            text-align: center;
+            margin-bottom: 48px;
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+        }
+        
+        .divider {
+            width: 100%;
+            max-width: 120px;
+            height: 1px;
+            background: rgba(47, 51, 45, 0.15);
+            margin: 48px 0;
+        }
+
+        /* Letter Section with Photo */
+        .letter-section {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(47, 51, 45, 0.08);
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 32px;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            align-items: center;
+            box-shadow: 0 4px 20px rgba(47, 51, 45, 0.02);
+        }
+
+        @media (max-width: 768px) {
+            .letter-section {
+                grid-template-columns: 1fr;
+                padding: 28px;
+                gap: 32px;
+            }
+        }
+
+        .letter-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 28px;
+            font-weight: 300;
+            color: #4f6049;
+            margin-bottom: 20px;
+            letter-spacing: 0.03em;
+        }
+
+        .letter-body p {
+            font-size: 15px;
+            color: #2f332d;
+            margin-bottom: 18px;
+            line-height: 1.7;
+        }
+
+        .letter-body p:last-child {
+            margin-bottom: 0;
+        }
+
+        .letter-photo {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(47, 51, 45, 0.06);
+            display: block;
+        }
+
+        /* Features List with Images */
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 32px;
+            font-weight: 300;
+            color: #4f6049;
+            margin-bottom: 40px;
+            letter-spacing: 0.05em;
+            text-align: center;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            width: 100%;
+            margin-bottom: 32px;
+        }
+
+        @media (max-width: 680px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.45);
+            border: 1px solid rgba(47, 51, 45, 0.06);
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 15px rgba(47, 51, 45, 0.01);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(47, 51, 45, 0.03);
+            border-color: rgba(124, 140, 114, 0.3);
+        }
+
+        .feature-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .feature-content {
+            padding: 24px;
+        }
+
+        .feature-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            font-weight: 400;
+            color: #4f6049;
+            margin-bottom: 8px;
+            letter-spacing: 0.02em;
+        }
+
+        .feature-card p {
+            font-size: 14px;
+            color: #697063;
+            line-height: 1.6;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            margin-bottom: 48px;
+            background: rgba(255, 255, 255, 0.4);
+            border: 1px solid rgba(47, 51, 45, 0.05);
+            padding: 32px;
+            border-radius: 8px;
+        }
+
+        .faq-item h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 19px;
+            font-weight: 500;
+            color: #2f332d;
+            margin-bottom: 6px;
+            letter-spacing: 0.01em;
+        }
+
+        .faq-item p {
+            font-size: 14px;
+            color: #697063;
+            line-height: 1.6;
+        }
+
+        /* Buttons & CTA Box */
+        .action-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            background: rgba(124, 140, 114, 0.08);
+            border: 1px solid rgba(124, 140, 114, 0.2);
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .action-box h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 32px;
+            font-weight: 300;
+            margin-bottom: 12px;
+            color: #4f6049;
+        }
+
+        .action-box p {
+            font-size: 15px;
+            color: #697063;
+            margin-bottom: 24px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #4f6049;
+            color: #fffaf2;
+            border: none;
+            padding: 14px 40px;
+            font-family: 'Lato', sans-serif;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 4px;
+            margin: 8px;
+            text-decoration: none;
+            transition: background 0.2s;
+            font-weight: 600;
+        }
+
+        .btn:hover { background: #3b4737; }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #4f6049;
+            color: #4f6049;
+        }
+
+        .btn-outline:hover { background: rgba(79, 96, 73, 0.08); }
+
+        .buttons { display: flex; flex-wrap: wrap; justify-content: center; }
+        
+        .footer-note { font-size: 13px; color: #697063; text-align: center; }
+
+        /* Top utility navigation */
+        .top-nav {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 24px;
+            font-size: 14px;
+        }
+        .member-question {
+            color: #697063;
+        }
+        .signin-link {
+            color: #4f6049;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .signin-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top-nav">
+            <span class="member-question">Already a member?</span>
+            <a href="/signin.html" class="signin-link">Sign In</a>
+        </div>
+        <!-- Logo (scaled naturally via height: 96px per Rule 44) -->
+        <img src="assets/beyond-the-bend-no-yoga.svg" alt="Beyond the Bend" class="logo">
+        
+        <h1>The Sanctuary</h1>
+        <p class="subtitle">A quiet space to listen to your body and meet the day you are actually having.</p>
+        <p class="price-note">$22 CAD per month</p>
+        <p class="price-detail">our founding member rate, locked in for the lifetime of your subscription</p>
+        
+        <!-- Welcome Letter from Laura with Photo -->
+        <div class="letter-section">
+            <div class="letter-content">
+                <h2 class="letter-title">Welcome Friend,</h2>
+                <div class="letter-body">
+                    <p>For a long time, I have been wondering how we might create a soft place to land in the middle of our busy weeks. I am beginning to notice how often we are asked to override our bodies, to push through tiredness, or to treat our physical self as a project to be fixed. I do not say that with certainty, but in my own life and in my years of teaching, I have felt the deep need for a quiet corner where we can simply show up as we are.</p>
+                    <p>The Sanctuary is my attempt to build that corner. It is a slow, self-paced library of movement, breath, and rest. We do not practice to achieve perfect postures or to perform. Instead, we practice to listen, to soften, and to meet the day we are actually having. Whether you have ten minutes for a guided breath or an hour for a deep restorative rest, you are welcome here.</p>
+                    <p>With care,<br>Laura</p>
+                </div>
+            </div>
+            <div class="letter-image">
+                <img src="assets/laura_tree_portrait.jpg" alt="Laura Harvey" class="letter-photo">
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- What is inside -->
+        <h2 class="section-title">What is Inside the Sanctuary</h2>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <img src="assets/premium_classes.png" alt="Restorative somatic movement" class="feature-img">
+                <div class="feature-content">
+                    <h3>Restorative & Somatic Movement</h3>
+                    <p>An on-demand library of slow, gentle classes. These practices are designed to help you release physical tension, quiet your mind, and restore ease to your nervous system.</p>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <img src="assets/meditations.png" alt="Guided meditations" class="feature-img">
+                <div class="feature-content">
+                    <h3>Guided Meditations & Audio</h3>
+                    <p>A collection of grounding meditations, yogic sleep practices, and breathwork guides to help you transition into rest at the start or end of your day.</p>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <img src="assets/courses.png" alt="Structured courses" class="feature-img">
+                <div class="feature-content">
+                    <h3>Structured Somatic Courses</h3>
+                    <p>Step-by-step pathways like <em>A Quiet Return</em>. These courses offer structured, intentional movement progressions that you can follow on your own time.</p>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <img src="assets/livestream_replays.png" alt="Livestream replays" class="feature-img">
+                <div class="feature-content">
+                    <h3>Livestream Replays</h3>
+                    <p>Access to recordings of all our weekly livestream practices, so you can join the class experience whenever you are ready.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- FAQ -->
+        <h2 class="section-title">Common Questions</h2>
+        
+        <div class="faq-section">
+            <div class="faq-item">
+                <h4>Is this suitable for beginners?</h4>
+                <p>Yes. Every class in the Sanctuary is designed to be gentle, accessible, and supportive. We focus on comfort and listening to your body rather than advanced physical postures.</p>
+            </div>
+            <div class="faq-item">
+                <h4>What props do I need?</h4>
+                <p>Many classes can be done with simple household items like blankets, pillows, and a quiet floor. We will guide you on how to set up using standard yoga props or whatever you have at home.</p>
+            </div>
+            <div class="faq-item">
+                <h4>How does billing work and can I cancel?</h4>
+                <p>Your subscription is billed monthly and you can cancel online at any time with one click. When you cancel, you will retain full access to the Sanctuary until the end of your billing cycle.</p>
+            </div>
+        </div>
+
+        <!-- Join Box -->
+        <div class="action-box">
+            <h2>Step Inside</h2>
+            <p>Subscribe for $22 CAD per month, founding member rate, to get immediate, unlimited access to the entire library.</p>
+            <div class="buttons">
+                <a href="/api/create-checkout" class="btn">Join The Sanctuary</a>
+                <a href="/signin.html" class="btn btn-outline">Sign In</a>
+            </div>
+        </div>
+        
+        <p class="footer-note">Already a member? Click Sign In above.</p>
+    </div>
+</body>
+</html>

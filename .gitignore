@@ -7,6 +7,7 @@
 *.flv
 *.m4v
 *.zip
+*.ts
 *.exe
 
 # Operating System Files
@@ -21,6 +22,8 @@ build/
 .cache/
 tmp/
 .temp/
+Tech_and_Web/Newsletter_Automation/*.log
+Tech_and_Web/Newsletter_Automation/*.pid
 
 # Antigravity / Gemini Workspace files
 .gemini/

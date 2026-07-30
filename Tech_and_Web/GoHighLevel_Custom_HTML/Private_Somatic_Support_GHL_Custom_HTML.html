@@ -1,0 +1,300 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+  .pss-wrapper {
+    background: #ffffff;
+    color: #4a4a4a;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  .pss-wrapper * {
+    box-sizing: border-box;
+  }
+
+  .pss-hero {
+    position: relative;
+    min-height: 92vh;
+    background-image: url('https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/693bb85beac0a8706b24a789.jpg');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #e9e7df;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 24px;
+    text-align: center;
+  }
+
+  .pss-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(30, 38, 28, 0.56);
+  }
+
+  .pss-hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 780px;
+    color: #ffffff;
+  }
+
+  .pss-hero h1 {
+    color: #ffffff;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2.4rem, 6vw, 4.4rem);
+    font-weight: 400;
+    line-height: 1.08;
+    margin: 0 0 22px;
+  }
+
+  .pss-hero p {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    font-style: italic;
+    line-height: 1.5;
+    margin: 0 auto 36px;
+    max-width: 680px;
+  }
+
+  .pss-ghost-btn,
+  .pss-btn {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .pss-ghost-btn {
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    padding: 15px 40px;
+  }
+
+  .pss-ghost-btn:hover {
+    background: #ffffff;
+    color: #556b2f;
+  }
+
+  .pss-btn {
+    background: #A8B5A2;
+    color: #ffffff;
+    padding: 18px 45px;
+  }
+
+  .pss-btn:hover {
+    background: #627c3a;
+  }
+
+  .pss-section {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 80px 24px;
+  }
+
+  .pss-section h2 {
+    color: #556b2f;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 1.25;
+    margin: 0 0 24px;
+    text-align: center;
+  }
+
+  .pss-section p {
+    font-size: 18px;
+    line-height: 1.9;
+    margin: 0 0 24px;
+  }
+
+  .pss-soft {
+    background: #f7f7f5;
+  }
+
+  .pss-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    margin-top: 36px;
+  }
+
+  .pss-panel {
+    background: #ffffff;
+    border: 1px solid rgba(168, 181, 162, 0.45);
+    border-radius: 6px;
+    padding: 30px;
+  }
+
+  .pss-panel h3 {
+    color: #3F4A3C;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 1.3;
+    margin: 0 0 16px;
+    text-align: left;
+  }
+
+  .pss-panel p {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+
+  .pss-list {
+    margin: 18px 0 0;
+    padding-left: 20px;
+    font-size: 17px;
+    line-height: 1.9;
+  }
+
+  .pss-list li {
+    margin-bottom: 8px;
+  }
+
+  .pss-offer {
+    background: #ffffff;
+    border: 1px solid rgba(85, 107, 47, 0.3);
+    border-radius: 8px;
+    padding: 44px;
+    text-align: center;
+    box-shadow: 0 18px 45px rgba(63, 74, 60, 0.08);
+  }
+
+  .pss-offer h2 {
+    margin-bottom: 10px;
+  }
+
+  .pss-price {
+    color: #3F4A3C;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 34px;
+    margin: 22px 0 8px;
+  }
+
+  .pss-note {
+    color: #66705f;
+    font-size: 15px;
+    margin-bottom: 28px;
+  }
+
+  .pss-consult {
+    background: #fcfbf9;
+    border: 1px solid #d8e4d0;
+    border-radius: 6px;
+    padding: 26px 28px;
+    margin-top: 30px;
+    text-align: left;
+  }
+
+  .pss-consult h3 {
+    color: #556b2f;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0 0 12px;
+    text-align: left;
+  }
+
+  .pss-disclaimer {
+    background: #f4f7f2;
+    border-left: 4px solid #A8B5A2;
+    padding: 24px 28px;
+    margin-top: 44px;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  @media (max-width: 760px) {
+    .pss-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .pss-offer {
+      padding: 32px 22px;
+    }
+  }
+</style>
+
+<div class="pss-wrapper">
+  <section class="pss-hero">
+    <div class="pss-hero-inner">
+      <h1>Private Somatic and Restorative Support</h1>
+      <p>A steady, body based space for women who are feeling overwhelmed, exhausted, disconnected, or in a season of change.</p>
+      <a href="https://link.fromleadstosales.com/widget/form/XScefZT0HIAWss2SYOXO" class="pss-ghost-btn">Ask About A Consultation</a>
+    </div>
+  </section>
+
+  <section class="pss-section">
+    <h2>A Place To Come Back To Yourself</h2>
+    <p>There are seasons when the body begins asking for a different kind of support. You may be tired of holding everything together. You may be moving through grief, burnout, caregiving, divorce, perimenopause, identity change, or the quiet feeling that you no longer know how to hear yourself clearly.</p>
+    <p>Private somatic and restorative support is a gentle one to one container where we slow down enough to listen. This is not about pushing, performing, or fixing yourself. It is about creating enough steadiness that your body can begin to soften, orient, and remember that it does not have to carry everything alone.</p>
+  </section>
+
+  <section class="pss-soft">
+    <div class="pss-section">
+      <h2>What This Work Can Include</h2>
+      <p>Each session is shaped around what you bring, what your body needs, and what feels appropriate inside the moment. The work may be quiet, reflective, movement based, restorative, or deeply still.</p>
+
+      <div class="pss-grid">
+        <div class="pss-panel">
+          <h3>Body Based Support</h3>
+          <p>Gentle somatic movement, restorative practice, breath awareness, grounding practices, body awareness, and nervous system support in plain, accessible language.</p>
+        </div>
+        <div class="pss-panel">
+          <h3>Reflective Support</h3>
+          <p>Spacious conversation, journaling, guided inquiry, meditation, and integration so the body and inner life both have room to be heard.</p>
+        </div>
+        <div class="pss-panel">
+          <h3>Steady Pacing</h3>
+          <p>We move slowly. You have choice. There is no pressure to process more than your system is ready to hold.</p>
+        </div>
+        <div class="pss-panel">
+          <h3>A Clear Container</h3>
+          <p>This work is supportive, grounded, and ethical. It is not therapy or medical treatment, and it can sit alongside other care when needed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pss-section">
+    <h2>Who This Is For</h2>
+    <p>This work may be a fit if you are a woman who is longing for a calmer, steadier relationship with your body and inner life.</p>
+    <ul class="pss-list">
+      <li>You feel overwhelmed, anxious, depleted, or emotionally tired.</li>
+      <li>You are moving through a life transition and need a place to land.</li>
+      <li>You have spent years taking care of everyone else and are beginning to wonder what you need.</li>
+      <li>You feel disconnected from your body, intuition, creativity, or sense of self.</li>
+      <li>You want support that is gentle, reflective, body based, and deeply human.</li>
+    </ul>
+  </section>
+
+  <section class="pss-soft">
+    <div class="pss-section">
+      <div class="pss-offer">
+        <h2>Eight Week Private Support Container</h2>
+        <p>My three founding client spaces are now full. I am currently opening a small number of additional spaces for women who feel ready for this kind of steady, individual support.</p>
+        <p>The container includes eight weekly private sessions, sixty minutes each. We use that time to build trust, notice what your body responds to, and create simple practices that can support you between sessions.</p>
+        <div class="pss-price">$1,040 total</div>
+        <p class="pss-note">Payment option available at $130 per week for eight weeks.</p>
+        <a href="https://link.fromleadstosales.com/widget/form/XScefZT0HIAWss2SYOXO" class="pss-btn">Ask About A Consultation</a>
+      </div>
+
+      <div class="pss-consult">
+        <h3>Complimentary Initial Consultation</h3>
+        <p>Before beginning, we can start with a complimentary initial consultation. This gives us a chance to talk through what you are looking for, what kind of support would feel useful, and whether this feels like the right fit.</p>
+      </div>
+
+      <div class="pss-disclaimer">
+        This work is not therapy, medical treatment, crisis care, or a replacement for support from a licensed health professional. It can support body awareness, reflection, rest, stress relief, movement, nervous system steadiness, and personal integration.
+      </div>
+    </div>
+  </section>
+</div>

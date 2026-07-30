@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter | When Money Is Really About Safety | Beyond the Bend Yoga</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+        body,
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            background-color: #f7f7f5;
+            color: #4a4a4a;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+
+        .header {
+            background-color: #faf0f0;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 4px solid #556b2f;
+        }
+
+        .header img {
+            max-width: 140px;
+            height: auto;
+            margin: 0 auto 25px;
+            display: block;
+        }
+
+        .masthead-title {
+            color: #556b2f;
+            font-family: 'Playfair Display', Georgia, serif;
+            line-height: 1.2;
+        }
+
+        .masthead-top {
+            display: block;
+            font-size: 28px;
+            font-style: italic;
+            font-weight: 400;
+            margin-bottom: 5px;
+        }
+
+        .masthead-main {
+            display: block;
+            font-size: 32px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-top: 2px solid #556b2f;
+            border-bottom: 2px solid #556b2f;
+            padding: 15px 0;
+            margin-top: 10px;
+        }
+
+        .content-block {
+            padding: 40px 30px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #556b2f;
+            font-size: 26px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #78866b;
+            font-size: 22px;
+            margin: 20px 0 10px;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .highlight-section {
+            background-color: #fcfbf9;
+            padding: 40px 30px;
+            border-left: 4px solid #556b2f;
+        }
+
+        .practice-section {
+            background-color: #eef2eb;
+            padding: 30px;
+            border-radius: 4px;
+        }
+
+        .studio-section {
+            background-color: #f4f7f2;
+            padding: 40px 30px;
+            border-top: 1px solid #d8e4d0;
+            border-bottom: 1px solid #d8e4d0;
+        }
+
+        .embodied-card {
+            background-color: #ffffff;
+            border-left: 4px solid #A8B5A2;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 15px;
+            letter-spacing: 1px;
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            font-weight: bold;
+        }
+
+        .btn-forest {
+            background-color: #3F4A3C;
+            color: #F7F4EF;
+        }
+
+        .btn-forest:hover {
+            background-color: #2D352B;
+        }
+
+        .placeholder-box {
+            background-color: #f7f4ef;
+            border: 2px solid #A8B5A2;
+            color: #3F4A3C;
+            padding: 26px;
+            margin: 24px 0;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .footer {
+            background-color: #3F4A3C;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #F7F4EF;
+            letter-spacing: 1px;
+        }
+
+        .footer a {
+            color: #A8B5A2;
+            text-decoration: none;
+        }
+
+        strong {
+            color: #556b2f;
+            font-weight: 600;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                width: 100% !important;
+            }
+
+            .header {
+                padding: 30px 15px;
+            }
+
+            .content-block,
+            .highlight-section {
+                padding: 25px 15px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            h3 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://storage.googleapis.com/msgsndr/t19sOv208p64ldeUjJug/media/697996aad119a57c1575bb7d.png" alt="Beyond the Bend Logo">
+            <div class="masthead-title">
+                <span class="masthead-top">Reflections from</span>
+                <span class="masthead-main">Beyond the Bend</span>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <p>Hello {{contact.first_name}},</p>
+
+            <p>This week, I had an unexpected realization.</p>
+
+            <p>I wasn't thinking deeply about money. I was simply checking my bank account. But before I had even looked at the numbers, I noticed something happening in my body. My stomach tightened. My chest felt heavy. There was a subtle feeling of unease.</p>
+
+            <p>The numbers themselves weren't creating the reaction. My body was.</p>
+
+            <p>That realization has stayed with me all week, and it's had me thinking about this whole idea in a different way than I expected. I wanted to bring you into it with me, so if you're up for it, come sit with me for a few minutes and let's explore this together.</p>
+
+            <p>Laura</p>
+        </div>
+
+        <div class="highlight-section">
+            <h2>This Week's Wellness Wisdom</h2>
+
+            <img src="https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/6a4b603f1209780f807fb8c3.png" alt="A quiet moment of grounding and self-soothing" style="display: block; max-width: 100%; height: auto; border-radius: 4px; margin: 20px 0;">
+
+            <h3>When Money Is Really About Safety</h3>
+            <p><em>By Laura Harvey | Beyond the Bend Yoga</em></p>
+
+            <p>What if our relationship with money isn't really about money at all? What if it's about safety?</p>
+
+            <p>I keep coming back to this idea that our bodies don't really speak in numbers. They speak in feeling. And that language gets set down so early, long before we even understand what a bank account is. Think about it. As kids, we're not calculating risk in our heads. We're just sensing it. We can feel whether the adults around us seem steady or unpredictable, whether our needs are actually going to be met, whether the ground under us can be trusted. That felt sense, whatever it was for each of us, seems to become a kind of blueprint we carry forward without even realizing it.</p>
+
+            <p>So if things felt tense or unpredictable or scarce when we were little, I don't think our nervous system understood that as a money problem. I think it just understood it as unsafe, full stop, because that was the only category it had. It's only later, once we're adults living in a world that runs on money, that this old wiring finds somewhere new to show up. Money becomes one of the clearest places where that old feeling gets triggered again. Not because money is really the problem, but maybe because it's just the loudest, most obvious place for our body to say what it's been carrying all along. Which is probably why we can be capable and responsible and still feel our stomach drop looking at a bank statement. It was never really about the numbers. It was that same old question underneath. Am I safe?</p>
+
+            <p>I've also been reading <em>Eastern Body, Western Mind</em>, which looks at the chakra system through a psychological lens, and something in it stopped me in my tracks. The root chakra is all about foundation. Safety, stability, belonging, that sense of having solid ground under you. And it's said to form in those same early years, shaped by whether things around us felt reliable and whether the people raising us felt steady. When that foundation feels solid, we tend to move through life trusting that we'll be okay. When it doesn't, we can carry this quiet background hum that the ground isn't quite trustworthy, even when everything in front of us is actually fine. I don't think it's a coincidence that money gets linked to this chakra so often. I don't think money is ever really the story. I just think it's one of the places where the real story finally becomes visible.</p>
+
+            <p>Whether that language makes more sense to you through the nervous system, through the chakras, or just through your own experience, I keep landing on the same question. Lately I'm less interested in asking how I can make more money, and more curious about something quieter. What actually helps me feel safe? Maybe that's where things start to shift. Not by forcing ourselves to think differently, and not by pretending the fear isn't there, but by just noticing how our body responds and offering ourselves a little of the same kindness we hand out to everyone else without even thinking about it.</p>
+        </div>
+
+        <div class="content-block">
+            <div class="practice-section">
+                <h2>Practice of the Week</h2>
+
+                <h3>Before You Look at the Numbers</h3>
+
+                <p>The next time you check your bank account, pay a bill, or think about money, pause for a moment before looking at the numbers.</p>
+
+                <p>Notice your body. What happens in your breathing? What happens in your chest or your belly? What thoughts arrive first?</p>
+
+                <p>Rather than trying to change anything, simply become curious. Awareness is often the first step toward healing.</p>
+            </div>
+        </div>
+
+        <!-- ═══ FROM THE STUDIO ═══ -->
+        <div class="studio-section">
+            <h2>From the Studio</h2>
+            
+            <div class="embodied-card">
+                <span style="display: inline-block; background-color: #556b2f; color: #F7F4EF; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1.5px; padding: 4px 12px; border-radius: 99px; margin-bottom: 15px;">Now Open</span>
+                <h3 style="margin-top: 0; color: #556b2f; font-style: normal; font-weight: 600; font-size: 24px; margin-bottom: 15px;">Step Inside The Sanctuary</h3>
+                
+                <p style="font-size: 18px; font-style: italic; color: #4a4a4a; line-height: 1.7; margin-bottom: 20px;"><strong>I am so incredibly happy to share that the Sanctuary is finally open.</strong></p> 
+                
+                <p>This has been a quiet work in progress for many months, and it is a space I have wanted to build for a very long time. It is designed to be a digital home for your practice, a place where you can show up exactly as you are, at whatever time of day you need it most.</p>
+                
+                <p>Because this is a brand new space, it is still growing. Right now, it contains our complete library of weekly livestream class recordings, which means you have over fifty on demand practices to choose from, ranging from slow somatic hatha to restorative sequences. I have also included a few of my favorite guided meditations and grounding breath practices to help you transition into rest.</p> 
+                
+                <p>I will be adding new classes, somatic courses, and audio guides to the library every single month. Because it is still growing, I am opening the doors with a special founding member rate of $22 CAD per month. If you join now, this introductory price is locked in for the lifetime of your subscription, it will never go up for you. As the library fills with more resources, the price will increase for new members, but your rate will remain exactly the same.</p>
+                
+                <p style="margin-bottom: 0;">If you would like to explore the space, see what is inside, or join us as a founding member, you can click the button below.</p>
+                
+                <div style="text-align: center; margin: 30px 0 10px;">
+                    <a href="https://btb-sanctuary.vercel.app/login.html" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-size: 15px; letter-spacing: 1px; font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: bold; background-color: #3F4A3C; color: #F7F4EF !important;">Step Inside the Sanctuary</a>
+                </div>
+            </div>
+
+            <div class="embodied-card" style="margin-top: 30px;">
+                <span style="display: inline-block; background-color: #b98178; color: #F7F4EF; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1.5px; padding: 4px 12px; border-radius: 99px; margin-bottom: 15px;">Early Bird Ends Tomorrow</span>
+                <h3 style="margin-top: 0; color: #556b2f; font-style: normal; font-weight: 600; font-size: 24px; margin-bottom: 15px;">The Sacred Journey: From Crown to Root</h3>
+                
+                <p style="font-size: 14px; color: #78866b; margin-bottom: 15px; font-style: italic; font-weight: bold;">
+                    A Three Hour Summer Immersion<br>
+                    Tuesday, July 28, from 6:00 PM to 9:00 PM<br>
+                    Rising Moon Studio, Sherwood Park, AB
+                </p>
+
+                <img src="https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/6a2dd113c5c622320670c133.png" alt="The Sacred Journey, From Crown to Root" style="display: block; max-width: 100%; height: auto; border-radius: 4px; margin: 20px 0;">
+
+                <p>Zorana and I are preparing a special summer immersion to help you return to your body and find your center in the middle of a busy season.</p> 
+
+                <p>We will guide you through a deep journey of restorative posture sequences, somatic movement, and grounding breath practices, while Zorana weaves in gentle Reiki and energy work throughout the session. We will focus on root grounding and crown awareness, creating a safe, carefully held container for you to rest and renew.</p>
+
+                <p><strong>Tomorrow, Tuesday, July 7, is the final day to register at the early bird rate of $62.</strong> After tomorrow, the price will increase to $71. We have a few spots remaining, and we would love to share this afternoon of deep restoration with you.</p>
+
+                <div style="text-align: center; margin: 30px 0 10px;">
+                    <a href="https://beyondthebendyoga.ca/the-sacred-journey" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-size: 15px; letter-spacing: 1px; font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: bold; background-color: #3F4A3C; color: #F7F4EF !important;">Register for the Sacred Journey</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h2>A Closing Thought</h2>
+
+            <p>I tried this practice myself a few days after that first unsettling moment at my bank account. I paused before I looked. I noticed the same tightness in my stomach, the same bracing in my chest. But this time I let myself stay with it a bit longer instead of rushing past it. I didn't try to fix it or explain it away. I just let it be there and offered it a little kindness.</p>
+
+            <p>Something in me softened. Not because the numbers had changed, but because I had.</p>
+
+            <p>I'm heading into my chakra workshop this month with all of this still sitting with me, and I love how these old teachings and the newer science of the nervous system keep landing in the same place. When we feel safer, we feel freer.</p>
+
+            <p>So maybe the next time that familiar tightening shows up, whether it's about money or something else entirely, you'll pause for a moment, notice, and offer yourself that same small kindness.</p>
+
+            <p>With warmth and gratitude,<br>Laura</p>
+        </div>
+
+        <div class="footer">
+            <p><strong style="color:#F7F4EF;">Beyond the Bend Yoga</strong></p>
+            <p>Rising Moon Studio &middot; Sherwood Park, AB</p>
+            <p><a href="https://beyondthebendyoga.ca" target="_blank" rel="noopener noreferrer">beyondthebendyoga.ca</a></p>
+            <p><a href="{{unsubscribe_link}}">Unsubscribe</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

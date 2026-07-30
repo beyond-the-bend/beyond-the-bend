@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagine Something Bigger | Beyond the Bend Yoga</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,300;7..72,400;7..72,500&family=Inter:wght@400;500;600&display=swap");
+
+        :root {
+            --ink: #2f332d;
+            --muted: #697063;
+            --soft: #f4efe7;
+            --paper: #fffaf2;
+            --sage: #7c8c72;
+            --rose: #b98178;
+        }
+
+        body {
+            margin: 0;
+            color: var(--ink);
+            background: linear-gradient(180deg, var(--paper), var(--soft));
+            font-family: "Inter", Arial, sans-serif;
+            line-height: 1.65;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .logo {
+            height: 80px;
+            margin-bottom: 40px;
+        }
+
+        .audio-container {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 12px 32px rgba(47, 51, 45, 0.08);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .cover-art {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            box-shadow: 0 8px 24px rgba(47, 51, 45, 0.12);
+        }
+
+        h1 {
+            font-family: "Literata", serif;
+            font-size: 24px;
+            font-weight: 500;
+            margin: 0 0 8px 0;
+            color: var(--ink);
+        }
+
+        p {
+            color: var(--muted);
+            margin: 0 0 30px 0;
+            font-size: 15px;
+        }
+
+        audio {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .sanctuary-banner {
+            margin-top: 20px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(47, 51, 45, 0.1);
+        }
+
+        .sanctuary-banner p {
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--sage);
+            color: white;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 15px;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #64735c;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="https://btb-assets.b-cdn.net/assets/beyond-the-bend-no-yoga.svg" alt="Beyond the Bend" class="logo">
+
+    <div class="audio-container">
+        <img src="assets/imagine_bigger_thumb.png" alt="Imagine Something Bigger" class="cover-art" onerror="this.style.display='none'">
+        
+        <h1>Imagine Something Bigger</h1>
+        <p>A Guided Practice &middot; 15 mins</p>
+
+        <audio controls>
+            <source src="assets/Imagine_Something_Bigger_Final.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <div class="sanctuary-banner">
+            <p>Ready to go deeper? Step inside The Sanctuary for a complete library of guided practices.</p>
+            <a href="https://btb-sanctuary.vercel.app/sanctuary.html" class="btn">Step Inside The Sanctuary</a>
+        </div>
+    </div>
+
+</body>
+</html>

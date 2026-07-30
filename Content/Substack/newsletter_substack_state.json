@@ -1,0 +1,156 @@
+{
+  "version": 1,
+  "sources": {
+    "NEWSLETTER_WILD_AND_WISE.html": {
+      "hash": "35ce881e6ee96c908158fb7c27fa3a52ecc55f06c4b84607101de3004817a331",
+      "output": "01_The_Wild_and_The_Wise.md",
+      "status": "baseline",
+      "updatedAt": "2026-06-15T17:19:21.815Z"
+    },
+    "FINAL_NEWSLETTER_WILD_AND_WISE.html": {
+      "hash": "aac08041d19dc9ca72a2f86494737480dd46375963b58a8beba679228ef20b9b",
+      "output": "01_The_Wild_and_The_Wise.md",
+      "status": "baseline",
+      "updatedAt": "2026-06-15T17:19:21.838Z"
+    },
+    "NEWSLETTER_WILD_AND_WISE_LEGACY_FORMAT.html": {
+      "hash": "ee07bc5fdde966deba34ed147859198989c15b82175a1ce5fd5a993176e5f731",
+      "output": "01_The_Wild_and_The_Wise.md",
+      "status": "baseline",
+      "updatedAt": "2026-06-15T17:19:21.838Z"
+    },
+    "NEWSLETTER_WEEKLY_TEMPLATE.html": {
+      "hash": "c88f86a7447515cba73156c7ab930ab66aa00efc2a923667fe72178972b3ad5a",
+      "output": null,
+      "status": "baseline",
+      "updatedAt": "2026-06-15T17:19:21.841Z"
+    },
+    "NEWSLETTER_MOMENT_THAT_IS_REAL.html": {
+      "hash": "7d6f4fee79e9cb004bab17bb3b2a15ca33f6e207f0a737e6bf107c3c80813fff",
+      "output": null,
+      "status": "baseline",
+      "updatedAt": "2026-06-15T17:19:21.842Z"
+    },
+    "NEWSLETTER_MOMENT_THAT_IS_REAL_LEGACY.html": {
+      "hash": "d22e63bb1d6e7af9d53c4c546f335dce96d05017fb319416a3504db12829c07a",
+      "output": null,
+      "status": "baseline",
+      "updatedAt": "2026-06-15T17:19:21.843Z"
+    },
+    "NEWSLETTER_MOMENT_THAT_IS_REAL_TRUE_LEGACY.html": {
+      "hash": "4be183167a4e2e9938e92dc1af3893a25508191f9c102cdd68a9b8ff037d3f2f",
+      "output": null,
+      "status": "baseline",
+      "updatedAt": "2026-06-15T17:19:21.844Z"
+    },
+    "NEWSLETTER_SCORIA_YOGA_MATS.html": {
+      "hash": "362c2e27b1001cb63c23c5c6d36cc1630d59c28ce69ae369390ba695ff780846",
+      "output": null,
+      "status": "baseline",
+      "updatedAt": "2026-06-15T17:19:21.845Z"
+    },
+    "NEWSLETTER_SEEING_IT_AGAIN.html": {
+      "hash": "584c0a0e4e68951a7daf2483bb23cda3e369acc50f9d8437c448a7eff3c6fed0",
+      "output": "03_Seeing_It_Again.md",
+      "status": "baseline",
+      "updatedAt": "2026-06-15T17:19:21.847Z"
+    },
+    "NEWSLETTER_TEMPLATE_BLANK.html": {
+      "hash": "af58f899112528dbd481b5f901eda8f13dee48c24623094c47aa5492d8c83f55",
+      "output": null,
+      "status": "baseline",
+      "updatedAt": "2026-06-15T17:19:21.848Z"
+    },
+    "NEWSLETTER_THE_FOUR_STEPS_OF_RAIN.html": {
+      "hash": "f785d892f15a559f45e95bd1fdad9daa5b18462823087d56e491a38ac1787622",
+      "output": "23_The_Four_Steps_of_RAIN.md",
+      "status": "baseline",
+      "updatedAt": "2026-06-15T17:19:21.849Z"
+    },
+    "NEWSLETTER_SWIMMING_WITH_THE_RIVER.html": {
+      "hash": "0fd499d0833f5675732a59d86e4fa1acf35afec74ef474af5b2289c236856c1f",
+      "output": "24_Swimming_With_the_River.md",
+      "status": "baseline",
+      "updatedAt": "2026-06-15T17:19:21.850Z"
+    },
+    "NEWSLETTER_THE_SNOW_THAT_KEEPS_COMING_BACK.html": {
+      "hash": "e3f616614a363da27f21e4881cbbabab84a12c3e38581f32b928ab949c95f5a6",
+      "output": "25_The_Snow_That_Keeps_Coming_Back.md",
+      "status": "baseline",
+      "updatedAt": "2026-06-15T17:19:21.851Z"
+    },
+    "NEWSLETTER_WHEN_LETTING_GO_SHAKES_THE_GROUND.html": {
+      "hash": "bd49b6876eca0eb4b497fbe91cea9c9e9fbc78bc767045239fb568d1f8ff41de",
+      "output": null,
+      "status": "baseline",
+      "updatedAt": "2026-06-15T17:19:21.852Z"
+    },
+    "NEWSLETTER_WHEN_THE_MIND_STEEPS.html": {
+      "hash": "1714f2d63ae3b5f3bd82622e70d7769f1d22df94e0eba80e176fd7c083b6d349",
+      "output": "27_When_the_Mind_Steeps_Too_Long.md",
+      "status": "baseline",
+      "updatedAt": "2026-06-15T17:19:21.853Z"
+    },
+    "NEWSLETTER_REJECTION_SOMATICS.html": {
+      "hash": "0af833f03ba7a0f4583a5d47894917e1660eb9085ad3558dedbc42fb9255593a",
+      "output": null,
+      "status": "baseline",
+      "updatedAt": "2026-06-15T17:19:21.853Z"
+    },
+    "Beyond_The_Bend_Newsletter.html": {
+      "hash": "b0b84348c1a7981ac1517e5b4184efd22b411bfb59daefe7f9154ef2a1885d20",
+      "output": null,
+      "status": "baseline",
+      "updatedAt": "2026-06-15T17:19:21.854Z"
+    },
+    "Newsletter_Mothers_Day.html": {
+      "hash": "ae96dc488c73af05a75ca7b12f5615ea3b8c7d4cdad21c135bc9a2b7334f6052",
+      "output": null,
+      "status": "baseline",
+      "updatedAt": "2026-06-15T17:19:21.855Z"
+    },
+    "NEWSLETTER_DREAM_IS_NOT_MISSING.html": {
+      "hash": "aa95cbb6d4272536af59c0e78db31c065df602337f8be132851f4de9c47caf3d",
+      "output": "28_When_the_Dream_Asks_to_Be_Lived.md",
+      "status": "baseline",
+      "updatedAt": "2026-06-15T17:19:21.856Z"
+    },
+    "NEWSLETTER_REMEMBERING_THE_FEMININE_DIVINE.html": {
+      "hash": "9e08aa8cdeadd93b7f88c7f75a4be452d76916dbb204356adc65c79f86ea5ee8",
+      "output": "29_Remembering_the_Feminine_Divine.md",
+      "status": "baseline",
+      "updatedAt": "2026-06-15T17:19:21.857Z"
+    },
+    "NEWSLETTER_THE_DESCENT.html": {
+      "hash": "cc3457df710643927f106dc42a0f1e019bcb7bfeec41d220d0dc8a18ce39b067",
+      "output": "30_The_Descent.md",
+      "status": "baseline",
+      "updatedAt": "2026-06-15T17:19:21.858Z"
+    },
+    "NEWSLETTER_SOME_MORNINGS_THE_BODY_JUST_DOESNT_WANT_TO_MOVE.html": {
+      "hash": "53aa38c1aff4f9226a94c8df7fee093b446e5c3a9710273c94d6f2fa55982574",
+      "output": "31_Some_Mornings_the_Body_Just_Doesnt_Want_to_Move.md",
+      "status": "converted",
+      "updatedAt": "2026-06-23T02:26:47.767Z"
+    },
+    "NEWSLETTER_TWO_SELVES_ONE_LIFE_DRAFT.html": {
+      "hash": "6e574c75782feb33a28c1dd04f1e472ee6cf30bc5eb0ce7146e0325fda049f39",
+      "output": "32_Two_Selves_One_Life_DRAFT.md",
+      "status": "converted",
+      "updatedAt": "2026-06-29T08:17:25.295Z"
+    },
+    "NEWSLETTER_WHEN_MONEY_IS_REALLY_ABOUT_SAFETY.html": {
+      "hash": "1b73b708fed362fdca8b2b3e1bfd8752116f5237ebe319c43d1d26d1b2403b14",
+      "output": "35_When_Money_Is_Really_About_Safety.md",
+      "status": "converted",
+      "updatedAt": "2026-07-06T19:33:21.298Z"
+    },
+    "NEWSLETTER_IMAGINING_SOMETHING_BIGGER.html": {
+      "hash": "74e5396dc980c0080527fd37d673860cf622bee9bd041ceac295737b01481caa",
+      "output": "37_Imagining_Something_Bigger.md",
+      "status": "converted",
+      "updatedAt": "2026-07-27T05:39:34.460Z"
+    }
+  },
+  "updatedAt": "2026-07-27T05:39:34.465Z"
+}

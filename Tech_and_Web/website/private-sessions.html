@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Somatic Support | Beyond the Bend</title>
+    <link rel="stylesheet" href="style.css?v=2">
+    <style>
+        .private-hero {
+            position: relative;
+            min-height: 72vh;
+            background-image: url('assets/laura_tree_portrait.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 24px;
+        }
+
+        .private-hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(30, 38, 28, 0.48);
+        }
+
+        .private-hero-inner {
+            position: relative;
+            z-index: 1;
+            max-width: 780px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .private-hero-inner h1 {
+            color: #fff;
+            font-size: clamp(2.4rem, 6vw, 4.4rem);
+            line-height: 1.08;
+            margin: 0 0 22px;
+        }
+
+        .private-hero-inner p {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(1.25rem, 3vw, 1.75rem);
+            font-style: italic;
+            line-height: 1.5;
+            margin: 0 auto 36px;
+            max-width: 680px;
+        }
+
+        .private-section {
+            max-width: 880px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        .private-section h2 {
+            font-size: 34px;
+            margin: 0 0 24px;
+        }
+
+        .private-section p {
+            font-size: 18px;
+            line-height: 1.9;
+            margin: 0 0 24px;
+        }
+
+        .private-soft {
+            background: #f7f7f5;
+        }
+
+        .private-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 28px;
+            margin-top: 36px;
+        }
+
+        .private-panel {
+            background: #fff;
+            border: 1px solid rgba(168, 181, 162, 0.45);
+            border-radius: 6px;
+            padding: 30px;
+        }
+
+        .private-panel h3 {
+            text-align: left;
+            color: var(--brand-dark);
+            font-size: 23px;
+            margin: 0 0 16px;
+        }
+
+        .private-panel p {
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+
+        .private-list {
+            margin: 18px 0 0;
+            padding-left: 20px;
+            font-size: 17px;
+            line-height: 1.9;
+        }
+
+        .offer-box {
+            background: #fff;
+            border: 1px solid rgba(85, 107, 47, 0.3);
+            border-radius: 8px;
+            padding: 44px;
+            text-align: center;
+            box-shadow: 0 18px 45px rgba(63, 74, 60, 0.08);
+        }
+
+        .offer-box h2 {
+            margin-bottom: 10px;
+        }
+
+        .offer-price {
+            color: var(--brand-dark);
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 34px;
+            margin: 22px 0 8px;
+        }
+
+        .offer-note {
+            color: #66705f;
+            font-size: 15px;
+            margin-bottom: 28px;
+        }
+
+        .private-disclaimer {
+            background: #f4f7f2;
+            border-left: 4px solid var(--brand-accent);
+            padding: 24px 28px;
+            margin-top: 44px;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 760px) {
+            .main-header {
+                padding: 0 24px;
+            }
+
+            .nav-desktop {
+                display: none;
+            }
+
+            .private-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .offer-box {
+                padding: 32px 22px;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+                gap: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="main-header">
+    <a href="index.html" class="logo-link">Beyond the Bend</a>
+    <nav>
+        <ul class="nav-desktop">
+            <li><a href="about.html">About</a></li>
+            <li><a href="private-sessions.html" class="active">Private Sessions</a></li>
+            <li>
+                <a href="#" style="cursor: pointer;">Classes</a>
+                <ul class="dropdown-menu">
+                    <li><a href="classes.html">Studio</a></li>
+                    <li><a href="virtual.html">Livestream</a></li>
+                </ul>
+            </li>
+            <li><a href="https://substack.com/@lauraleeharvey" target="_blank">Reflections</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="library.html">The Sanctuary</a></li>
+            <li><a href="everything.html">Everything</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="private-hero">
+        <div class="private-hero-inner">
+            <h1>Private Somatic and Restorative Support</h1>
+            <p>A steady, body based space for women who are feeling overwhelmed, exhausted, disconnected, or in a season of change.</p>
+            <a href="mailto:lauralee@beyondthebendyoga.ca?subject=Private%20Somatic%20Support%20Inquiry" class="banner-ghost-btn">Ask About A Fit Call</a>
+        </div>
+    </section>
+
+    <section class="private-section">
+        <h2>A Place To Come Back To Yourself</h2>
+        <p>There are seasons when the body begins asking for a different kind of support. You may be tired of holding everything together. You may be moving through grief, burnout, caregiving, divorce, perimenopause, identity change, or the quiet feeling that you no longer know how to hear yourself clearly.</p>
+        <p>Private somatic and restorative support is a gentle one to one container where we slow down enough to listen. This is not about pushing, performing, or fixing yourself. It is about creating enough steadiness that your body can begin to soften, orient, and remember that it does not have to carry everything alone.</p>
+    </section>
+
+    <section class="private-soft">
+        <div class="private-section">
+            <h2>What This Work Can Include</h2>
+            <p>Each session is shaped around what you bring, what your body needs, and what feels appropriate inside the moment. The work may be quiet, reflective, movement based, restorative, or deeply still.</p>
+
+            <div class="private-grid">
+                <div class="private-panel">
+                    <h3>Body Based Support</h3>
+                    <p>Gentle somatic movement, restorative yoga, breath awareness, grounding practices, body awareness, and nervous system support in plain, accessible language.</p>
+                </div>
+                <div class="private-panel">
+                    <h3>Reflective Support</h3>
+                    <p>Spacious conversation, journaling, guided inquiry, meditation, and integration so the body and inner life both have room to be heard.</p>
+                </div>
+                <div class="private-panel">
+                    <h3>Steady Pacing</h3>
+                    <p>We move slowly. You have choice. There is no pressure to process more than your system is ready to hold.</p>
+                </div>
+                <div class="private-panel">
+                    <h3>A Clear Container</h3>
+                    <p>This work is supportive, grounded, and ethical. It is not therapy or medical treatment, and it can sit alongside other care when needed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="private-section">
+        <h2>Who This Is For</h2>
+        <p>This work may be a fit if you are a woman who is longing for a calmer, steadier relationship with your body and inner life.</p>
+        <ul class="private-list">
+            <li>You feel overwhelmed, anxious, depleted, or emotionally tired.</li>
+            <li>You are moving through a life transition and need a place to land.</li>
+            <li>You have spent years taking care of everyone else and are beginning to wonder what you need.</li>
+            <li>You feel disconnected from your body, intuition, creativity, or sense of self.</li>
+            <li>You want support that is gentle, reflective, body based, and deeply human.</li>
+        </ul>
+    </section>
+
+    <section class="private-soft">
+        <div class="private-section">
+            <div class="offer-box">
+                <h2>Eight Week Private Support Container</h2>
+                <p>My three founding client spaces are now full. I am currently opening a small number of additional spaces for women who feel ready for this kind of steady, individual support.</p>
+                <p>The container includes eight weekly private sessions, sixty minutes each. We use that time to build trust, notice what your body responds to, and create simple practices that can support you between sessions.</p>
+                <div class="offer-price">$1,040 total</div>
+                <p class="offer-note">Payment option available at $130 per week for eight weeks.</p>
+                <a href="mailto:lauralee@beyondthebendyoga.ca?subject=Private%20Somatic%20Support%20Inquiry" class="btn-olive">Ask About A Fit Call</a>
+            </div>
+
+            <div class="private-disclaimer">
+                This work is not therapy, medical treatment, crisis care, or a replacement for support from a licensed health professional. It can support body awareness, reflection, rest, stress relief, movement, nervous system steadiness, and personal integration.
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="main-footer">
+    <div style="margin-bottom: 80px;">
+        <h4 style="color: white; font-size: 24px; margin-bottom: 15px;">A Quieter Way Through the Week</h4>
+        <p style="opacity: 0.8; font-size: 15px; max-width: 500px; margin: 0 auto 30px; font-family: 'Lato', sans-serif; text-transform: none; letter-spacing: normal;">Join the community and receive a nourishing email every week filled with somatic reflections, class updates, and gentle support.</p>
+        <a href="https://link.fromleadstosales.com/widget/form/NFdWjQJ4Bw166ZxO9vJc" target="_blank" class="banner-ghost-btn" style="padding: 12px 30px;">Join The Newsletter</a>
+    </div>
+
+    <div class="footer-logo">BEYOND THE BEND</div>
+    <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="private-sessions.html">Private Sessions</a>
+        <a href="classes.html">Classes</a>
+        <a href="everything.html">Everything</a>
+        <a href="#">Contact</a>
+    </div>
+    <div style="opacity: 0.5; font-size: 11px; letter-spacing: 1px; text-transform: uppercase;">
+        Beyond the Bend, Sherwood Park, Alberta
+        <br><br>
+        <span style="font-family: 'Playfair Display', serif; font-style: italic; text-transform: none; font-size: 15px; opacity: 0.8;">May all beings find their way home to peace.</span>
+    </div>
+</footer>
+
+</body>
+</html>

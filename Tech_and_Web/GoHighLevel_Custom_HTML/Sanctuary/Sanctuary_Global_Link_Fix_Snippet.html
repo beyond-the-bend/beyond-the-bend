@@ -1,0 +1,47 @@
+<!-- Sanctuary global link fix, paste once into GoHighLevel site footer or global tracking code -->
+<script>
+(function () {
+  var linkMap = {
+    "index.html": "https://beyondthebendyoga.ca/dashboard",
+    "/index.html": "https://beyondthebendyoga.ca/dashboard",
+    "sanctuary.html": "https://beyondthebendyoga.ca/dashboard",
+    "/sanctuary.html": "https://beyondthebendyoga.ca/dashboard",
+    "sanctuary_livestreams.html": "https://beyondthebendyoga.ca/livestreams",
+    "/sanctuary_livestreams.html": "https://beyondthebendyoga.ca/livestreams",
+    "sanctuary_guided_explorations.html": "https://beyondthebendyoga.ca/guided-explorations",
+    "/sanctuary_guided_explorations.html": "https://beyondthebendyoga.ca/guided-explorations",
+    "sanctuary_meditations.html": "https://beyondthebendyoga.ca/meditations",
+    "/sanctuary_meditations.html": "https://beyondthebendyoga.ca/meditations",
+    "sanctuary_courses.html": "https://beyondthebendyoga.ca/courses",
+    "/sanctuary_courses.html": "https://beyondthebendyoga.ca/courses",
+    "sanctuary_course_quiet_return.html": "https://beyondthebendyoga.ca/quiet-return",
+    "/sanctuary_course_quiet_return.html": "https://beyondthebendyoga.ca/quiet-return"
+  };
+
+  function cleanHref(href) {
+    if (!href) return "";
+    var withoutDomain = href.replace(/^https?:\/\/beyondthebendyoga\.ca/i, "");
+    return withoutDomain.replace(/^\.?\//, "");
+  }
+
+  function fixLinks() {
+    document.querySelectorAll("a[href]").forEach(function (link) {
+      var href = link.getAttribute("href");
+      var key = cleanHref(href);
+      if (linkMap[href]) {
+        link.setAttribute("href", linkMap[href]);
+      } else if (linkMap[key]) {
+        link.setAttribute("href", linkMap[key]);
+      } else if (linkMap["/" + key]) {
+        link.setAttribute("href", linkMap["/" + key]);
+      }
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", fixLinks);
+  } else {
+    fixLinks();
+  }
+})();
+</script>

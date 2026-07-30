@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter | When the Mind Steeps Too Long</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+        body,
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            background-color: #f7f7f5;
+            color: #4a4a4a;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+
+        /* Header / Masthead */
+        .header {
+            background-color: #faf0f0;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 4px solid #556b2f;
+        }
+
+        .header img {
+            max-width: 140px;
+            height: auto;
+            margin-bottom: 25px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .masthead-title {
+            color: #556b2f;
+            font-family: 'Playfair Display', Georgia, serif;
+            line-height: 1.2;
+        }
+
+        .masthead-top {
+            display: block;
+            font-size: 28px;
+            font-style: italic;
+            font-weight: 400;
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+
+        .masthead-main {
+            display: block;
+            font-size: 32px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-top: 2px solid #556b2f;
+            border-bottom: 2px solid #556b2f;
+            padding: 15px 0;
+            margin-top: 10px;
+        }
+
+        .content-block {
+            padding: 40px 30px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #556b2f;
+            font-size: 26px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #78866b;
+            font-size: 22px;
+            margin-bottom: 10px;
+            margin-top: 20px;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .highlight-section {
+            background-color: #fcfbf9;
+            padding: 40px 30px;
+            border-left: 4px solid #556b2f;
+        }
+
+        .studio-section {
+            background-color: #f4f7f2;
+            padding: 40px 30px;
+            border-top: 1px solid #d8e4d0;
+        }
+
+        .practice-section {
+            background-color: #eef2eb;
+            padding: 30px 20px;
+            margin-top: 0;
+        }
+
+        .img-responsive {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin: 20px 0;
+            display: block;
+        }
+
+        .placeholder-box {
+            width: 100%;
+            height: 300px;
+            background-color: #e8ddd4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #78866b;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            border-radius: 4px;
+            margin: 20px 0;
+            border: 1px dashed #A8B5A2;
+        }
+
+        /* Class schedule table */
+        .class-table {
+            width: 100%;
+            margin: 30px 0;
+            border-collapse: collapse;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #d8e4d0;
+            background: white;
+        }
+
+        .class-row td {
+            padding: 15px 20px;
+            font-size: 15px;
+            line-height: 1.6;
+            border-bottom: 1px solid #d8e4d0;
+        }
+
+        .class-day {
+            color: #556b2f;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .class-status {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-top: 5px;
+            display: block;
+        }
+
+        .status-full {
+            color: #E8C4C4;
+        }
+
+        .status-open {
+            color: #A8B5A2;
+        }
+
+        .new-badge {
+            background-color: #556b2f;
+            color: white;
+            font-size: 11px;
+            padding: 2px 7px;
+            border-radius: 10px;
+            letter-spacing: 1px;
+            vertical-align: middle;
+            margin-left: 6px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            transition: all 0.3s;
+        }
+
+        .btn-sage {
+            background-color: #A8B5A2;
+            color: white;
+        }
+
+        .btn-forest {
+            background-color: #3F4A3C;
+            color: #F7F4EF;
+        }
+
+        .embodied-card {
+            background-color: #ffffff;
+            border: 1px solid #d8e4d0;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(63, 74, 60, 0.05);
+        }
+
+        .footer {
+            background-color: #3F4A3C;
+            padding: 60px 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #F7F4EF;
+            letter-spacing: 1px;
+        }
+
+        .footer a {
+            color: #A8B5A2;
+            text-decoration: none;
+        }
+
+        strong {
+            color: #556b2f;
+            font-weight: 600;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                width: 100% !important;
+            }
+
+            .header {
+                padding: 30px 15px;
+            }
+
+            .content-block,
+            .highlight-section,
+            .studio-section {
+                padding: 30px 20px;
+            }
+
+            .masthead-main {
+                font-size: 24px;
+                letter-spacing: 1px;
+            }
+
+            .masthead-top {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- ═══ MASTHEAD BANNER ═══ -->
+        <div class="header">
+            <img src="https://storage.googleapis.com/msgsndr/t19sOv208p64ldeUjJug/media/697996aad119a57c1575bb7d.png"
+                alt="Beyond the Bend Logo">
+            <div class="masthead-title">
+                <span class="masthead-top">Reflections from</span>
+                <span class="masthead-main">Beyond the Bend</span>
+            </div>
+        </div>
+
+        <!-- ═══ PERSONAL INTRO ═══ -->
+        <div class="content-block">
+            <p>Hello {{contact.first_name}},</p>
+            <p>I hope your week is starting with a sense of ease. Lately, I have been noticing how quickly my mind can drift away from the simple beauty of the present moment, turning even the quietest afternoon into a series of problems to solve. It is a subtle shift, one that often happens before I even realize I have left my body behind.</p>
+            <p>This week, a simple cup of tea reminded me of what happens when we stay in those loops just a little too long. I wanted to share some reflections on that internal shift, along with a gentle invitation to return to yourself through our practice together this spring.</p>
+        </div>
+
+        <!-- ═══ WELLNESS WISDOM ═══ -->
+        <div class="highlight-section">
+            <h2>This Week's Wellness Wisdom</h2>
+
+            <!-- IMAGE — Steeping Tea -->
+            <img src="https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/69d13e50fa2dde97422396ee.jpg"
+                alt="When the Mind Steeps Too Long" class="img-responsive">
+
+            <h3>When the Mind Steeps Too Long</h3>
+            <p><em>By Laura Harvey | Beyond the Bend Yoga</em></p>
+
+            <p>There is a point where thinking stops helping and starts clouding everything.</p>
+            <p>There are moments when I can feel it happening, not as anything dramatic or visible from the outside, but as a quiet internal shift, subtle enough that I might miss it if I am not paying attention.</p>
+            <p>My mind begins to circle. One thought finds another and then another, and somewhere in that movement I lose the thread of where I actually am. I am no longer here, in my life, in my body. I have drifted up into my head, turning things over, trying to solve something, trying to understand, trying to land somewhere solid. And the longer I stay there, the heavier everything becomes.</p>
+            <p>I noticed it the other day while making tea. The bag goes in and for a moment it is just right, the water warming and deepening, something alive moving through it. But if you leave it too long the whole thing shifts, growing darker and more bitter until what started out as something nourishing becomes something you no longer want to drink.</p>
+            <p>The mind can do this too, and I think most of us know exactly what that feels like even if we have never had a word for it.</p>
+            <p>We need our thoughts. We need that capacity to reflect, to discern, to move through our days with some sense of direction, and that is not the problem. The problem is when we forget to lift the bag out, when we stay in the thinking past the point where it is actually helping us. And the strange thing is that in those moments we almost always believe the answer is more thinking, that if we go a little deeper or look a little harder we will finally arrive somewhere solid. But what is actually needed tends to be much simpler than that.</p>
+            <p>Just a pause. A gentle return to the body, to the breath, to the feeling of feet on the ground and shoulders releasing without being asked. Nothing in my life has changed in that moment, and yet something in me has. The water clears, and if a thought comes from that quieter place it tends to be different, not tangled or urgent, just clean and simple and enough.</p>
+            <p>This is what the practice keeps teaching me, not to silence the mind or distrust it, but to recognize when it has done its work, to know the moment when more thinking will not bring more clarity. Stepping back from that kind of looping is not avoidance or giving up. It is, I think, a form of wisdom we are all slowly learning how to trust.</p>
+        </div>
+
+        <!-- ═══ FROM THE STUDIO ═══ -->
+        <div class="studio-section">
+            <h2>From the Studio</h2>
+            <p>The Monday and Tuesday evening classes are completely full, and I just have to take a moment to say how wonderful that is. This community is vibrant and alive, and it fills my heart to see so many of you showing up for yourselves this spring. If you have been thinking about joining us, there is still room in a few classes and it is absolutely not too late.</p>
+
+            <!-- Class Schedule Table -->
+            <table class="class-table">
+                <tr class="class-row">
+                    <td>
+                        <span class="class-day">Monday Evening</span>
+                        <strong>Somatic Vinyasa</strong> &middot; 6:00 PM
+                        <span class="class-status status-full">FULL</span>
+                    </td>
+                </tr>
+                <tr class="class-row">
+                    <td>
+                        <span class="class-day">Tuesday Morning</span>
+                        <strong>Rise and Restore</strong> &middot; 10:00 to 11:15 AM
+                        <span class="class-status status-open">A FEW SPACES REMAINING</span>
+                    </td>
+                </tr>
+                <tr class="class-row">
+                    <td>
+                        <span class="class-day">Tuesday Evening</span>
+                        <strong>Restore and Reclaim</strong> &middot; 6:00 PM
+                        <span class="class-status status-full">FULL</span>
+                    </td>
+                </tr>
+                <tr class="class-row" style="background-color: #fafbfc;">
+                    <td>
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                            <div>
+                                <span class="class-day">Wednesday Morning (Virtual)</span>
+                                <strong>Somatic Hatha</strong> &middot; 10:00 to 11:15 AM<br>
+                                <span class="class-status" style="color: #78866b;">VIRTUAL SANCTUARY &middot; FROM MY HOME TO YOURS</span>
+                            </div>
+                            <div style="margin-top: 10px;">
+                                <a href="https://beyondthebendyoga.ca/livestream-yoga" style="display: inline-block; background-color: #78866b; color: white; text-decoration: none; padding: 6px 12px; border-radius: 2px; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Register Virtual</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="class-row" style="background-color: #F0F4EE;">
+                    <td>
+                        <span class="class-day">Wednesday Evening</span>
+                        <strong>Embodied Flow</strong> &middot; 5:30 to 6:30 PM <span class="new-badge">NEW</span>
+                        <span class="class-status status-open">JUST A FEW SPACES LEFT</span>
+                    </td>
+                </tr>
+            </table>
+
+            <p style="text-align: center; margin: 40px 0;">
+                <a href="https://beyondthebendyoga.ca/classes" class="btn btn-sage">View Classes &amp; Register</a>
+            </p>
+
+            <!-- Spotlight Card -->
+            <div class="embodied-card">
+                <h3 style="margin-top: 0; color: #3F4A3C; font-style: normal;">Join for the remainder of the session.</h3>
+                <p style="font-size: 15px;">If you are interested in joining for the rest of the spring session, which would save you a little money, simply <strong>reply to this email</strong>. I will personally work out the prorated details for you so you can join us on the mat without worry. It is not too late, and I would love to have you with us.</p>
+            </div>
+        </div>
+
+        <!-- ═══ PRACTICE OF THE WEEK ═══ -->
+        <div class="content-block" style="background-color: #eef2eb;">
+            <div class="practice-section">
+                <h2>Practice of the Week</h2>
+                <h3 style="margin-top: 8px;">Learning to Pause</h3>
+                <p>The next time you notice your mind looping, try this simple sequence.</p>
+                
+                <p><strong>Notice what is actually there.</strong> Before you do anything else, just look at what the mind is holding. Not to judge it or fix it, but to see it clearly. Are there the same thoughts circling back around? Name it, even silently to yourself. The mind is busy. That is enough to know.</p>
+                
+                <p><strong>Pause.</strong> Not to fix anything or arrive anywhere, but simply to interrupt the momentum of it. You do not need to change what is happening, you just need to step out of the current for a moment. Even one minute is enough.</p>
+                
+                <p><strong>Drop into the body.</strong> Feel your feet on the ground. Notice if your jaw is holding anything, if your shoulders have crept upward, if there is a kind of bracing somewhere that you did not consciously choose. The body almost always knows before the mind does that something needs to soften.</p>
+                
+                <p><strong>Breathe.</strong> Take a slow breath in and let the exhale be longer than feels necessary. Let that breath be a gentle signal to the nervous system that it is safe to set the thinking down for a moment.</p>
+                
+                <p><strong>Trust.</strong> This is not a practice of emptying or escaping. It is a practice of learning to trust that clarity does not always arrive through effort. Sometimes the wisest thing we can do is stop reaching, and let the water clear.</p>
+            </div>
+        </div>
+
+        <!-- ═══ CLOSING THOUGHT ═══ -->
+        <div class="content-block">
+            <p>If any part of this resonated with you this week, I would love to hear about it. These letters are written in the hope that something lands, not as instruction, but as a kind of companionship along the way. We are all navigating this together, learning when to lean in and when to let the water settle, and I find that deeply comforting.</p>
+            <p>Until next week, be gentle with yourself and with your mind. It is doing its best, and so are you.</p>
+            <br>
+            <p>With warmth,<br>Laura 🩷</p>
+            <br>
+            <p style="font-size: 13px; font-style: italic; opacity: 0.8; border-top: 1px solid #eee; padding-top: 20px;">
+                P.S. A special thank you to Michael Neill, whose recent reflection on the teabag of our thinking provided the spark for this week's letter.
+            </p>
+        </div>
+
+        <!-- ═══ FOOTER ═══ -->
+        <div class="footer">
+            BEYOND THE BEND YOGA<br>
+            Rising Moon Studio &middot; Sherwood Park, AB<br><br>
+            <a href="{{unsubscribe_link}}">Unsubscribe</a>
+        </div>
+
+    </div>
+</body>
+
+</html>

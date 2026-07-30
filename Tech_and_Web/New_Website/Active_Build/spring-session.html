@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Session | Rising Moon Studio</title>
+    <meta name="description" content="Register for the Spring Yoga Session at Rising Moon Studio.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+        :root {
+            --bg-content: #ffffff;
+            --text-main: #4a4a4a;
+            --text-dark: #3F4A3C;
+            --accent-green: #6B8063;
+            --accent-light: #f7f4ef;
+            --accent-sage: #A8B5A2;
+            --border-light: #e8ddd4;
+        }
+
+        body {
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #f0f4ee 0%, #e8ddd4 50%, #e8c4c4 100%);
+            background-attachment: fixed;
+            color: var(--text-main);
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .landing-container {
+            max-width: 680px;
+            margin: 20px auto 40px;
+            background-color: var(--bg-content);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .section-padding { padding: 40px 45px; }
+
+        .course-hero { text-align: center; border-bottom: 1px solid var(--border-light); }
+        .hero-img { width: 100%; height: auto; border-bottom: 3px solid var(--accent-sage); }
+
+        h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text-dark);
+            font-size: 38px;
+            font-weight: 600;
+            margin: 30px 0 10px 0;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-style: italic;
+            color: var(--accent-green);
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        p { font-size: 17px; margin-bottom: 20px; }
+
+        h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text-dark);
+            font-size: 26px;
+            font-weight: 600;
+            margin: 40px 0 20px 0;
+            text-align: center;
+        }
+
+        .divider { width: 50px; height: 2px; background-color: var(--accent-sage); margin: 40px auto; }
+
+        .btn-primary {
+            display: block;
+            text-align: center;
+            padding: 16px 30px;
+            background-color: var(--accent-green);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 15px;
+            letter-spacing: 1px;
+            transition: background 0.3s;
+            margin: 15px auto;
+            max-width: 320px;
+        }
+        .btn-primary:hover { background-color: #556b2f; }
+        
+        .btn-ghost {
+            display: block;
+            text-align: center;
+            padding: 16px 30px;
+            background-color: transparent;
+            border: 2px solid var(--accent-green);
+            color: var(--text-dark);
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 15px;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            margin: 15px auto;
+            max-width: 320px;
+        }
+        .btn-ghost:hover { background-color: var(--accent-light); }
+
+        .class-card {
+            display: flex;
+            flex-direction: column;
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            border: 1px solid var(--border-light);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+        }
+        .class-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--border-light);
+        }
+        .class-card-content { padding: 25px 30px; }
+        .class-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-sage); margin-bottom: 6px; }
+        .class-card h3 { font-family: 'Playfair Display', Georgia, serif; color: var(--text-dark); font-size: 20px; font-weight: 600; margin: 0 0 8px 0; }
+        .class-card p { font-size: 14px; margin: 0; line-height: 1.5; color: #5A6658; }
+        
+        blockquote {
+            background-color: var(--bg-content);
+            border-left: 3px solid var(--accent-sage);
+            padding: 20px 25px;
+            margin: 40px 0;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 20px;
+            font-style: italic;
+            color: var(--text-dark);
+        }
+
+        .final-cta {
+            background-color: var(--text-dark);
+            text-align: center;
+            color: var(--accent-light);
+        }
+        .final-cta h2 { color: #ffffff; margin-top: 0; }
+        .final-cta p { color: var(--accent-sage); }
+        .final-cta .btn-primary { background-color: var(--accent-green); border: 1px solid var(--accent-green); }
+        .final-cta .btn-primary:hover { background-color: #ffffff; color: var(--text-dark); }
+        .final-cta .btn-ghost { border-color: var(--accent-sage); color: #fff; }
+        .final-cta .btn-ghost:hover { background-color: rgba(255,255,255,0.1); }
+
+        .copyright-footer { text-align: center; font-size: 12px; color: var(--text-dark); padding-top: 0; }
+
+        @media (max-width: 720px) {
+            .landing-container { margin: 10px; border-radius: 6px; }
+            .section-padding { padding: 30px 20px; }
+        }
+    </style>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1115790293777092');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1115790293777092&ev=PageView&noscript=1"/></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+<body>
+
+    <div class="landing-container">
+        
+        <div class="course-hero">
+            <!-- Studio interior shot from existing site -->
+            <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/6932150381eaa194a5889805.jpg" class="hero-img" alt="Rising Moon Studio">
+            <div class="section-padding">
+                <h1>Spring Session<br>at Rising Moon</h1>
+                <div class="subtitle">April 8 - June 25, 2026</div>
+                <p style="text-align: center; font-size: 16px; color: var(--accent-sage);">An 11-week sanctuary for women holding a lot together.</p>
+            </div>
+        </div>
+
+        <div class="section-padding" style="background-color: var(--accent-light);">
+            <p>You already know how to come back to yourself.</p>
+            <p>These classes are not about working harder or bending yourself into shapes that do not fit anymore. They are about remembering what it feels like to breathe deeply, move gently, and reconnect with the part of you that knows exactly what you need.</p>
+            <p>No flexibility required. No pretzels. No perfection. Just presence, breath, and permission to soften.</p>
+            
+            <a href="#register" class="btn-primary" style="margin-top: 30px;">Reserve Your Mat</a>
+        </div>
+
+        <div class="section-padding">
+            <h2>The Four Open Classes</h2>
+            <p style="text-align: center; font-size: 15px; margin-bottom: 40px; color: var(--accent-sage);">(Monday Somatic Vinyasa is currently full)</p>
+
+            <div class="class-card">
+                <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/687dc6268b576378e82a21f4.png" alt="Rise and Restore">
+                <div class="class-card-content">
+                    <div class="class-label">Tuesdays &middot; 10:00 - 11:15 AM</div>
+                    <h3>Rise and Restore</h3>
+                    <p>Begin your day with calm and renewal. Designed to bring ease, stillness, and renewal into your morning with natural light streaming into the beautiful studio space.</p>
+                </div>
+            </div>
+
+            <div class="class-card">
+                <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/68cdb01199621f0a24bcc9ca.png" alt="Restore and Reclaim">
+                <div class="class-card-content">
+                    <div class="class-label">Tuesdays &middot; 6:00 - 7:15 PM</div>
+                    <h3>Restore and Reclaim</h3>
+                    <p>Come melt. This 75-minute class is your permission slip to slow all the way down. Long-held, fully supported poses and a space that feels like a deep exhale. Pajamas welcome.</p>
+                </div>
+            </div>
+
+            <div class="class-card">
+                <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/68505662bd2be424baaeaf36.png" alt="Somatic Hatha">
+                <div class="class-card-content">
+                    <div class="class-label">Wednesdays &middot; 10:00 - 11:15 AM</div>
+                    <h3>Somatic Hatha</h3>
+                    <p>Weaves together grounded yoga flow, organic movement, and supported restorative postures into a practice that feels both nourishing and incredibly alive.</p>
+                </div>
+            </div>
+
+            <div class="class-card">
+                <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/69aa2073c1e328b31bcf2e5e.jpg" alt="Embodied Flow">
+                <div class="class-card-content">
+                    <div class="class-label">Wednesdays &middot; 5:30 - 6:30 PM &middot; NEW & LIMITED</div>
+                    <h3>Embodied Flow</h3>
+                    <p>Just you, the ground, and an hour of movement that belongs entirely to you. No mat, no props, no performance. We simply show up, tune in, and let the body lead. (Strictly 12 spots).</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="section-padding" style="background-color: var(--accent-light);">
+            <blockquote>
+                "Laura's gentle approach, soothing voice and non-judgmental presence provides the perfect invitation into restorative work."
+            </blockquote>
+            <p style="text-align: right; font-style: italic; color: var(--accent-sage); font-size: 15px;">— Maureen, Student</p>
+        </div>
+
+        <div class="final-cta section-padding" id="register">
+            <h2>Join the Spring Session</h2>
+            <p>11 consecutive weeks. Deep rest. A true sanctuary.</p>
+            <div style="font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 600; margin: 30px 0;">$187 + GST</div>
+            <p style="margin-bottom: 30px; font-size: 14px;">Select your preferred payment method below to secure your mat.</p>
+            
+            <a href="https://link.fromleadstosales.com/widget/form/36Jeq3Ji5gCr6npGZAyL" target="_blank" rel="noopener noreferrer" class="btn-primary">Pay by Credit Card</a>
+            <a href="https://link.fromleadstosales.com/widget/form/uCQdXMvU2xhHaGUwun89" target="_blank" rel="noopener noreferrer" class="btn-ghost">Pay by E-Transfer</a>
+        </div>
+
+    </div>
+
+    <!-- SOFT DOWNSELL -->
+    <div style="text-align: center; max-width: 600px; margin: -20px auto 40px; padding: 30px; color: var(--text-dark);">
+        <p style="font-family: 'Playfair Display', Georgia, serif; font-size: 22px; font-style: italic; margin-bottom: 10px;">Not in Sherwood Park?</p>
+        <p style="font-size: 15px; color: var(--text-main); line-height: 1.6; margin-bottom: 25px;">I write a free, reflective returning-home newsletter for women all over the world.</p>
+        <a href="https://link.fromleadstosales.com/widget/form/NFdWjQJ4Bw166ZxO9vJc" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 12px 30px; border: 1px solid var(--accent-sage); color: var(--text-dark); text-decoration: none; border-radius: 4px; font-size: 13px; letter-spacing: 1px; transition: background 0.3s;" onmouseover="this.style.backgroundColor='var(--accent-sage)'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='var(--text-dark)';">Join the Weekly Newsletter</a>
+    </div>
+
+    <div class="copyright-footer">
+        BEYOND THE BEND YOGA &nbsp;&middot;&nbsp; RISING MOON STUDIO
+    </div>
+
+</body>
+</html>

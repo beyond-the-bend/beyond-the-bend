@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter | Beyond the Bend</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+        body,
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            background-color: #f7f7f5;
+            color: #4a4a4a;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+
+        /* Header / Masthead */
+        .header {
+            background-color: #faf0f0;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 4px solid #556b2f;
+        }
+
+        .header img {
+            max-width: 140px;
+            height: auto;
+            margin-bottom: 25px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .masthead-title {
+            color: #556b2f;
+            font-family: 'Playfair Display', Georgia, serif;
+            line-height: 1.2;
+        }
+
+        .masthead-top {
+            display: block;
+            font-size: 28px;
+            font-style: italic;
+            font-weight: 400;
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+
+        .masthead-main {
+            display: block;
+            font-size: 32px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-top: 2px solid #556b2f;
+            border-bottom: 2px solid #556b2f;
+            padding: 15px 0;
+            margin-top: 10px;
+        }
+
+        .content-block {
+            padding: 40px 30px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #556b2f;
+            font-size: 26px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #78866b;
+            font-size: 22px;
+            margin-bottom: 10px;
+            margin-top: 20px;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        ul {
+            font-size: 16px;
+            color: #4a4a4a;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .highlight-section {
+            background-color: #fcfbf9;
+            padding: 40px 30px;
+            border-left: 4px solid #556b2f;
+        }
+
+        .studio-section {
+            background-color: #f4f7f2;
+            padding: 40px 30px;
+            border-top: 1px solid #d8e4d0;
+        }
+
+        .practice-section {
+            background-color: #eef2eb;
+            padding: 30px 20px;
+            margin-top: 0;
+        }
+
+        .img-responsive {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin: 20px 0;
+            display: block;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 15px;
+            letter-spacing: 1px;
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+        }
+
+        .btn-sage {
+            background-color: #A8B5A2;
+            color: white;
+        }
+
+        .btn-forest {
+            background-color: #3F4A3C;
+            color: #F7F4EF;
+        }
+
+        .embodied-card {
+            background-color: #F0F4EE;
+            border-left: 3px solid #A8B5A2;
+            padding: 20px 25px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .footer {
+            background-color: #3F4A3C;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #F7F4EF;
+            letter-spacing: 1px;
+        }
+
+        .footer a {
+            color: #A8B5A2;
+            text-decoration: none;
+        }
+
+        strong {
+            color: #556b2f;
+            font-weight: 600;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                width: 100% !important;
+            }
+
+            .header {
+                padding: 30px 15px;
+            }
+
+            .content-block,
+            .highlight-section,
+            .studio-section {
+                padding: 25px 15px;
+            }
+
+            .masthead-main {
+                font-size: 24px;
+                letter-spacing: 1px;
+            }
+
+            .masthead-top {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- ═══ MASTHEAD BANNER ═══ -->
+        <div class="header">
+            <img src="https://storage.googleapis.com/msgsndr/t19sOv208p64ldeUjJug/media/697996aad119a57c1575bb7d.png"
+                alt="Beyond the Bend Logo">
+            <div class="masthead-title">
+                <span class="masthead-top">Reflections from</span>
+                <span class="masthead-main">Beyond the Bend</span>
+            </div>
+        </div>
+
+        <!-- ═══ PERSONAL INTRO ═══ -->
+        <div class="content-block">
+            <p style="text-align: center; font-style: italic; color: #78866b; font-size: 18px; margin-bottom: 30px;">"It is never too late to be what you might have been."<br><span style="font-size: 14px; text-transform: uppercase;">— George Eliot</span></p>
+
+            <p>Hello {{contact.first_name}},</p>
+            <p>I want to tell you something I have been sitting with for a while now, something I have not quite known how to say out loud until recently.</p>
+            <p>My fifties have been the most alive I have ever felt.</p>
+            <p>Not the easiest. Not the most comfortable. Not the most certain. But the most alive. And I think it is time I talked about why.</p>
+            <p>Because if you are somewhere in the middle of your own rearranging, whether that is a career that stopped fitting, a relationship that ended, a body you have grown unfamiliar with, or just a quiet sense that something has to change, I want you to know that what is on the other side of all of that is not loss. It is a kind of freedom I did not know existed.</p>
+            <p>I want to spend some time exploring this with you in the weeks ahead, not as a tidy guide to reinvention, because I do not believe in those, but as a woman walking alongside another woman, telling the truth about what it actually looks like.</p>
+            <p>This week, I want to start at the beginning. All of it at once. The whole beautiful, terrifying picture.</p>
+        </div>
+
+        <!-- ═══ WELLNESS WISDOM ═══ -->
+        <div class="highlight-section">
+            <h2>This Week's Wellness Wisdom</h2>
+
+            <!-- IMAGE -->
+            <img src="https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/693bbebc358d9f3d9ab2b177.png"
+                alt="Laura Harvey" class="img-responsive">
+
+            <h3>Finding Freedom in my 50s</h3>
+            <p><em>By Laura Harvey | Beyond the Bend Yoga</em></p>
+
+            <p>There is a particular kind of courage that does not announce itself. It does not feel like bravery in the moment. It feels more like finally telling the truth, to yourself, quietly, in the middle of an ordinary day.</p>
+            <p>For me, that truth arrived in the body first, the way it usually does. I had moved to a new city, and for a time I carried my old career with me, the way we do when we are not quite ready to put something down. But somewhere in that time the truth became impossible to ignore. A career that had once felt like purpose had quietly become something I was simply enduring. I knew it the way you know things you are not quite ready to act on yet. And then one day, I was ready. I left. I built a business from the ground up, and began the slow and necessary work of rebuilding a life from the inside out.</p>
+            <p>That meant getting reacquainted with a body I had been too busy to listen to. It meant returning to a spiritual life I had let go thin and quiet over the years. It meant exploring the possibility of love and companionship again, with fresh eyes and considerably more self knowledge than I had the first time around. And it meant discovering, somewhat to my surprise, that starting over socially in your fifties is not the lonely proposition I had feared. The people I have found here, through the students I teach, through a remarkable community of growth minded souls who have become lifelong friends, have changed the texture of my days in ways I did not see coming.</p>
+            <p>None of it arrived neatly. But all of it arrived.</p>
+            <p>What I did not anticipate was how alive this season would feel. I had prepared for difficulty, and difficulty was certainly present. What I had not prepared for was joy. And underneath that joy, something I can only describe as relief. There is a particular freedom available at this stage of life that simply does not exist earlier, the freedom of knowing that this is not the rehearsal anymore. There is no future version of myself I am postponing things for, no next chapter I am supposed to be preparing for. This is the chapter. And that realization, rather than frightening me, has made everything feel more vivid, more worth showing up for, more worth savoring.</p>
+            <p>That is what my fifties have given me. Not certainty. Not ease. But realness. And with that realness has come a gratitude I could not have manufactured in easier times. Gratitude for the rupture that made room. Gratitude for the courage that showed up even when I did not feel courageous. Gratitude for this one life, still unfolding, still surprising me.</p>
+        </div>
+
+        <!-- ═══ PRACTICE OF THE WEEK ═══ -->
+        <div class="content-block">
+            <div class="practice-section" style="border-radius: 4px; padding: 30px;">
+                <h2>Practice of the Week</h2>
+                <h3 style="margin-top: 8px;">The Invitation</h3>
+                <p>Find ten quiet minutes this week, somewhere you will not be interrupted. You might want a journal nearby, or you might simply want to sit and let the questions breathe. There are no right answers here, only honest ones.</p>
+                <p>Read each question slowly, and pause between them. Notice what stirs.</p>
+                <ul style="padding-left: 20px; line-height: 1.8;">
+                    <li>Where am I right now, truly, and not where I think I should be?</li>
+                    <li>What still matters to me, the things I would choose again even if no one was watching?</li>
+                    <li>What am I genuinely excited about, even if I have not yet given myself permission to say so out loud?</li>
+                    <li>What have I finally let go of, and what has that release made room for?</li>
+                    <li>Who are the people that make me feel most like myself?</li>
+                    <li>What would I begin if I knew I had permission?</li>
+                </ul>
+                <p style="margin-bottom: 0;">Sit with whatever arises. The body knows things the mind is still catching up to.</p>
+            </div>
+        </div>
+
+        <!-- ═══ FROM THE STUDIO ═══ -->
+        <div class="studio-section">
+            <h2>From the Studio</h2>
+            
+            <div class="embodied-card" style="background-color: #ffffff; border-left: 4px solid #A8B5A2; padding: 25px; margin-bottom: 30px;">
+                <h3 style="margin-top: 0; color: #556b2f; font-style: normal; font-weight: 600;">Try a Complimentary Online Class</h3>
+                
+                <p>If what you read today stirred something in you, I would love to have you come and experience this work in your body rather than just in your mind. Many of my classes are available online, which means it does not matter where you are. You just need a mat, a quiet space, and a willingness to show up for yourself.</p>
+                
+                <p><strong>Here is what is available each week:</strong></p>
+                <ul style="padding-left: 20px; line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>Monday Evening, 6:00 to 7:15</strong> — <em>Somatic Vinyasa</em>, a welcoming and grounding practice to begin your week.</li>
+                    <li><strong>Tuesday Morning, 10:00 to 11:15</strong> — <em>Rise and Restore</em>, a gentle and replenishing practice to carry you through the week.</li>
+                    <li><strong>Tuesday Evening, 6:00 to 7:15</strong> — <em>Restore and Reclaim</em>, a restorative practice for coming back to yourself at the end of the day.</li>
+                    <li><strong>Wednesday Morning, 10:00 to 11:15</strong> — <em>Somatic Hatha</em>, a slow and intentional practice rooted in nervous system awareness and body wisdom.</li>
+                </ul>
+                
+                <p>And because I know that trying something new can feel like a leap, I would like to make it a little easier. If you have been curious about joining and have not yet taken the step, <strong>reply to this email and I will send you a link for your complimentary class.</strong> No pressure, no commitment. Just come and see how it feels.</p>
+                <p style="margin-bottom: 0;">I would love to see some new faces out there.</p>
+            </div>
+        </div>
+
+        <!-- ═══ CLOSING THOUGHT ═══ -->
+        <div class="content-block">
+            <h2>A Closing Thought</h2>
+            <p>I am glad you are here. I mean that in the most literal sense. Whatever brought you to this newsletter, and whatever season you are in right now, I am glad our paths have crossed.</p>
+            <p>There is more I want to say about all of this. Each of these threads, the career, the move, the body, the spiritual life, the dating, the community, deserves its own conversation, and I plan to give each one the space it needs in the weeks ahead. I hope you will stay with me as I do.</p>
+            <p>As always, if anything here resonated with you, I would love to hear about it. Just hit reply. I read every single one.</p>
+            <br>
+            <p>With warmth and gratitude,<br>Laura 🩷</p>
+        </div>
+
+        <!-- ═══ FOOTER ═══ -->
+        <div class="footer">
+            BEYOND THE BEND YOGA<br>
+            Rising Moon Studio &middot; Sherwood Park, AB<br><br>
+            <a href="{{unsubscribe_link}}">Unsubscribe</a>
+        </div>
+
+    </div>
+</body>
+
+</html>

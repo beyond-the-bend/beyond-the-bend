@@ -94,6 +94,7 @@ Use this EXACT structure. Do not improvise a different layout.
 - Wednesday evenings Embodied Flow = NEW. Wednesday mornings Somatic Hatha = NOT new.
 
 ### GoHighLevel Merge Tags
+- **Greeting:** ALWAYS start the personal intro with `Hello {{contact.first_name}},` (with the comma appearing AFTER the name tag, not before).
 - First name: `{{contact.first_name}}`
 - Unsubscribe: `{{unsubscribe_link}}`
 
@@ -143,5 +144,6 @@ When in doubt, open that file and match its structure exactly.
 | Replacing contractions with formal language | Keep Laura's voice exactly as written |
 | Adding NEW badge to existing classes | Only NEW classes get the badge |
 | Forgetting the byline under the essay title | Always include "By Laura Harvey | Beyond the Bend Yoga" |
+| Using "Hello friends" or generic greetings | ALWAYS use "Hello {{contact.first_name}}," |
 | Building HTML before all content is confirmed | Gather ALL sections first, then build once |
 | Saving the image only to the Antigravity brain folder | Also copy to `C:\BTB\newsletters\` |

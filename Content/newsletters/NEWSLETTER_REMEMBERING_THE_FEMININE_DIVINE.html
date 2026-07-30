@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter | Remembering the Feminine Divine</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+        body, p, h1, h2, h3, h4, h5, h6 {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            background-color: #f7f7f5;
+            color: #4a4a4a;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+
+        .header {
+            background-color: #faf0f0;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 4px solid #556b2f;
+        }
+
+        .header img {
+            max-width: 140px;
+            height: auto;
+            margin: 0 auto 25px auto;
+            display: block;
+        }
+
+        .masthead-title {
+            color: #556b2f;
+            font-family: 'Playfair Display', Georgia, serif;
+            line-height: 1.2;
+        }
+
+        .masthead-top {
+            display: block;
+            font-size: 28px;
+            font-style: italic;
+            font-weight: 400;
+            margin-bottom: 5px;
+        }
+
+        .masthead-main {
+            display: block;
+            font-size: 32px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-top: 2px solid #556b2f;
+            border-bottom: 2px solid #556b2f;
+            padding: 15px 0;
+            margin-top: 10px;
+        }
+
+        .content-block {
+            padding: 40px 30px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #556b2f;
+            font-size: 26px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #78866b;
+            font-size: 22px;
+            margin-bottom: 10px;
+            margin-top: 20px;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        h4 {
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            color: #556b2f;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 7px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .img-responsive {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin: 20px 0;
+            display: block;
+        }
+
+        .byline {
+            color: #888888;
+            font-size: 13px;
+            font-style: italic;
+            margin-bottom: 25px;
+        }
+
+        .studio-section {
+            background-color: #f4f7f2;
+            padding: 42px 30px;
+            border-top: 1px solid #d8e4d0;
+            border-bottom: 1px solid #d8e4d0;
+        }
+
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 22px 0 28px 0;
+            background-color: #ffffff;
+            border: 1px solid #d8e4d0;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .schedule-table td {
+            padding: 14px 16px;
+            border-bottom: 1px solid #d8e4d0;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .schedule-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .class-day {
+            color: #556b2f;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .pause-note {
+            background-color: #ffffff;
+            border-left: 4px solid #A8B5A2;
+            padding: 17px 18px;
+            margin: 22px 0;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .pass-card {
+            background-color: #ffffff;
+            border: 1px solid #d8e4d0;
+            border-left: 4px solid #A8B5A2;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 16px 0;
+        }
+
+        .pass-card.featured {
+            border-left-color: #556b2f;
+            box-shadow: 0 5px 18px rgba(85, 107, 47, 0.10);
+        }
+
+        .pass-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #556b2f;
+            font-size: 21px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .pass-price {
+            color: #3F4A3C;
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .best-fit {
+            display: inline-block;
+            background-color: #556b2f;
+            color: #ffffff;
+            border-radius: 50px;
+            padding: 5px 12px;
+            font-size: 11px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .btn-wrap {
+            text-align: center;
+            margin: 30px 0 10px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 15px;
+            letter-spacing: 1px;
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            background-color: #A8B5A2;
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .practice-section {
+            background-color: #eef2eb;
+            padding: 35px 30px;
+        }
+
+        .closing-section {
+            padding: 40px 30px;
+            background-color: #fcfbf9;
+            border-top: 1px solid #eee8e2;
+        }
+
+        .footer {
+            background-color: #3F4A3C;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #F7F4EF;
+            letter-spacing: 1px;
+        }
+
+        .footer a {
+            color: #A8B5A2;
+            text-decoration: none;
+        }
+
+        strong {
+            color: #556b2f;
+            font-weight: 600;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .content-block, .studio-section, .practice-section, .closing-section {
+                padding: 30px 20px;
+            }
+
+            .masthead-main {
+                font-size: 26px;
+            }
+
+            .masthead-top {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://storage.googleapis.com/msgsndr/t19sOv208p64ldeUjJug/media/697996aad119a57c1575bb7d.png" alt="Beyond the Bend Yoga">
+            <div class="masthead-title">
+                <span class="masthead-top">Reflections from</span>
+                <span class="masthead-main">Beyond the Bend</span>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <p>Hello {{contact.first_name}},</p>
+
+            <p>Lately, I have found myself drawn into an exploration I spent much of my life quietly avoiding. It is the exploration of the feminine divine, and even writing those words feels vulnerable somehow. Not because they feel untrue, but because for many years I associated them with something vague, mystical, overly spiritual, or somehow separate from ordinary life. I think I imagined the feminine divine as something outside of me, something I would have to understand, believe in, or become.</p>
+
+            <p>What I am beginning to wonder now is whether it is much simpler and much more intimate than that. Maybe the feminine divine is not something we become. Maybe it is something we remember. Maybe it is not a performance, an aesthetic, or a role, but a returning to the parts of ourselves the world often taught us to suppress in order to survive.</p>
+        </div>
+
+        <div class="content-block" style="padding-top: 0;">
+            <h2>This Week's Wellness Wisdom</h2>
+
+            <img class="img-responsive" src="https://assets.cdn.filesafe.space/t19sOv208p64ldeUjJug/media/6a1e0147ff82912d65dba903.jpg" alt="Remembering the feminine divine">
+
+            <h3>Remembering the Feminine Divine</h3>
+            <p class="byline">By Laura Harvey | Beyond the Bend Yoga</p>
+
+            <p>I have been thinking about the parts of ourselves that are intuitive, soft, sensual, creative, emotional, resting, feeling, cyclical, and deeply connected to the wisdom of the body. These are not weak parts. They are not lesser parts. They are not impractical parts. And yet, for many women, they are often the first parts we learn to hide, mistrust, or push aside.</p>
+
+            <p>I want to name sensuality carefully, because I think it is one of the places women are asked to give themselves away most deeply. I do not mean sensuality as performance, seduction, or something created for someone else to consume. I mean the simple, sacred capacity to feel life through the body. To notice warmth on the skin, pleasure in movement, beauty in colour, comfort in touch, hunger, longing, tenderness, grief, aliveness. I mean the part of us that knows we are not only here to function, produce, caretake, and endure. We are also here to feel.</p>
+
+            <p>I think many women become extraordinarily capable while quietly abandoning themselves along the way. We learn how to achieve, how to push through exhaustion, how to care for everyone else, how to override our intuition, how to stay productive, and how to harden ourselves when softness no longer feels safe. We may also learn to separate from our sensuality, either because it was judged, used, misunderstood, ignored, or made unsafe. We become so skilled at functioning that we may not even notice the disconnect at first. We simply keep going.</p>
+
+            <p>Then, at some point, something begins calling us back. Sometimes it arrives through heartbreak, burnout, illness, a life transition, a divorce, a loss, menopause, or a quiet longing we cannot explain. It may not arrive as a dramatic awakening. It may arrive as fatigue. It may arrive as irritability. It may arrive as a deep sense that the life we have built no longer feels like a place we can fully inhabit.</p>
+
+            <p>For me, this exploration has not felt glamorous or polished. It has felt raw. It has asked uncomfortable questions. Why did softness begin to feel unsafe? Why did I learn to mistrust my intuition? Why did rest become something I had to earn? Why did I spend so much energy trying to prove my worth through productivity and strength while quietly distancing myself from my emotional and embodied self?</p>
+
+            <p>Perhaps the biggest question of all is this: what parts of myself did I abandon in order to feel safe in this world?</p>
+
+            <p>I do not think the feminine divine is weakness. In fact, I am beginning to believe it may be one of the most misunderstood forms of strength there is. It is not force, domination, or performance. It is presence, intuition, deep listening, creativity, compassion, embodiment, sensuality, and connection. It is the ability to feel deeply without losing oneself. It is the courage to soften in a world that often rewards hardness.</p>
+
+            <p>I think many women are carrying a kind of exhaustion that cannot be solved simply by getting more sleep. It is the exhaustion of constantly overriding ourselves. It is the exhaustion of living disconnected from our own inner knowing. It is the exhaustion of treating the body as something to control instead of something to listen to.</p>
+
+            <p>Maybe this is partly why restorative practices, meditation, stillness, breath, and nervous system work feel so meaningful to me now. Not because they help us escape life, but because they help us return to ourselves. They create space to hear the quieter voice underneath the noise, the one that was always there, the one that never stopped waiting for us.</p>
+
+            <p>I do not write any of this as someone who has figured it all out. I write it as a woman still learning, still remembering, still softening, and still trying to reclaim the parts of herself she once believed she had to leave behind. I am beginning to understand that this season of life may not be asking me to become someone new. It may be asking me to come home to who I was before the world taught me to disconnect from myself.</p>
+        </div>
+
+        <div class="studio-section">
+            <h2>From the Studio</h2>
+            <h3>Summer Online Practice</h3>
+
+            <p>July and August have their own rhythm. There are holidays, lake days, visitors, slower mornings, full calendars, and weeks when getting to the studio simply may not make sense. I do not want practice to become another thing you have to manage perfectly, but I do want there to be an easy way for you to keep one steady thread of connection with your body, your breath, and the part of you that feels better when you keep showing up gently.</p>
+
+            <p>This summer, four weekly classes will continue online so you can practice from wherever you are. You can join from home, from the cabin, while you are away visiting family, or anytime your body is asking for a little more steadiness. You do not need a perfect setup. You just need a quiet enough space, your mat, and a willingness to meet yourself where you are.</p>
+
+            <table class="schedule-table" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td><span class="class-day">Monday evening</span>Somatic Vinyasa, 6:00 to 7:15 PM</td>
+                </tr>
+                <tr>
+                    <td><span class="class-day">Tuesday morning</span>Rise and Restore, 10:00 to 11:15 AM</td>
+                </tr>
+                <tr>
+                    <td><span class="class-day">Tuesday evening</span>Restore and Reclaim, 6:00 to 7:15 PM</td>
+                </tr>
+                <tr>
+                    <td><span class="class-day">Wednesday morning</span>Somatic Hatha, 10:00 to 11:15 AM</td>
+                </tr>
+            </table>
+
+            <h3>Choose the Pass That Fits Your Summer</h3>
+
+            <div class="pass-card">
+                <div class="pass-title">5 Class Pass</div>
+                <div class="pass-price">$84.00 including GST</div>
+                <p>This is a beautiful fit if you know you will be away often, but still want a few steady places to return to throughout July and August. It gives you room to stay connected without needing to overcommit.</p>
+            </div>
+
+            <div class="pass-card featured">
+                <span class="best-fit">Best fit for steady summer practice</span>
+                <div class="pass-title">10 Class Pass</div>
+                <div class="pass-price">$155.40 including GST</div>
+                <p>This is the best fit if you want one steady class most weeks. It gives your summer a gentle rhythm without asking you to be rigid. For many people, this will be the sweetest middle place.</p>
+            </div>
+
+            <div class="pass-card">
+                <div class="pass-title">20 Class Pass</div>
+                <div class="pass-price">$273.00 including GST</div>
+                <p>This is for you if you know your body feels better when you practice more than once a week. It gives you the most room to move between grounding, restoring, strengthening, and softening all summer long.</p>
+            </div>
+
+            <p>The invitation is simple. Choose the pass that fits the summer you are actually living, not the one you think you should be living. Let this be supportive, spacious, and easy to return to.</p>
+
+            <div class="btn-wrap">
+                <a href="https://beyondthebendyoga.ca/livestream-yoga" class="btn">View Online Class Passes</a>
+            </div>
+        </div>
+
+        <div class="practice-section">
+            <h2>Practice of the Week</h2>
+            <h3>A Gentle Practice For Remembering</h3>
+
+            <p>This week, give yourself a few quiet minutes to come back into conversation with your body. You do not need to make it complicated. Sit or lie down somewhere comfortable and let your body be supported. Feel the weight of yourself being held by the chair, the floor, the bed, or the earth beneath you. Let your hands rest somewhere that feels natural, perhaps over your heart, your belly, or simply in your lap.</p>
+
+            <p>Take a few slow breaths without trying to change anything too much. Notice where your body feels tense, tired, guarded, or far away. Then notice if there is anywhere, even one small place, that feels neutral, warm, soft, or a little more at ease. Let your attention rest there for a moment. You are not trying to force peace. You are simply practicing listening.</p>
+
+            <p>If it feels right, ask yourself gently, what part of me has been waiting to be heard? You might also ask, where have I stopped allowing myself to feel? You may receive words, an image, a feeling, or nothing at all. All of it is welcome. The practice is not about getting an answer. It is about making space for the quieter parts of you to know they are allowed to exist.</p>
+
+            <p>Afterward, you might write a few sentences beginning with, "I am beginning to remember..." Let the words come slowly. Let them be imperfect. Let them belong to you.</p>
+        </div>
+
+        <div class="closing-section">
+            <h2>A Closing Thought</h2>
+
+            <p>Maybe coming home to ourselves does not happen all at once. Maybe it happens slowly, in the small moments when we stop holding our breath, when we allow softness to return, and when we begin to trust that the body has been telling the truth all along. I am beginning to believe that this remembering is not something we have to force. It is something we can make space for, one honest moment at a time.</p>
+
+            <p>With warmth and gratitude,</p>
+            <p>Laura</p>
+        </div>
+
+        <div class="footer">
+            <p style="margin-bottom: 10px;">Beyond the Bend Yoga</p>
+            <p style="margin-bottom: 10px;">Sherwood Park, Alberta</p>
+            <p><a href="{{unsubscribe_link}}">Unsubscribe</a></p>
+        </div>
+    </div>
+</body>
+</html>
